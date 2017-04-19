@@ -1,0 +1,46 @@
+<table>
+
+  <tr>
+    <th style="width:5%">Date</th>
+    <th style="width:40%">Lesson</th>
+    <th style="width:25%">Topics</th>
+    <th style="width:10%">Reading</th>
+    <th style="width:10%">Lecture</th>
+    <th style="width:10%">Assignment</th>
+  </tr>
+
+  {{ range $.Site.Data.lessons }}
+    {{range . }}
+    <tr>
+      <td align="right">{{ .date }}</td>
+      <td><b>{{ .title }}<b/></td>
+      <td>{{ .topics }}</td>
+
+      {{ if .reading }}
+      <td align="center"><a href="{{ .Site.baseurl }}/readings/{{ .reading }}">
+          <i class="fa fa-book fa-lg"></i></a></td>
+      {{ else }}
+        <td align="center"><font color="f1f1f1">
+          <i class="fa fa-book fa-lg"></i></font></td>
+      {{ end }}
+
+      {{ if .lecture }}
+      <td align="center"><a href="{{ .Site.baseurl }}/lectures/{{ .lecture  }}">
+          <i class="fa fa-comment fa-lg"></i></a></td>
+      {{ else }}
+        <td align="center"><font color="f1f1f1">
+          <i class="fa fa-comment fa-lg"></i></font></td>
+      {{ end }}
+
+      {{ if .assignment }}
+      <td align="center"><a href="{{ .Site.baseurl }}/assignments/{{ .assignment }}">
+          <i class="fa fa-keyboard-o fa-lg"></i></a></td>
+      {{ else }}
+        <td align="center"><font color="f1f1f1">
+          <i class="fa fa-keyboard-o fa-lg"></i></font></td>
+      {{ end }}
+    </tr>
+    {{ end }}
+  {{ end }}
+
+</table>
