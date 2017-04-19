@@ -6,7 +6,7 @@ theme = "hugo-tranquilpeak-theme"
 #disqusShortname = ""
 # googleAnalytics = ""
 paginate = 7
-canonifyurls = true
+relativeurls = true
 publishDir = "docs"
 
 
