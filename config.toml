@@ -1,4 +1,4 @@
-baseurl = "espm-157/"
+baseurl = "espm-157"
 languageCode = "en-us"
 defaultContentLanguage = "en-us"
 title = "ESPM 157"
@@ -6,7 +6,7 @@ theme = "hugo-tranquilpeak-theme"
 #disqusShortname = ""
 # googleAnalytics = ""
 paginate = 7
-#canonifyurls = true
+canonifyurls = true
 publishDir = "docs"
 
 
@@ -42,13 +42,13 @@ publishDir = "docs"
   identifier = "syllabus"
   name = "Syllabus"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-archive\"></i>"
-  url = "espm-157/syllabus"
+  url = "/syllabus"
 [[menu.main]]
   weight = 3
   identifier = "policies"
   name = "Policies"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-question\"></i>"
-  url = "espm-157/policies"
+  url = "/policies"
 
 [[menu.links]]
   weight = 0
