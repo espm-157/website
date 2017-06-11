@@ -1,12 +1,10 @@
-<table>
-
+<table class="table">
   <tr>
-    <th style="width:5%">Date</th>
-    <th style="width:40%">Lesson</th>
-    <th style="width:25%">Topics</th>
-    <th style="width:10%">Reading</th>
-    <th style="width:10%">Lecture</th>
-    <th style="width:10%">Assignment</th>
+    <th style="width:30%">Date</th>
+    <th style="width:50%">Lesson</th>
+    <th style="width:5%">Reading</th>
+    <th style="width:5%">Lecture</th>
+    <th style="width:5%">Assignment</th>
   </tr>
 
   {{ range $.Site.Data.lessons }}
@@ -14,8 +12,6 @@
     <tr>
       <td align="right">{{ .date }}</td>
       <td><b>{{ .title }}<b/></td>
-      <td>{{ .topics }}</td>
-
       {{ if .reading }}
       <td align="center"><a href="{{ .Site.baseurl }}/readings/{{ .reading }}">
           <i class="fa fa-book fa-lg"></i></a></td>

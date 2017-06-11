@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Data Science &amp; Global Change Ecology on ESPM 157</title>
+    <title>ESPM 157: Data Science &amp; Global Change Ecology on ESPM 157</title>
     <link>/</link>
-    <description>Recent content in Data Science &amp; Global Change Ecology on ESPM 157</description>
+    <description>Recent content in ESPM 157: Data Science &amp; Global Change Ecology on ESPM 157</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 19 Apr 2017 00:00:00 +0000</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Wed, 19 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>/syllabus/</guid>
-      <description>  Date Lesson Topics Reading Lecture Assignment    Introduction        Climate Change I        Climate Change II        Reproducible Workflows        Population Dynamics I        Population Dynamics II        Writing packages        Fisheries Collapse I        Fisheries Collapse II        Docker &amp;amp; Cloud Computing        Extinction Rates I        Extinction Rates II        Data publication        Final Projects       </description>
+      <description> Date Lesson Reading Lecture Assignment   Aug 24 Introduction      Aug 29 Climate Change      Aug 31 Climate Change      Sept 5 Climate Change      Sept 7 Climate Change      Sept 12 Reproducible Workflows      Sept 14 Reproducible Workflows      Sept 19       Sept 21       Sept 26       Sept 28       Oct 3       Oct 5       Oct 10       Oct 12       Oct 17       Oct 19       Oct 24       Oct 26       Oct 31       Nov 2        Population Dynamics       Population Dynamics       Population Dynamics       Population Dynamics       Writing R packages       Fisheries Collapse       Fisheries Collapse       Fisheries Collapse       Fisheries Collapse       Docker &amp;amp; Cloud Computing       Extinction Rates I       Extinction Rates II       Data publication       Final Projects      </description>
     </item>
     
     <item>
@@ -40,21 +40,21 @@ Instructional Methods As a flipped classroom, students are provided with either 
     </item>
     
     <item>
-      <title>Data Science &amp; Global Change Ecology</title>
-      <link>/index/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/index/</guid>
-      <description>* *     Instructor Carl Boettiger     GSI TBD     Location Mulford 230   Times Tu/Th 12:30P - 2:00P   CCN 46582    Course Description Many of the greatest challenges we face today come from understanding and interacting with the natural world: from global climate change to the sudden collapse of fisheries and forests, from the spread of disease and invasive species to the unknown wealth of medical, cultural, and technological value we derive from nature.</description>
-    </item>
-    
-    <item>
       <title>Modules</title>
       <link>/modules/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/modules/</guid>
-      <description>show_chart Climate Change    my_location Spatial movement    computer Simulations    directions_boat Overfishing    watch Mass Extinctions    Concepts  CO2 concentration Global mean temperature    Skills    Left Column  right column    Wide entry    unit 4 L  unit 4 R    unit 5 L  unit 5 R       </description>
+      <description> timeline Climate Change    bug_report Ecological simulation    directions_boat Overfishing    my_location Spatial movement    trending_down Mass Extinctions    Concepts CO2 concentration Global mean temperature Sea level rise Land ice sheet melt Arctic sea ice cover   Skills  Data wrangling: plain text formats Tidy data (intro) Data visualization Smoothing     Focal results: Coexistence, Bet hedging, Limit Cycles, Bifurcations, Deterministic Chaos Methods:    Worm et al     Animal movement Spatial Raster and Spatial Vector data    Focal result: replicating paper from Cerbellos et al on the sixth mass extinction Technologies &amp; data formats: JSON, REST APIs,       </description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>/tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/tools/</guid>
+      <description>  GitHub     R    cloud Cloud computing     Docker               </description>
     </item>
     
   </channel>

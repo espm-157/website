@@ -14,6 +14,8 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdn.rawgit.com/gaborcsardi/r-font/master/rlogo.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/wesbos/Font-Awesome-Docker-Icon/master/fontcustom/fontcustom.css">
 
 	
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
@@ -22,7 +24,7 @@
 
   
 <body class="landing-page">
-    <nav class="navbar navbar-transparent navbar-absolute">
+  	<nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll">
 	    	<div class="container">
         	
         	<div class="navbar-header">
@@ -51,8 +53,18 @@
         
 
         <li class="nav-item">
+          <a href="../modules">
+            <i class="material-icons">dashboard</i>
+            <span>Modules</span>
+          </a>
+        </li>
+        
+      
+        
+
+        <li class="nav-item">
           <a href="../syllabus">
-            <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+            <i class="material-icons">date_range</i>
             <span>Syllabus</span>
           </a>
         </li>
@@ -62,7 +74,7 @@
 
         <li class="nav-item">
           <a href="../policies">
-            <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+            <i class="material-icons">gavel</i>
             <span>Policies</span>
           </a>
         </li>
@@ -96,37 +108,46 @@
 	      </div>
       </div>
 		</div>
-          <footer class="footer">
-	        <div class="container">
-	            <nav class="pull-left">
-	                <ul>
-	                    <li>
-	                        <a href="http://www.creative-tim.com">
-	                            Creative Tim
-	                        </a>
-	                    </li>
-				          		<li>
-	                        <a href="http://presentation.creative-tim.com">
-	                           About Us
-	                        </a>
-	                    </li>
-	                    <li>
-	                        <a href="http://blog.creative-tim.com">
-	                           Blog
-	                        </a>
-	                    </li>
-	                    <li>
-	                        <a href="http://www.creative-tim.com/license">
-	                            Licenses
-	                        </a>
-	                    </li>
-	                </ul>
-	            </nav>
-	            <div class="copyright pull-right">
-	                &copy; 2016, made with <i class="fa fa-heart heart"></i> by Creative Tim. Hugo mod by <a href="https://twitter.com/cboettig">cboettig</a>
-	            </div>
-	        </div>
-	    </footer>
+    <footer class="footer">
+  <div class="container">
+	  <nav class="pull-left">
+	    <ul>
+	    
+        
+
+        <li>
+          <a href="https://data.berkeley.edu"><i class="material-icons">pin_drop</i> UC Berkeley</a>
+        </li>
+        
+      
+        
+
+        <li>
+          <a href="https://github.com/boettiger-lab/espm-157"><i class="button-icon fa fa-lg fa-github"></i> Site source</a>
+        </li>
+        
+      
+        
+
+        <li>
+          <a href="https://stackoverflow.com/questions/tagged/r"><i class="button-icon fa fa-lg fa-stack-overflow"></i> help</a>
+        </li>
+        
+      
+        
+
+        <li>
+          <a href="https://r-project.org"><i class="icon-rlogo" style="font-size:150%"></i> get R</a>
+        </li>
+        
+      
+      </ul>
+    </nav>
+	  <div class="copyright pull-right">
+	    <img src="../img/cc-by.svg"/>
+	  </div>
+  </div>
+</footer>
 	</div>
 </body>
 

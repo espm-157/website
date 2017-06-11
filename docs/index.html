@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.20.2" />
+	<meta name="generator" content="Hugo 0.20.7" />
 	<meta charset="utf-8" />
 	<link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon.png">
 	<link rel="icon" type="image/png" href="img/favicon.png">
@@ -15,6 +15,8 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdn.rawgit.com/gaborcsardi/r-font/master/rlogo.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/wesbos/Font-Awesome-Docker-Icon/master/fontcustom/fontcustom.css">
 
 	
     <link href="./css/bootstrap.min.css" rel="stylesheet" />
@@ -52,8 +54,18 @@
         
 
         <li class="nav-item">
+          <a href="./modules" data-target="/modules">
+            <i class="material-icons">dashboard</i>
+            <span>Modules</span>
+          </a>
+        </li>
+        
+      
+        
+
+        <li class="nav-item">
           <a href="./syllabus" data-target="/syllabus">
-            <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+            <i class="material-icons">date_range</i>
             <span>Syllabus</span>
           </a>
         </li>
@@ -63,7 +75,7 @@
 
         <li class="nav-item">
           <a href="./policies" data-target="/policies">
-            <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+            <i class="material-icons">gavel</i>
             <span>Policies</span>
           </a>
         </li>
@@ -78,8 +90,8 @@
       <div class="container">
         <div class="row">
 					<div class="col-md-6">
-              <h1 class="title">Data Science &amp; Global Change Ecology</h1>
-              <h4></h4>
+              <h1 class="title">ESPM 157: Data Science &amp; Global Change Ecology</h1>
+              <h4>Many of the greatest challenges we face today come from understanding and interacting with the natural world: from global climate change to the sudden collapse of fisheries and forests, from the spread of disease and invasive species to the unknown wealth of medical, cultural, and technological value we derive from nature. Advances in satellites and micro-sensors, computation, informatics and the Internet have made available unprecedented amounts of data about the natural world, and with it, new challenges of sifting, processing and synthesizing large and diverse sources of information. In this course, students will learn and apply fundamental computing, statistics and modeling concepts to a series of real-world ecological and environmental data sets. Through this hands-on approach, students will learn more about issues in the natural world while also developing the practical skills for working with heterogeneous real-world data encountered in all areas of data science.</h4>
               <br />
 					</div>
         </div>
@@ -88,14 +100,13 @@
 		<div class="main main-raised">
 			<div class="container">
 		  	<div class="section text-center section-landing">
-		  	  
-	            
-
-<table>
+		  	  <div class="row">
+		  	    <div class="col-md-6 col-md-offset-3">  
+	            <table class="table table-condensed table-striped text-left">
 <thead>
 <tr>
-<th>*</th>
-<th>*</th>
+<th><span></span></th>
+<th><span></span></th>
 </tr>
 </thead>
 
@@ -127,9 +138,7 @@
 </tbody>
 </table>
 
-<h2 id="course-description">Course Description</h2>
-
-<p>Many of the greatest challenges we face today come from understanding and interacting with the natural world: from global climate change to the sudden collapse of fisheries and forests, from the spread of disease and invasive species to the unknown wealth of medical, cultural, and technological value we derive from nature. Advances in satellites and micro-sensors, computation, informatics and the Internet have made available unprecedented amounts of data about the natural world, and with it, new challenges of sifting, processing and synthesizing large and diverse sources of information. In this course, students will learn and apply fundamental computing, statistics and modeling concepts to a series of real-world ecological and environmental data sets. Through this hands-on approach, students will learn more about issues in the natural world while also developing the practical skills for working with heterogeneous real-world data encountered in all areas of data science.</p>
+<h2 id="overview">Overview</h2>
 
 <p>In this course, students will learn the fundamentals of modern data science, computing, statistics and modeling to leading questions in ecology and environmental science. Students will master R programming techniques, relational database fundamentals, data management, version control, working with remote data and REST APIs, collaborative and reproducible research practices and workflow while analyzing issues pertaining to topics such as global climate change, ecological population dynamics, fisheries collapse and mass extinctions.</p>
 
@@ -150,48 +159,58 @@ is preliminary and always subject to change.</p>
 
 <h2 id="texts">Texts</h2>
 
-<p>We will use <a href="http://amzn.to/2aHLAQ1">Grolemund and Wickham&rsquo;s <em>R For Data Science</em></a>
+<p>We will use <a href="http://amzn.to/2aHLAQ1">Grolemund and Wickham's <em>R For Data Science</em></a>
 as the primary text for this course. A hard copy of the book is not
-required and the openly licensed full text can be found on the <a href="http://r4ds.had.co.nz/">author&rsquo;s website for this book</a>.</p>
+required and the openly licensed full text can be found on the <a href="http://r4ds.had.co.nz/">author's website for this book</a>.</p>
 
-<p>Students will also be referred to sections in <a href="http://adv-r.had.co.nz/">Wickham&rsquo;s <em>Advanced R</em></a> for more on
+<p>Students will also be referred to sections in <a href="http://adv-r.had.co.nz/">Wickham's <em>Advanced R</em></a> for more on
 fundamentals of R programming, as well as various other references as necessary.</p>
 
-	            
+	          </div>
+          </div>   
 	      </div>
       </div>
 		</div>
-          <footer class="footer">
-	        <div class="container">
-	            <nav class="pull-left">
-	                <ul>
-	                    <li>
-	                        <a href="http://www.creative-tim.com">
-	                            Creative Tim
-	                        </a>
-	                    </li>
-				          		<li>
-	                        <a href="http://presentation.creative-tim.com">
-	                           About Us
-	                        </a>
-	                    </li>
-	                    <li>
-	                        <a href="http://blog.creative-tim.com">
-	                           Blog
-	                        </a>
-	                    </li>
-	                    <li>
-	                        <a href="http://www.creative-tim.com/license">
-	                            Licenses
-	                        </a>
-	                    </li>
-	                </ul>
-	            </nav>
-	            <div class="copyright pull-right">
-	                &copy; 2016, made with <i class="fa fa-heart heart"></i> by Creative Tim. Hugo mod by <a href="https://twitter.com/cboettig">cboettig</a>
-	            </div>
-	        </div>
-	    </footer>
+    <footer class="footer">
+  <div class="container">
+	  <nav class="pull-left">
+	    <ul>
+	    
+        
+
+        <li>
+          <a href="https://data.berkeley.edu"><i class="material-icons">pin_drop</i> UC Berkeley</a>
+        </li>
+        
+      
+        
+
+        <li>
+          <a href="https://github.com/boettiger-lab/espm-157"><i class="button-icon fa fa-lg fa-github"></i> Site source</a>
+        </li>
+        
+      
+        
+
+        <li>
+          <a href="https://stackoverflow.com/questions/tagged/r"><i class="button-icon fa fa-lg fa-stack-overflow"></i> help</a>
+        </li>
+        
+      
+        
+
+        <li>
+          <a href="https://r-project.org"><i class="icon-rlogo" style="font-size:150%"></i> get R</a>
+        </li>
+        
+      
+      </ul>
+    </nav>
+	  <div class="copyright pull-right">
+	    <img src="./img/cc-by.svg"/>
+	  </div>
+  </div>
+</footer>
 	</div>
 </body>
 

@@ -2,4 +2,4 @@
 title: Modules
 ---
 
-{{< profile-tabs >}}
+{{< modules >}}

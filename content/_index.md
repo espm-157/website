@@ -1,10 +1,13 @@
 ---
-title: "Data Science & Global Change Ecology"
+title: "ESPM 157: Data Science & Global Change Ecology"
+description: "Many of the greatest challenges we face today come from understanding and interacting with the natural world: from global climate change to the sudden collapse of fisheries and forests, from the spread of disease and invasive species to the unknown wealth of medical, cultural, and technological value we derive from nature. Advances in satellites and micro-sensors, computation, informatics and the Internet have made available unprecedented amounts of data about the natural world, and with it, new challenges of sifting, processing and synthesizing large and diverse sources of information. In this course, students will learn and apply fundamental computing, statistics and modeling concepts to a series of real-world ecological and environmental data sets. Through this hands-on approach, students will learn more about issues in the natural world while also developing the practical skills for working with heterogeneous real-world data encountered in all areas of data science."
+markup: "mmark"
 ---
 
 
+{.table .table-condensed .table-striped .text-left}
 
-*        |  *
+ <span></span>     | <span></span>
 -----------|-------------------------------------------------------------------
 Instructor | [Carl Boettiger](http://carlboettiger.info) <a href="mailto:cboettig@gmail.com" title="email"><i class="fa fa-envelope"></i></a><a href="https://twitter.com/cboettig" title="Twitter"> <i class="fa fa-twitter"></i></a> <a href="https://github.com/cboettig" title="GitHub"><i class="fa fa-github"></i></a> |  
 GSI        | [TBD](mailto:) <a href="mailto:" title="email"><i class="fa fa-envelope"></i></a> <a href="https://github.com/" title="GitHub"><i class="fa fa-github"></i></a> |  
@@ -14,9 +17,9 @@ CCN        | 46582                                    |
 
 
 
-## Course Description
+## Overview
 
-Many of the greatest challenges we face today come from understanding and interacting with the natural world: from global climate change to the sudden collapse of fisheries and forests, from the spread of disease and invasive species to the unknown wealth of medical, cultural, and technological value we derive from nature. Advances in satellites and micro-sensors, computation, informatics and the Internet have made available unprecedented amounts of data about the natural world, and with it, new challenges of sifting, processing and synthesizing large and diverse sources of information. In this course, students will learn and apply fundamental computing, statistics and modeling concepts to a series of real-world ecological and environmental data sets. Through this hands-on approach, students will learn more about issues in the natural world while also developing the practical skills for working with heterogeneous real-world data encountered in all areas of data science.
+
 
 In this course, students will learn the fundamentals of modern data science, computing, statistics and modeling to leading questions in ecology and environmental science. Students will master R programming techniques, relational database fundamentals, data management, version control, working with remote data and REST APIs, collaborative and reproducible research practices and workflow while analyzing issues pertaining to topics such as global climate change, ecological population dynamics, fisheries collapse and mass extinctions.
 

@@ -31,16 +31,16 @@
   </url>
   
   <url>
-    <loc>/index/</loc>
-  </url>
-  
-  <url>
     <loc>/modules/</loc>
   </url>
   
   <url>
     <loc>/tags/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tools/</loc>
   </url>
   
 </urlset>

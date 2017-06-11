@@ -42,6 +42,7 @@ should be submitted as instructed.
 
 Grades will be assigned using the following weighted components:
 
+{.table .table-striped}
  component     | weight   
 ---------------|-----
 Final Project  | 30% 
