@@ -35,6 +35,10 @@
   </url>
   
   <url>
+    <loc>/modules/</loc>
+  </url>
+  
+  <url>
     <loc>/tags/</loc>
     <priority>0</priority>
   </url>

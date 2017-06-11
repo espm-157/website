@@ -1,8 +1,8 @@
-baseurl = "espm-157"
+baseurl = "/espm-157"
 languageCode = "en-us"
 defaultContentLanguage = "en-us"
 title = "ESPM 157"
-theme = "cboettig"
+theme = "material"
 #disqusShortname = ""
 # googleAnalytics = ""
 paginate = 7
@@ -23,7 +23,6 @@ publishDir = "docs"
   bio = ""
   job = "Assistant Professor"
   location = "UC Berkeley"
-  # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
   gravatarEmail = "cboettig@gmail.com"
   # Your profile picture
 #  picture = ""
@@ -36,7 +35,6 @@ publishDir = "docs"
   name = "Home"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-home\"></i>"
   url = "/"
-
 [[menu.main]]
   weight = 2
   identifier = "syllabus"
@@ -63,95 +61,9 @@ publishDir = "docs"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-stack-overflow\"></i>"
   url = "https://stackoverflow.com/"
 
-#[[menu.misc]]
-#  weight = 0
-#  identifier = "rss"
-#  name = "RSS"
-#  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-rss\"></i>"
-#  url = "/index.xml"
+
 
 [params]
-  # Customize date format use to render blog post date, categories and other
-  # You must use date format used by Go Time package https://golang.org/pkg/time/
-  # Months (not work with short month like "jan", "feb", etc) are translated if translation exists on i18n folders
-  # Default format is: January 2, 2006 
-  # dateFormat = "2 January 2006"
+  dateFormat = "January 2, 2006"
+  background = "https://climate.nasa.gov/system/internal_resources/details/original/417_1263_banner-science-1600x500.jpg"
 
-  # Global keywords configuration. Following keywords will be add to every pages
-  # keywords = []
-
-  # Hide sidebar on all article page to let article take full width to improve reading, and enjoy wide images and cover images. (true: enable, false: disable)
-  clearReading = true
-
-  # Define categories will create hierarchy between parents: `categories = ["foo", "bar"]` will consider "bar" a sub-category of "foo". 
-  # If false it will flat categories.
-  hierarchicalCategories = true
-
-  description = ""
-
-  # Customization
-  # Define the behavior of the sidebar
-  # 1: Display extra large sidebar on extra large screen, large sidebar on large screen,
-  #    medium sidebar on medium screen and header bar on small screen and
-  #    extra large sidebar is swiped on extra large screen and large sidebar on all lower screen (default)
-  # 2: Display large sidebar on large screen, medium sidebar on medium screen and
-  #    header bar on small screen and large sidebar is swiped
-  # 3: Display medium sidebar on large and medium screen and header bar on small screen and
-  #    medium sidebar is swiped
-  # 4: Display header bar on all screens, extra large sidebar is swiped on extra large screen and
-  #    large sidebar is swiped on all lower screens
-  # 5: Display header bar on all screens and large sidebar is swiped on large screen
-  # 6: Display header bar on all screens and medium sidebar is swiped
-  sidebarBehavior = 1
-
-  # Your blog cover picture. I STRONGLY recommend you to use a CDN to speed up loading of pages.
-  # Otherwise put your image in folder `static/_images/` (development)  or in `source/assets/images/` if you can't or don't want to build the theme,
-  # and use relative url : `your-image.png`
-  coverImage = "http://res.cloudinary.com/ddjqmou3y/image/upload/v1492645918/cover_vkyvf6.jpg"
-
-  # Display an image gallery at the end of a post which have photos variables (false: disabled, true: enabled)
-  imageGallery = true
-
-  # Display thumbnail image of each post on index pages (false: disabled, true: enabled)
-  thumbnailImage = true
-  # Display thumbnail image at the right of title in index pages (`right`, `left` or `bottom`)
-  # Set this value to `right` if you have old posts to keep the old style on them
-  # and define `thumbnailImagePosition` on a post to overwrite this setting
-  thumbnailImagePosition = "bottom"
-  # Automatically select the cover image or the first photo from the gallery of a post if there is no thumbnail image as the thumbnail image
-  # Set this value to `true` if you have old posts that use the cover image or the first photo as the thumbnail image
-  # and set `autoThumbnailImage` to `false` on a post to overwrite this setting
-  autoThumbnailImage = true
-
-  # Your favicon path, default is "/favicon.png"
-  # favicon = "/favicon.png"
-
-  # Header configuration
-  # The link at the right of the header is customizable
-  # You can add a link (as an icon) at the right of the header instead of the author's gravatar image or author's picture.
-  # By default, author's gravatar or author's picture is displayed.
-  #     url: /#search
-  #     icon: search
-  #     class: st-search-show-outputs
-
-  # Custom CSS. Put here your custom CSS files. They are loaded after the theme CSS;
-  # they have to be referred from static root. Example
-  # customCSS = ["css/foo.css"]
-
-  # Custom JS. Put here your custom JS files. They are loaded after the theme JS;
-  # they have to be referred from static root. Example
-  # customJS = ["js/foo.js"]
-
-  [params.header.rightLink]
-    class = ""
-    icon = ""
-    url = "/#about"
-
-  # Customize like of athor avatar in sidebar
-  # [params.sidebar.profile]
-  #   url = "/#about"
-
-
-  # Customize copyright value "© 2016 <CUSTOMIZATION>. All Rights Reserved"
-   [params.footer]
-     copyright = "<a rel=\"license\" property=\"http://creativecommons.org/ns#license\" href=\"http://creativecommons.org/licenses/by/4.0/\" ><img src=\"https://i.creativecommons.org/l/by/4.0/88x31.png\" alt=\"cc-by\"/></a>"
