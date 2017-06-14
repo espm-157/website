@@ -15,13 +15,85 @@ library(tidyverse)
 Data from <http://dx.doi.org/10.5441/001/1.j900f88t>
 
 
-```{r}
-buffalo_meta <- read_csv("https://www.datarepository.movebank.org/bitstream/handle/10255/move.611/Kruger%20African%20Buffalo%2c%20GPS%20tracking%2c%20South%20Africa-reference-data.csv")
+```{r message=FALSE}
+#buffalo_meta <- read_csv("https://www.datarepository.movebank.org/bitstream/handle/10255/move.611/Kruger%20African%20Buffalo%2c%20GPS%20tracking%2c%20South%20Africa-reference-data.csv")
+
+buffalo_meta <- read_csv("../data/buffalo-meta.csv")
 ```
 
 ```{r}
-buffalo <- read_csv("https://www.datarepository.movebank.org/bitstream/handle/10255/move.610/Kruger%20African%20Buffalo%2c%20GPS%20tracking%2c%20South%20Africa.csv")
+#buffalo <- read_csv("https://www.datarepository.movebank.org/bitstream/handle/10255/move.610/Kruger%20African%20Buffalo%2c%20GPS%20tracking%2c%20South%20Africa.csv")
+
+buffalo <- read_csv("../data/buffalo.csv")
 buffalo
 ```
 
+```{r}
+p4s <- "+init=epsg:4326 +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs +towgs84=0,0,0"
+```
+
+- `sf`: a Simple Feature data.frame
+- `sfc`: Simple Feature column, containing the geometry of a simple feature frame.
+- `sfg`: a Simple Feature Geometry
+
+Hack cooridnates into WKT format to exploit conversion from CSV
+
+```{r}
+buffalo %>%
+  rename(X = `location-lat`, Y = `location-long`) %>%
+  mutate(WKT = paste0("POINT (", X, " ", Y, ")")) %>%
+  select(-X, -Y) %>%
+  write_csv("buffalo_st.csv")
+buffalo_st <- st_read("buffalo_st.csv")
+
+st_crs(buffalo_st) <- p4s
+
+```
+
+
+
+```{r}
+
+#buffalo %>% rowwise() %>% summarise(long = `location-long`, lat=`location-lat`)
+
+## better than purrrlyr::by_rows
+## need dplyr >= 0.7.0 to support list-columns
+
+buffalo_sf <-
+buffalo %>%
+  rowwise() %>%
+  mutate(geometry = 
+           st_geometry(
+             st_point(c(`location-long`, `location-lat`)))) %>% 
+  ungroup() # remove rowwise class
+
+# nope
+# class(buffalo_sf) <- c("sf", class(buffalo_sf))
+
+st_crs(buffalo_sf) <- p4s
+```
+
+Construct a multipoint geometry. (but, we want 1 geometry per entry!)
+
+```{r}
+sfg <- st_multipoint(as.matrix(buffalo[c("location-long", "location-lat")]))
+sfc <- st_geometry(sfg)
+st_crs(sfc) <- p4s
+```
+
+```{r}
+library(sp)
+buffalo_sp <- SpatialPointsDataFrame(coords = buffalo[c("location-long", "location-lat")], 
+                                     data = buffalo, 
+                                     proj4string = sp::CRS(p4s))
+
+sf <- as(buffalo_sp, "sf")
+
+#sf2 <- st_as_sf(buffalo_sp) #identical to above
+# sfc <- st_as_sfc(buffalo_sp) # identical to st_geometry(sf)
+```
+
+
 Look at env var layers from <https://www.movebank.org/node/7471>
+
+http://proj4.org/faq.html
