@@ -1,0 +1,398 @@
+---
+title: "Extinctions Unit"
+author: "Carl Boettiger"
+maketitle: true
+output:
+  rmdshower::shower_presentation:
+    self_contained: true
+    katex: true
+    theme: material
+---
+
+
+
+```{r include=FALSE}
+library("tidyverse")
+#library("printr")
+knitr::opts_chunk$set(comment=NA)
+```
+
+# Extinctions Module
+
+
+## Extinctions Module
+
+_Are we experiencing the sixth great extinction?_  
+
+What is the current pace of extinction? Is it accelerating? How does it compare to background extinction rates?
+
+
+## Background
+
+- [Section Intro Video](https://youtu.be/QsH6ytm89GI)
+- [Ceballos et al (2015)](http://doi.org/10.1126/sciadv.1400253)
+
+
+## Computational Topics
+
+- Accessing data from a RESTful API
+- Error handling
+- JSON data format
+- Regular expressions
+- Working with missing values
+
+
+
+## Additional references:
+
+- http://www.hhmi.org/biointeractive/biodiversity-age-humans (Video)
+- [Barnosky et al. (2011)](http://doi.org/10.1038/nature09678)
+- [Pimm et al (2014)](http://doi.org/10.1126/science.1246752)
+- [Sandom et al (2014)](http://dx.doi.org/10.1098/rspb.2013.3254)
+
+
+
+## Accessing Data from a REST API
+
+
+- **RE**presentational State Transfer 
+
+- **A**plication **P**rogramming **I**nterface
+
+
+![](http://maxoffsky.com/word/wp-content/uploads/2012/11/RESTful-API-design-1014x457.jpg)
+
+
+
+## IUCN Redlist API
+
+Example API call: 
+
+`http://api.iucnredlist.org/index/species/Acaena-exigua.json`
+
+
+## Working with JSON data
+
+
+
+```json
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "isAlive": true,
+  "age": 25,
+  "address": {
+    "streetAddress": "21 2nd Street",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": "10021-3100"
+  },
+  "phoneNumbers": [
+    {
+      "type": "home",
+      "number": "212 555-1234"
+    }
+  ]
+}
+```
+
+
+
+
+```{r}
+
+library("jsonlite")
+
+data <- fromJSON(
+'{
+  "firstName": "John",
+  "lastName": "Smith",
+  "isAlive": true,
+  "age": 25,
+  "address": {
+    "streetAddress": "21 2nd Street",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": "10021-3100"
+  },
+  "phoneNumbers": [
+    {
+      "type": "home",
+      "number": "212 555-1234"
+    }
+  ]
+}')
+
+data$address$
+
+
+```
+
+
+
+## CURL and REST
+
+```{r}
+library("httr")
+
+resp <- httr::GET("http://api.iucnredlist.org/index/species/Acaena-exigua.json")
+#content(resp, as = "text")
+```
+
+## CURL and REST
+
+
+```{r}
+data <- content(resp)
+class(data)
+```
+
+How'd it know??
+
+## Understanding a response object
+
+```{r}
+resp$headers$`content-type`
+```
+
+
+## Parsing JSON
+
+```{r}
+hawaii_rose <- fromJSON(content(resp, as="text"))
+hawaii_rose
+```
+
+## explicit parsing, robust format
+
+```{r}
+hawaii_rose <- fromJSON(content(resp, as="text"), simplifyVector = FALSE)
+```
+
+
+
+# Working with Regular Expressions
+
+- [Self-guided Tutorial](http://regexone.com/)
+- [Cheetsheet](http://www.cheatography.com/davechild/cheat-sheets/regular-expressions/)
+- [stringr RegEx Vignette](https://cran.r-project.org/web/packages/stringr/vignettes/regular-expressions.html)
+
+example_string = "The last known individual of <em>A. exigua</em> was discovered in 1990s and has since died."
+
+Match exactly 4 digits: `'\d{4}'`
+
+
+```{r}
+example_string = "The last known individual of <em>A. exigua</em> was discovered in 1990s and has since died."
+stringr::str_extract(example_string, "\\d{4}") 
+```
+
+
+
+
+# Calculating Extinction Rates: Putting it all together
+
+First, to know what queries to make to the IUCN REST API, we need a list of extinct species names.  This information can be downloaded from the IUCN website, but unfortunately this is not easily automated.  Thus we'll download the data file using a copy already prepared for the course: 
+
+
+```{r}
+extinct = read_csv("http://berkeley.carlboettiger.info/espm-88b/extinction/data/extinct.csv")
+extinct
+```
+
+```{r}
+
+get_rationale <- function(x){
+   paste0("http://api.iucnredlist.org/index/species/", x$Genus, "-", x$Species, ".json") %>%
+   httr::GET() -> resp
+  
+   if(resp$status_code == 200){
+   content(resp) -> json
+     if("rationale" %in% names(json[[1]])){
+       
+         json[[1]]$rationale
+        
+
+     } else {
+       NA
+     }
+   } else {
+     NA
+   }
+}
+
+get_rationale(extinct[3,])
+```
+
+```{r}
+
+extinct[1:5,] %>% 
+  select(Genus, Species) %>% 
+ purrr::by_row(get_rationale, .to = "rationale", .collate = "rows") -> df
+
+df %>% mutate(last_seen = stringr::str_extract(rationale, "\\d{4}"))
+```
+
+```{r}
+resp <- httr::GET("http://api.iucnredlist.org/index/species/Acaena-exigua.json")
+json <- content(resp)
+json[[1]]$rationale
+stringr::str_extract(example_string, "\\d{4}") 
+
+```
+
+
+
+
+## Getting a Date using RegEx
+
+Next, we will need a function that can extract a date from the text of the "rationale" column returned by the API. Here we'll use our knowledge of *regular expressions*.  Our function must meet the following criteria:
+
+- Return the year from a string of text.
+- Return `NA` (for missing value) if no date can be found
+- Format the date year as a numeric value
+
+
+
+## Calling the API & Error Handling
+
+```{r}
+library(httr)
+
+extinct[1:5,] %>% 
+  select(Genus, Species) %>% 
+  purrr::by_row(function(x){
+  paste0('http://api.iucnredlist.org/index/species/', x$Genus, '-', x$Species, '.json')
+}, 
+.to = "last_seen", .collate = "rows") -> df
+
+df
+```
+
+```{r}
+get_rationale <- function(x){
+    resp <- paste0('http://api.iucnredlist.org/index/species/', x$Genus, '-', x$Species, '.json') %>%
+      httr::GET()
+    
+    if(resp$status_code == 200){
+      out <- 
+        resp %>%
+        httr::content(as = "text") %>%
+        fromJSON(simplifyVector = FALSE)
+      
+      if(!is.null(out[[1]]$rationale)){
+        as.character(out[[1]]$rationale)
+      } else {
+        as.character(NA)
+      }
+      
+    } else {
+    as.character(NA)
+    }
+}
+```    
+
+
+```{r}
+df <- extinct[1:10,] %>% 
+  select(Genus, Species, `Species ID`) %>% 
+  purrr::by_row(get_rationale, .to = "rationale", .collate = "rows") 
+df
+
+
+```
+
+
+## Here we go
+
+```{r}
+df <- extinct %>% 
+    select(Genus, Species, `Species ID`) %>% 
+    purrr::by_row(get_rationale, .to = "rationale", .collate = "rows") 
+df
+
+
+```
+
+
+```{r}
+
+df %>% mutate(last_seen = as.numeric(str_extract(rationale, "\\d{4}"))) -> dates
+
+```
+
+## Histogram of Extinction Dates
+
+We can get a sense for the tempo of extinctions by plotting extinctions since 1500 in 25-year interval bins.  
+
+```{r}
+dates %>% ggplot(aes(last_seen)) + geom_histogram()
+```
+
+# Exercises
+
+
+# Question 1: Extinctions by group
+
+A. Compute the number of extinctions from 1500 - 1900 and from 1900 to present of each of the following taxonomic groups: 
+
+  - Vertebrates
+  - Mammals
+  - Birds
+  - Fish
+  - Amphibians
+  - Reptiles
+  - Insects
+  - Plants
+
+Compare your estimates to Table 1 of [Ceballos et al (2015)](http://doi.org/10.1126/sciadv.1400253).  
+
+
+## Question 2: Weighing by number of species
+
+
+The number of species going extinct per century in a given taxonomic group will be influenced by how many species are present in the group to begin with. (For an obvious example, the number of vertebrate extinctions is always going to be higher than the number of mammal extinctions, since mammals are vertebrates).  Overall, these numbers do not change greatly over a period of a few hundred years, so we were able to make the relative comparisons between the roughly pre-industrial and post-industrial periods above.  
+
+As discussed by Tony Barnosky in the introductory video (or in [Ceballos et al (2015)](http://doi.org/10.1126/sciadv.1400253) paper), if we want to compare these extinction rates against the long-term palentological record, it is necessary to weigh the rates by the total number of species. That is, to compute the number of extinctions per million species per year (MSY; equivalently, the number extinctions per 10,000 species per 100 years).  
+
+A) First, we will compute how many species are present in each of the taxonomic groups.  To do so, we need a table that has not only extinct species, but all assessed species.  We will once again query this information from the IUCN API.
+
+
+This is going to involve a lot of data -- more than the API can serve in a single chunk.  Instead, the API breaks the returns up into groups of 10,000 species per page (see API docs: http://apiv3.iucnredlist.org/api/v3/docs#species).  Luckily, the API also tells us the total number of species:
+
+http://apiv3.iucnredlist.org/api/v3/speciescount?token=9bb4facb6d23f48efbf424bb05c0c1ef1cf6f468393bc745d42179ac4aca5fee
+
+The code below queries the first page.  How many pages will we need to get all the data?  Modify the example below to collect all of the data into a single DataFrame.  Note the use of `append` to add data to an existing data.frame with matching column labels.  
+
+
+```{r}
+## Assignment: Adjust this code so that it reads in all pages, not just the first page:
+# Uses API V3, which requires a token.  Note here we just use the public token.
+link <- paste0("http://apiv3.iucnredlist.org/api/v3/species/page/", as.character(1:10), "?token=9bb4facb6d23f48efbf424bb05c0c1ef1cf6f468393bc745d42179ac4aca5fee")
+
+
+
+r <- httr::GET(link)
+out <- httr::content(r)
+out$result %>% 
+  purrr::map_df(function(x) x %>% unlist() %>% enframe() %>% spread(name, value)) -> 
+  all_species
+
+```
+
+B) Based on the complete data, write queries that count the number of species in each group.  Then use these numbers to compute MSY, the number extinctions per 10,000 species per 100 years, for each of the groups listed in Question 1.  How do your estimates compare to the overall historical average of about 2 MSY?
+
+## Question 3: Improving our algorithm
+
+
+In parsing the data with regular expressions, we encountered certain data that resulted in missing values.  Identify and investigate the strings for which we were not able to extract a date value.  
+
+- Why did the date extraction fail?  
+- Can you deduce an approximate date by examining the text? 
+- Can you modify the regular expression to reduce the number of missing values?  
+- How do these missing values impact our overall estimate of the extinction rate? (In which direction, and by approximately what amount?)
+
+
+## Question 4: Looking forward (bonus)
+
+Plot the MSY rates in intervals of 50 years for each of the groups as a line plot (compare to Figure 1a of [Ceballos et al (2015)](http://doi.org/10.1126/sciadv.1400253) paper).  Compute the slope of these curves to forecast the extinction rate in 2100.  

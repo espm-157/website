@@ -1,0 +1,22 @@
+---
+title: "Stochasticity exercises"
+---
+
+## Exercise 1: Environmental noise
+
+1. Run multiple replicates of the simulation with logistic growth shown in class (leaving the parameters fixed) and plot the results.
+1. Repeat the averaging process we showed above for the exponential growth model.  What happens?  Do the results match the deterministic case?  
+
+## Exercise 2: Bet-hedging
+
+Can two losing strategies make for a winning strategy?  Modify the exponential growth simulation to include a population in which a fraction `p` execute strategy A (seeds germinate and reproduce or die depending on weather conditions)  and a fraction `1-p` take strategy B and remain in the ground (seed bank), where they cannot reproduce but experience only a small probability of mortality.  Each year compute the updated population in the seed bank as the sum of of the contribution from strategy A and B, re-assign all new seeds to a strategy, and continue. 
+
+Strategy A: Germinate with probability `p`
+  - Heads: Good year! Each individual contributes 4 new seeds to the seed bank.  
+  - Tails: Bad year! Only 1/5th of the population survives to contribute a seed back to the seed bank. 
+
+Strategy B: Remain in seed bank (probability `(1-p)`), no offspring.  5% die each year
+
+1. Explore how the long-term outcome (*not* the average outcome) depends on the value of `p`.  Does the population look like it will persist? 
+1.  Vary the fraction of individuals allocated to Stategy B (the 'seed bank') vs that allocated to Strategy A by trying different values of `p`.  What do you observe?  Can this combination of losing stragies be successful?  How?  Can you determine the optimal stategy?  
+
