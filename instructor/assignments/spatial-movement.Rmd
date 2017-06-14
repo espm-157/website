@@ -1,0 +1,27 @@
+---
+title: "spatial movement data"
+author: "Carl Boettiger"
+date: "6/13/2017"
+output: html_document
+---
+
+
+
+```{r message=FALSE}
+library(sf)
+library(tidyverse)
+```
+
+Data from <http://dx.doi.org/10.5441/001/1.j900f88t>
+
+
+```{r}
+buffalo_meta <- read_csv("https://www.datarepository.movebank.org/bitstream/handle/10255/move.611/Kruger%20African%20Buffalo%2c%20GPS%20tracking%2c%20South%20Africa-reference-data.csv")
+```
+
+```{r}
+buffalo <- read_csv("https://www.datarepository.movebank.org/bitstream/handle/10255/move.610/Kruger%20African%20Buffalo%2c%20GPS%20tracking%2c%20South%20Africa.csv")
+buffalo
+```
+
+Look at env var layers from <https://www.movebank.org/node/7471>
