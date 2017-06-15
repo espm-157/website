@@ -7,6 +7,7 @@ output: html_document
 
 See:
 
+- <http://robinlovelace.net/geocompr/index.html>
 - <https://cran.r-project.org/web/packages/sf/vignettes/sf1.html>
 - <https://cran.r-project.org/web/packages/sf/vignettes/sf2.html>
 - <http://strimas.com/r/tidy-sf/>
@@ -17,13 +18,20 @@ See:
 library(sf)
 library(tidyverse)
 
-library(maps)
-library(mapdata)
+library(maps)    # for low-res country maps
+library(mapdata) # for higher-res country maps
 ```
 
 
 
-Data from <http://dx.doi.org/10.5441/001/1.j900f88t>
+Consdier spatio-temporal data with `stars` package: 
+
+```{r}
+#devtools::install_github("r-spatial/stars", update = FALSE)
+
+```
+
+Buffalo movement data from <http://dx.doi.org/10.5441/001/1.j900f88t>
 
 
 ```{r message=FALSE}
