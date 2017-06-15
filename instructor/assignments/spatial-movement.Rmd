@@ -7,15 +7,18 @@ output: html_document
 
 See:
 
-- https://cran.r-project.org/web/packages/sf/vignettes/sf1.html
-- https://cran.r-project.org/web/packages/sf/vignettes/sf2.html
-- http://strimas.com/r/tidy-sf/
+- <https://cran.r-project.org/web/packages/sf/vignettes/sf1.html>
+- <https://cran.r-project.org/web/packages/sf/vignettes/sf2.html>
+- <http://strimas.com/r/tidy-sf/>
 
 
 
 ```{r message=FALSE}
 library(sf)
 library(tidyverse)
+
+library(maps)
+library(mapdata)
 ```
 
 
@@ -43,6 +46,15 @@ buffalo_sf <- st_as_sf(buffalo, coords = c("location-long", "location-lat"), crs
 ```{r}
 buffalo_sf %>% filter(`individual-local-identifier`=="Queen", timestamp < as.POSIXct("2005-05-01")) %>%
   ggplot() + geom_sf(size=0.2, shape="+")
+```
+
+Note: also see maps in `spData` package.  
+
+```{r}
+#sa <- map("worldHires","South Africa", plot=FALSE)
+st_as_sf(map('world', "South Africa", plot = FALSE, fill = TRUE, xlim = c(14,35), ylim=c(-35,-20))) %>% 
+  st_transform(4326) %>%
+  ggplot() + geom_sf() 
 ```
 
 
