@@ -12,6 +12,9 @@ See:
 - <https://cran.r-project.org/web/packages/sf/vignettes/sf2.html>
 - <http://strimas.com/r/tidy-sf/>
 
+For plotting vector & raster on interactive plots:
+
+- <https://github.com/r-spatial/mapview> extends leaflet
 
 
 ```{r message=FALSE}
@@ -20,6 +23,7 @@ library(tidyverse)
 
 library(maps)    # for low-res country maps
 library(mapdata) # for higher-res country maps
+library(mapview) #interactive maps, raster + vector layers
 ```
 
 
