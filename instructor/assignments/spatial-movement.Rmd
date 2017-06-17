@@ -114,7 +114,7 @@ queen %>%
 Hmm, that seems like a lot of work.  Can't we just get some standard map layers for our data? And some nice interactive zoom/pan features?
 
 ```{r}
-mapview(queen)
+mapview(queen, zcol="timestamp")
 ```
 
 Yeah, that's more like it.
