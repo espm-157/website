@@ -55,12 +55,24 @@ buffalo
 buffalo_sf <- st_as_sf(buffalo, coords = c("location-long", "location-lat"), crs=4326)
 ```
 
+One of the best things about the `sf` library is that we can leverage all of our `dplyr` verbs to manipulate the laters.  For instance, this `buffalo` movement data sure has a lot of records.  Let's subset it to focus only the individual named "Queen" and use the first two months of data:
+
+
 ```{r}
-buffalo_sf %>% filter(`individual-local-identifier`=="Queen", timestamp < as.POSIXct("2005-05-01")) %>%
+queen <-
+buffalo_sf %>% 
+  filter(`individual-local-identifier`=="Queen") %>%
+  filter(timestamp < as.POSIXct("2005-05-01"))
+```
+
+We can now plot this data efficiently:
+
+```{r}
+queen %>%
   ggplot() + geom_sf(size=0.2, shape="+")
 ```
 
-Note: also see maps in `spData` package.  
+Hmm, it would be helpful to have this data on a map.  Let's take a look at some of the built-in maps:
 
 ```{r}
 #sa <- map("worldHires","South Africa", plot=FALSE)
@@ -69,6 +81,7 @@ st_as_sf(map('world', "South Africa", plot = FALSE, fill = TRUE, xlim = c(14,35)
   ggplot() + geom_sf() 
 ```
 
+Maybe we want finer resolution:
 
 ```{r}
 download.file("http://biogeo.ucdavis.edu/data/gadm2.8/shp/ZAF_adm_shp.zip", "sa.shp.zip")
@@ -90,9 +103,7 @@ b <- st_bbox(buffalo_sf)
 ```{r}
 kruger <- south_africa %>% filter(NAME_1 %in% c("Limpopo", "Mpumalanga"))
 
-buffalo_sf %>% 
-  filter(`individual-local-identifier`=="Queen") %>%
-  filter(timestamp < as.POSIXct("2005-05-01")) %>%
+queen %>%
   ggplot()  + 
   geom_sf(data = kruger) +
   geom_sf()  # map first, pts on top
@@ -100,6 +111,13 @@ buffalo_sf %>%
   #coord_sf(xlim = c(b['xmin'], b['xmax']), ylim = c(b['ylim'], b['ymax']))
 ```
 
+Hmm, that seems like a lot of work.  Can't we just get some standard map layers for our data? And some nice interactive zoom/pan features?
+
+```{r}
+mapview(queen)
+```
+
+Yeah, that's more like it.
 
 ----------
 
