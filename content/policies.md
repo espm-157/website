@@ -1,6 +1,7 @@
 ---
 title: "Policies"
 date: "2017-04-13T00:00:00"
+markup: "mmark"
 ---
 
 
@@ -43,7 +44,8 @@ should be submitted as instructed.
 Grades will be assigned using the following weighted components:
 
 {.table .table-striped}
- component     | weight   
+
+component      | weight   
 ---------------|-----
 Final Project  | 30% 
 HW Exercises   | 60% 
