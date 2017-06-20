@@ -190,6 +190,8 @@ sf <- as(buffalo_sp, "sf")
 # sfc <- st_as_sfc(buffalo_sp) # identical to st_geometry(sf)
 ```
 
+Consider Albatross data, study id: 2911040
+
 
 Look at env var layers from <https://www.movebank.org/node/7471>
 
