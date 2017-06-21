@@ -24,11 +24,51 @@ library(tidyverse)
 library(maps)    # for low-res country maps
 library(mapdata) # for higher-res country maps
 library(mapview) #interactive maps, raster + vector layers
+
+library(leaflet)
+```
+
+
+```{r message=FALSE}
+#library(move)
+#devtools::install_github("cboettig/movebank")
+library(movebank)
+readRenviron("../../.Renviron")
+#study <- movebank("study", id = 2911040)
+#individuals <- movebank("individuals", study_id = 2911040)
+albatross <- movebank("event", study_id = 2911040)
+```
+
+```{r}
+albatross_sf <- 
+  albatross %>%
+  na.omit() %>%
+  st_as_sf(coords = c("location_long", "location_lat"), crs=4326)
+```
+
+```{r}
+albatross_sf %>% group_by(individual_id) %>% tally()
+albatross_sf %>% filter(individual_id %in% c(2911059,2911062)) %>% mapview(zcol="individual_id")
+
+```
+
+
+```{r}
+## Leaflet doesn't do "point" and "mutipoint" for `sf` objects directly, but we can combine leaflet and mapview
+#albatross_sf %>% filter(individual_id %in% c(2911059,2911062)) %>% leaflet()
+data(quakes)
+q <- st_as_sf(quakes[1:20,], coords = c("long", "lat"), crs=4326)
+# Show first 20 rows from the `quakes` dataset
+mapview(q)@map %>% addTiles() %>%
+  addMarkers(data = quakes[1:20,], ~long, ~lat, popup = ~as.character(mag), label = ~as.character(mag))
 ```
 
 
 
-Consdier spatio-temporal data with `stars` package: 
+----
+
+
+Consider spatio-temporal data with `stars` package: 
 
 ```{r}
 #devtools::install_github("r-spatial/stars", update = FALSE)
