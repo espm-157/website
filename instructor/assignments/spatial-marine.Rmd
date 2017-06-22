@@ -1,0 +1,82 @@
+---
+title: "R Notebook"
+output: 
+  html_document:
+    self_contained: false
+
+---
+
+```{r}
+#install.packages("mregions")
+#devtools::install_github("iobis/robis")
+
+#library("robis")
+library("mregions")
+library("dplyr")
+library("ggplot2")
+library("mapview")
+library("sf")
+```
+
+Types: EEZ, LME, FAO, IHO, EEZ Boundaries.  
+
+```{r}
+
+eez <- mr_shp("MarineRegions:eez", read=FALSE, maxFeatures = 100)
+#eez <- mr_shp("MarineRegions:eez", read=FALSE, maxFeatures = 1e4)
+eez_sf <- read_sf(eez)
+
+#plot(eez_sf)
+ggplot(eez_sf) + geom_sf()
+```
+
+
+```{r}
+mapview(eez_sf, zcol="sovereign1")
+```
+
+
+
+
+```{r}
+eezs <- mr_records_by_type(type = "EEZ")
+eez_codes <- mr_names("MarineRegions:eez")
+
+
+eezs %>% rename(mrgid = MRGID) %>% mutate(mrgid = as.character(mrgid)) %>% left_join(eez_codes) %>% as_tibble -> eez
+
+```
+
+
+```{r}
+fao <- mr_records_by_type(type = "FAO fishing areas")
+fao_codes <- mr_names("MarineRegions:fao")
+
+
+eezs %>% rename(mrgid = MRGID) %>% mutate(mrgid = as.character(mrgid)) %>% left_join(eez_codes) %>% as_tibble -> eez
+
+```
+
+
+```{r}
+require(robis)
+require(dplyr)
+require(ggplot2)
+
+data <- occurrence(resourceid = 586)
+
+afil <- data %>% 
+  filter(scientificName == "Amphiura filiformis") %>%
+  group_by(locality) %>% 
+  summarise(n = mean(individualCount), 
+            lon = mean(decimalLongitude), 
+            lat = mean(decimalLatitude), 
+            depth = mean(minimumDepthInMeters))
+
+ggplot() + geom_point(data = afil, aes(lon, lat, size = n, colour = depth)) +
+  scale_colour_distiller(palette = "Spectral") +
+  theme(panel.background = element_blank()) + 
+  coord_fixed(ratio = 1) + scale_size(range = c(2, 12))
+
+
+```
