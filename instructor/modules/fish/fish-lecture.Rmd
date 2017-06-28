@@ -1,0 +1,308 @@
+---
+title: "Fisheries Collapse"
+author: "Carl Boettiger"
+maketitle: false
+output:
+  rmdshower::shower_presentation:
+    self_contained: false
+    katex: true
+    theme: material
+    ratio: 16x10
+
+---
+
+```{r}
+knitr::opts_chunk$set(message=FALSE, warning = FALSE)
+```
+
+# Unit III: Global Fisheries Collapse?
+
+
+## Introduction
+
+- [Atlantic Cod History](https://www.youtube.com/watch?v=3fCX6XKzbUY)
+- ["End of the Line" Trailer](https://www.youtube.com/watch?v=H6WOvY_C-_I)
+
+
+
+## Atlantic Cod History
+
+
+<iframe
+width="560"
+height="315"
+src="https://www.youtube.com/embed/3fCX6XKzbUY"
+frameborder="0"
+allowfullscreen
+></iframe>
+
+
+
+
+## End of the Line
+
+
+<iframe
+width="560"
+height="315"
+src="https://www.youtube.com/embed/H6WOvY_C-_I"
+frameborder="0"
+allowfullscreen
+></iframe>
+
+
+## Cod Collapse
+
+<img src="http://berkeley.carlboettiger.info/espm-88b/fish/img/codcollapse.jpg" width=600>
+
+Source: http://www.millenniumassessment.org/documents/document.356.aspx.pdf
+
+
+## Global fisheries trends
+
+<img src="http://berkeley.carlboettiger.info/espm-88b/img/worm2006.png" width=700 height = 500>
+
+### Source: [Worm et al. 2006 _Science_](http://doi.org/10.1126/science.1132294)
+
+
+## Media version
+
+- [New York Times: "Study Sees 'Global Collapse' of Fish Species"](http://www.nytimes.com/2006/11/03/science/03fish.html?_r=0)
+- [BBC declares: 'Only 50 years left' for sea fish](http://news.bbc.co.uk/2/hi/science/nature/6108414.stm) 
+
+![](http://graphics8.nytimes.com/images/2006/11/02/us/1103-nat-webFISH.gif)
+
+
+
+
+
+
+
+## The Database
+
+[RAM Legacy Stock Assessment Database](http://ramlegacy.marinebiodiversity.ca/ram-legacy-stock-assessment-database)
+
+<img src="http://ramlegacy.marinebiodiversity.ca/ram-legacy-stock-assessment-database/ram-legacy-entity-relationship-diagram" width=700>
+
+```{r}
+library("tidyverse")
+library("readxl")
+```
+
+## Reading in the tables
+
+<!-- 
+
+```{r}
+values <- read_csv("http://berkeley.carlboettiger.info/espm-88b/fish/data/values.csv")
+assessment <- read_csv("http://berkeley.carlboettiger.info/espm-88b/fish/data/assessment.csv")
+stock <- read_csv("http://berkeley.carlboettiger.info/espm-88b/fish/data/stock.csv")
+units <- read_csv("http://berkeley.carlboettiger.info/espm-88b/fish/data/units.csv")
+area  <- read_csv("http://berkeley.carlboettiger.info/espm-88b/fish/data/area.csv")
+```
+
+
+-->
+
+
+
+
+```{r, message=FALSE, warning=FALSE}
+download.file("https://depts.washington.edu/ramlegac/wordpress/databaseVersions/RLSADB_v3.0_(assessment_data_only)_excel.zip", 
+              "ramlegacy.zip")
+path <- unzip("ramlegacy.zip")
+sheets <- readxl::excel_sheets(path)
+ram <- lapply(sheets, readxl::read_excel, path = path)
+names(ram) <- sheets
+
+## Name the available tables:
+names(ram)
+```
+
+
+
+
+## Exploring the Database: a bird's eye view
+
+- "Tidy Data": Codd's Third Normal form:
+
+> Each row must describe the Key, the Whole Key, and Nothing But the Key (so help me Cobb)
+
+
+
+## What is a Stock Assessment?
+
+- From the Assessment Table, id: http://www.afsc.noaa.gov/REFM/docs/2010/GOApop.pdf
+- From said pdf, methods (in 2009 assessment): http://www.afsc.noaa.gov/refm/docs/2009/GOApop.pdf
+
+
+
+
+> When treated this way, our stock assessment is a large Bayesian model, which includes
+informative (e.g., lognormal natural mortality with a small CV) and noninformative (or nearly so, such as
+a parameter bounded between 0 and 10) prior distributions. In the model presented in this SAFE report,
+the number of parameters estimated is 134.
+
+-- http://www.afsc.noaa.gov/refm/docs/2009/GOApop.pdf pg 757
+
+
+## Task 1: Investigating Cod Collapse
+
+<img src="http://berkeley.carlboettiger.info/espm-88b/fish/img/codcollapse.jpg" width=600>
+
+
+## Step 1: Joining up the data
+
+
+
+We want a table with the following additional columns: `"country"`, `"ssb_unit"`, `"catch_landings_unit"`, `"scientificname"`, `"commonname"`, `"year"`, `"ssb"`, and `"TC"` columns.  
+
+```{r}
+ram$timeseries_values_views %>%
+  select(assessid, stockid, year, SSB, TC) %>%
+  left_join(ram$stock) %>%
+  left_join(ram$area) %>% 
+   select(assessid, stockid, scientificname, commonname, country, year, SSB, TC) %>%
+  left_join(ram$timeseries_units_views %>% 
+      rename(TC_units = TC, SSB_units = SSB)) %>% 
+   select(scientificname, commonname, country, year, SSB, TC, SSB_units, TC_units) -> 
+df
+    
+```
+
+
+## Step 2: Dealing with missing values
+
+
+```{r eval=FALSE}
+df %>% 
+  group_by(commonname, year) %>%
+  summarise(catch = sum(TC)) %>% 
+  filter(commonname == "Atlantic cod") %>%
+  ggplot(aes(year, catch)) + 
+  geom_line()
+
+```
+
+
+## Step 2: Dealing with missing values
+
+
+```{r echo = FALSE}
+df %>% 
+  group_by(commonname, year) %>%
+  summarise(catch = sum(TC)) %>% 
+  filter(commonname == "Atlantic cod") %>%
+  ggplot(aes(year, catch)) + 
+  geom_line()
+
+```
+
+
+
+
+## Step 3: Aggregating over assessments
+
+
+Different stock assessments will cover different regions and times for the same species.  To get the full picture of what is happening to any given species, we must sum up the stocks over all of these assessments in a given year.  
+
+Use `groups` to sum over the `TC` and `ssb` data for each year for each species, then select the "Atlantic cod" and plot their `TC` over time.  
+
+
+## Step 3: Aggregating over assessments
+
+```{r eval=FALSE}
+df %>% 
+  group_by(commonname, year) %>%
+  summarise(catch = sum(TC, na.rm=TRUE)) %>% 
+  filter(commonname == "Atlantic cod") %>%
+  ggplot(aes(year, catch)) + 
+  geom_line()
+
+```
+
+
+## Step 3: Aggregating over assessments
+
+```{r echo=FALSE}
+df %>% 
+  group_by(commonname, year) %>%
+  summarise(catch = sum(TC, na.rm=TRUE)) %>% 
+  filter(commonname == "Atlantic cod") %>%
+  ggplot(aes(year, catch)) + 
+  geom_line()
+
+```
+
+
+## Matching the MEA plot
+
+Not quite right!  This doesn't seem to quite match the pattern shown by Millennium Ecosystem Assessment plot.  The early years look good, but the total landings here are much larger.  Is this a real discrepancy in the data or have we forgotten something?
+
+The Millenium Ecosystem Assessment does not spell out their data sources, but it does have one hint: their figure just shows fishing off the banks of Newfoundland.  We can see where else Atlantic cod can be found by joining the `areas` table and `stockid` table:   
+
+
+Let's try just looking at all stock assessessments from Canadian waters instead.  Modify the plot to show just those cod caught by Canada. We'll need to group by an extra variable now as well.  
+
+## Matching the MEA plot
+
+```{r eval=FALSE}
+df %>% 
+  group_by(commonname, country, year) %>%
+  summarise(catch = sum(TC, na.rm=TRUE)) %>% 
+  filter(commonname == "Atlantic cod", country == "Canada") %>%
+  ggplot(aes(year, catch)) + 
+  geom_line()
+```
+
+
+## Matching the MEA plot
+
+```{r echo = FALSE}
+df %>% 
+  group_by(commonname, country, year) %>%
+  summarise(catch = sum(TC, na.rm=TRUE)) %>% 
+  filter(commonname == "Atlantic cod", country == "Canada") %>%
+  ggplot(aes(year, catch)) + 
+  geom_line()
+```
+
+
+
+
+## Accounting for units
+
+Not perfect, but much better.  What about those pesky units?  Determine whether all `CT` in your plot are using the same units: e.g. MT or (Metric Tonnes), vs E03 (thousands of fish).
+
+```{r eval=FALSE}
+df %>% filter(TC_units == "MT") %>%
+  group_by(commonname, country, year) %>%
+  summarise(catch = sum(TC, na.rm=TRUE)) %>% 
+  filter(commonname == "Atlantic cod", country == "Canada") %>%
+  ggplot(aes(year, catch)) + 
+  geom_line()
+```
+
+
+
+
+## Accounting for units
+
+
+```{r echo=FALSE}
+df %>% filter(TC_units == "MT") %>%
+  group_by(commonname, country, year) %>%
+  summarise(catch = sum(TC, na.rm=TRUE)) %>% 
+  filter(commonname == "Atlantic cod", country == "Canada") %>%
+  ggplot(aes(year, catch)) + 
+  geom_line()
+```
+
+
+
+## Accounting for units
+
+
+
+Excellent! All the same units so no need to start worrying about the average weight of a cod fish.  Our result is not a perfect match to the MEA, but pretty close.  On to part II to evaluate global collapse trends.
+

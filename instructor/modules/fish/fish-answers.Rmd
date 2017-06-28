@@ -1,0 +1,135 @@
+
+```{r include = FALSE}
+knitr::opts_chunk$set(message = FALSE)
+```
+
+# The Database
+
+[RAM Legacy Stock Assessment Database](http://ramlegacy.marinebiodiversity.ca/ram-legacy-stock-assessment-database)
+
+```{r message = FALSE}
+library("tidyverse")
+library("readxl")
+```
+
+## Reading in the tables
+
+```{r}
+download.file("https://depts.washington.edu/ramlegac/wordpress/databaseVersions/RLSADB_v3.0_(assessment_data_only)_excel.zip", 
+              "ramlegacy.zip")
+path <- unzip("ramlegacy.zip")
+sheets <- readxl::excel_sheets(path)
+ram <- lapply(sheets, readxl::read_excel, path = path)
+names(ram) <- sheets
+
+## Name the available tables:
+names(ram)
+```
+
+
+
+# Task 1: Investigating the North-Atlantic Cod
+
+We seek to replicate the following figure from the Millenium Ecosystem Assessment Project using the RAM data.
+
+![](http://berkeley.carlboettiger.info/espm-88b/fish/img/codcollapse.jpg)
+
+
+
+We want a table with the following additional columns: `"country"`, `"ssb_unit"`, `"catch_landings_unit"`, `"scientificname"`, `"commonname"`, `"year"`, `"ssb"`, and `"TC"` columns.  
+
+Not clear what kind of areas the `area` table is using, these don't appear to be LMEs, EEZs, or other obvious marine region classification.
+
+```{r}
+ram$timeseries_values_views %>%
+  select(assessid, stockid, year, SSB, TC) %>%
+  left_join(ram$stock) %>%
+  left_join(ram$area) %>% 
+  left_join(ram$timeseries_units_views %>% 
+      rename(TC_units = TC, SSB_units = SSB)) %>% 
+  select(commonname, areaname, country, year, SSB, TC,
+         TC_units, SSB_units,
+         scientificname, assessid, stockid, areaid) -> 
+df
+    
+```
+
+Exercise: map areas table into marine regions.
+
+```{r}
+georges_bank <- ram$area %>% filter(grepl("Georges Bank", areaname)) %>% pull(areaid) 
+
+df %>% filter(commonname == "Atlantic cod") %>% distinct(areaname, country, areaid) -> cod_areas
+cod_areas
+```
+
+```{r}
+ids <- cod_areas$areaid[1:8]
+ids <- cod_areas$areaid[c(1:8, 11:13)]
+ids <- cod_areas %>% filter(country == "Canada") %>% pull(areaid)
+```
+
+
+```{r }
+df %>% 
+  group_by(commonname, year) %>%
+  filter(commonname == "Atlantic cod", areaid %in% ids, TC_units == "MT") %>%
+  summarise(catch = sum(TC, na.rm =TRUE)) %>% 
+  ggplot(aes(year, catch)) + 
+  geom_line()
+
+```
+
+## Stock Collapses
+
+(catch-based calculations)
+
+```{r}
+df %>% select(stockid, TC, year) %>% 
+  filter(year > 1950, year < 2006) %>% 
+  na.omit() %>% 
+  group_by(year) %>% tally() %>% 
+  ggplot(aes(year, n)) + geom_point()
+```
+
+```{r}
+## species can either have missing data (within a series) or a time range that just doesn't span the full interval.
+core_ids <- 
+  df %>% 
+  select(stockid, TC, year) %>% 
+  filter(year >= 1950, year <= 2006) %>% 
+  na.omit() %>% ## no NAs in TC in this year interval
+  group_by(stockid) %>% 
+  tally() %>% 
+  filter(n == 2006-1950+1) %>% # has data for full range (includes NAs if they weren't ommitted)
+  pull(stockid)
+
+n <- length(core_ids)
+```
+
+
+
+```{r}
+core_stocks <-
+  df %>%  
+  select(stockid, TC, year) %>% 
+  group_by(stockid) %>% 
+  mutate(collapsed = TC < 0.10 * max(TC,na.rm=TRUE)) %>% # must be based on all data
+  filter(year >= 1950, year <= 2006, stockid %in% core_ids)  %>%
+  mutate(cumulative = cumsum(collapsed)) 
+
+#core_stocks %>% ggplot(aes(year,TC, fill=stockid)) + geom_area() + guides(fill=FALSE)
+
+## Cumulative means has experienced at least once collapse so far
+core_stocks %>% ## Core stocks only
+  group_by(year) %>%
+  summarise(fraction = sum(as.numeric(collapsed)) / length(core_ids), 
+            cumulative = sum(as.numeric(cumulative > 1)) / length(core_ids)) -> worm
+
+worm %>%
+  ggplot(aes(year, cumulative)) + 
+  geom_line(col="red") +
+  geom_line(aes(y = fraction), col="black") + 
+  scale_y_reverse( lim=c(1,0))
+
+```
