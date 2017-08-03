@@ -6,9 +6,10 @@ output:
 
 ---
 
-```{r}
+```{r message=FALSE}
 #install.packages("mregions")
 #devtools::install_github("iobis/robis")
+#devtools::install_github("hadley/ggplot2")
 
 #library("robis")
 library("mregions")
@@ -22,7 +23,7 @@ Types: EEZ, LME, FAO, IHO, EEZ Boundaries.
 
 ```{r}
 
-eez <- mr_shp("MarineRegions:eez", read=FALSE, maxFeatures = 100)
+eez <- mr_shp("MarineRegions:eez", read=FALSE, maxFeatures = 500)
 #eez <- mr_shp("MarineRegions:eez", read=FALSE, maxFeatures = 1e4)
 eez_sf <- read_sf(eez)
 
