@@ -10,7 +10,7 @@ markup: "mmark"
  <span></span>     | <span></span>
 -----------|-------------------------------------------------------------------
 Instructor | [Carl Boettiger](http://carlboettiger.info) <a href="mailto:cboettig@gmail.com" title="email"><i class="fa fa-envelope"></i></a><a href="https://twitter.com/cboettig" title="Twitter"> <i class="fa fa-twitter"></i></a> <a href="https://github.com/cboettig" title="GitHub"><i class="fa fa-github"></i></a> |  
-GSI        | [TBD](mailto:) <a href="mailto:" title="email"><i class="fa fa-envelope"></i></a> <a href="https://github.com/" title="GitHub"><i class="fa fa-github"></i></a> |  
+GSI        | [Dana Paige Seidel](https://ourenvironment.berkeley.edu/people/dana-seidel) <a href="dpseidel@berkeley.edu:" title="email"><i class="fa fa-envelope"></i></a> <a href="https://github.com/dpseidel" title="GitHub"><i class="fa fa-github"></i></a> |  
 Location   |  Mulford 230   |   
 Times      | **Tu/Th 12:30P - 2:00P**                 |  
 CCN        | 46582                                    |  
