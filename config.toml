@@ -8,6 +8,7 @@ theme = "material"
 paginate = 7
 relativeurls = true
 publishDir = "docs"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 
 [permalinks]
@@ -65,7 +66,7 @@ publishDir = "docs"
   identifier = "GitHub"
   name = "Team Repos"
   pre = "<i class=\"button-icon fa fa-lg fa-github\"></i>"
-  url = "https://github.com/boettiger-lab/espm-157"
+  url = "https://github.com/espm-157"
 [[menu.footer]]
   weight = 3
   identifier = "StackOverflow"
