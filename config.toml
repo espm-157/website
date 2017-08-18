@@ -41,15 +41,21 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   identifier = "modules"
   name = "Modules"
   pre = "<i class=\"material-icons\">dashboard</i>"
-  url = "/modules"
+  url = "/modules"  
 [[menu.main]]
-  weight = 2
+  weight = 3
+  identifier = "tools"
+  name = "Tools"
+  pre = "<i class=\"material-icons\">build</i>"
+  url = "/tools"
+[[menu.main]]
+  weight = 4
   identifier = "syllabus"
   name = "Syllabus"
   pre = "<i class=\"material-icons\">date_range</i>"
   url = "/syllabus"
 [[menu.main]]
-  weight = 3
+  weight = 5
   identifier = "policies"
   name = "Policies"
   pre = "<i class=\"material-icons\">gavel</i>"
