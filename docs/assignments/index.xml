@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Assignments on ESPM 157</title>
-    <link>/assignments/</link>
+    <link>/espm-157/assignments/</link>
     <description>Recent content in Assignments on ESPM 157</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="/assignments/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/espm-157/assignments/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Climate Exercise</title>
-      <link>/assignments/climate/</link>
+      <link>/espm-157/assignments/climate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/assignments/climate/</guid>
+      <guid>/espm-157/assignments/climate/</guid>
       <description>Unit I: Climate Change Module Warm-up exercise: Examining CO2 trends in R  Example from http://climate.nasa.gov/vital-signs/carbon-dioxide/ Raw data from ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_mm_mlo.txt  Which months are the CO2 values at the maximum? Minimum? Why is this?
 What rolling average is used in computing the “trend” line? How does the trend depend on the rolling average?
   Exercise I: Temperature Data Last year, 2015, has now been confirmed as the warmest year on record.</description>
