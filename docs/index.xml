@@ -2,49 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ESPM 157: Data Science &amp; Global Change Ecology on ESPM 157</title>
-    <link>/espm-157/</link>
+    <link>/</link>
     <description>Recent content in ESPM 157: Data Science &amp; Global Change Ecology on ESPM 157</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 19 Apr 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/espm-157/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>/espm-157/syllabus/</link>
+      <link>/syllabus/</link>
       <pubDate>Wed, 19 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/espm-157/syllabus/</guid>
+      <guid>/syllabus/</guid>
       <description> Date Lesson Reading Lecture Assignment   Aug 24 Introduction      Aug 29 Climate Change      Aug 31 No Class      Sept 5 Climate Change      Sept 7 Climate Change      Sept 12 Climate Change      Sept 14 Reproducible Workflows      Sept 19 Reproducible Workflows      Sept 21 Population Dynamics      Sept 26 Population Dynamics      Sept 28 Population Dynamics      Oct 3 Writing R packages      Oct 5 Writing R packages      Oct 10 Fisheries Collapse      Oct 12 Fisheries Collapse      Oct 17 Fisheries Collapse      Oct 19 Fisheries Collapse      Oct 24 Docker &amp;amp; Cloud Computing      Oct 26 Docker &amp;amp; Cloud Computing      Oct 31 Spatial Data      Nov 2 Spatial Data      Nov 7 Spatial Data      Nov 9 Spatial Data      Nov 14 Extinctions      Nov 16 Extinctions      Nov 21 Extinctions      Nov 28 Final Projects      Nov 30 Final Projects      </description>
     </item>
     
     <item>
       <title>Policies</title>
-      <link>/espm-157/policies/</link>
+      <link>/policies/</link>
       <pubDate>Thu, 13 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/espm-157/policies/</guid>
+      <guid>/policies/</guid>
       <description>Prerequisites You should be generally numerically literate, and some prior programming experience will be helpful. Students new to programming might find Hands on Programming with R to be helpful. Students with significant experience in programming and statistical analysis should find themselves well prepared but should find plenty still to learn in each lesson.
 Instructional Methods As a flipped classroom, students are provided with either reading or video material that they are expected to view/read prior to class.</description>
     </item>
     
     <item>
       <title></title>
-      <link>/espm-157/about/</link>
+      <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/espm-157/about/</guid>
+      <guid>/about/</guid>
       <description> ESPM 157 </description>
     </item>
     
     <item>
       <title>Climate Exercise</title>
-      <link>/espm-157/assignments/climate/</link>
+      <link>/assignments/climate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/espm-157/assignments/climate/</guid>
+      <guid>/assignments/climate/</guid>
       <description>Unit I: Climate Change Module Warm-up exercise: Examining CO2 trends in R  Example from http://climate.nasa.gov/vital-signs/carbon-dioxide/ Raw data from ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_mm_mlo.txt  Which months are the CO2 values at the maximum? Minimum? Why is this?
 What rolling average is used in computing the “trend” line? How does the trend depend on the rolling average?
   Exercise I: Temperature Data Last year, 2015, has now been confirmed as the warmest year on record.</description>
@@ -52,19 +52,19 @@ What rolling average is used in computing the “trend” line? How does the tre
     
     <item>
       <title>Modules</title>
-      <link>/espm-157/modules/</link>
+      <link>/modules/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/espm-157/modules/</guid>
+      <guid>/modules/</guid>
       <description>timeline Climate Change    bug_report Ecological simulation    directions_boat Overfishing    my_location Spatial movement    trending_down Mass Extinctions     Topics: CO2 concentration, Global mean temperature, Sea level rise, Land ice sheet melt, Arctic sea ice cover  Skills: Data wrangling: plain text formats, Tidy data, Data visualization, Smoothing     Topics: Coexistence, Bet Hedging, Limit Cycles, Bifurcations, Deterministic Chaos  Skills: Flow control, functions, iterators, writing R packages, testing, literate documentation    From Worm et al.</description>
     </item>
     
     <item>
       <title>Tools</title>
-      <link>/espm-157/tools/</link>
+      <link>/tools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/espm-157/tools/</guid>
+      <guid>/tools/</guid>
       <description>GitHub     R     Docker    Get started!  Create a GitHub account Install Git Introduce yourself to Git   Learn more:  GitHub Help topics  Free GitHub Student Accounts Also, we are using Travis Continuous Integration to test assignments submitted to GitHub     Get started!  Install the latest R and RStudio Connect RStudio to Git  R tools &amp; features  RStudio:Fully featured IDE Tidyverse: an opinionated collection of R packages designed for data science RMarkdown: Authoring LaTeX pdfs, websites, and more R Packages: Portable, reproducible code     Get started!</description>
     </item>
     
