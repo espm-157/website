@@ -13,7 +13,7 @@
       <td align="right">{{ .date }}</td>
       <td><b>{{ .title }}<b/></td>
       {{ if .reading }}
-      <td align="center"><a href="{{ .Site.baseurl }}/readings/{{ .reading }}">
+      <td align="center"><a href="{{ .reading }}">
           <i class="fa fa-book fa-lg"></i></a></td>
       {{ else }}
         <td align="center"><font color="f1f1f1">
@@ -21,7 +21,7 @@
       {{ end }}
 
       {{ if .lecture }}
-      <td align="center"><a href="{{ .Site.baseurl }}/lectures/{{ .lecture  }}">
+      <td align="center"><a href="{{ .Site.baseurl }}/lecture/{{ .lecture  }}">
           <i class="fa fa-comment fa-lg"></i></a></td>
       {{ else }}
         <td align="center"><font color="f1f1f1">
@@ -29,7 +29,7 @@
       {{ end }}
 
       {{ if .assignment }}
-      <td align="center"><a href="{{ .Site.baseurl }}/assignments/{{ .assignment }}">
+      <td align="center"><a href="{{ .Site.baseurl }}/assignment/{{ .assignment }}">
           <i class="fa fa-keyboard-o fa-lg"></i></a></td>
       {{ else }}
         <td align="center"><font color="f1f1f1">

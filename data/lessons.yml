@@ -1,8 +1,10 @@
 lessons:
   - title: "Introduction"
     date: "Aug 24"
-  - title: "Climate Change"
+    lecture: "intro.html"
+  - title: "Software Setup; Climate Change"
     date: "Aug 29"
+    reading: "http://r4ds.had.co.nz/introduction.html"
   - title: "No Class"
     date: "Aug 31"
   - title: "Climate Change"
