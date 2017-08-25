@@ -71,12 +71,12 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   weight = 2
   identifier = "GitHub"
   name = "Team Repos"
-  pre = "<i class=\"button-icon fa fa-lg fa-github\"></i>"
+  pre = "<i class=\"button-icon fa fa-2x fa-github\"></i>"
   url = "https://github.com/espm-157"
 [[menu.footer]]
   weight = 3
   identifier = "Piazza"
-  name = "help"
+  name = "Forum"
   pre = "<i class=\"material-icons\">forum</i>"
   url = "piazza.com/berkeley/fall2017/espm157/home"
 #[[menu.footer]]
