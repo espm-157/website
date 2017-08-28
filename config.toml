@@ -78,7 +78,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   identifier = "Piazza"
   name = "Forum"
   pre = "<i class=\"material-icons\">forum</i>"
-  url = "piazza.com/berkeley/fall2017/espm157/home"
+  url = "https://piazza.com/berkeley/fall2017/espm157/home"
 #[[menu.footer]]
 #  weight = 4
 #  name = "get R"
