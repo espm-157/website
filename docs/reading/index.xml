@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Readings on ESPM 157</title>
+    <link>/reading/</link>
+    <description>Recent content in Readings on ESPM 157</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/reading/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Reading for 2017-09-05</title>
+      <link>/reading/climate1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reading/climate1/</guid>
+      <description> Read Section 2: Explore Intro Read Data Visualization Intro, First Steps, and Aesthetic Mappings: Section 3.1 - Section 3.3  </description>
+    </item>
+    
+  </channel>
+</rss>
