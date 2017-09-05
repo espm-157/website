@@ -7,8 +7,7 @@ output:
     ratio: 4x3
     self_contained: yes
     theme: ribbon
-#html_notebook:
-#    self_contained: no
+
 ---
 
 ```{r include=FALSE}
