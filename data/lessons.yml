@@ -14,6 +14,7 @@ lessons:
     lecture: "climate-intro.html"
   - title: "Climate Change"
     date: "Sept 7"
+    reading: "/reading/climate2"
   - date: "Sept 12"
     title: "Climate Change"
   - date: "Sept 14"
