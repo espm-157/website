@@ -18,7 +18,7 @@
       <guid>/assignment/climate/</guid>
       <description>Unit I: Climate Change Module Warm-up exercise: Examining CO2 trends in R  Example from http://climate.nasa.gov/vital-signs/carbon-dioxide/ Raw data from ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_mm_mlo.txt  Which months are the CO2 values at the maximum? Minimum? Why is this?
 What rolling average is used in computing the “trend” line? How does the trend depend on the rolling average?
-  Exercise I: Temperature Data Last year, 2015, has now been confirmed as the warmest year on record.</description>
+  Exercise I: Temperature Data Each of the last years has consecutively set new records on global climate.</description>
     </item>
     
   </channel>

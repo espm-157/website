@@ -10,6 +10,8 @@ lessons:
   - title: "Climate Change"
     date: "Sept 5"
     reading: "/reading/climate1"
+    assignment: "climate"
+    lecture: "climate-intro.html"
   - title: "Climate Change"
     date: "Sept 7"
   - date: "Sept 12"

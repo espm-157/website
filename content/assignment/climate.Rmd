@@ -3,6 +3,8 @@ title: "Climate Exercise"
 ---
 
 
+[![](https://img.shields.io/badge/download-.Rmd-blue.svg")](https://github.com/espm-157/website/raw/master/content/assignment/climate.Rmd)
+
 # Unit I: Climate Change Module
 
 ## Warm-up exercise: Examining CO2 trends in R
@@ -19,7 +21,7 @@ What rolling average is used in computing the "trend" line?  How does the trend 
 
 # Exercise I: Temperature Data
 
-Last year, 2015, has now been confirmed as the warmest year on record.  In this section we will analyze global mean temperature data.
+Each of the last years has consecutively set new records on global climate.  In this section we will analyze global mean temperature data.
 
 Data from: <http://climate.nasa.gov/vital-signs/global-temperature>
 
