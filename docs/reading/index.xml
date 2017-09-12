@@ -29,5 +29,15 @@
  Data Visualization Intro,Section 3.4 - Section 3.6  </description>
     </item>
     
+    <item>
+      <title>Reading for 2017-09-07</title>
+      <link>/reading/climate4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reading/climate4/</guid>
+      <description>In advance of Thursday’s class (2017-09-14), please read:
+ Tidy data: 12.1 - 12.3.  Of particular interest is getting used to the “tidy structure” of fig 12.1, and the use of the gather() function.</description>
+    </item>
+    
   </channel>
 </rss>
