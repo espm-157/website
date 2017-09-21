@@ -61,6 +61,18 @@
   </url>
   
   <url>
+    <loc>/reading/popdyn1/</loc>
+  </url>
+  
+  <url>
+    <loc>/reading/popdyn2/</loc>
+  </url>
+  
+  <url>
+    <loc>/reading/popdyn3/</loc>
+  </url>
+  
+  <url>
     <loc>/reading/</loc>
     <priority>0</priority>
   </url>
