@@ -39,5 +39,15 @@
  Tidy data: 12.1 - 12.3.  Of particular interest is getting used to the “tidy structure” of fig 12.1, and the use of the gather() function.</description>
     </item>
     
+    <item>
+      <title>Reading for 2017-09-21</title>
+      <link>/reading/workflows/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reading/workflows/</guid>
+      <description>For Thursday’s class, please read the following two short sections:
+ 6. Workflow: scripts, and 8. Workflow: projects  </description>
+    </item>
+    
   </channel>
 </rss>

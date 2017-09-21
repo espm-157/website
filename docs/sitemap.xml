@@ -57,6 +57,10 @@
   </url>
   
   <url>
+    <loc>/reading/workflows/</loc>
+  </url>
+  
+  <url>
     <loc>/reading/</loc>
     <priority>0</priority>
   </url>

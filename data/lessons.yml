@@ -26,6 +26,7 @@ lessons:
     reading: "https://peerj.com/preprints/3159.pdf"
   - date: "Sept 21"
     title: "Reproducible Workflows"
+    reading: "reading/workflows"
   - date: "Sept 26"
     title: "Population Dynamics"
   - date: "Sept 28"
