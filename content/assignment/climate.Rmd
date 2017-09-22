@@ -3,8 +3,6 @@ title: "Climate Exercise"
 ---
 
 
-[![](https://img.shields.io/badge/download-.Rmd-blue.svg)](https://github.com/espm-157/website/raw/master/content/assignment/climate.Rmd)
-
 # Unit I: Climate Change Module
 
 ## Warm-up exercise: Examining CO2 trends in R

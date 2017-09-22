@@ -21,5 +21,15 @@ What rolling average is used in computing the “trend” line? How does the tre
   Exercise I: Temperature Data Each of the last years has consecutively set new records on global climate.</description>
     </item>
     
+    <item>
+      <title>Population dynamics assignment</title>
+      <link>/assignment/popdyn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/assignment/popdyn/</guid>
+      <description>Attention: To get started on the exercise, visit the Piazza post to create your team repo.
+In this section, we will explore population dynamics of multiple interacting species; or more generally, dynamics in multiple variables. Previously, our only dynamic variable was a single focal population, sometimes called x, or squirrels, that could change over time in response to how many other squirrels there were. All other aspects of system were fixed: such as the environmental conditions responsible for determining the growth rate r and carrying capacity K.</description>
+    </item>
+    
   </channel>
 </rss>
