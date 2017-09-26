@@ -77,15 +77,20 @@ use initial value $x_0 = 1.1$ and $y_0 = 1.1$ and a max time of $500$ iterations
 3. Create a plot showing the population sizes of hare (x) and lynx (y) over time.
 
 
-4.  Increase the time interval to 600, 700, 800, 900.  What happens?  Vary the starting conditions. What do you see?  
+4.  Increase the time interval to 1000, 3000, 9000.  What happens?  
 
+
+5. Vary the starting conditions. What do you see?  
+
+
+6. Create a plot a of hare size vs linx size with various starting conditions.  Use `geom_path` to create these plots -- called "phase planes"
 
 
 
 
 ## Exercise 2: Modifiying the model: Carrying capacity
 
-In the model in exercise 1, you observed that it was very difficult to create stable, regular cycles over a long period of time.  Instead, one population or the other was always spiralling out of control.  To avoid this very unrealistic result, we will now modify our model to add in further biological assumptions.
+The above result looks like cycles, but are ultimately not stable.  This pattern is called "centers" in dynamical systems, and sits right at the edge between stable and unstable.  We now add more biology back into the system.  
 
 In the model of exercise 1, the only thing limiting the growth of hare was the presence predation by lynx. If the lynx population got too small, the hare population shot up without bound.  In reality, a lack of food and habitat would eventually stall an ever-expanding hare population.  To capture this, we will re-introduce the same "carrying capacity" concept we first saw last week.  
 
@@ -93,6 +98,7 @@ In the model of exercise 1, the only thing limiting the growth of hare was the p
 
 
 $$f(x,y) = a  (1 - H/K) - b P $$
+For starters, we will use `K = 10` and the same initial conditions as before (`H0 = 1.1`, `P0 = 1.1`).  
 
 
 2. Re-run your model and plot the results.  How have the results changed?  
@@ -110,7 +116,7 @@ $$f(x,y) = a  (1 - H/K) - b P $$
 
 Another limitation of our model is the ability of the Lynx population to consume hare at arbitrary effiency, regardless of how many hare we have.  Thus a very small initial number of lynx, `y` can almost immediately become as large as you like as long as there are enough hares. When prey is rare, we might well expect the survival and reproduction of a lynx to be directly proportional to the number of hare, $g(x,y) ~ c x y$, but beyond a certain point we expect additional hare not to matter so much.  Likewise, it may make sense to put an upper limit on how many hare a single lynx can catch.  We model this by introducing a "saturating" function:
 
-$h(H) = \frac{1}{s + H}$ to our equations for $f$ and $g$:  
+$h(H) = \frac{1}{1 + s \cdot H}$ to our equations for $f$ and $g$:  
 
 $$ f(H,P) = a (1 - H / K)  - b \cdot P \cdot h(H) $$
 $$ g(H,P) = c \cdot H \cdot h(H) - d $$
@@ -125,7 +131,7 @@ b = 0.01
 c = 0.01
 d = 0.01
 k = 10
-s = 5
+s = 1/5
 ```
 
 2. You should now see that the population settles into a steady set of oscillations.  Try several different starting points for the initial conditions, (showing your results) and describe the resulting dynamics.  Try starting conditions that appear both inside and outside the "stable limit cycle" that emerges in your phase portrait plot.  
