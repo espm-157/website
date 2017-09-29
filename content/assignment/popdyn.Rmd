@@ -4,7 +4,7 @@ math: true
 ---
 
 
-***Attention:*** To get started on the exercise, visit the Piazza post to create your team repo.
+***Attention:*** To get started on the exercise, visit the [Piazza post](https://piazza.com/class/j6ibyy2v4oq21u?cid=14) to create your team repo. 
 
 
 ------

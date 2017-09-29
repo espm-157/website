@@ -30,6 +30,7 @@ lessons:
   - date: "Sept 26"
     title: "Population Dynamics"
     reading: "/reading/popdyn1"
+    assignment: "popdyn"
   - date: "Sept 28"
     title: "Population Dynamics"
     reading: "/reading/popdyn2"

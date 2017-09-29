@@ -3,6 +3,10 @@ title: "Climate Exercise"
 ---
 
 
+***Attention:*** To get started on the exercise, visit the [Piazza post](https://piazza.com/class/j6ibyy2v4oq21u?cid=9) to create your team repo. 
+
+
+
 # Unit I: Climate Change Module
 
 ## Warm-up exercise: Examining CO2 trends in R
