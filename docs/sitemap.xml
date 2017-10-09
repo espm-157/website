@@ -77,6 +77,22 @@
   </url>
   
   <url>
+    <loc>/reading/r-pkgs/</loc>
+  </url>
+  
+  <url>
+    <loc>/reading/dplyr-1/</loc>
+  </url>
+  
+  <url>
+    <loc>/reading/dplyr-2/</loc>
+  </url>
+  
+  <url>
+    <loc>/reading/dplyr-3/</loc>
+  </url>
+  
+  <url>
     <loc>/reading/</loc>
     <priority>0</priority>
   </url>

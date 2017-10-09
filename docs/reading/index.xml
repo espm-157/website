@@ -76,5 +76,42 @@
       <description>Please read Chapter 21.1 to 21.4 on iteration</description>
     </item>
     
+    <item>
+      <title>Reading for 2017-10-05</title>
+      <link>/reading/r-pkgs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reading/r-pkgs/</guid>
+      <description>Today&amp;rsquo;s class will introduce the basic idea of an R package as a fundamental unit for sharing re-usable R functions. We will re-organize our population dynamics assignment repo into the structure required for an R package.
+While writing a minimal R package is really pretty simple, R packages are still considered an advanced topic and rightly the subject of completely separate books. We recommend Hadley Wickham&amp;rsquo;s Writing R Packages which is available in press or online for more detailed reading.</description>
+    </item>
+    
+    <item>
+      <title>Reading for 2017-10-10</title>
+      <link>/reading/dplyr-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reading/dplyr-1/</guid>
+      <description>Today&amp;rsquo;s class will introduce a new section on fisheries collapse. We will also be diving into data manipulation in earnest. Make sure to read or re-familiarize yourself with the basic dplyr verbs filter, arrange, select, and mutate, Sections 5.1 - 5.5</description>
+    </item>
+    
+    <item>
+      <title>Reading for 2017-10-12</title>
+      <link>/reading/dplyr-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reading/dplyr-2/</guid>
+      <description>More dplyr: working with grouped data using group_by and summarize: Sections 5.6 - 5.7</description>
+    </item>
+    
+    <item>
+      <title>Reading for 2017-10-17</title>
+      <link>/reading/dplyr-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reading/dplyr-3/</guid>
+      <description>Read the opening sections of chapter 13 on Relational Data: Sections 13.1 - 13.4.1.</description>
+    </item>
+    
   </channel>
 </rss>
