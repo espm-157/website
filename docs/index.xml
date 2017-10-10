@@ -40,6 +40,17 @@ Instructional Methods As a flipped classroom, students are provided with either 
     </item>
     
     <item>
+      <title></title>
+      <link>/assignment/fish/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/assignment/fish/</guid>
+      <description>Unit 3: Fisheries Collapse Module This module will focus on understanding and replicating fisheries stock assessment data and fisheries collapse. Follow along with Carl, as he live codes the first exercise and then complete the second as your group assignment.
+The Database We will use data from the RAM Legacy Stock Assessment Database
+First, load in the necessary librarys. Note that this time we need a package we haven’t used before readxl.</description>
+    </item>
+    
+    <item>
       <title>Climate Exercise</title>
       <link>/assignment/climate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

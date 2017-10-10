@@ -43,6 +43,8 @@ lessons:
   - date: "Oct 10"
     title: "Fisheries Collapse"
     reading: "/reading/dplyr-1"
+    assignment: "fish.html"
+    lecture: "fish-lecture.html"
   - date: "Oct 12"
     title: "Fisheries Collapse"
     reading: "/reading/dplyr-2"

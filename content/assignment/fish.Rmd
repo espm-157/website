@@ -1,0 +1,211 @@
+---
+output: github_document
+---
+
+```{r include = FALSE}
+knitr::opts_chunk$set(message = FALSE)
+```
+# Unit 3: Fisheries Collapse Module
+
+This module will focus on understanding and replicating
+fisheries stock assessment data and fisheries collapse. Follow along with Carl, 
+as he live codes the first exercise and then complete the second as your group assignment. 
+
+## The Database
+
+We will use data from the [RAM Legacy Stock Assessment Database](http://ramlegacy.marinebiodiversity.ca/ram-legacy-stock-assessment-database)
+
+First, load in the necessary librarys. Note that this time we need a package we 
+haven't used before `readxl`. This package is useful for reading in .xls or 
+.xlsx files. As always if you want more info on a package run `?readxl` after 
+loading it.
+
+```{r message = FALSE}
+library("tidyverse")
+library("readxl")
+```
+
+## Reading in the tables
+
+```{r}
+#download.file("https://depts.washington.edu/ramlegac/wordpress/databaseVersions/RLSADB_v3.0_(assessment_data_only)_excel.zip", 
+#              "ramlegacy.zip")
+path <- unzip("ramlegacy.zip")  #unzip the .xls files
+sheets <- readxl::excel_sheets(path) #use the readxl package to identify sheet names 
+ram <- lapply(sheets, readxl::read_excel, path = path)  #read the data from all 3 sheets into a list
+names(ram) <- sheets # give the list of datatables their assigned sheet names
+
+## check your names
+names(ram)
+
+## check your data
+head(ram$area)
+
+```
+
+
+
+# Exercise 1: Investigating the North-Atlantic Cod
+
+First, We seek to replicate the following figure from the Millenium Ecosystem Assessment Project using the RAM data. 
+
+![](http://berkeley.carlboettiger.info/espm-88b/fish/img/codcollapse.jpg)
+
+
+## Task 1: Joining the necessary data
+
+To replicate this plot, we need a table with the following columns: `"country"`, `"ssb_unit"`, `"catch_landings_unit"`, `"scientificname"`, `"commonname"`, `"year"`, `"ssb"`, and `"TC"`. 
+
+Using the `select()` and `join()` functions you were introduced to in in Module 1,
+build a tidy table with the desired columns. 
+
+```{r}
+ 
+```
+
+## Task 2: Mapping the Area table to marine regions
+
+In order to replicate the collapse of Atlantic Cod, 
+we need to be able to map area table from the Ram database to the marine regions. 
+
+*As an aside, this database is unclear what kind of areas the `area` table is using, they do not appear to be LMEs, EEZs, or other obvious marine region classification. Regardless, we will use them to extract the North America cod stocks.*
+
+Write code to pull all marine areas (listed in `ram$area`) that contain a certain substring
+in their name -- ex. "Georges Bank". 
+Hint: you want want to consider functions `filter()` or `grep()`
+
+```{r}
+
+```
+
+We are interested in mapping the data from just the areas where Atlantic Cod are found.
+Using the table you built above, pull out distinct areas that contain
+Atlantic Cod populations into a new tidytable. 
+Hint: you may want to use functions like `filter()` or `distinct()`
+
+```{r}
+
+```
+
+## Task 3: Subsetting our data by regional id
+
+Using bracket notation and or the `filter()` and `pull()` functions, try pulling 
+certain subsets of ids from your table of cod areas. ex. the first 8 ids, or the ids of areas just within a certain country.
+
+Create a vector of ids of areas with Atlantic Cod and in Canada. 
+
+```{r}
+
+```
+
+
+## Task 4: Plotting Total Catch in Canada
+
+Calculate and plot the catch in million tons (MT) of Atlantic Cod from
+Canada using the data table and vector of ids you created above. 
+Hint: you may want to use functions like `group_by()`, `filter()`, and/or `summarise()`
+
+```{r }
+
+
+```
+
+**Question:** How does this graph compare to the one presented above? 
+
+------
+
+# Exercise 2: Group Assignment
+
+## Stock Collapses
+
+We seek to replicate the temporal trend in stock declines shown in [Worm et al 2006](http://doi.org/10.1126/science.1132294):
+
+![](http://berkeley.carlboettiger.info/espm-88b/img/worm2006.png)
+
+**Question 1:** What years does this plot include? What is it plotting? 
+
+## Task 1: Plotting total taxa caught worldwide 1950-2006
+
+Adapting the table you created in the first exercise, select and 
+manipulate the necessary columns to plot the number of total taxa caught each year 
+from 1950 til 2006 using `geom_point()`. 
+
+Hint: you may want to use functions like `group_by()`, `tally()` and be sure to 
+carefully consider how to handle or omit missing values. 
+
+```{r}
+
+```
+
+## Task 2: Removing incomplete datasets
+
+Species can either have missing data (within a series) or a time range 
+that just doesn't span the full interval. Grouping by stockid instead of year, 
+build a character vector containing only those stockids that have data for the 
+full range (1950-2006).
+
+
+```{r}
+
+```
+
+**Question 2:** How many taxa have data for the full range?
+
+```{r}
+
+```
+
+
+## Task 3: Which fisheries have collapsed?
+
+A fishery may be considered *collapsed* when total catch (TC) falls
+below 10% of its peak. For those stocks with complete data sets, create a new 
+tidy table including columns: `stockid`, `TC`, `year`, `collapsed`, and `cumulative`, 
+where `collapsed` is a logical (True or False) for whether or not that fishery could
+be considered collapsed in that year, and `cumulative` is the count of total years
+the fishery has been collapsed at that point in time. 
+
+```{r}
+
+```
+
+## Task 4: Plotting total catch
+
+Using `geom_area()` plot the TC per stockid acros all years. 
+```{r}
+
+```
+
+## Task 5: Calculating percent collapsed
+
+To replicate the original plot, we must calculate the percent of taxa 
+collapsed over time.
+Using the `summarise()` function, and only the core stocks that have data 
+across the full interval, build a new tidy table
+that gives the fraction of all stocks that are collapsed in each year and 
+include a cumulative column that gives the fraction of all years (between 1950 and each year)
+that has experience at least one collapse. 
+
+Hint: when logical vectors are summed or converted to numerics, TRUE = 1 and FALSE = 0.
+
+```{r}
+
+```
+
+## Task 6: Plotting proportion collapsed over time. 
+
+Using `geom_line` twice to plot two individual lines (of different
+colors please), plot the cumulative number of collapsed fisheries through time
+and the fraction of collapsed fishers through time on the same graph.
+
+Hint: try using `scale_y_reverse()` to flip the y axis for a different perspective
+on these fractions.
+
+```{r}
+
+
+```
+
+**Question 3:** What does this graph show us? How is it presenting information differently than the original graph for this exercise? Is it presenting the same information? 
+
+

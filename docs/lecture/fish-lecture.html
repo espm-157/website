@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fisheries Collapse</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Carl Boettiger" />
+    <link href="libs/remark-css-0.0.1/example.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Fisheries Collapse
+### Carl Boettiger
+
+---
+
+
+
+
+# Unit III: Global Fisheries Collapse?
+
+---
+
+## Introduction
+
+- [Atlantic Cod History](https://www.youtube.com/watch?v=3fCX6XKzbUY)
+- ["End of the Line" Trailer](https://www.youtube.com/watch?v=H6WOvY_C-_I)
+
+---
+
+## Atlantic Cod History
+
+
+&lt;iframe
+width="560"
+height="315"
+src="https://www.youtube.com/embed/3fCX6XKzbUY"
+frameborder="0"
+allowfullscreen
+&gt;&lt;/iframe&gt;
+
+
+---
+
+## End of the Line
+
+
+&lt;iframe
+width="560"
+height="315"
+src="https://www.youtube.com/embed/H6WOvY_C-_I"
+frameborder="0"
+allowfullscreen
+&gt;&lt;/iframe&gt;
+
+---
+
+## Cod Collapse
+
+&lt;img src="http://berkeley.carlboettiger.info/espm-88b/fish/img/codcollapse.jpg" width=600&gt;
+
+Source: http://www.millenniumassessment.org/documents/document.356.aspx.pdf
+
+
+---
+
+## Global fisheries trends
+
+&lt;img src="http://berkeley.carlboettiger.info/espm-88b/img/worm2006.png" width=700 height = 400&gt;
+
+### Source: [Worm et al. 2006 _Science_](http://doi.org/10.1126/science.1132294)
+
+---
+
+## Media version
+
+- [New York Times: "Study Sees 'Global Collapse' of Fish Species"](http://www.nytimes.com/2006/11/03/science/03fish.html?_r=0)
+- [BBC declares: 'Only 50 years left' for sea fish](http://news.bbc.co.uk/2/hi/science/nature/6108414.stm) 
+
+![](http://graphics8.nytimes.com/images/2006/11/02/us/1103-nat-webFISH.gif)
+
+---
+
+
+
+
+
+## The Database
+
+[RAM Legacy Stock Assessment Database](http://ramlegacy.marinebiodiversity.ca/ram-legacy-stock-assessment-database)
+
+&lt;img src="ram-2011.png" width=700&gt;
+
+
+```r
+library("tidyverse")
+library("readxl")
+```
+
+
+---
+
+## Reading in the tables
+
+
+
+
+```r
+download.file("https://depts.washington.edu/ramlegac/wordpress/databaseVersions/RLSADB_v3.0_(assessment_data_only)_excel.zip", 
+              "ramlegacy.zip")
+path &lt;- unzip("ramlegacy.zip")
+sheets &lt;- readxl::excel_sheets(path)
+ram &lt;- lapply(sheets, readxl::read_excel, path = path)
+names(ram) &lt;- sheets
+
+## Name the available tables:
+names(ram)
+```
+
+```
+##  [1] "area"                    "assessment"             
+##  [3] "assessmethod"            "assessor"               
+##  [5] "biometrics"              "bioparams"              
+##  [7] "bioparams_ids_views"     "bioparams_units_views"  
+##  [9] "bioparams_values_views"  "management"             
+## [11] "stock"                   "taxonomy"               
+## [13] "timeseries"              "timeseries_ids_views"   
+## [15] "timeseries_units_views"  "timeseries_values_views"
+## [17] "tsmetrics"
+```
+
+
+---
+
+## Exploring the Database: a bird's eye view
+
+- "Tidy Data": Codd's Third Normal form:
+
+&gt; Each row must describe the Key, the Whole Key, and Nothing But the Key (so help me Cobb)
+
+
+---
+
+## What is a Stock Assessment?
+
+- From the Assessment Table, id: http://www.afsc.noaa.gov/REFM/docs/2010/GOApop.pdf
+- From said pdf, methods (in 2009 assessment): http://www.afsc.noaa.gov/refm/docs/2009/GOApop.pdf
+
+
+
+
+&gt; When treated this way, our stock assessment is a large Bayesian model, which includes
+informative (e.g., lognormal natural mortality with a small CV) and noninformative (or nearly so, such as
+a parameter bounded between 0 and 10) prior distributions. In the model presented in this SAFE report,
+the number of parameters estimated is 134.
+
+-- http://www.afsc.noaa.gov/refm/docs/2009/GOApop.pdf pg 757
+
+
+---
+
+## Task 1: Investigating Cod Collapse
+
+&lt;img src="http://berkeley.carlboettiger.info/espm-88b/fish/img/codcollapse.jpg" width=600&gt;
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});
+(function() {var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler"); if (!r) return; s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }"; d.head.appendChild(s);})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

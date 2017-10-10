@@ -17,6 +17,10 @@
   </url>
   
   <url>
+    <loc>/assignment/fish/</loc>
+  </url>
+  
+  <url>
     <loc>/archives/</loc>
     <priority>0</priority>
   </url>
