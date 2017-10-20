@@ -61,12 +61,12 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   pre = "<i class=\"material-icons\">gavel</i>"
   url = "/policies"
 
-[[menu.footer]]
-  weight = 1
-  identifier = "Berkeley"
-  name = "UC Berkeley"
-  pre = "<i class=\"material-icons\">pin_drop</i>"
-  url = "https://data.berkeley.edu"
+#[[menu.footer]]
+#  weight = 1
+#  identifier = "Berkeley"
+#  name = "UC Berkeley"
+#  pre = "<i class=\"material-icons\">pin_drop</i>"
+#  url = "https://data.berkeley.edu"
 [[menu.footer]]
   weight = 2
   identifier = "GitHub"
@@ -79,11 +79,17 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   name = "Forum"
   pre = "<i class=\"material-icons\">forum</i>"
   url = "https://piazza.com/berkeley/fall2017/espm157/home"
-#[[menu.footer]]
-#  weight = 4
-#  name = "get R"
-#  pre = "<i class=\"icon-rlogo\" style=\"font-size:150%\"></i>"
-#  url = "https://r-project.org"
+[[menu.footer]]
+  weight = 4
+  name = "Textbook"
+  pre = "<i class=\"material-icons\">book</i>"
+  url = "http://r4ds.had.co.nz/"
+[[menu.footer]]
+  weight = 5
+  name = "Travis-CI"
+  pre = "<i class=\"material-icons\">check_circle</i>"
+  url = "http://travis.com/espm-157/"
+
 
 [params]
   dateFormat = "January 2, 2006"
