@@ -45,6 +45,10 @@
   </url>
   
   <url>
+    <loc>/assignment/proposal-final/</loc>
+  </url>
+  
+  <url>
     <loc>/modules/</loc>
   </url>
   
@@ -112,6 +116,10 @@
   
   <url>
     <loc>/tools/</loc>
+  </url>
+  
+  <url>
+    <loc>/assignment/2017-10-24-fish-reproducibility/</loc>
   </url>
   
 </urlset>

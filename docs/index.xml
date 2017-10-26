@@ -63,6 +63,16 @@ What rolling average is used in computing the “trend” line? How does the tre
     </item>
     
     <item>
+      <title>Final Project: Proposal</title>
+      <link>/assignment/proposal-final/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/assignment/proposal-final/</guid>
+      <description>Please prepare a short proposal on your final project idea for next Thursday, Nov 2. The proposal should include:
+ Title &amp;amp; description of the project Your name &amp;amp; partner&amp;rsquo;s name A description of the data required, and how it will be obtained (e.g. URL/DOI to data source) 3 questions / analysis tasks you will perform on the data; in the spirit of the assignments we have been doing.  You may choose to work with your partner or independently on the final project.</description>
+    </item>
+    
+    <item>
       <title>Modules</title>
       <link>/modules/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -200,6 +210,15 @@ While writing a minimal R package is really pretty simple, R packages are still 
       
       <guid>/tools/</guid>
       <description>GitHub     R     Docker    Get started!  Create a GitHub account Install Git Introduce yourself to Git   Learn more:  GitHub Help topics  Free GitHub Student Accounts Also, we are using Travis Continuous Integration to test assignments submitted to GitHub     Get started!  Install the latest R and RStudio Connect RStudio to Git  R tools &amp; features  RStudio:Fully featured IDE Tidyverse: an opinionated collection of R packages designed for data science RMarkdown: Authoring LaTeX pdfs, websites, and more R Packages: Portable, reproducible code     Get started!</description>
+    </item>
+    
+    <item>
+      <title>fish reproducibility</title>
+      <link>/assignment/2017-10-24-fish-reproducibility/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/assignment/2017-10-24-fish-reproducibility/</guid>
+      <description>Set visibility settings on your repository Review the repo of another team, making direct edits for improvements:  Overall presentation:  travis passing, badged? information in readme, yaml header output files committed   Rmd inspection  Remove extraneous / duplicate code blocks. Request narrative text where text is missing executable, top-to-bottom?   Understand and compare results:  Data table strategies: joining vs separate tables Can the code be made more consise?</description>
     </item>
     
   </channel>
