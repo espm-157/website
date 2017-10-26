@@ -58,6 +58,7 @@ lessons:
   - date: "Oct 26"
     title: "Docker & Cloud Computing"
     reading: "/reading/docker"
+    assignment: "proposal-final"
   - date: "Oct 31"
     title: "Spatial Data"
   - date: "Nov 2"
