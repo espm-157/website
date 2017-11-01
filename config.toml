@@ -5,7 +5,7 @@ title = "ESPM 157"
 theme = "material"
 #disqusShortname = ""
 # googleAnalytics = ""
-paginate = 7
+paginate = 10
 relativeurls = true
 publishDir = "docs"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
@@ -89,7 +89,11 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   name = "Travis-CI"
   pre = "<i class=\"material-icons\">check_circle</i>"
   url = "http://travis.com/espm-157/"
-
+[[menu.footer]]
+  weight = 6
+  name = "DataCamp Lessons"
+  pre = "<i class=\"material-icons\">video_library</i>"
+  url = "https://www.datacamp.com/groups/espm-157-data-science-for-global-change-biology"
 
 [params]
   dateFormat = "January 2, 2006"
