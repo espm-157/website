@@ -73,6 +73,16 @@ What rolling average is used in computing the “trend” line? How does the tre
     </item>
     
     <item>
+      <title>Geospatial Reading - I</title>
+      <link>/reading/geospatial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/reading/geospatial/</guid>
+      <description>You&amp;rsquo;ve probably noticed that our textbook doesn&amp;rsquo;t have any section on geospatial data. Most exsiting resources on geospatial data in R still cover the older sp library, including the classic Applied Spatial Data Analysis in R (physical) textbook (by authors of sp and related packages, who are also authors of sf).
+The under-development version of an upcoming textbook, Geocomputation with R, aims to provide a more thorough treatment of the latest iteration on spatial data in R, including the sf package and tidyverse-style programming.</description>
+    </item>
+    
+    <item>
       <title>Modules</title>
       <link>/modules/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
