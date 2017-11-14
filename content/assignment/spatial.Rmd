@@ -1,0 +1,312 @@
+---
+title: "Spatial Assignment"
+author: 
+output: github_document
+always_allow_html: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(messages = FALSE, cache = TRUE)
+```
+
+# Exercise 
+This module is inspired by a recent paper in Nature Ecology and Evolution, [**Mapping the global potential for marine aquaculture**](https://www.nature.com/articles/s41559-017-0257-9). The authors 
+used multiple constraints including ship traffic, dissolved oxygen, bottom depth
+and more, to limit and map areas suitable for aquaculture.
+
+![](./images/aquaculture_map.png)
+
+We are going to use a similar, but much more simplified approach here. 
+We will map potential areas of marine aquaculture for the super cute Pacific spiny lumpsucker (*Eumicrotremus orbis*)
+
+![They have adhesive pelvic disks! How cute!](./images/lumpsucker.png)
+
+We will answer this question by taking into consideration the following spatial data:  
+
+**1. Sea Surface Temperature** (raster data)  
+**2. Net Primary Productivity** (raster data)  
+**3. Marine Protected Areas**  (vector data)  
+
+```{r libraries, include= FALSE}
+
+library(mapview)      #interactive maps, raster + vector layers
+library(raster)       #Main raster library
+library(tidyverse)    #our old friend
+library(sf)           #to work with simple features data
+
+devtools::install_github("tidyverse/ggplot2") #installing the developer version of ggplot for the geom_sf() function
+library(ggplot2)
+
+```  
+
+## Task 1: Play with Vector Data
+
+So to figure out where we might find the lumpsucker fish, we need to know a little
+about it!
+
+From [NOAA's species description](http://www.nmfs.noaa.gov/speciesid/fish_page/fish68a.html):
+
+> A lot of people who see Pacific spiny lumpsuckers for the first time describe them as a ping-pong ball with fins. They are tiny and very inefficient swimmers, found most often in kelp or eelgrass beds attached to a rock or a log no deeper than 500 feet. They are quite common, ranging from the waters off the Washington coast, up around the arc of the Aleutian Islands, to the Asian mainland and the northern islands of Japan, and in the Bering Sea. A giant Pacific spiny lumpsucker is five inches long, but most are closer to an inch. Scuba divers are their biggest fans because the little fellows will eat right out of their hands.
+
+Key information for optimal growth:  
+
+- Sea surface temperatures between **12 and 18 degrees Celsius**  
+- Net Primary Productivity between **2.6 and 3 mgC/m2/day**
+
+### Task 1: Load and Visualize data
+We'll start by a downloading data file of all Marine Protected Areas monitored by the US
+Federal government: . Load this is and visualize it
+using ggplot. 
+
+```{r}
+download.file("https://marineprotectedareas.noaa.gov/pdf/helpful-resources/inventory/mpa_inventory_2014_public_shp.zip", 
+              "shapefiles/mpas.zip")
+unzip("shapefiles/mpas.zip", exdir="shapefiles")
+```
+
+Using the `sf` library, load the downloaded file (`mpa_inventory_2014_public_shp.shp`) 
+and visualize it.  *It's large, it may take a moment to plot* 
+```{r}
+```
+
+### Task 2: Filtering only the West Coast! 
+Woah!The US territories are a lot bigger than we sometimes think about! 
+
+But since this species of lumpsuckers are only found on the Pacific, let's start by limiting this 
+shapefile to just the West Coast of the contiguous US. 
+
+The nice thing about simple features data, is that it can be filtered and summarised
+in the same way as non-spatial data using the `dplyr` functions we learned last
+week. 
+
+First to make our lives easier, `select()` only the columns that we care about:
+we'll want to know the Site_Label, Site_ID, and State at a minimum. Additionally write 
+code, to limit the MPAs we see to only those controlled by the states on the 
+west coast of the US. 
+
+```{r}
+```
+
+Now using `ggplot`, plot the west coast mpas, colored by their state. 
+```{r}
+```
+
+Seems like maybe we're missing a lot of Federally protected areas! How might we 
+get at those?
+
+### Task 3: Filter by Intersection!
+
+Above we filtered out those MPAs we weren't interested in using the `dplyr` 
+functions we learned last week, but with such a large spatial file, 
+the `sf` library may offer a better way, given a second .shp file offering a 
+bounding box for the area we are interested in: `US-wc_bbox.shp`
+
+Try loading in this new shape file, visualizing it (*hint*: try using the function `mapview()`),
+and using the `st_intersection` function to filter only the polygon records of `mpas` on the west coast of the 
+continental US. 
+
+```{r}
+```
+
+### Task 4
+
+How much protected marine habitat does each state or agency control?
+Which controls the most? Try using the `st_area` command. 
+
+Below, we've gotten you started: `st_buffer(0)` is necessary before summarise functions
+with this particular dataset to avoid a self-intersection warning that occurs with 
+the mpas polygon dataset. 
+
+```{r}
+# your_dataset_here %>% 
+#  st_buffer(0) %>%  ....
+```
+
+
+## Exercise 2: Load and Play with Raster data
+**Sea Surface Temperature**
+
+In the `rasters` folder, there are 5 `.tif` files with the naming pattern `average_annual_sst_[year].tif`, which are 5 annual average sea surface temperatures for our region (2008-2012). We want just **one** raster file of the average SST over that time period.
+
+### Task 1: Read in raster data
+To create a single average Sea Surface Temperature layer, you'll first need to read in 
+all 5 data files (try adapting the `list.files()` function). To read them all in, 
+you'll use the `raster` function. 
+
+```{r}
+
+```
+
+### Task 2: Visualize & Explore
+
+Before running any calculation or analysis, visualize the data. Plot 1 or all of the
+rasters, to take a look at them. 
+```{r}
+
+```
+
+*Notice the data values are in Kelvin - we will change this to celsius later.*
+
+Try exploring the data, using basic functions like `hist()`, or `summary()`
+
+```{r}
+
+```
+#### Question: What year had the highest annual sea surface temperature recorded?
+
+```{r}
+
+```
+
+### Task 4: Stack rasters
+
+To get a single layer of average SST in degrees Celsius we need to first `stack` all layers.
+
+![](images/singletomulti.png)
+
+`stack` is a function from the raster package that puts all RasterLayers into a RasterStack. 
+It can stack either from filenames for rasters, or from the raster objects themselves. 
+Produce a rasterstack of Average Sea Surface Temperature across all 5 years. Try using the
+`plot` function to visualize the stack.
+
+```{r calc avg SST}
+
+```
+
+### Task 5: Raster calcuations
+
+As we said earlier, we want this raster in Celsius. The conversion between Kelvin
+and Celsius is: 
+
+Calculate the mean value per cell and then convert to Celsius by subtracting 273.15. 
+You could do this in multiple steps or write a small custom function. 
+
+Write this as a custom R function. 
+
+```{r}
+
+```
+
+You can perform operations on a RasterStack by using the `calc()` function from 
+the `raster` package. Use the `calc()` function to apply your conversion from 
+above and then plot the resulting raster. 
+
+```{r pipes sst}
+
+```
+
+## Exercise 3: Projections
+
+Since Lumpsuckers may be influenced by more than just sea surface temperature, 
+we want to include **Net Primary Production (NPP)** in our analysis. 
+So we need to read that in too and create a rasterstack of ur new `sst_avg` raster
+and the NPP layer. 
+
+#### Task 1: Read in NPP raster data   
+
+Read in the NPP data, using the `raster()` command and the "annual_npp_prepped.tif"
+found in the rasters folder.This data is the net primary production (mgC/m2/day).
+After readng in, plot this data. 
+
+```{r avg npp}
+
+```
+
+### Task 2:  Reproject
+
+Try adding these two layers together using `stack` and you'll get an error because
+these rasters are not in the same "projection" or of the same extent - pretty obvious from the plots.
+In order to do analysis acrossmultiple spatial datasources, they must be using the
+same coordinate reference system. 
+
+Use the `crs()` command to see what coordinate system each of your rasters are using:
+```{r}
+
+
+```
+
+Now, we can use `projectRaster()` from the raster package to reproject a RasterLayer from 
+one projection to another. You will need to define what the new projection 
+should be by setting a coordinate reference system using the argument `crs =`.
+
+Project npp into sstAvg's coordinate reference system and prove to yourself they 
+are equal. 
+
+```{r reproject}
+
+
+```
+
+*Note: keep in mind, different projections may not be the only thing different across your rasters. To do any sort of analysis using multiple rasters, they all need to be in the same extent, projection and cell resolution.*
+
+To crop and resample the npp layer to the extent and resolution of sstAvg, adapt and run the following line:
+```{r}
+# npp.fit <- resample(your_projected_npp, your_sst_raster, method="bilinear") %>% crop(., your_sst_raster)
+```
+
+Stack the now matching rasters together using the `stack` function and plot them.
+```{r}
+
+```
+
+#### Question: Looking at them side by side, do you have intuition about where lumpsuckers are likely to survive? 
+Remember: Lumpsucker fish grow best in waters that are 
+**between 12 and 18 degrees Celsius.** and with an NPP between **2.6 and 3 mgC/m2/day**
+
+
+## Exercise 4:  Analysis   
+
+Now that our data is prepped and guaranteed to play nicely, we can move onto the
+fun stuff - **analyzing the data**. For this specific analysis, we need to use 
+the SST and NPP data to find areas along the US West Coast that are suitable for 
+growing lumpsucker fish. This requires removal of all cells from NPP and SST 
+that are not within the ideal growth parameter range.
+
+Although we could do this from the raster itself reclassifying and subsetting,
+those dataset but because in this module we are most interested in the `sf` package, 
+let's get back to vector data. 
+
+### Task 1: Sample Points & Extract values from Rasters
+Try using the `st_sample()` function, to sample 1000 points from the west coast 
+mpa polygons we filtered in task 1. 
+
+Once sampled, your points will no longer be a simple features dataframe, 
+instead `sp_sample()` returns a single geometry object of class `sfc` 
+which is not a data.frame. To turn an `sfc` object back into an `sf` object use `st_sf()`.
+Try using `st_sf()` and then `st_join()` to retrieve the MPAs info for each sampled point. 
+
+```{r}
+
+```
+
+#### R Question: Why does your new dataframe of points likely have fewer than 1000 points? 
+See the `st_sample()` documentation and explain. 
+
+### Task 2: Extract Raster Values
+Use your sampled points to extract information from the rasters 
+on sea surface temperature and net primary productivity, 
+try using the `raster::extract` function. Remember `mutate` plays nicely
+with `sf` objects
+
+```{r}
+
+```
+
+### Task 3: Analysis Questions
+For the following questions, remember that Lumpsucker fish grow best in waters that are 
+**between 12 and 18 degrees Celsius.** and with an NPP between **2.6 and 3 mgC/m2/day**
+
+#### Question 1: At what percentage of your sampled points would lumpsucker fish be found?
+```{r}
+
+```
+
+#### Question 2: In your set of sampled points, what is the minimum latitude where lumpsucker fish are likely to be found?
+```{r}
+
+```
+
+#### Question 3: Plot only those points where lumpsucker fish are found. 
+```{r}
+
+```

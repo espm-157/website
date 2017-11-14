@@ -34,6 +34,17 @@ What rolling average is used in computing the “trend” line? How does the tre
     </item>
     
     <item>
+      <title>Extinctions Unit</title>
+      <link>/assignment/extinction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/assignment/extinction/</guid>
+      <description>Extinctions Module Are we experiencing the sixth great extinction?
+What is the current pace of extinction? Is it accelerating? How does it compare to background extinction rates?
+ Background  Section Intro Video Ceballos et al (2015)   Computational Topics  Accessing data from a RESTful API Error handling JSON data format Regular expressions Working with missing values   Additional references:  http://www.hhmi.org/biointeractive/biodiversity-age-humans (Video) Barnosky et al. (2011) Pimm et al (2014) Sandom et al (2014)   Getting started (based on live code session) CURL and REST Use the httr package to make a single API query against the following endpoint: http://api.</description>
+    </item>
+    
+    <item>
       <title>Final Project: Proposal</title>
       <link>/assignment/proposal-final/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -51,6 +62,16 @@ What rolling average is used in computing the “trend” line? How does the tre
       <guid>/assignment/popdyn/</guid>
       <description>Attention: To get started on the exercise, visit the Piazza post to create your team repo.
 In this section, we will explore population dynamics of multiple interacting species; or more generally, dynamics in multiple variables. Previously, our only dynamic variable was a single focal population, sometimes called x, or squirrels, that could change over time in response to how many other squirrels there were. All other aspects of system were fixed: such as the environmental conditions responsible for determining the growth rate r and carrying capacity K.</description>
+    </item>
+    
+    <item>
+      <title>Spatial Assignment</title>
+      <link>/assignment/spatial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/assignment/spatial/</guid>
+      <description>Exercise This module is inspired by a recent paper in Nature Ecology and Evolution, Mapping the global potential for marine aquaculture. The authors used multiple constraints including ship traffic, dissolved oxygen, bottom depth and more, to limit and map areas suitable for aquaculture.
+ We are going to use a similar, but much more simplified approach here. We will map potential areas of marine aquaculture for the super cute Pacific spiny lumpsucker (Eumicrotremus orbis)</description>
     </item>
     
     <item>

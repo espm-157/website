@@ -45,6 +45,10 @@
   </url>
   
   <url>
+    <loc>/assignment/extinction/</loc>
+  </url>
+  
+  <url>
     <loc>/assignment/proposal-final/</loc>
   </url>
   
@@ -109,8 +113,16 @@
   </url>
   
   <url>
+    <loc>/reading/extinction/</loc>
+  </url>
+  
+  <url>
     <loc>/reading/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/assignment/spatial/</loc>
   </url>
   
   <url>
