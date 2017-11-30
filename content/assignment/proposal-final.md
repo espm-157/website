@@ -43,3 +43,6 @@ Please create your proposal in a markdown file called `proposal.md` in the root 
 - Parsing extensible data formats (JSON, XML)
 - Use of spatial vector data (`sf` package) and visualization of spatial data
 - Creation of an R package
+- Use of `purrr` package functions for [iteration](http://r4ds.had.co.nz/iteration.html)
+- Manipulation of [dates](http://r4ds.had.co.nz/dates-and-times.html) or [strings](http://r4ds.had.co.nz/strings.html)
+- Unique challenges you encounter: particularly messy data/ non-standard formats, special emphasis on visualization or presentation of results.
