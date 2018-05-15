@@ -36,7 +36,7 @@ Data science is about analyzing real-world data sets, and so a series
 of projects involving real data are a required part of the course. You
 may work alone or with a single partner on all projects. 
 
-Assignments are due Monday night by 11:59 pm Pacific Time. Assignments
+Assignments are due by 11:59 pm Pacific Time on the day indicated. Assignments
 should be submitted as instructed.
 
 ## Grading
@@ -111,6 +111,16 @@ You are encouraged to bring up related questions that arise in your
 research as well.
 
 __Office hours will be held by appointment.__
+
+## Code of Conduct
+
+Our course is committed to providing a respectful and welcoming 
+environment to all participants.  Please review the 
+[Open Code of Conduct](http://todogroup.org/opencodeofconduct/)
+guidelines for respectful and harassment-free conduct. To report
+an incident or request more information, contact the UC Berkeley
+[Office for the Prevention of Harassment and Discrimination](https://ophd.berkeley.edu) at
+<ask_ophd@berkeley.edu>
 
 
 

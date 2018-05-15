@@ -17,7 +17,7 @@
   </url>
   
   <url>
-    <loc>/assignment/fish/</loc>
+    <loc>/overview-notes/</loc>
   </url>
   
   <url>
@@ -26,8 +26,12 @@
   </url>
   
   <url>
-    <loc>/assignment/</loc>
+    <loc>/assignments/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/read/fish/</loc>
   </url>
   
   <url>
@@ -36,7 +40,11 @@
   </url>
   
   <url>
-    <loc>/assignment/climate/</loc>
+    <loc>/assignments/climate/</loc>
+  </url>
+  
+  <url>
+    <loc>/read/dplyr-1/</loc>
   </url>
   
   <url>
@@ -45,15 +53,51 @@
   </url>
   
   <url>
-    <loc>/assignment/extinction/</loc>
+    <loc>/assignments/final/</loc>
   </url>
   
   <url>
-    <loc>/assignment/proposal-final/</loc>
+    <loc>/read/functions/</loc>
   </url>
   
   <url>
-    <loc>/reading/geospatial/</loc>
+    <loc>/read/geospatial-1/</loc>
+  </url>
+  
+  <url>
+    <loc>/read/geospatial-io/</loc>
+  </url>
+  
+  <url>
+    <loc>/read/geospatial-raster/</loc>
+  </url>
+  
+  <url>
+    <loc>/read/geospatial-raster-vector/</loc>
+  </url>
+  
+  <url>
+    <loc>/read/geospatial-vector/</loc>
+  </url>
+  
+  <url>
+    <loc>/read/getting-help/</loc>
+  </url>
+  
+  <url>
+    <loc>/read/git-1/</loc>
+  </url>
+  
+  <url>
+    <loc>/read/dplyr-2/</loc>
+  </url>
+  
+  <url>
+    <loc>/read/purrr-1/</loc>
+  </url>
+  
+  <url>
+    <loc>/read/iteration/</loc>
   </url>
   
   <url>
@@ -61,68 +105,36 @@
   </url>
   
   <url>
-    <loc>/assignment/popdyn/</loc>
+    <loc>/read/rmarkdown-basics/</loc>
   </url>
   
   <url>
-    <loc>/reading/climate1/</loc>
+    <loc>/read/httr/</loc>
   </url>
   
   <url>
-    <loc>/reading/climate2/</loc>
+    <loc>/read/workflows/</loc>
   </url>
   
   <url>
-    <loc>/reading/climate4/</loc>
+    <loc>/read/docker/</loc>
   </url>
   
   <url>
-    <loc>/reading/workflows/</loc>
-  </url>
-  
-  <url>
-    <loc>/reading/popdyn1/</loc>
-  </url>
-  
-  <url>
-    <loc>/reading/popdyn2/</loc>
-  </url>
-  
-  <url>
-    <loc>/reading/popdyn3/</loc>
-  </url>
-  
-  <url>
-    <loc>/reading/r-pkgs/</loc>
-  </url>
-  
-  <url>
-    <loc>/reading/dplyr-1/</loc>
-  </url>
-  
-  <url>
-    <loc>/reading/dplyr-2/</loc>
-  </url>
-  
-  <url>
-    <loc>/reading/dplyr-3/</loc>
-  </url>
-  
-  <url>
-    <loc>/reading/docker/</loc>
-  </url>
-  
-  <url>
-    <loc>/reading/extinction/</loc>
-  </url>
-  
-  <url>
-    <loc>/reading/</loc>
+    <loc>/read/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/assignment/spatial/</loc>
+    <loc>/read/dplyr-3/</loc>
+  </url>
+  
+  <url>
+    <loc>/read/setup/</loc>
+  </url>
+  
+  <url>
+    <loc>/read/strings-regex/</loc>
   </url>
   
   <url>
@@ -135,7 +147,19 @@
   </url>
   
   <url>
-    <loc>/assignment/2017-10-24-fish-reproducibility/</loc>
+    <loc>/tutorials/</loc>
+  </url>
+  
+  <url>
+    <loc>/read/ggplot-1/</loc>
+  </url>
+  
+  <url>
+    <loc>/read/websites/</loc>
+  </url>
+  
+  <url>
+    <loc>/read/r-pkgs/</loc>
   </url>
   
 </urlset>

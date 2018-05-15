@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="generator" content="Hugo 0.30.2" />                                                                   
+               
+    
+  <title>ESPM 157</title>
+	<link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon.png">
+	<link rel="icon" type="image/png" href="../../img/favicon.png">
+	
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdn.rawgit.com/gaborcsardi/r-font/master/rlogo.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/wesbos/Font-Awesome-Docker-Icon/master/fontcustom/fontcustom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.0/css/academicons.min.css">
+
+	
+  <link href="../../css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../../css/material-kit.css" rel="stylesheet"/>
+  
+  
+
+  
+    
+  <link rel="alternate" href="../../index.xml" type="application/rss+xml" title="ESPM 157">
+  <link rel="feed" href="../../index.xml" type="application/rss+xml" title="ESPM 157">
+  <link rel="canonical" href="../../read/geospatial-1/">
+</head>
+
+  
+<body class="profile-page">
+  	<nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll">
+	    	<div class="container">
+        	
+        	<div class="navbar-header">
+        		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
+            		<span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+        		</button>
+        		<a class="navbar-brand" href="../../">ESPM 157</a>
+        	</div>
+
+        	<div class="collapse navbar-collapse" id="navigation-example">
+        		<ul class="nav navbar-nav navbar-right">
+      
+        
+
+        <li class="nav-item">
+          <a href="../../">
+            <i class='sidebar-button-icon fa fa-lg fa-home'></i>
+            <span>Home</span>
+          </a>
+        </li>
+        
+      
+        
+
+        <li class="nav-item">
+          <a href="../../modules">
+            <i class='material-icons'>dashboard</i>
+            <span>Modules</span>
+          </a>
+        </li>
+        
+      
+        
+
+        <li class="nav-item">
+          <a href="../../tutorials">
+            <i class='material-icons'>build</i>
+            <span>Tutorials</span>
+          </a>
+        </li>
+        
+      
+        
+
+        <li class="nav-item">
+          <a href="../../syllabus">
+            <i class='material-icons'>date_range</i>
+            <span>Syllabus</span>
+          </a>
+        </li>
+        
+      
+        
+
+        <li class="nav-item">
+          <a href="../../policies">
+            <i class='material-icons'>gavel</i>
+            <span>Policies</span>
+          </a>
+        </li>
+        
+      
+        		</ul>
+        	</div>
+    	</div>
+    </nav>
+  <div class="wrapper">
+    <div class="header header-filter" style="background-image: url('https://climate.nasa.gov/system/internal_resources/details/original/417_1263_banner-science-1600x500.jpg');">
+    </div>
+		<div class="main main-raised">
+			<div class="container">
+		  	<div class="section text-left">
+		  	  <h2 class="title text-center">Geospatial Data &amp; Visualization</h2>
+	            
+
+<h2 id="reading">Reading</h2>
+
+<p>Our geospatial module is meant only as an introduction to geospatial data, an already-rich area in R that is in mid-Renaissance right now, just as tabular data was in the past few years since the introduction of <code>dplyr</code> and the rest of <code>tidyverse</code>.</p>
+
+<p>GeoSpatial Textbook: <strong><a href="https://geocompr.robinlovelace.net">Geocomputation with R</a></strong> (Lovelace, Nowosad, Muenchow)</p>
+
+<ul>
+<li><strong><a href="https://geocompr.robinlovelace.net/intro.html">Chapter 1: Introduction</a></strong></li>
+</ul>
+
+<h3 id="basic-visualization-tools">Basic Visualization tools</h3>
+
+<p>Also read over the following vignettes:</p>
+
+<ul>
+<li>Static maps: <strong><a href="https://cran.r-project.org/web/packages/tmap/vignettes/tmap-nutshell.html">tmap Vignette</a></strong></li>
+<li>Interactive maps: <strong><a href="https://r-spatial.github.io/mapview/articles/articles/mapview_01-basics.html">mapview Vignette</a></strong></li>
+</ul>
+
+<h2 id="watch">Watch</h2>
+
+<h3 id="updated">UPDATED</h3>
+
+<ul>
+<li><p>DataCamp now has a more modern course from Zev Ross, <strong><a href="https://www.datacamp.com/courses/spatial-analysis-in-r-with-sf-and-raster">Spatial Analysis in R with <code>sf</code> and <code>raster</code></a></strong> that more closely aligns with the tools we will be using in this module (matching the Geocomputation reading above).</p></li>
+
+<li><p><del>Charlotte Wickham&rsquo;s DataCamp course, <strong><a href="https://www.datacamp.com/courses/working-with-geospatial-data-in-r">Working with Geospatial Data</a></strong> doesn&rsquo;t cover the new/emerging spatial suite we will focus on, but still very relevant. Chapter 3, introducing the <code>raster</code> side of things, is (for the moment) the same one we will use. However, the <code>sf</code> package replaces the vector manipulation and mapping functions of <code>sp</code>, though many concepts carry over.  Least relevant are the older plotting strategies covered there, such as <code>ggmap</code>, where we will rely on newer <code>tmap</code>, <code>ggplot::geom_sf</code>, and <code>mapview</code> packages.</del></p></li>
+</ul>
+
+<h3 id="references">References</h3>
+
+<ul>
+<li><p>I highly recommend browsing the <a href="https://cran.r-project.org/web/packages/sf/">excellent vignettes</a> of the <code>sf</code> package.  Vignettes are provided with most well-developed R packages and often provide the best and most up-to-date introduction to the package.</p></li>
+
+<li><p>Follow the <a href="http://r-spatial.org/">r-spatial blog &amp; website</a> for the latest news from the r-spatial community.  (Speaking of which, you can also follow the <a href="https://www.tidyverse.org/articles/">Tidyverse website/blog</a> for updates from there.)  Most of the package developers involved in these projects are also active in the <code>#rstats</code> corner of Twitter.</p></li>
+</ul>
+
+	      </div>
+      </div>
+		</div>
+    <footer class="footer">
+  <div class="container">
+	  <nav class="pull-left">
+	    <ul>
+	    
+        
+
+        <li>
+          <a href="https://github.com/ds421"><i class='button-icon fa fa-2x fa-github'></i> Team Repos</a>
+        </li>
+        
+      
+        
+
+        <li>
+          <a href="https://piazza.com/class/jcldsjdnq5a6g9"><i class='material-icons'>forum</i> Forum</a>
+        </li>
+        
+      
+        
+
+        <li>
+          <a href="http://r4ds.had.co.nz/"><i class='material-icons'>book</i> Textbook</a>
+        </li>
+        
+      
+        
+
+        <li>
+          <a href="http://travis-ci.com/ds421/"><i class='material-icons'>check_circle</i> Travis-CI</a>
+        </li>
+        
+      
+        
+
+        <li>
+          <a href="https://www.datacamp.com/groups/espm-288-reproducible-collaborative-data-science"><i class='material-icons'>video_library</i> DataCamp</a>
+        </li>
+        
+      
+      </ul>
+    </nav>
+	  <div class="copyright pull-right">
+	    <img src="../../img/cc-by.svg"/>
+	  </div>
+  </div>
+</footer>
+	</div>
+</body>
+
+   
+  
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	
+	
+	
+	<script src="../../js/material.min.js"></script>
+
+
+	
+	<script src="../../js/nouislider.min.js" type="text/javascript"></script>
+	
+	<script src="../../js/bootstrap-datepicker.js" type="text/javascript"></script>
+
+	
+	<script src="../../js/material-kit.js" type="text/javascript"></script>
+
+   
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    <script async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+    
+</html>

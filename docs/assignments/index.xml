@@ -21,5 +21,14 @@ What rolling average is used in computing the “trend” line? How does the tre
   Exercise I: Temperature Data Last year, 2015, has now been confirmed as the warmest year on record.</description>
     </item>
     
+    <item>
+      <title>Final Project: Proposal</title>
+      <link>/assignments/final/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/assignments/final/</guid>
+      <description>Projects should essentially look like any of our modules, but with you identifying the dataset and questions rather than working from a template. You may choose to replicate a figure from an existing study, but are also encouraged to use this opportunity to perform some exploratory analysis on data you may be using in your DS421 team projects or your own dissertation research. Remember that as with modules, finals will be graded on workflow and presentation rather than particular conclusions.</description>
+    </item>
+    
   </channel>
 </rss>

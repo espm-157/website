@@ -1,90 +1,203 @@
 lessons:
-  - title: "Introduction"
-    date: "Aug 24"
-    lecture: "intro.html"
-  - title: "Software Setup; Climate Change"
-    date: "Aug 29"
-    reading: "http://r4ds.had.co.nz/introduction.html"
-  - title: "No Class"
-    date: "Aug 31"
-  - title: "Climate Change"
-    date: "Sept 5"
-    reading: "/reading/climate1"
-    assignment: "climate"
-    lecture: "climate-intro.html"
-  - title: "Climate Change"
-    date: "Sept 7"
-    reading: "/reading/climate2"
-  - date: "Sept 12"
-    title: "Climate Change"
-    reading: "http://r4ds.had.co.nz/workflow-basics.html"
-  - date: "Sept 14"
-    title: "Climate Change"
-    reading: "/reading/climate4"
-  - date: "Sept 19"
-    title: "Climate Change wrap-up"
-    reading: "https://peerj.com/preprints/3159.pdf"
-  - date: "Sept 21"
-    title: "Reproducible Workflows"
-    reading: "/reading/workflows"
-  - date: "Sept 26"
-    title: "Population Dynamics"
-    reading: "/reading/popdyn1"
-    assignment: "popdyn"
-  - date: "Sept 28"
-    title: "Population Dynamics"
-    reading: "/reading/popdyn2"
-  - date: "Oct 3"
-    title: "Population Dynamics"
-    reading: "/reading/popdyn3"
-  - date: "Oct 5"
-    title: "Writing R packages"
-    reading: "/reading/r-pkgs"
-  - date: "Oct 10"
-    title: "Fisheries Collapse"
-    reading: "/reading/dplyr-1"
-    assignment: "fish.html"
-    lecture: "fish-lecture.html"
-  - date: "Oct 12"
-    title: "Fisheries Collapse"
-    reading: "/reading/dplyr-2"
-  - date: "Oct 17"
-    reading: "/reading/dplyr-3"
-    title: "Fisheries Collapse"
-  - date: "Oct 19"
-    title: "Fisheries Collapse"
-  - date: "Oct 24"
-    title: "Reproducibility exercise"
-  - date: "Oct 26"
-    title: "Docker & Cloud Computing"
-    reading: "/reading/docker"
-  - date: "Oct 31"
-    title: "Spatial Data"
-    assignment: "spatial"
-  - date: "Nov 2"
-    title: "Spatial Data"
-    reading: "/reading/geospatial"
-  - date: "Nov 7"
-    title: "Spatial Data"
-  - date: "Nov 9"
-    title: "Spatial Data"
-  - date: "Nov 14" 
-    title: "Extinctions"
-    assignment: "extinction"
-    reading: "/reading/extinction"
-  - date: "Nov 16"
-    title: "Extinctions"
-  - date: "Nov 21"
-    title: "Extinctions"
-  - date: "Nov 28"
-    title: "Final Projects"
-    assignment: "proposal-final"
-  - date: "Nov 30"
-    title: "Final Projects"
-  - date: "Dec 5"
-    title: "No Class, RRR week"
-  - date: "Dec 7"
-    title: "No Class, RRR week"
-  - date: "Dec 12"
-    title: "Final Projects due before midnight!"
+  - module: "<i class='material-icons'>home</i>"
+    topics: "Introduction & setup"
+    date: "2018-01-18"
+    reading: "read/setup"
+    watch: "read/setup"
+    
+  - module: " "
+    date: " "
+    topics: "<b>CLIMATE MODULE</b>"
+    
+  - module: "<i class='fa fa-lg fa-thermometer-full'></i>"
+    date: "2018-01-23"
+    reading: "read/rmarkdown-basics"
+    watch: "read/rmarkdown-basics"
+    datatype: '<i class="fa fa-table"></i>'
+    topics: "Individual assessment"
+    
+  - module: "<i class='fa fa-lg fa-github'></i>"
+    date: "2018-01-25"
+    topics: "Workflow: GitHub, RMarkdown, Travis"
+    reading: "read/git-1"
+    watch: "read/git-1"
+    assignment: ""
+    
+  - module: "<i class='fa fa-lg fa-thermometer-full'></i>"
+    date: "2018-01-30"
+    datatype: '<i class="fa fa-table"></i>'
+    topics: "Visualization basics"
+    reading: "read/ggplot-1"
+    watch: "read/ggplot-1"
+    
+  - module: "<i class='fa fa-lg fa-thermometer-full'></i>"
+    date: "2018-02-01"
+    datatype: '<i class="fa fa-table"></i>'
+    topics: "Manipulation basics"
+    reading: "read/dplyr-1"
+    watch: "read/dplyr-1"
+
+  - module: " "
+    date: " "
+    topics: "<b>OVERFISHING MODULE</b>"
+    
+  - module: "<i class='material-icons'>directions_boat</i>"
+    date: "2018-02-06"
+    datatype: '<i class="fa fa-database"></i>'
+    topics: "Relational data: groups"
+    reading: "read/dplyr-2"
+    watch: "read/dplyr-2"
+    
+  - module: " <i class='material-icons'>directions_boat</i>"  
+    date: "2018-02-08"
+    datatype: "<i class='fa fa-database'></i>"
+    topics: "Relational data: joins"
+    reading: "read/dplyr-3"
+    watch: "read/dplyr-3"
+    
+  - module: " <i class='material-icons'>directions_boat</i>"
+    date: "2018-02-13"
+    datatype: '<i class="fa fa-database"></i>'
+    topics: "group_by and summarize"
+    reading: "read/fish"
+    watch: "read/fish"
+
+  - module: " <i class='material-icons'>directions_boat</i>"  
+    date: "2018-02-15"
+    datatype: '<i class="fa fa-database"></i>'
+    topics: "Missing Values"
+ 
+  - module: " <i class='material-icons'>directions_boat</i>"  
+    date: "2018-02-20"
+    datatype: '<i class="fa fa-database"></i>'
+    topics: "Reproducibility"
+        
+  - module: "<i class='material-icons'>language</i>"
+    topics: "web design"
+    date: "2018-02-22"
+    reading: "read/websites"
+    
+  - module: " "
+    date: " "
+    topics: "<b>POPULATION DYNAMICS MODULE</b>"
+ 
+  - module: "<i class='material-icons'>bug_report</i>"
+    date: "2018-02-27"
+    datatype: '<i class="material-icons">memory</i>'
+    topics: "Functions"
+    reading: "read/functions"
+    watch: "read/functions"
+
+  - module: " <i class='material-icons'>bug_report</i>"
+    topics: "Iteration"
+    date: "2018-03-01"  
+    datatype: '<i class="material-icons">memory</i>'
+
+  - module: " <i class='material-icons'>bug_report</i>"
+    date: "2018-03-06"
+    datatype: '<i class="material-icons">memory</i>'
+    topics: "Iteration"
+    reading: "read/iteration"
+    watch: "read/iteration"
+       
+  - module: " <i class='icon-rlogo'></i> <i class='fa fa-lg fa-gift'></i>"
+    date: "2018-03-08"    
+    topics: "Writing R packages"
+    reading: "read/r-pkgs"
+
+    
+  - module: " "
+    date: " "
+    topics: "<b>GEOSPATIAL CHANGE MODULE</b>"
+    
+  - module: "<i class='material-icons'>my_location</i>"  
+    date: "2018-03-13"
+    datatype: '<i class="material-icons">satellite</i>'
+    topics: "geospatial intro, visualization"
+    reading: "read/geospatial-1"
+    watch: "read/geospatial-1"
+    
+  - module: "<i class='material-icons'>my_location</i>"
+    date: "2018-03-15"
+    datatype: '<i class="material-icons">satellite</i>'
+    topics: "vector data"
+    reading: "read/geospatial-raster-vector"
+    watch: "read/geospatial-vector"
+
+    
+  - module: "<i class='material-icons'>my_location</i>"
+    date: "2018-03-20"
+    datatype: '<i class="material-icons">satellite</i>'
+    topics: "raster data"
+    reading: "read/geospatial-io"
+    watch: "read/geospatial-io"
+    
+  - module: "<i class='fa fa-2x fa-docker'></i> <i class='material-icons'>cloud</i>"
+    topics: "Tutorial: Docker & Cloud computing"
+    reading: "read/docker"
+    date: "2018-03-22"
+
+  - module: "<i class='material-icons'>school</i>"
+    date: "2018-04-03"
+    topics: "Final Project Proposals"
+    reading: "assignments/final"
+
+  - module: " "
+    date: " "
+    topics: "<b>MASS EXTINCTIONS MODULE</b>"
+
+    
+  - module: "<i class='material-icons'>trending_down</i>"
+    date: "2018-04-05"
+    datatype: '<i class="material-icons">widgets</i>'
+    topics: "REST APIs"
+    watch: "read/httr"
+    
+  - module: " <i class='material-icons'>trending_down</i>"
+    date: "2018-04-10"
+    datatype: '<i class="material-icons">widgets</i>'
+    topics: "Regular Expressions"
+    reading: "read/strings-regex"
+    watch: "read/strings-regex"
+    
+  - module: "<i class='material-icons'>trending_down</i>"
+    date: "2018-04-12"
+    datatype: '<i class="material-icons">widgets</i>'
+    topics: "Data rectangling"
+    reading: "read/purrr-1"
+    watch: "read/purrr-1"
+  
+  - module: "<i class='material-icons'>trending_down</i>"
+    date: "2018-04-17"
+    datatype: '<i class="material-icons">widgets</i>'
+    topics: "Data rectangling"
+    read: ""
+  
+  - module: " "
+    date: " "
+    topics: "<b>BIODIVERSITY MODULE / FINAL PROJECTS</b>"
+    
+  - module: "<i class='material-icons'>nature_people</i>" 
+    datatype: "<i class='material-icons'>share</i>"
+    date: "2018-04-19"
+    topics: "JSON-LD, graph queries"
+
+  - module: "<i class='material-icons'>school</i>"
+    date: "2018-04-24"
+    topics: "Final Projects"
+    
+  - module: "<i class='material-icons'>nature_people</i>"
+    datatype: "<i class='material-icons'>share</i>"
+    date: "2018-04-26"
+    topics: "Data publishing"
+
+  - module: "<i class='material-icons'>school</i>"
+    date: "2018-05-01"
+    topics: "Final Projects"
+
+  - module: "<i class='material-icons'>school</i>"
+    date: "2018-05-03"  
+    topics: "Final Projects"
+    
+  
   

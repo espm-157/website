@@ -54,7 +54,7 @@
 
         <li class="nav-item">
           <a href="../">
-            <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+            <i class='sidebar-button-icon fa fa-lg fa-home'></i>
             <span>Home</span>
           </a>
         </li>
@@ -64,7 +64,7 @@
 
         <li class="nav-item">
           <a href="../modules">
-            <i class="material-icons">dashboard</i>
+            <i class='material-icons'>dashboard</i>
             <span>Modules</span>
           </a>
         </li>
@@ -73,9 +73,9 @@
         
 
         <li class="nav-item">
-          <a href="../tools">
-            <i class="material-icons">build</i>
-            <span>Tools</span>
+          <a href="../tutorials">
+            <i class='material-icons'>build</i>
+            <span>Tutorials</span>
           </a>
         </li>
         
@@ -84,7 +84,7 @@
 
         <li class="nav-item">
           <a href="../syllabus">
-            <i class="material-icons">date_range</i>
+            <i class='material-icons'>date_range</i>
             <span>Syllabus</span>
           </a>
         </li>
@@ -94,7 +94,7 @@
 
         <li class="nav-item">
           <a href="../policies">
-            <i class="material-icons">gavel</i>
+            <i class='material-icons'>gavel</i>
             <span>Policies</span>
           </a>
         </li>
@@ -105,158 +105,161 @@
     	</div>
     </nav>
   <div class="wrapper">
-    <div class="header header-filter" style="background-image: url('https://climate.nasa.gov/system/internal_resources/details/original/417_1263_banner-science-1600x500.jpg');">
-    </div>
+	  <div class="header header-filter" style="background-image: url('https://climate.nasa.gov/system/internal_resources/details/original/417_1263_banner-science-1600x500.jpg');">
+	  </div>
 		<div class="main main-raised">
-			<div class="container">
-		  	<div class="section text-left">
-		  	  <h2 class="title text-center">Modules</h2>
-	                          <div class="profile-tabs">
-               <div class="nav-align-center">
-                  <ul class="nav nav-pills nav-pills-primary" role="tablist">
-                    <li class="active">
-                      <a href="#climate" role="tab" data-toggle="tab">
-                        <i class="material-icons">timeline</i>
-                        Climate Change
+	    <div class="container">
+	      <div class="section text-left">
+          <h2 class="title text-center">Modules</h2>
+          This course is divided into separate modules, each designed to give you a hands-on experience working in teams to reproduce or examine a fundamental result in global change ecology.  Each module will also introduce a different type of data and different tooling to handle it, as described in the summaries below.  You will spend a few weeks working through each module in your team, largely at your own pace. Weekly readings and introductory live-code sessions will provide some necessary background, but real learning will happen only by doing.  Most of the questions in your assignment for each module do not have &#39;right&#39; answers, but involve open ended research to fully explore.  Students without prior statistical or computational experience should be able to complete initial exercises, while teams with greater prior experience are expected to push those boundaries by going deeper into the analysis and presentation. Workflow and communication are central elements to each module.  All work should appear in professional and well documented format using RMarkdown notebooks in the project GitHub repository and pass all automated checks on Travis-CI.
+
+          <div class = "nav-align-center">
+              <ul class="nav nav-pills nav-pills-primary" role="tablist">
+                  
+                   <li class="nav-item">
+                      <a href="#climate" data-toggle="tab" role="tab">
+                        <i class='material-icons'>timeline</i> Climate Change
                       </a>
                     </li>
-                     <li>
-                      <a href="#simulation" role="tab" data-toggle="tab">
-                        <i class="material-icons">bug_report</i>
-                        Ecological simulation
+                  
+                   <li class="nav-item">
+                      <a href="#fish" data-toggle="tab" role="tab">
+                        <i class='material-icons'>directions_boat</i> Overfishing
                       </a>
                     </li>
-                    <li>
-                      <a href="#overfishing" role="tab" data-toggle="tab">
-                        <i class="material-icons">directions_boat</i>
-                        Overfishing
-                       </a>
-                    </li>
-                    <li>
-                      <a href="#spatial" role="tab" data-toggle="tab">
-                        <i class="material-icons">my_location</i>
-                        Spatial movement
+                  
+                   <li class="nav-item">
+                      <a href="#popdyn" data-toggle="tab" role="tab">
+                         <i class='material-icons'>bug_report</i> Ecological Simulation
                       </a>
                     </li>
-                    <li>
-                    <a href="#extinction" role="tab" data-toggle="tab">
-                      <i class="material-icons">trending_down</i>
-                      Mass Extinctions
-                    </a>
+                  
+                   <li class="nav-item">
+                      <a href="#spatial" data-toggle="tab" role="tab">
+                         <i class='material-icons'>my_location</i> Geospatial
+                      </a>
                     </li>
-                    </ul>
+                  
+                   <li class="nav-item">
+                      <a href="#extinction" data-toggle="tab" role="tab">
+                         <i class='material-icons'>trending_down</i> Mass Extinctions
+                      </a>
+                    </li>
+                  
+              </ul>
+              <div class="tab-content gallery text-left">
+            	<hr>
 
-                    <div class="tab-content gallery">
-                    <div class="tab-pane text-center active" id="climate">
-                      <div class="row">
-                        <div class="col-md-6">
-                        <img src="../img/co2.png"  class="img-rounded img-responsive img-raised">  
+<div class="tab-pane active" id="climate">
+  <h2>Climate Change</h2>
+  <div class="row">
+    <div class="col-md-6">
+    <img src="../img/co2.png"  class="img-rounded img-responsive img-raised">  
+    </div>
+    <div class="col-md-6">
+      
+      <h3><i class="fa fa-table"></i> Tabular data</h3>
+      
+    <strong>What is the evidence for a changing climate?</strong> In this unit, we will examine some of the most important indicators of global climate change:  
+    including CO2 concentration, global mean temperature, sea level rise, land ice sheet melt, 
+    and arctic sea ice cover.  We will wrangle a wide range of tabular data file formats used by
+    NOAA and other agencies and introduce the fundamentals of data visualization with <code>ggplot2</code>
+    and data processing with basic functions from the <code>readr</code>, <code>tidyr</code>, and 
+    <code>dplyr</code> packages as we 
+    seek to replicate the principle results of climate change over the last decades and also the
+    past thousands of years. 
+  
+    </div>
+  </div>
+</div>
 
-                          
-                        </div>
-                        <div class="col-md-6">
-                          <strong>Topics</strong>:
-                            CO2 concentration,
-                            Global mean temperature,
-                            Sea level rise,
-                            Land ice sheet melt,
-                            Arctic sea ice cover
-                          <br/>  
-                          <strong>Skills</strong>:
-                            Data wrangling: plain text formats,
-                            Tidy data,
-                            Data visualization,
-                            Smoothing
-                        </div>
-                      </div>
-                    </div>
-                   
-                    <div class="tab-pane text-center" id="simulation">
-                      <div class="row">
-                        <div class="col-md-6">
-                           <img src="../img/chaos.png"  class="img-rounded img-responsive img-raised">  
-                        </div>
-                        <div class="col-md-6">
-                          <strong>Topics</strong>: 
-                          Coexistence, 
-                          Bet Hedging, 
-                          Limit Cycles, 
-                          Bifurcations, 
-                          Deterministic Chaos
-                          <br/>
-                          <strong>Skills</strong>:
-                          Flow control,
-                          functions,
-                          iterators,
-                          writing R packages,
-                          testing,
-                          literate documentation
-                        </div>
-                      </div>
-                    </div>
-                    
-                    
-                    <div class="tab-pane text-center" id="overfishing">
-                      <div class="row">
-                        <div class="col-md-6">
-                          
-                        <img src="../img/worm2006.jpg"  class="img-rounded img-responsive img-raised">  
-                        From Worm <emph>et al.</emph> 2006, <a href="https://doi.org/10.1126/science.1132294">https://doi.org/10.1126/science.1132294</a>
-                        
-                        </div>
-                        <div class="col-md-6">
-                          <strong>Topics</strong>: Fisheries, reproducibility, missing data, data visualization and inference
-                          <br/>
-                          <strong>Skills:</strong>:
-                          Relational databases, SQL
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div class="tab-pane text-center" id="spatial">
-                      <div class="row">
-                        <div class="col-md-6">
-                          <img src="../img/albatross.png"  class="img-rounded img-responsive img-raised">  
-                        </div>  
-                        <div class="col-md-6">
-                        <strong>Technologies and data formats</strong>: <a href="https://en.wikipedia.org/wiki/Simple_Features">Simple Features Access</a> (ISO 19125) (used in GIS, geojson), Spatial rasters (e.g. geotiff, netcdf), interactive mapping.
-                        </div>
-                      </div>
-                    </div> 
-                    
-                    <div class="tab-pane text-center" id="extinction">
-                      <div class="row">
-                        <div class="col-md-6">
-                          <img src="../img/extinctions.jpg"  class="img-rounded img-responsive img-raised">  
 
-                           From Cerbellos et al., <a href="https://doi.org/10.1126/sciadv.1400253">https://doi.org/10.1126/sciadv.1400253</a>
-                          
-                        </div>
-                        <div class="col-md-6">
-                          <strong>Topics</strong>: 
-                          ICUN Redlist, 
-                          Fossil record,
-                          Taxonomy,
-                          Remote and unstructured data
-                          <br/>
-                          <strong>Skills</strong>:
-                          JSON, 
-                          curl, 
-                          REST APIs, 
-                          regular expressions
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+<div class="tab-pane" id="fish">
+  <h2>Overfishing</h2>
+  <div class="row">
+    <div class="col-md-6">
+    <img src="../img/worm2006.jpg"  class="img-rounded img-responsive img-raised">  
+    From Worm <emph>et al.</emph> 2006, <a href="https://doi.org/10.1126/science.1132294">https://doi.org/10.1126/science.1132294</a>
+    </div>
+    <div class="col-md-6">
+      <h3><i class="fa fa-database"></i> Relational databases</h3>
+      
+      <strong>The last fish in the sea?</strong>
+      In a paper in <emph>Science</emph> in 2006, Boris Worm and colleagues seized international headlines
+      and fueled an ongoing scientific controversy when they documented the persistent declines
+      of fisheries on a global scale.  In this module, we will explore the evidence behind these
+      controvertial results using some of the best publicly available data from global fisheries
+      stock assessments.  This will introduce us to techniques for working with relational databases,
+      where the data we need is spread across multiple tables. We will get deeper into `dplyr` and
+      related tools.
+    </div>
+  </div>
+</div>
+
+<div class="tab-pane" id="popdyn">
+  <h2>Ecological Simulation</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <img src="../img/chaos.png" class="img-rounded img-responsive img-raised">  
+    </div>
+    <div class="col-md-6">
+      <h3><i class="material-icons">memory</i> Simulated data</h3>
+      
+      One of the fastest growing sources of data comes not from measurements, but simulations.
+    </div>
+  </div>
+</div>
+
+<div class="tab-pane" id="spatial">
+  <h2>Geospatial Analysis</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <img src="../img/albatross.png" class="img-rounded img-responsive img-raised">  
+    </div>  
+    <div class="col-md-6">
+      <h3><i class="material-icons">satellite</i> Geospatial data</h3>
+      <strong>How will changing climate conditions drive species range shifts?</strong>
+      This module provides an introduction to the fundamentals of working with spatial vector and
+      raster data in R.  Our approach places an emphasis on the 
+      <a href="https://en.wikipedia.org/wiki/Simple_Features">Simple Features Access</a> standard
+      (ISO 19125) and tidyverse-style workflow using the <code>sf</code> package and emerging
+      ecosystem of <a href="https://r-spatial.org">r-spatial</a> tools.  
+    </div>
+  </div>
+</div>
+
+<div class="tab-pane" id="extinction">
+  <h2>Mass Extinctions</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <img src="../img/extinctions.jpg"  class="img-rounded img-responsive img-raised">  
+      From Cerbellos et al., <a href="https://doi.org/10.1126/sciadv.1400253">https://doi.org/10.1126/sciadv.1400253</a>
+    </div>
+    <div class="col-md-6">
+      <h3><i class="material-icons">widgets</i> Non-rectangular data</h3>
+      <strong>Are we experiencing the sixth mass extinction?</strong> In this unit, we will
+      attempt to estimate the current rate of species extinctions across major taxa and compare
+      this against the background rate of extinctions in the fossil record; replicating seminal
+      work from a series of papers by Tony Barnosky and colleagues.  Though rectangular data frames
+      have formed the core unit of our analysis so far, to answer these questions we will learn to
+      work with non-rectangular data.  This module will introduce the fundamentals of working with
+      non-rectangular data in the JSON format returned by a REST API. We will also encounter the use
+      of Regular Expressions for extracting information from unstructured textual data. 
+    </div>
+  </div>
+</div>
+
+
+
+
+
               </div>
-              
-
-
-	      </div>
-      </div>
-		</div>
-    <footer class="footer">
+            </div>
+          </div>
+	     </div>
+	  </div>
+  </div>
+  <footer class="footer">
   <div class="container">
 	  <nav class="pull-left">
 	    <ul>
@@ -264,35 +267,35 @@
         
 
         <li>
-          <a href="https://github.com/espm-157"><i class="button-icon fa fa-2x fa-github"></i> Team Repos</a>
+          <a href="https://github.com/ds421"><i class='button-icon fa fa-2x fa-github'></i> Team Repos</a>
         </li>
         
       
         
 
         <li>
-          <a href="https://piazza.com/berkeley/fall2017/espm157/home"><i class="material-icons">forum</i> Forum</a>
+          <a href="https://piazza.com/class/jcldsjdnq5a6g9"><i class='material-icons'>forum</i> Forum</a>
         </li>
         
       
         
 
         <li>
-          <a href="http://r4ds.had.co.nz/"><i class="material-icons">book</i> Textbook</a>
+          <a href="http://r4ds.had.co.nz/"><i class='material-icons'>book</i> Textbook</a>
         </li>
         
       
         
 
         <li>
-          <a href="http://travis.com/espm-157/"><i class="material-icons">check_circle</i> Travis-CI</a>
+          <a href="http://travis-ci.com/ds421/"><i class='material-icons'>check_circle</i> Travis-CI</a>
         </li>
         
       
         
 
         <li>
-          <a href="https://www.datacamp.com/groups/espm-157-data-science-for-global-change-biology"><i class="material-icons">video_library</i> DataCamp Lessons</a>
+          <a href="https://www.datacamp.com/groups/espm-288-reproducible-collaborative-data-science"><i class='material-icons'>video_library</i> DataCamp</a>
         </li>
         
       
@@ -303,7 +306,6 @@
 	  </div>
   </div>
 </footer>
-	</div>
 </body>
 
    

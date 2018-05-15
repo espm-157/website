@@ -1,42 +1,46 @@
-<table class="table">
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+
+<table class="table table-striped" align="text-center">
   <tr>
-    <th style="width:30%">Date</th>
-    <th style="width:50%">Lesson</th>
-    <th style="width:5%">Reading</th>
-    <th style="width:5%">Lecture</th>
-    <th style="width:5%">Assignment</th>
+    <th align="center" style="width:15%">Date</th>
+    <th align="center" style="width:10%"><a href="/modules">Module</a></th>
+    <th align="center" style="width:10%">Data</th>
+    <th align="center" style="width:45%">Topics</th>
+    <th align="center" style="width:5%">Read</th>
+    <th align="center" style="width:5%">Watch</th>
   </tr>
 
   {{ range $.Site.Data.lessons }}
     {{range . }}
     <tr>
-      <td align="right">{{ .date }}</td>
-      <td><b>{{ .title }}<b/></td>
+      <td align="center">{{ .date }}</td>
+      <td align="center"><b>{{ .module | safeHTML }}<b/></td>
+      <td align="center">{{if .datatype }}{{ .datatype | safeHTML }}{{ end }}</td>
+      <td align="center">{{if .topics }}{{ .topics | safeHTML }}{{ end }}</td>
+
       {{ if .reading }}
-      <td align="center"><a href="{{ .reading }}">
+      <td align="center"><a href="{{ .Site.baseurl }}/{{ .reading }}">
           <i class="fa fa-book fa-lg"></i></a></td>
       {{ else }}
         <td align="center"><font color="f1f1f1">
           <i class="fa fa-book fa-lg"></i></font></td>
       {{ end }}
 
-      {{ if .lecture }}
-      <td align="center"><a href="{{ .Site.baseurl }}/lecture/{{ .lecture  }}">
+      {{ if .watch }}
+      <td align="center"><a href="{{ .Site.baseurl }}/{{ .watch  }}">
           <i class="fa fa-comment fa-lg"></i></a></td>
       {{ else }}
         <td align="center"><font color="f1f1f1">
           <i class="fa fa-comment fa-lg"></i></font></td>
       {{ end }}
 
-      {{ if .assignment }}
-      <td align="center"><a href="{{ .Site.baseurl }}/assignment/{{ .assignment }}">
-          <i class="fa fa-keyboard-o fa-lg"></i></a></td>
-      {{ else }}
-        <td align="center"><font color="f1f1f1">
-          <i class="fa fa-keyboard-o fa-lg"></i></font></td>
-      {{ end }}
     </tr>
     {{ end }}
   {{ end }}
 
 </table>
+
+    
+  </div>
+</div>
