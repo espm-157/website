@@ -66,13 +66,13 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   identifier = "GitHub"
   name = "Team Repos"
   pre = "<i class='button-icon fa fa-2x fa-github'></i>"
-  url = "https://github.com/ds421"
+  url = "https://github.com/espm-157"
 [[menu.footer]]
   weight = 3
   identifier = "Piazza"
   name = "Forum"
   pre = "<i class='material-icons'>forum</i>"
-  url = "https://piazza.com/class/jcldsjdnq5a6g9"
+  url = "#"
 [[menu.footer]]
   weight = 4
   name = "Textbook"
@@ -82,12 +82,12 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   weight = 5
   name = "Travis-CI"
   pre = "<i class='material-icons'>check_circle</i>"
-  url = "http://travis-ci.com/ds421/"
+  url = "http://travis-ci.com/espm-157/"
 [[menu.footer]]
   weight = 6
   name = "DataCamp"
   pre = "<i class='material-icons'>video_library</i>"
-  url = "https://www.datacamp.com/groups/espm-288-reproducible-collaborative-data-science"
+  url = "https://www.datacamp.com/groups/espm-157-data-science-for-global-change-ecology"
 
 
 
