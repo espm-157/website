@@ -1,5 +1,5 @@
 ---
-title: "ESPM 288: Reproducible and Collaborative Data Science"
+title: "ESPM 157: Data Science for Global Change Ecology"
 description: ""
 markup: "mmark"
 ---
