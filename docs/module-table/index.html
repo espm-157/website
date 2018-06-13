@@ -29,7 +29,7 @@
     
   <link rel="alternate" href="../index.xml" type="application/rss+xml" title="ESPM 157">
   <link rel="feed" href="../index.xml" type="application/rss+xml" title="ESPM 157">
-  <link rel="canonical" href="../tutorials/">
+  <link rel="canonical" href="../module-table/">
 </head>
 
   
@@ -110,124 +110,88 @@
 		<div class="main main-raised">
 	    <div class="container">
 	      <div class="section text-left">
-          <h2 class="title text-center">Tutorials</h2>
-          Tutorials will provide a brief introduction to a range of data science tools, many of which we will continue to use regularly throughout the course modules.  Tutorial sessions will be woven in between modules and are meant to fit within a single class session.  While modules aim to help you master fundamental skills through a hands-on analysis over several weeks, tutorials are meant primarily to give you some context and a flavor for what is possible.
+          <h2 class="title text-center">Modules</h2>
+          This course is divided into separate modules, each designed to give you a hands-on experience working in teams to reproduce or examine a fundamental result in global change ecology.  Each module will also introduce a different type of data and different tooling to handle it, as described in the summaries below.  You will spend a few weeks working through each module in your team, largely at your own pace. Weekly readings and introductory live-code sessions will provide some necessary background, but real learning will happen only by doing.  Most of the questions in your assignment for each module do not have &#39;right&#39; answers, but involve open ended research to fully explore.  Students without prior statistical or computational experience should be able to complete initial exercises, while teams with greater prior experience are expected to push those boundaries by going deeper into the analysis and presentation. Workflow and communication are central elements to each module.  All work should appear in professional and well documented format using RMarkdown notebooks in the project GitHub repository and pass all automated checks on Travis-CI.
+
           <div class = "nav-align-center">
               <ul class="nav nav-pills nav-pills-primary" role="tablist">
                   
                    <li class="nav-item">
-                      <a href="#github" data-toggle="tab" role="tab">
-                        <i class='fa fa-github'></i> GitHub
+                      <a href="#climate" data-toggle="tab" role="tab">
+                        <i class='material-icons'>timeline</i> Climate Change
                       </a>
                     </li>
                   
                    <li class="nav-item">
-                      <a href="#rmarkdown" data-toggle="tab" role="tab">
-                        <br/><img src='../img/rmarkdown.png' alt='rmarkdown' width='36' height='36'><br/> RMarkdown
+                      <a href="#fish" data-toggle="tab" role="tab">
+                        <i class='material-icons'>directions_boat</i> Overfishing
                       </a>
                     </li>
                   
                    <li class="nav-item">
-                      <a href="#travis" data-toggle="tab" role="tab">
-                        <i class='material-icons'>check_circle</i> Travis-CI
+                      <a href="#popdyn" data-toggle="tab" role="tab">
+                         <i class='material-icons'>bug_report</i> Ecological Simulation
                       </a>
                     </li>
                   
                    <li class="nav-item">
-                      <a href="#packages" data-toggle="tab" role="tab">
-                        <i class='fa fa-archive'></i> R Packages
+                      <a href="#spatial" data-toggle="tab" role="tab">
+                         <i class='material-icons'>my_location</i> Geospatial
                       </a>
                     </li>
                   
                    <li class="nav-item">
-                      <a href="#docker" data-toggle="tab" role="tab">
-                        <i class='fa fa-docker'></i> Docker
-                      </a>
-                    </li>
-                  
-                   <li class="nav-item">
-                      <a href="#cloud" data-toggle="tab" role="tab">
-                        <i class='fa fa-cloud'></i> Cloud
-                      </a>
-                    </li>
-                  
-                   <li class="nav-item">
-                      <a href="#website" data-toggle="tab" role="tab">
-                        <i class='material-icons'>language</i> Web design
-                      </a>
-                    </li>
-                  
-                   <li class="nav-item">
-                      <a href="#shiny" data-toggle="tab" role="tab">
-                        <br/><img src='../img/shiny.png' alt='shiny' width='36' height='36'><br/> Shiny
+                      <a href="#extinction" data-toggle="tab" role="tab">
+                         <i class='material-icons'>trending_down</i> Mass Extinctions
                       </a>
                     </li>
                   
               </ul>
               <div class="tab-content gallery text-left">
-            	
-
-<p>&nbsp;
-<div class="tab-pane active" id="github">
-<h3><i class="fa fa-github"></i> GitHub</h3></p>
-
-<p>Almost everything we do will involve GitHub in some way.  This tutorial will provide a brief introduction to our GitHub-based workflow and review common <code>git</code> patterns for resolving issues you may encounter in working collaboratively.<br />
-<!-- User name/picture, 2FA, github classroom, pull requests, github emoji-->
-</div>
-<div class="tab-pane" id="rmarkdown"></p>
-
-<h3 id="i-class-icon-rlogo-i-rmarkdown-notebooks"><i class="icon-rlogo"></i> RMarkdown Notebooks</h3>
-
-<p>Most of your work will take place inside an RMarkdown notebook.  While we will rely primarily on the <code>github_document</code> format, RMarkdown supports a wide variety of output formats that you can use to create <code>pdf</code> documents (including particular journal formats) slideshows, websites, ebooks and interactive tutorials.  In this tutorial, we will showcase these formats and introduce how RMarkdown output can be customized through <code>yaml</code> header blocks, <code>knitr</code> chunks, and templates.  We will also introduce some of the technology behind RMarkdown formats, including <code>pandoc</code>, <code>LaTeX</code>, and <code>HTML</code>/<code>CSS</code>.  See <a href="https://rmarkdown.rstudio.com">https://rmarkdown.rstudio.com</a>.</p>
-
-<p></div>
-<div class="tab-pane" id="travis"></p>
-
-<h3 id="i-class-fa-fa-check-i-travis-ci"><i class="fa fa-check"></i> Travis CI</h3>
-
-<p>Continuous Integration (CI) is an important concept data science practice has largely adopted from software engineering, in which a suite of tests are run every time changes are committed (i.e. pushed to GitHub or other version control platform) to a project. We will use the popular Travis-CI platform to check for successful and reproducible rendering of RMarkdown notebooks in your project directories.</p>
-
-<p>Our Travis-CI tutorial will provide more background on what Travis is an how it can be configured and used in a variety of settings.</p>
-
-<p></div>
-<div class="tab-pane" id="packages">
-  <h3><i class="fa fa-archive"></i> R Packages</h3></p>
-
-<p>Writing R packages isn&rsquo;t just for software developers.
-The R packaging mechanism provides a powerful and very flexible mechanism for organizing
-research projects, a notion we refer to as the R &ldquo;compendium&rdquo; model.  This tutorial will
-introduce you to the fundamentals of the R package structure and it&rsquo;s ecosystem of tools.</p>
-
-<p></div>
-<div class="tab-pane" id="docker">
-  <h3><i class="fa fa-docker"></i> Docker</h3></p>
-
-<p>Docker the engine behind the emerging Open Container standard for creating portable
-  computational environments; important both for reproducibility of existing work and
-  deploying analyses on larger compute systems (see Cloud Tutorial).  This tutorial will
-  introduce you to the basics of using Docker with the R environment.</p>
-
-<p></div>
-<div class="tab-pane" id="cloud">
-  <h3><i class="fa fa-cloud"></i> Cloud</h3></p>
-
-<p>This tutorial will review some of the major commercial and academic platforms for
-  cloud computing research and give you experience of launching your own instances and
-  running analyses on cloud computers using Docker and the RStudio interface.
-</div>
-<div class="tab-pane" id="website">
-  <h3><i class="fa fa-html5"></i> Web design</h3></p>
-
-<p>Effective web-based communication is an important element of reproducible and collaborative data science.  This tutorial will provide a brief introduction to creating your own websites with <code>Rmarkdown</code> based tools such as <code>bookdown</code> and <code>blogdown</code>.</p>
-
-<p><!-- netlify, hugo, bootstrap css -->
-</div>
-<div class="tab-pane" id="shiny">
-  <h3> Shiny</h3>
-  RStudio&rsquo;s Shiny platform provides a simple way to turn your R plots and analyses into interactive interfaces with menus, buttons and slider bars.<br />
-</div>
-<!-- Shiny? --></p>
-
+            	<table class="table table-striped" align="text-center">
+  <tr>
+    <th align="center" style="width:25%">Module</th>
+    <th align="center">Candidate paper</th>
+    <th align="center">Data Format</th>
+    <th align="center">Technical skills</th>
+  </tr>
+  <tr>
+    <td><i class='material-icons'>timeline</i> Climate Change</td>
+    <td><a href="https://doi.org/10.1038/20859">Petit et al. (1999)</a></td> 
+    <td><i class="fa fa-table"></i> Tabular data </td>
+    <td> Parsing tabular data, visualization (<code>readr</code>, <code>ggplot2</code>)</td>
+  </tr>
+  <tr>
+    <td><i class='material-icons'>directions_boat</i> Overfishing </td>
+    <td> <a href="https://doi.org/10.1126/science.1132294)">Worm et al. (2006)</a></td>
+    <td><i class="fa fa-database"></i> Relational databases</td>
+    <td> groups, joins, filters. SQL (<code>dplyr</code>, <code>tidyr</code>)</td>
+  </tr>
+  <tr>
+    <td><i class='material-icons'>bug_report</i> Ecological Simulations </td>
+    <td><a href="https://doi.org/10.1126/science.186.4164.645">May (1974)</a> </td>
+    <td><i class="material-icons">memory</i> Simulated data</td>
+    <td>Functional programming, (<code>purrr</code>)</td>
+  </tr>
+  <tr>
+    <td><i class='material-icons'>my_location</i> Range shifts</td>
+    <td><a href="https://doi.org/10.1126/science.1239352">Pinsky et al. (2013)</a></td>
+    <td><i class="material-icons">satellite</i> Geospatial data</td>
+    <td>Raster & vector data, (<code>sf</code>, <code>raster</code>, <code>mapview</code>, <code>tmap</code>)</td>
+  </tr>
+  <tr>  
+    <td><i class='material-icons'>trending_down</i> Mass Extinctions </td>
+    <td><a href="https://doi.org/10.1126/sciadv.1400253">Ceballos et al. (2015)</a></td>
+    <td><i class="material-icons">widgets</i> Non-rectangular data </td>
+    <td>REST APIs, JSON, regex (<code>httr</code>, <code>jsonlite</code>, <code>stringr</code>)</td>
+  </tr>
+    <tr>  
+    <td><i class='material-icons'>nature_people</i> Global biodiversity </td>
+    <td><a href="https://doi.org/10.1126/science.1248484">Dornelas et al (2014)</a></td>
+    <td><i class="material-icons">share</i> Semantic linked data </td>
+    <td>Data repositories, RDF, metadata (<code>rgbif</code>, <code>dataone</code>, <code>rdflib</code>)</td>
+  </tr>
+</table>
               </div>
             </div>
           </div>
