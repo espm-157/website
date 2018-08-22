@@ -72,7 +72,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   identifier = "Piazza"
   name = "Forum"
   pre = "<i class='material-icons'>forum</i>"
-  url = "#"
+  url = "http://piazza.com/berkeley/fall2018/espm157"
 [[menu.footer]]
   weight = 4
   name = "Textbook"

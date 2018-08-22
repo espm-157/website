@@ -1,19 +1,21 @@
 ---
 title: "ESPM 157: Data Science for Global Change Ecology"
-description: ""
 markup: "mmark"
+description: |
+  <a href="#content"><button class="btn btn-primary">Get started!</button></a>
+
+
 ---
 
+  {.table .table-condensed .table-striped .text-left}
 
-{.table .table-condensed .table-striped .text-left}
-
- <span></span>     | <span></span>
------------|-------------------------------------------------------------------
-Instructor | [Carl Boettiger](http://carlboettiger.info) <a href="mailto:cboettig@gmail.com" title="email"><i class="fa fa-envelope"></i></a><a href="https://twitter.com/cboettig" title="Twitter"> <i class="fa fa-twitter"></i></a> <a href="https://github.com/cboettig" title="GitHub"><i class="fa fa-github"></i></a> |  
-GSIs        |   |  
-Location   |                                |   
-Times      | **Mon, Fri 12:00P - 2:00P**    |  
-CCN        |                                |  
+  <span></span>     | <span></span>
+  -----------|-------------------------------------------------------------------
+  Instructor | **[Carl Boettiger](http://carlboettiger.info)**  <a href="mailto:cboettig@gmail.com" title="email"><i class="fa fa-envelope"></i></a><a href="https://twitter.com/cboettig" title="Twitter"> <i class="fa fa-twitter"></i></a> <a href="https://github.com/cboettig" title="GitHub"><i class="fa fa-github"></i></a> |  
+  GSIs        |  [Andy Rothstein](https://ourenvironment.berkeley.edu/people/andrew-rothstein) (Lead), [Heng Huang](https://ourenvironment.berkeley.edu/people/heng-huang) |  
+  Location   |     110 Barrows Hall           |   
+  Times      | **Mon, Fri 12:00P - 2:00P**    |  
+  CCN        |   26798                        |  
 
 
 
