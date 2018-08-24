@@ -4,7 +4,7 @@ author: "Carl Boettiger"
 
 output:
   xaringan::moon_reader:
-#    chakra: libs/remark-latest.min.js
+    #chakra: libs/remark-latest.min.js
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -30,7 +30,7 @@ class: center
 
 # Global Change
 
-<img src="images/dimacs/global-change.jpg" width="550">
+<img src="img/dimacs/global-change.jpg" width="550">
 
 <small> Overpeck+ (2011) doi:[10.1126/science.1197869](http://doi.org/10.1126/science.1197869) </small>
 
@@ -39,7 +39,7 @@ class: center
 
 # Fishery Collapse?
 
-<img src="images/dimacs/worm2006.png", width="700">
+<img src="img/dimacs/worm2006.png", width="700">
 
 <small> Worm+ (2006) doi:[10.1126/science.1132294](http://doi.org/10.1126/science.1132294)</small>
 
@@ -48,7 +48,7 @@ class: center
 
 # Tipping points?
 
-<img src="images/berkeley2014/barnosky.png", width="600">
+<img src="img/berkeley2014/barnosky.png", width="600">
 
 <small> Barnoksy+ (2012) doi:[10.1038/nature11018](http://doi.org/10.1038/nature11018)</small>
 
@@ -59,7 +59,7 @@ class: center
 
 # Remote sensors
 
-<img src="images/berkeley2014/landsat2.jpg" width="550">
+<img src="img/berkeley2014/landsat2.jpg" width="550">
 
 <small>credit: NASA</small>
 
@@ -68,7 +68,7 @@ class: center
 
 # micro sensors
 
-<img src="images/berkeley2014/gps-zebra.jpg" width="500">
+<img src="img/berkeley2014/gps-zebra.jpg" width="500">
 
 <small>credit: NSF </small>
 
@@ -77,7 +77,7 @@ class: center
 
 ## NEON
 
-<img src="images/asn2014/neon.png" width="550">
+<img src="img/asn2014/neon.png" width="550">
 
 <small> credit: Hopkin (2006) doi:[10.1038/444420a](http://doi.org/10.1038/444420a) </small>
 
@@ -86,7 +86,7 @@ class: center
 
 ## OOI
 
-<img src="images/asn2014/ooi.png" width="900">
+<img src="img/asn2014/ooi.png" width="900">
 
 <small> credit: Witze (2013) doi:[10.1038/501480a](http://doi.org/10.1038/501480a) </small>
 
@@ -106,14 +106,14 @@ class: center
 
 # Field-based study
 
-![](images/berkeley2014/icecore.jpg)
+![](img/berkeley2014/icecore.jpg)
 
 ---
 class: center
 
 # Growth of climate data by type
 
-![](images/dimacs/growth-climate-data.png)
+![](img/dimacs/growth-climate-data.png)
 
 <small> Overpeck+ (2011) doi:[10.1126/science.1197869](http://doi.org/10.1126/science.1197869) </small>
 
@@ -160,7 +160,7 @@ class: center
 
 # Engineering bottlenecks
 
-<img src="images/dimacs/bottleneck.jpg" width="700">
+<img src="img/dimacs/bottleneck.jpg" width="700">
 
 <small> Baraniuk (2011) doi:[10.1126/science.1197448](http://doi.org/10.1126/science.1197448) </small>
 
@@ -169,7 +169,7 @@ class: center
 
 # Science bottlenecks
 
-<img src="images/dimacs/science-bottleneck.png">
+<img src="img/dimacs/science-bottleneck.png">
 
 <small>adapted from Reichman+ (2011) doi:[10.1126/science.1197962](http://doi.org/10.1126/science.1197962)</small>
 
@@ -297,7 +297,7 @@ class: middle, left, inverse
 ---
 class: center
 
-<img src="images/dimacs/measurement-error.jpg" width="700"/>
+<img src="img/dimacs/measurement-error.jpg" width="700"/>
 
 # data visualization
 
@@ -311,7 +311,7 @@ class: center, inverse, middle
 # Variety
 
 ---
-background-image: url(images/Bertrand/factory-farm.jpg)
+background-image: url(img/Bertrand/factory-farm.jpg)
 background-size: 100%
 background-position: center
 class: center, top, inverse
@@ -322,7 +322,7 @@ class: center, top, inverse
 <small>credit: Arthus-Bertrand</small>
 
 ---
-background-image: url(images/Bertrand/organic-farm.png)
+background-image: url(img/Bertrand/organic-farm.png)
 background-size: 100%
 background-position: center
 class: center, middle, inverse
@@ -337,7 +337,7 @@ class: center, inverse
 
 # Vertically integrated data repositories
 
-<img src="images/dimacs/tetris.png">
+<img src="img/dimacs/tetris.png">
 
 
 ---
@@ -345,7 +345,7 @@ class: center, inverse
 
 # Limitations to vertical integration
 
-![](images/dimacs/tetris-lose.png)
+![](img/dimacs/tetris-lose.png)
 
 
 ---
@@ -366,7 +366,7 @@ class: center, middle
 
 # Velocity: the need for Reproducibility
 
-<img src="images/dimacs/growth-climate-data.png" width="350"/>
+<img src="img/dimacs/growth-climate-data.png" width="350"/>
 
 <small> Overpeck+ (2011) doi:[10.1126/science.1197869](http://doi.org/10.1126/science.1197869) </small>
 
@@ -377,7 +377,7 @@ class: center
 
 # Example: Synthetic analysis of biodiversity loss
 
-<img src="images/dimacs/diversity-fig1.png" width="700">
+<img src="img/dimacs/diversity-fig1.png" width="700">
 
 Sythesizes over 140 data sets.
 
@@ -386,7 +386,7 @@ class: center
 
 # Finds no evidence for systematic loss
 
-<img src="images/dimacs/diversity-fig2.png" width="700">
+<img src="img/dimacs/diversity-fig2.png" width="700">
 
 How easy would it be to update this to reflect new data?
 
@@ -401,17 +401,17 @@ class: center, inverse, middle
 # Reproducibility: important for other reasons as well:
 
 ---
-background-image: url("images/economist/cover.jpg")
+background-image: url("img/economist/cover.jpg")
 
 ---
-background-image: url("images/economist/replicate.jpg")
+background-image: url("img/economist/replicate.jpg")
 
 ---
-background-image: url("images/economist/rug.jpg")
+background-image: url("img/economist/rug.jpg")
 
 
 ---
-background-image: url("images/economist/trouble.jpg")
+background-image: url("img/economist/trouble.jpg")
 
 
 ---
@@ -419,7 +419,7 @@ class: center
 
 # Reproducible workflows: Dynamic documents
 
-<img src="images/dimacs/spectrum.png">
+<img src="img/dimacs/spectrum.png">
 
 <small>Peng (2011) doi:[10.1126/science.1213847](http://doi.org/10.1126/science.1213847)</small>
 
