@@ -175,15 +175,15 @@ lessons:
   
   - module: " "
     date: " "
-    topics: "<b>BIODIVERSITY MODULE / FINAL PROJECTS</b>"
+    topics: "<b>FINAL PROJECTS</b>"
     
-  - module: "<i class='material-icons'>nature_people</i>" 
-    datatype: "<i class='material-icons'>share</i>"
-    date: "2018-11-26"
-    topics: "JSON-LD, graph queries"
+#  - module: "<i class='material-icons'>nature_people</i>" 
+#    datatype: "<i class='material-icons'>share</i>"
+#    date: "2018-11-26"
+#    topics: "JSON-LD, graph queries"
 
   - module: "<i class='material-icons'>school</i>"
-    date: "2018-11-30"
+    date: "2018-11-26"
     topics: "Final Projects"
     
 #  - module: "<i class='material-icons'>nature_people</i>"
@@ -192,11 +192,11 @@ lessons:
 #    topics: "Data publishing"
 
   - module: "<i class='material-icons'>school</i>"
-    date: ""
+    date: "2018-11-30"
     topics: "Final Projects"
 
   - module: "<i class='material-icons'>school</i>"
-    date: "2"  
+    date: ""  
     topics: "Final Projects"
     
   
