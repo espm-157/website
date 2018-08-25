@@ -5,12 +5,12 @@ title: "R Markdown Basics"
 
 ## Watch
 
-- **[Reports with RMarkdown](https://www.datacamp.com/courses/reporting-with-r-markdown)** (by Garrett Grolemund)
+- **[Chapter 1: Authoring RMarkdown Reports](https://www.datacamp.com/courses/reporting-with-r-markdown)** (by Garrett Grolemund)
 
-_Focus is on chapter 1 and chapter 2, though aside from a few hints most of this is self-explanatory.  Feel free to check out chapters 3 and 4 for more information on some of the other output formats and advanced features of RMarkdown.  Please note that we will mostly be using the `github_document` format and not the `html_document` format._
+_You should just complete the first chapter in this lesson._
 
 
-## Read
+## Reading
 
 - Introduction **[[r4ds-27.1](http://r4ds.had.co.nz/r-markdown.html#introduction-18)]**
 - R Markdown  **[[r4ds-27.2](http://r4ds.had.co.nz/r-markdown.html#r-markdown-basics)]**

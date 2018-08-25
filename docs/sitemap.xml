@@ -117,10 +117,6 @@
   </url>
   
   <url>
-    <loc>/read/workflows/</loc>
-  </url>
-  
-  <url>
     <loc>/read/docker/</loc>
   </url>
   
@@ -160,6 +156,10 @@
   
   <url>
     <loc>/read/websites/</loc>
+  </url>
+  
+  <url>
+    <loc>/read/workflows/</loc>
   </url>
   
   <url>

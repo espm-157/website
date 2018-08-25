@@ -112,8 +112,9 @@ Reading Geospatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/git-1/</guid>
-      <description> Watch  DataCamp Lesson: RStudio IDE, Part II, Chapter 2: Version Control (by Garrett Grolemund).  Yes, we&amp;rsquo;re starting with Chapter 2 on Version Control, you&amp;rsquo;ll encounter making your own Packages later on.
-Read  Git Setup: HappyGitWithR.com Data Import: [r4ds-11]  </description>
+      <description> Watch  DataCamp Lesson: RStudio IDE, Part I, Chapter 1: &amp;ldquo;Orientation&amp;rdquo; (by Garrett Grolemund).
+ DataCamp Lesson: RStudio IDE, Part II, Chapter 2: Version Control (by Garrett Grolemund).
+  Reading &amp;amp; Reference  Git Setup: HappyGitWithR.com Data Import: [r4ds-11]  </description>
     </item>
     
     <item>
@@ -149,8 +150,8 @@ Read  Git Setup: HappyGitWithR.com Data Import: [r4ds-11]  </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/rmarkdown-basics/</guid>
-      <description>Watch  Reports with RMarkdown (by Garrett Grolemund)  Focus is on chapter 1 and chapter 2, though aside from a few hints most of this is self-explanatory. Feel free to check out chapters 3 and 4 for more information on some of the other output formats and advanced features of RMarkdown. Please note that we will mostly be using the github_document format and not the html_document format.
-Read  Introduction [r4ds-27.</description>
+      <description> Watch  Chapter 1: Authoring RMarkdown Reports (by Garrett Grolemund)  You should just complete the first chapter in this lesson.
+Reading  Introduction [r4ds-27.1] R Markdown [r4ds-27.2] Code chunks [r4ds-27.4]  Reference  R Markdown Cheat Sheet R Markdown Reference Guide  </description>
     </item>
     
     <item>
@@ -160,16 +161,6 @@ Read  Introduction [r4ds-27.</description>
       
       <guid>/read/httr/</guid>
       <description>Watch Working with Web Data in R</description>
-    </item>
-    
-    <item>
-      <title>Reading for 2017-09-21</title>
-      <link>/read/workflows/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/read/workflows/</guid>
-      <description>For Thursday&amp;rsquo;s class, please read the following two short sections:
- 6. Workflow: scripts, and 8. Workflow: projects  </description>
     </item>
     
     <item>
@@ -198,7 +189,7 @@ Read  Relational Data (*_join functions) r4ds-13.1 - 13.7  </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/setup/</guid>
-      <description> Watch  DataCamp Lesson: RStudio IDE, Part I (by Garrett Grolemund).  Read  Prerequisites Running R code RStudio Cheat sheet (for reference)
+      <description> Watch  DataCamp Lesson: RStudio IDE, Part I, Chapter 1: &amp;ldquo;Orientation&amp;rdquo; (by Garrett Grolemund).  Read  Prerequisites Running R code RStudio Cheat sheet (for reference)
  Style guide Consistent style is an important element of communication and collaboration.
 Please review sections 1. Files and 2. Syntax. Most Syntax conventions can be automatically checked with lintr::lint(&amp;quot;assignment.Rmd&amp;quot;).
   </description>
@@ -231,6 +222,16 @@ Read  Data Exploration [r4ds-2] First Steps [r4ds-3.2] Aesthetic mappings [r4ds-
       
       <guid>/read/websites/</guid>
       <description>This class will be a tutorial unit on making websites in R. Being familiar with the basic elements of web design (HTML, CSS, domain names) able being able to quickly build a lightweight website is an important skill for any data scientist, although rarely part of data science curriculum. Our goal will be to introduce some of the common platforms and strategies for building a website. Unlike our modules, tutorials are aimed more at exposure than mastery of any particular concepts or tools.</description>
+    </item>
+    
+    <item>
+      <title>Workflows</title>
+      <link>/read/workflows/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/read/workflows/</guid>
+      <description>Please read the following two short sections:
+ 6. Workflow: scripts, and 8. Workflow: projects  </description>
     </item>
     
     <item>
