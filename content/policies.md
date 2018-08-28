@@ -119,8 +119,7 @@ environment to all participants.  Please review the
 [Open Code of Conduct](http://todogroup.org/opencodeofconduct/)
 guidelines for respectful and harassment-free conduct. To report
 an incident or request more information, contact the UC Berkeley
-[Office for the Prevention of Harassment and Discrimination](https://ophd.berkeley.edu) at
-<ask_ophd@berkeley.edu>
+[Office for the Prevention of Harassment and Discrimination](https://ophd.berkeley.edu) by emailing `ask_ophd@berkeley.edu` or by phone (510) 643-7985.
 
 
 
