@@ -1,5 +1,5 @@
 ---
-title: "Data Manipulation Basics"
+title: "Wrapping up Climate Module"
 ---
 
 ## Watch

@@ -79,15 +79,6 @@ What rolling average is used in computing the “trend” line? How does the tre
     </item>
     
     <item>
-      <title>Data Manipulation Basics</title>
-      <link>/read/dplyr-1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/read/dplyr-1/</guid>
-      <description> Watch  Tidyverse Chapter 1: Data Wrangling (David Robinson)  Read  dplyr basic verbs: filter, arrange, select, and mutate, [r4ds-5.1 - 5.5]  </description>
-    </item>
-    
-    <item>
       <title>Final Project: Proposal</title>
       <link>/assignments/final/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -316,8 +307,7 @@ Almost everything we do will involve GitHub in some way. This tutorial will prov
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/ggplot-1/</guid>
-      <description> Watch  Tidyverse Chapter 2: Data Visualization (David Robinson)  (Yes, we&amp;rsquo;re starting with Chapter 2, we&amp;rsquo;ll go back to Chapter 1 soon).
-Read  Data Exploration [r4ds-2] First Steps [r4ds-3.2] Aesthetic mappings [r4ds-3.3] Common problems [r4ds-3.4] Facets r4ds-3.5 Geometric objects r4ds-3.6  Reference  Data Visualization Cheat Sheet cheatsheets-ggplot2-2.1  </description>
+      <description> Watch  Tidyverse Chapter 1: Data Wrangling (David Robinson) Tidyverse Chapter 2: Data Visualization (David Robinson)  Read Plotting  Data Exploration [r4ds-2] First Steps [r4ds-3.2] Aesthetic mappings [r4ds-3.3] Common problems [r4ds-3.4] Facets r4ds-3.5 Geometric objects r4ds-3.6  Reference  Data Visualization Cheat Sheet cheatsheets-ggplot2-2.1  </description>
     </item>
     
     <item>
@@ -337,6 +327,15 @@ Read  Data Exploration [r4ds-2] First Steps [r4ds-3.2] Aesthetic mappings [r4ds-
       <guid>/read/workflows/</guid>
       <description>Please read the following two short sections:
  6. Workflow: scripts, and 8. Workflow: projects  </description>
+    </item>
+    
+    <item>
+      <title>Wrapping up Climate Module</title>
+      <link>/read/dplyr-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/read/dplyr-1/</guid>
+      <description> Watch  Tidyverse Chapter 1: Data Wrangling (David Robinson)  Read  dplyr basic verbs: filter, arrange, select, and mutate, [r4ds-5.1 - 5.5]  </description>
     </item>
     
     <item>
