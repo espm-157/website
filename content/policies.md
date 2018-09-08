@@ -36,7 +36,7 @@ Data science is about analyzing real-world data sets, and so a series
 of projects involving real data are a required part of the course. You
 may work alone or with a single partner on all projects. 
 
-Assignments are due by 11:59 pm Pacific Time on the day indicated. Assignments
+All assignments are due by immediately **before** the start of class on the day indicated. Assignments
 should be submitted as instructed.
 
 ## Grading

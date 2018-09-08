@@ -1,0 +1,37 @@
+---
+title: '2018-09-07 Class Notes'
+author: "Carl Boettiger"
+date: "9/7/2018"
+output: github_document
+---
+
+
+## Reminders
+
+- Focus on reading, exercises -- Great work!
+- open-ended questions, not always covered 
+- Piazza discussion forum
+- pair coding
+
+## Overview
+
+- GitHub
+  - Collaboration
+  - rmarkdown -> markdown
+  
+- Travis
+  - What, why?
+  - Debugging
+  
+- R 
+  - `readr` separators
+  - `ggplot2`  -- Grammar??
+  - `dplyr`
+  - Syntax
+  
+
+
+- Naming things
+- Style
+
+

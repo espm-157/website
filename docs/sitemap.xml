@@ -21,6 +21,10 @@
   </url>
   
   <url>
+    <loc>/livecode/2018-09-07-class-notes/</loc>
+  </url>
+  
+  <url>
     <loc>/archives/</loc>
     <priority>0</priority>
   </url>
@@ -94,6 +98,11 @@
   
   <url>
     <loc>/read/iteration/</loc>
+  </url>
+  
+  <url>
+    <loc>/livecode/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
