@@ -269,6 +269,15 @@ Read  Relational Data (*_join functions) r4ds-13.1 - 13.7  </description>
     </item>
     
     <item>
+      <title>Relational Data</title>
+      <link>/read/dplyr-4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/read/dplyr-4/</guid>
+      <description> Watch  DataCamp Lessons: First three chapters of Working with Data in the Tidyverse  </description>
+    </item>
+    
+    <item>
       <title>Setup</title>
       <link>/read/setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

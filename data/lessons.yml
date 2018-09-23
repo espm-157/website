@@ -71,6 +71,7 @@ lessons:
     date: "2018-09-28"
     datatype: '<i class="fa fa-database"></i>'
     topics: "Missing Values"
+    watch: "read/dplyr-4"
  
   - module: " <i class='material-icons'>directions_boat</i>"  
     date: "2018-10-01"
