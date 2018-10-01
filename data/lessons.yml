@@ -72,15 +72,20 @@ lessons:
     datatype: '<i class="fa fa-database"></i>'
     topics: "Missing Values"
     watch: "read/dplyr-4"
- 
+
   - module: " <i class='material-icons'>directions_boat</i>"  
     date: "2018-10-01"
+    datatype: '<i class="fa fa-database"></i>'
+    topics: "more dplyr"
+ 
+  - module: " <i class='material-icons'>directions_boat</i>"  
+    date: "2018-10-05"
     datatype: '<i class="fa fa-database"></i>'
     topics: "Reproducibility"
         
   - module: "<i class='material-icons'>language</i>"
     topics: "web design"
-    date: "2018-10-05"
+    date: "2018-10-08"
     reading: "read/websites"
     
   - module: " "
@@ -88,7 +93,7 @@ lessons:
     topics: "<b>POPULATION DYNAMICS MODULE</b>"
  
   - module: "<i class='material-icons'>bug_report</i>"
-    date: "2018-10-08"
+    date: "2018-10-12"
     datatype: '<i class="material-icons">memory</i>'
     topics: "Functions"
     reading: "read/functions"
@@ -96,21 +101,19 @@ lessons:
 
   - module: " <i class='material-icons'>bug_report</i>"
     topics: "Iteration"
-    date: "2018-10-012"  
+    date: "2018-10-15"  
     datatype: '<i class="material-icons">memory</i>'
 
   - module: " <i class='material-icons'>bug_report</i>"
-    date: "2018-10-15"
+    date: "2018-10-19"
     datatype: '<i class="material-icons">memory</i>'
     topics: "Iteration"
     reading: "read/iteration"
     watch: "read/iteration"
        
-  - module: " <i class='icon-rlogo'></i> <i class='fa fa-lg fa-gift'></i>"
-    date: "2018-10-19"    
-    topics: "Writing R packages"
-    reading: "read/r-pkgs"
-
+#  - module: " <i class='icon-rlogo'></i> <i class='fa fa-lg fa-gift'></i>"
+#    topics: "Writing R packages"
+#    reading: "read/r-pkgs"
     
   - module: " "
     date: " "
