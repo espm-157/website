@@ -1,0 +1,32 @@
+module	topics	date	reading	watch	datatype	assignment	read
+<i class='material-icons'>home</i>	Introduction & setup	2018-08-24	read/setup	read/setup	NA	NA	NA
+ 	<b>CLIMATE MODULE</b>	 	NA	NA	NA	NA	NA
+<i class='fa fa-lg fa-thermometer-full'></i>	Individual assessment	2018-08-27	read/rmarkdown-basics	read/rmarkdown-basics	"<i class=""fa fa-table""></i>"	NA	NA
+<i class='fa fa-lg fa-github'></i>	Workflow: GitHub, RMarkdown, Travis	2018-08-31	read/git-1	read/git-1	NA		NA
+<i class='fa fa-lg fa-thermometer-full'></i>	Visualization basics	2018-09-07	read/ggplot-1	read/ggplot-1	"<i class=""fa fa-table""></i>"	NA	NA
+<i class='fa fa-lg fa-thermometer-full'></i>	Manipulation basics	2018-09-10	read/dplyr-1	read/dplyr-1	"<i class=""fa fa-table""></i>"	NA	NA
+<i class='fa fa-lg fa-thermometer-full'></i>	Module wrap-up	2018-09-14	NA	NA	"<i class=""fa fa-table""></i>"	NA	NA
+ 	<b>OVERFISHING MODULE</b>	 	NA	NA	NA	NA	NA
+<i class='material-icons'>directions_boat</i>	Relational data: groups	2018-09-17	read/dplyr-2	read/dplyr-2	"<i class=""fa fa-database""></i>"	NA	NA
+ <i class='material-icons'>directions_boat</i>	Relational data: joins	2018-09-21	read/dplyr-3	read/dplyr-3	<i class='fa fa-database'></i>	NA	NA
+ <i class='material-icons'>directions_boat</i>	group_by and summarize	2018-09-24	read/fish	read/fish	"<i class=""fa fa-database""></i>"	NA	NA
+ <i class='material-icons'>directions_boat</i>	Missing Values	2018-09-28	NA	read/dplyr-4	"<i class=""fa fa-database""></i>"	NA	NA
+ <i class='material-icons'>directions_boat</i>	more dplyr	2018-10-01	NA	NA	"<i class=""fa fa-database""></i>"	NA	NA
+ <i class='material-icons'>directions_boat</i>	Reproducibility	2018-10-05	NA	NA	"<i class=""fa fa-database""></i>"	NA	NA
+<i class='material-icons'>bug_report</i>	Functions	2018-10-08	NA	NA	"<i class=""material-icons"">memory</i>"	NA	NA
+ 	<b>GEOSPATIAL CHANGE MODULE</b>	 	NA	NA	NA	NA	NA
+<i class='material-icons'>my_location</i>	geospatial intro, visualization	2018-10-12	read/geospatial-1	read/geospatial-1	"<i class=""material-icons"">satellite</i>"	NA	NA
+<i class='material-icons'>my_location</i>	vector data	2018-10-15	read/geospatial-raster-vector	read/geospatial-vector	"<i class=""material-icons"">satellite</i>"	NA	NA
+<i class='material-icons'>my_location</i>	raster data	2018-10-19	read/geospatial-io	read/geospatial-io	"<i class=""material-icons"">satellite</i>"	NA	NA
+<i class='material-icons'>my_location</i>	raster data	2018-10-22	read/geospatial-io	read/geospatial-io	"<i class=""material-icons"">satellite</i>"	NA	NA
+<i class='material-icons'>my_location</i>	raster data	2018-10-26	read/geospatial-io	read/geospatial-io	"<i class=""material-icons"">satellite</i>"	NA	NA
+<i class='fa fa-2x fa-docker'></i> <i class='material-icons'>cloud</i>	Tutorial: Docker & Cloud computing	2018-11-02	read/docker	NA	NA	NA	NA
+<i class='material-icons'>school</i>	Final Project Proposals	2018-11-05	assignments/final	NA	NA	NA	NA
+ 	<b>MASS EXTINCTIONS MODULE</b>	 	NA	NA	NA	NA	NA
+<i class='material-icons'>trending_down</i>	REST APIs	2018-11-09	NA	read/httr	"<i class=""material-icons"">widgets</i>"	NA	NA
+ <i class='material-icons'>trending_down</i>	Regular Expressions	2018-11-16	read/strings-regex	read/strings-regex	"<i class=""material-icons"">widgets</i>"	NA	NA
+<i class='material-icons'>trending_down</i>	Data rectangling	2018-11-19	read/purrr-1	read/purrr-1	"<i class=""material-icons"">widgets</i>"	NA	NA
+<i class='material-icons'>trending_down</i>	Data rectangling	2018-11-26	NA	NA	"<i class=""material-icons"">widgets</i>"	NA	
+ 	<b>FINAL PROJECTS</b>	 	NA	NA	NA	NA	NA
+<i class='material-icons'>school</i>	Final Projects	2018-11-30	NA	NA	NA	NA	NA
+<i class='material-icons'>school</i>	Final Projects		NA	NA	NA	NA	NA

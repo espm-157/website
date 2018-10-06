@@ -83,33 +83,34 @@ lessons:
     datatype: '<i class="fa fa-database"></i>'
     topics: "Reproducibility"
         
-  - module: "<i class='material-icons'>language</i>"
-    topics: "web design"
-    date: "2018-10-08"
-    reading: "read/websites"
+#  - module: "<i class='material-icons'>language</i>"
+#    topics: "web design"
+#    date: "2018-10-08"
+#    reading: "read/websites"
+
     
-  - module: " "
-    date: " "
-    topics: "<b>POPULATION DYNAMICS MODULE</b>"
+#  - module: " "
+#    date: " "
+#    topics: "<b>POPULATION DYNAMICS MODULE</b>"
  
   - module: "<i class='material-icons'>bug_report</i>"
-    date: "2018-10-12"
+    date: "2018-10-08"
     datatype: '<i class="material-icons">memory</i>'
     topics: "Functions"
-    reading: "read/functions"
-    watch: "read/functions"
+#    reading: "read/functions"
+#    watch: "read/functions"
 
-  - module: " <i class='material-icons'>bug_report</i>"
-    topics: "Iteration"
-    date: "2018-10-15"  
-    datatype: '<i class="material-icons">memory</i>'
+# - module: " <i class='material-icons'>bug_report</i>"
+#    topics: "Iteration"
+#    date: "2018-10-15"  
+#    datatype: '<i class="material-icons">memory</i>'
 
-  - module: " <i class='material-icons'>bug_report</i>"
-    date: "2018-10-19"
-    datatype: '<i class="material-icons">memory</i>'
-    topics: "Iteration"
-    reading: "read/iteration"
-    watch: "read/iteration"
+#  - module: " <i class='material-icons'>bug_report</i>"
+#    date: "2018-10-19"
+#    datatype: '<i class="material-icons">memory</i>'
+#    topics: "Iteration"
+#    reading: "read/iteration"
+#    watch: "read/iteration"
        
 #  - module: " <i class='icon-rlogo'></i> <i class='fa fa-lg fa-gift'></i>"
 #    topics: "Writing R packages"
@@ -120,14 +121,14 @@ lessons:
     topics: "<b>GEOSPATIAL CHANGE MODULE</b>"
     
   - module: "<i class='material-icons'>my_location</i>"  
-    date: "2018-10-22"
+    date: "2018-10-12"
     datatype: '<i class="material-icons">satellite</i>'
     topics: "geospatial intro, visualization"
     reading: "read/geospatial-1"
     watch: "read/geospatial-1"
     
   - module: "<i class='material-icons'>my_location</i>"
-    date: "2018-10-26"
+    date: "2018-10-15"
     datatype: '<i class="material-icons">satellite</i>'
     topics: "vector data"
     reading: "read/geospatial-raster-vector"
@@ -135,46 +136,67 @@ lessons:
 
     
   - module: "<i class='material-icons'>my_location</i>"
-    date: "2018-10-29"
+    date: "2018-10-19"
     datatype: '<i class="material-icons">satellite</i>'
     topics: "raster data"
     reading: "read/geospatial-io"
     watch: "read/geospatial-io"
-    
-  - module: "<i class='fa fa-2x fa-docker'></i> <i class='material-icons'>cloud</i>"
-    topics: "Tutorial: Docker & Cloud computing"
-    reading: "read/docker"
-    date: "2018-11-02"
 
-  - module: "<i class='material-icons'>school</i>"
-    date: "2018-11-05"
-    topics: "Final Project Proposals"
-    reading: "assignments/final"
+  - module: "<i class='material-icons'>my_location</i>"
+    date: "2018-10-22"
+    datatype: '<i class="material-icons">satellite</i>'
+    topics: "spatial data manipulation"
+
+  - module: "<i class='material-icons'>my_location</i>"
+    date: "2018-10-26"
+    datatype: '<i class="material-icons">satellite</i>'
+    topics: "Reproducibility"
+
+  #- module: "<i class='fa fa-2x fa-docker'></i> <i class='material-icons'>cloud</i>"
+  #  topics: "Tutorial: Docker & Cloud computing"
+  #  reading: "read/docker"
+  #  date: "2018-11-02"
+
+#  - module: "<i class='material-icons'>school</i>"
+#    date: "2018-11-05"
+#    topics: "Final Project Proposals"
+#    reading: "assignments/final"
 
   - module: " "
     date: " "
     topics: "<b>MASS EXTINCTIONS MODULE</b>"
 
-    
   - module: "<i class='material-icons'>trending_down</i>"
-    date: "2018-11-09"
+    date: "2018-11-02"
     datatype: '<i class="material-icons">widgets</i>'
     topics: "REST APIs"
     watch: "read/httr"
     
-  - module: " <i class='material-icons'>trending_down</i>"
-    date: "2018-11-16"
+  - module: "<i class='material-icons'>trending_down</i>"
+    date: "2018-11-05"
     datatype: '<i class="material-icons">widgets</i>'
     topics: "Regular Expressions"
     reading: "read/strings-regex"
-    watch: "read/strings-regex"
+    watch: "read/strings-regex"  
+    
+  - module: "<i class='material-icons'>trending_down</i>"
+    date: "2018-11-09"
+    datatype: '<i class="material-icons">widgets</i>'
+    topics: "Data rectangling"
+    reading: "read/purrr-1"
+    watch: "read/purrr-1"
+    
+  - module: " <i class='material-icons'>trending_down</i>"
+    date: "2018-11-16"
+    datatype: '<i class="material-icons">widgets</i>'
+    topics: "Data rectangling"
+
     
   - module: "<i class='material-icons'>trending_down</i>"
     date: "2018-11-19"
     datatype: '<i class="material-icons">widgets</i>'
     topics: "Data rectangling"
-    reading: "read/purrr-1"
-    watch: "read/purrr-1"
+
   
   - module: "<i class='material-icons'>trending_down</i>"
     date: "2018-11-26"
@@ -205,5 +227,3 @@ lessons:
     date: ""  
     topics: "Final Projects"
     
-  
-  
