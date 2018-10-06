@@ -88,12 +88,31 @@ What rolling average is used in computing the “trend” line? How does the tre
     </item>
     
     <item>
+      <title>Climate Module Rubric</title>
+      <link>/rubrics/climate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rubrics/climate/</guid>
+      <description>3 pts for use of git hub
+ 0pts: no repo or a repo with no unique commits 1pts: evidence of at least one commit. read me not updated 2pts: evidence of semiregular commits, read me updated only partially - either missing name of team member or failing to update the read me from the template 3pts: evidence of multiple commits, read me updated to reflect the repos purpose, team member name and handle included   3 pts for Rmarkdown</description>
+    </item>
+    
+    <item>
       <title>Final Project: Proposal</title>
       <link>/assignments/final/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/assignments/final/</guid>
       <description>Projects should essentially look like any of our modules, but with you identifying the dataset and questions rather than working from a template. You may choose to replicate a figure from an existing study, but are also encouraged to use this opportunity to perform some exploratory analysis on data you may be using in your DS421 team projects or your own dissertation research. Remember that as with modules, finals will be graded on workflow and presentation rather than particular conclusions.</description>
+    </item>
+    
+    <item>
+      <title>Fish Module Rubric</title>
+      <link>/rubrics/fish/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rubrics/fish/</guid>
+      <description>2 pt for use of GitHub  are both users pushing/pulling? have they successfully dealt with merge conflicts (if any)? have they updated their repository README with names and module details?  2 pts for travis  is their build passing? is the travis badge included and displaying correctly on their .md documents  2 pts for Rmarkdown  do they include a .md file along with their .Rmd assignment file?</description>
     </item>
     
     <item>
@@ -287,6 +306,15 @@ Read  Relational Data (*_join functions) r4ds-13.1 - 13.7  </description>
  Style guide Consistent style is an important element of communication and collaboration.
 Please review sections 1. Files and 2. Syntax. Most Syntax conventions can be automatically checked with lintr::lint(&amp;quot;assignment.Rmd&amp;quot;).
   </description>
+    </item>
+    
+    <item>
+      <title>Spatial Module Rubric</title>
+      <link>/rubrics/spatial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rubrics/spatial/</guid>
+      <description>2 pt for use of git hub  are both users pushing/pulling? have they successfully dealt with merge conflicts? have they updated their repository README with names and module details?  2 pts for travis  is their build passing? is the travis badge included and displaying correctly on their .md documents  2 pts for Rmarkdown  do they include a .md file along with their .Rmd assignment file?</description>
     </item>
     
     <item>

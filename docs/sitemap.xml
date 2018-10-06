@@ -48,12 +48,20 @@
   </url>
   
   <url>
+    <loc>/rubrics/climate/</loc>
+  </url>
+  
+  <url>
     <loc>/</loc>
     <lastmod>2017-04-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/assignments/final/</loc>
+  </url>
+  
+  <url>
+    <loc>/rubrics/fish/</loc>
   </url>
   
   <url>
@@ -139,7 +147,16 @@
   </url>
   
   <url>
+    <loc>/rubrics/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/read/setup/</loc>
+  </url>
+  
+  <url>
+    <loc>/rubrics/spatial/</loc>
   </url>
   
   <url>
