@@ -131,8 +131,8 @@ lessons:
     date: "2018-10-15"
     datatype: '<i class="material-icons">satellite</i>'
     topics: "vector data"
-    reading: "read/geospatial-raster-vector"
-    watch: "read/geospatial-vector"
+    reading: "read/geospatial-2"
+    watch: "read/geospatial-2"
 
     
   - module: "<i class='material-icons'>my_location</i>"

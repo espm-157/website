@@ -29,7 +29,7 @@
     
   <link rel="alternate" href="../../index.xml" type="application/rss+xml" title="ESPM 157">
   <link rel="feed" href="../../index.xml" type="application/rss+xml" title="ESPM 157">
-  <link rel="canonical" href="../../read/geospatial-1/">
+  <link rel="canonical" href="../../read/geospatial-orig/">
 </head>
 
   
@@ -113,14 +113,42 @@
 		  	  <h2 class="title text-center">Geospatial Data &amp; Visualization</h2>
 	            
 
-<h2 id="datacamp">DataCamp</h2>
-
-<p>Chapters 1 &amp; 2 in <a href="https://www.datacamp.com/courses/spatial-analysis-in-r-with-sf-and-raster">Spatial Analysis in R with sf &amp; raster</a></p>
-
 <h2 id="reading">Reading</h2>
 
-<p>Read from <a href="https://geocompr.robinlovelace.net/">GeoComputation in R</a>:
-Ch 1, 2.1, 2.2, 3.2, 3.3</p>
+<p>Our geospatial module is meant only as an introduction to geospatial data, an already-rich area in R that is in mid-Renaissance right now, just as tabular data was in the past few years since the introduction of <code>dplyr</code> and the rest of <code>tidyverse</code>.</p>
+
+<p>GeoSpatial Textbook: <strong><a href="https://geocompr.robinlovelace.net">Geocomputation with R</a></strong> (Lovelace, Nowosad, Muenchow)</p>
+
+<ul>
+<li><strong><a href="https://geocompr.robinlovelace.net/intro.html">Chapter 1: Introduction</a></strong></li>
+</ul>
+
+<h3 id="basic-visualization-tools">Basic Visualization tools</h3>
+
+<p>Also read over the following vignettes:</p>
+
+<ul>
+<li>Static maps: <strong><a href="https://cran.r-project.org/web/packages/tmap/vignettes/tmap-nutshell.html">tmap Vignette</a></strong></li>
+<li>Interactive maps: <strong><a href="https://r-spatial.github.io/mapview/articles/articles/mapview_01-basics.html">mapview Vignette</a></strong></li>
+</ul>
+
+<h2 id="watch">Watch</h2>
+
+<h3 id="updated">UPDATED</h3>
+
+<ul>
+<li><p>DataCamp now has a more modern course from Zev Ross, <strong><a href="https://www.datacamp.com/courses/spatial-analysis-in-r-with-sf-and-raster">Spatial Analysis in R with <code>sf</code> and <code>raster</code></a></strong> that more closely aligns with the tools we will be using in this module (matching the Geocomputation reading above).</p></li>
+
+<li><p><del>Charlotte Wickham&rsquo;s DataCamp course, <strong><a href="https://www.datacamp.com/courses/working-with-geospatial-data-in-r">Working with Geospatial Data</a></strong> doesn&rsquo;t cover the new/emerging spatial suite we will focus on, but still very relevant. Chapter 3, introducing the <code>raster</code> side of things, is (for the moment) the same one we will use. However, the <code>sf</code> package replaces the vector manipulation and mapping functions of <code>sp</code>, though many concepts carry over.  Least relevant are the older plotting strategies covered there, such as <code>ggmap</code>, where we will rely on newer <code>tmap</code>, <code>ggplot::geom_sf</code>, and <code>mapview</code> packages.</del></p></li>
+</ul>
+
+<h3 id="references">References</h3>
+
+<ul>
+<li><p>I highly recommend browsing the <a href="https://cran.r-project.org/web/packages/sf/">excellent vignettes</a> of the <code>sf</code> package.  Vignettes are provided with most well-developed R packages and often provide the best and most up-to-date introduction to the package.</p></li>
+
+<li><p>Follow the <a href="http://r-spatial.org/">r-spatial blog &amp; website</a> for the latest news from the r-spatial community.  (Speaking of which, you can also follow the <a href="https://www.tidyverse.org/articles/">Tidyverse website/blog</a> for updates from there.)  Most of the package developers involved in these projects are also active in the <code>#rstats</code> corner of Twitter.</p></li>
+</ul>
 
 	      </div>
       </div>

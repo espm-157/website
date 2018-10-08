@@ -36,6 +36,26 @@ Read  R for Data Science textbook: [r4ds-19]  </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/geospatial-1/</guid>
+      <description>DataCamp Chapters 1 &amp;amp; 2 in Spatial Analysis in R with sf &amp;amp; raster
+Reading Read from GeoComputation in R: Ch 1, 2.1, 2.2, 3.2, 3.3</description>
+    </item>
+    
+    <item>
+      <title>Geospatial Data &amp; Visualization</title>
+      <link>/read/geospatial-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/read/geospatial-2/</guid>
+      <description>DataCamp Chapters 3 &amp;amp; 4 in Spatial Analysis in R with sf &amp;amp; raster
+Reading Read from GeoComputation in R: Ch 3.3, 4.2, 4.3, ch 8.1 and 8.2</description>
+    </item>
+    
+    <item>
+      <title>Geospatial Data &amp; Visualization</title>
+      <link>/read/geospatial-orig/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/read/geospatial-orig/</guid>
       <description>Reading Our geospatial module is meant only as an introduction to geospatial data, an already-rich area in R that is in mid-Renaissance right now, just as tabular data was in the past few years since the introduction of dplyr and the rest of tidyverse.
 GeoSpatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
  Chapter 1: Introduction  Basic Visualization tools Also read over the following vignettes:

@@ -73,6 +73,14 @@
   </url>
   
   <url>
+    <loc>/read/geospatial-2/</loc>
+  </url>
+  
+  <url>
+    <loc>/read/geospatial-orig/</loc>
+  </url>
+  
+  <url>
     <loc>/read/geospatial-io/</loc>
   </url>
   
@@ -194,6 +202,10 @@
   
   <url>
     <loc>/read/r-pkgs/</loc>
+  </url>
+  
+  <url>
+    <loc>/livecode/2018-10-08-functions/</loc>
   </url>
   
 </urlset>

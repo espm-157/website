@@ -131,6 +131,26 @@ Read  R for Data Science textbook: [r4ds-19]  </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/geospatial-1/</guid>
+      <description>DataCamp Chapters 1 &amp;amp; 2 in Spatial Analysis in R with sf &amp;amp; raster
+Reading Read from GeoComputation in R: Ch 1, 2.1, 2.2, 3.2, 3.3</description>
+    </item>
+    
+    <item>
+      <title>Geospatial Data &amp; Visualization</title>
+      <link>/read/geospatial-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/read/geospatial-2/</guid>
+      <description>DataCamp Chapters 3 &amp;amp; 4 in Spatial Analysis in R with sf &amp;amp; raster
+Reading Read from GeoComputation in R: Ch 3.3, 4.2, 4.3, ch 8.1 and 8.2</description>
+    </item>
+    
+    <item>
+      <title>Geospatial Data &amp; Visualization</title>
+      <link>/read/geospatial-orig/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/read/geospatial-orig/</guid>
       <description>Reading Our geospatial module is meant only as an introduction to geospatial data, an already-rich area in R that is in mid-Renaissance right now, just as tabular data was in the past few years since the introduction of dplyr and the rest of tidyverse.
 GeoSpatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
  Chapter 1: Introduction  Basic Visualization tools Also read over the following vignettes:
@@ -392,6 +412,19 @@ Almost everything we do will involve GitHub in some way. This tutorial will prov
       <guid>/read/r-pkgs/</guid>
       <description>Today&amp;rsquo;s class will introduce the basic idea of an R package as a fundamental unit for sharing re-usable R functions. We will re-organize our population dynamics assignment repo into the structure required for an R package.
 While writing a minimal R package is really pretty simple, R packages are still considered an advanced topic and rightly the subject of completely separate books. We recommend Hadley Wickham&amp;rsquo;s Writing R Packages which is available in press or online for more detailed reading.</description>
+    </item>
+    
+    <item>
+      <title>Writing functions in R</title>
+      <link>/livecode/2018-10-08-functions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/livecode/2018-10-08-functions/</guid>
+      <description>library(tidyverse) Today we will be learning to write our own functions in R. Consider the discrete Logistic growth function:
+\[x_{t+1} = x_t + r x_t \left(1 - \frac{x_t}{K} \right)\]
+Here we exress this function in R:
+growth &amp;lt;- function(xt, r, K){ r * xt * (1 - xt / K) } We can simulate the function as follows:
+simulate &amp;lt;- function(max_time, x0, r, K){ x &amp;lt;- numeric(max_time) x[1] &amp;lt;- x0 for (t in 1:(max_time - 1)) { x[t + 1] &amp;lt;- x[t] + growth(x[t], r = r, K) } pop_data &amp;lt;- data_frame(time = 1:max_time, pop_size = x) pop_data } We can perform a few simulations with different values of r:</description>
     </item>
     
   </channel>

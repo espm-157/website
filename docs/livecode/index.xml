@@ -19,5 +19,18 @@
       <description>Reminders  Focus on reading, exercises – Great work! open-ended questions, not always covered Piazza discussion forum pair coding   Overview  GitHub  Collaboration rmarkdown -&amp;gt; markdown  Travis  What, why? Debugging  R  readr separators ggplot2 – Grammar?? dplyr Syntax  Naming things Style   </description>
     </item>
     
+    <item>
+      <title>Writing functions in R</title>
+      <link>/livecode/2018-10-08-functions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/livecode/2018-10-08-functions/</guid>
+      <description>library(tidyverse) Today we will be learning to write our own functions in R. Consider the discrete Logistic growth function:
+\[x_{t+1} = x_t + r x_t \left(1 - \frac{x_t}{K} \right)\]
+Here we exress this function in R:
+growth &amp;lt;- function(xt, r, K){ r * xt * (1 - xt / K) } We can simulate the function as follows:
+simulate &amp;lt;- function(max_time, x0, r, K){ x &amp;lt;- numeric(max_time) x[1] &amp;lt;- x0 for (t in 1:(max_time - 1)) { x[t + 1] &amp;lt;- x[t] + growth(x[t], r = r, K) } pop_data &amp;lt;- data_frame(time = 1:max_time, pop_size = x) pop_data } We can perform a few simulations with different values of r:</description>
+    </item>
+    
   </channel>
 </rss>
