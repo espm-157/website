@@ -138,9 +138,9 @@ lessons:
   - module: "<i class='material-icons'>my_location</i>"
     date: "2018-10-19"
     datatype: '<i class="material-icons">satellite</i>'
-    topics: "raster data"
-    reading: "read/geospatial-io"
-    watch: "read/geospatial-io"
+    topics: "functional programming"
+    reading: "read/functions"
+    watch: "read/functions"
 
   - module: "<i class='material-icons'>my_location</i>"
     date: "2018-10-22"
