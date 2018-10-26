@@ -165,6 +165,12 @@ lessons:
   - module: " "
     date: " "
     topics: "<b>MASS EXTINCTIONS MODULE</b>"
+    
+  - module: "<i class='material-icons'>trending_down</i>"
+    date: "2018-10-29"
+    datatype: '<i class="material-icons">widgets</i>'
+    topics: "REST APIs"
+    watch: "read/httr"
 
   - module: "<i class='material-icons'>trending_down</i>"
     date: "2018-11-02"
