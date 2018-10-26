@@ -279,11 +279,21 @@ Reading  Introduction [r4ds-27.1] R Markdown [r4ds-27.2] Code chunks [r4ds-27.4]
     
     <item>
       <title>REST APIs and web queries</title>
-      <link>/read/httr/</link>
+      <link>/read/httr-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/httr/</guid>
-      <description>Watch Working with Web Data in R</description>
+      <guid>/read/httr-1/</guid>
+      <description>Watch Working with Web Data in R, chapters 1 &amp;amp; 2.</description>
+    </item>
+    
+    <item>
+      <title>REST APIs and web queries</title>
+      <link>/read/httr-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/read/httr-2/</guid>
+      <description>Watch Working with Web Data in R, chapter 3.
+NOTE Also, please have your final project repo created and fill out proposal.md with your proposed project idea!</description>
     </item>
     
     <item>

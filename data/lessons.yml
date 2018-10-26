@@ -170,13 +170,13 @@ lessons:
     date: "2018-10-29"
     datatype: '<i class="material-icons">widgets</i>'
     topics: "REST APIs"
-    watch: "read/httr"
+    watch: "read/httr-1"
 
   - module: "<i class='material-icons'>trending_down</i>"
     date: "2018-11-02"
     datatype: '<i class="material-icons">widgets</i>'
     topics: "REST APIs"
-    watch: "read/httr"
+    watch: "read/httr-2"
     
   - module: "<i class='material-icons'>trending_down</i>"
     date: "2018-11-05"
