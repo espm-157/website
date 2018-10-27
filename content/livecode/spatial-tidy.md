@@ -2,11 +2,10 @@
 title: Habitat Analysis of the Pacific Spiny Lumpsucker
 ---
 
- We will map potential areas of marine aquaculture for the super cute
-    Pacific spiny lumpsucker (*Eumicrotremus orbis*)
+We map potential areas of marine aquaculture for the super cute
+Pacific spiny lumpsucker (*Eumicrotremus orbis*)
 
-![They have adhesive pelvic disks\! How
-    cute\!](images/lumpsucker.png)
+
 
 ``` r
 library(tidyverse)
@@ -77,4 +76,5 @@ tm_shape(habitat) +
             legend.frame = TRUE)
 ```
 
-![](spatial-tidy_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](../spatial-tidy_files/figure-gfm/unnamed-chunk-6-1.png)
+
