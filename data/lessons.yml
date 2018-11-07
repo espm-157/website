@@ -189,26 +189,13 @@ lessons:
     date: "2018-11-09"
     datatype: '<i class="material-icons">widgets</i>'
     topics: "Data rectangling"
-    reading: "read/purrr-1"
-    watch: "read/purrr-1"
+    reading: "read/purrr-2"
+    watch: "read/purrr-2"
     
   - module: " <i class='material-icons'>trending_down</i>"
     date: "2018-11-16"
     datatype: '<i class="material-icons">widgets</i>'
-    topics: "Data rectangling"
-
-    
-  - module: "<i class='material-icons'>trending_down</i>"
-    date: "2018-11-19"
-    datatype: '<i class="material-icons">widgets</i>'
-    topics: "Data rectangling"
-
-  
-  - module: "<i class='material-icons'>trending_down</i>"
-    date: "2018-11-26"
-    datatype: '<i class="material-icons">widgets</i>'
-    topics: "Data rectangling"
-    read: ""
+    topics: "Reproducibility & Data sources"
   
   - module: " "
     date: " "
@@ -218,7 +205,15 @@ lessons:
 #    datatype: "<i class='material-icons'>share</i>"
 #    date: "2018-11-26"
 #    topics: "JSON-LD, graph queries"
-
+    
+  - module: "<i class='material-icons'>school</i>"
+    date: "2018-11-19"  
+    topics: "Final Projects"
+    
+  - module: "<i class='material-icons'>school</i>"
+    date: "2018-11-26"  
+    topics: "Final Projects" 
+    
   - module: "<i class='material-icons'>school</i>"
     date: "2018-11-30"
     topics: "Final Projects"
@@ -229,7 +224,5 @@ lessons:
 #    topics: "Data publishing"
 
 
-  - module: "<i class='material-icons'>school</i>"
-    date: ""  
-    topics: "Final Projects"
+
     

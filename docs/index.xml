@@ -18,7 +18,7 @@
       
       <guid>/syllabus/</guid>
       <description>warning  clear  Please note: Syllabus under development, subject to change    
- Date Module Data Topics Read Watch   2018-08-24 home  Introduction &amp; setup         CLIMATE MODULE     2018-08-27   Individual assessment     2018-08-31   Workflow: GitHub, RMarkdown, Travis     2018-09-07   Visualization basics     2018-09-10   Manipulation basics     2018-09-14   Module wrap-up         OVERFISHING MODULE     2018-09-17 directions_boat  Relational data: groups     2018-09-21  directions_boat  Relational data: joins     2018-09-24  directions_boat  group_by and summarize     2018-09-28  directions_boat  Missing Values     2018-10-01  directions_boat  more dplyr     2018-10-05  directions_boat  Reproducibility     2018-10-08 bug_report memory Functions         GEOSPATIAL CHANGE MODULE     2018-10-12 my_location satellite geospatial intro, visualization     2018-10-15 my_location satellite vector data     2018-10-19 my_location satellite functional programming     2018-10-22 my_location satellite spatial data manipulation     2018-10-26 my_location satellite Reproducibility         MASS EXTINCTIONS MODULE     2018-10-29 trending_down widgets REST APIs     2018-11-02 trending_down widgets REST APIs     2018-11-05 trending_down widgets Regular Expressions     2018-11-09 trending_down widgets Data rectangling     2018-11-16  trending_down widgets Data rectangling     2018-11-19 trending_down widgets Data rectangling     2018-11-26 trending_down widgets Data rectangling         FINAL PROJECTS     2018-11-30 school  Final Projects      school  Final Projects       </description>
+ Date Module Data Topics Read Watch   2018-08-24 home  Introduction &amp; setup         CLIMATE MODULE     2018-08-27   Individual assessment     2018-08-31   Workflow: GitHub, RMarkdown, Travis     2018-09-07   Visualization basics     2018-09-10   Manipulation basics     2018-09-14   Module wrap-up         OVERFISHING MODULE     2018-09-17 directions_boat  Relational data: groups     2018-09-21  directions_boat  Relational data: joins     2018-09-24  directions_boat  group_by and summarize     2018-09-28  directions_boat  Missing Values     2018-10-01  directions_boat  more dplyr     2018-10-05  directions_boat  Reproducibility     2018-10-08 bug_report memory Functions         GEOSPATIAL CHANGE MODULE     2018-10-12 my_location satellite geospatial intro, visualization     2018-10-15 my_location satellite vector data     2018-10-19 my_location satellite functional programming     2018-10-22 my_location satellite spatial data manipulation     2018-10-26 my_location satellite Reproducibility         MASS EXTINCTIONS MODULE     2018-10-29 trending_down widgets REST APIs     2018-11-02 trending_down widgets REST APIs     2018-11-05 trending_down widgets Regular Expressions     2018-11-09 trending_down widgets Data rectangling     2018-11-16  trending_down widgets Reproducibility &amp; Data sources         FINAL PROJECTS     2018-11-19 school  Final Projects     2018-11-26 school  Final Projects     2018-11-30 school  Final Projects       </description>
     </item>
     
     <item>
@@ -250,6 +250,16 @@ library(tidyverse) library(mapview) library(raster) library(sf) library(units) l
       
       <guid>/read/purrr-1/</guid>
       <description>Watch Chapters 3 &amp;amp; 4 of Writing Functions in R. Theste two chapters are focused on purrr and it&amp;rsquo;s use in iteration, particulaly the map() family. It may seem surprising that these tools for iteration are buried in the second half of a course on writing functions, but as you will see, these concepts are closely linked through a style known as functional programming, which is particularly relevant to much data science type analyses.</description>
+    </item>
+    
+    <item>
+      <title>Iterate using purrr</title>
+      <link>/read/purrr-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/read/purrr-2/</guid>
+      <description> Watch Chapters 4 &amp;amp; 5 of Writing Functions in R. (&amp;ldquo;Advanced input &amp;amp; output&amp;rdquo;, and &amp;ldquo;Robust functions&amp;rdquo;)
+Reading  R4DS 21.5: The map functions R4DS 21.6: Dealing with failure R4DS 21.7: Mapping over multiple arguments  </description>
     </item>
     
     <item>
