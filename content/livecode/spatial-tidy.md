@@ -7,7 +7,7 @@ Pacific spiny lumpsucker (*Eumicrotremus orbis*)
 
 
 
-``` r
+```{r}
 library(tidyverse)
 library(mapview)  
 library(raster)   
@@ -24,14 +24,14 @@ Key information for optimal growth:
 
 <!-- end list -->
 
-``` r
+```{r}
 ## Loading the data
 west_coast <- st_read("shapefiles/mpas_westcoast.shp", quiet = TRUE)
 sst <- stack( list.files('rasters', pattern = 'average_', full.names = T) )
 npp <- raster('rasters/annual_npp.tif')
 ```
 
-``` r
+```{r}
 # convert units and projections
 
 #K_factor <- as.numeric(set_units(set_units(0, "Celsius"), "K"))
@@ -40,13 +40,13 @@ sstProj <- projectRaster(sstAvg, crs = crs(npp))
 names(sstProj) <- "sst"
 ```
 
-``` r
+```{r}
 # get a vector layer with state boundary data, also in the local projection
 land <- us_states() %>%
   st_transform(crs(npp, asText=TRUE)) 
 ```
 
-``` r
+```{r}
 habitat_stack <- stack(
    list(
    sst = raster::calc(sstProj, function(x) between(x, 12, 18)),
@@ -62,7 +62,7 @@ habitat <- habitat_stack %>%
 names(habitat) <- "lumpsucker_habitat"
 ```
 
-``` r
+```{r}
 tm_shape(habitat) + 
   tm_raster("lumpsucker_habitat") + 
   tm_shape(land) +
