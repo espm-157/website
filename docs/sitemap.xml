@@ -8,16 +8,23 @@
   </url>
   
   <url>
+    <loc>/</loc>
+    <lastmod>2017-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/policies/</loc>
     <lastmod>2017-04-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/about/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/overview-notes/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -49,11 +56,6 @@
   
   <url>
     <loc>/rubrics/climate/</loc>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2017-04-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>

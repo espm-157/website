@@ -1,5 +1,6 @@
 ---
 date: 2017-04-19
+layout: "fullwidth"
 ---
 
 <div class="alert alert-warning">
