@@ -73,16 +73,6 @@ Reading Geospatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
     </item>
     
     <item>
-      <title>Geospatial Raster Data</title>
-      <link>/read/geospatial-raster/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/read/geospatial-raster/</guid>
-      <description>Reading Geospatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
- Chapter 2.2: Raster Data Chapter 3.3: Manipulating raster objects Chapter 4.3: Raster spatial operations  Watch Spatial Analysis in R with sf and raster</description>
-    </item>
-    
-    <item>
       <title>Geospatial Raster and Vector Data</title>
       <link>/read/geospatial-raster-vector/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -95,6 +85,16 @@ Reading Geospatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
  Chapter 4.2: Vector spatial operations
  Chapter 4.3: Raster spatial operations
   Watch Spatial Analysis in R with sf and raster</description>
+    </item>
+    
+    <item>
+      <title>Geospatial Raster Data</title>
+      <link>/read/geospatial-raster/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/read/geospatial-raster/</guid>
+      <description>Reading Geospatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
+ Chapter 2.2: Raster Data Chapter 3.3: Manipulating raster objects Chapter 4.3: Raster spatial operations  Watch Spatial Analysis in R with sf and raster</description>
     </item>
     
     <item>
@@ -175,25 +175,6 @@ Reading  Introduction [r4ds-27.1] R Markdown [r4ds-27.2] Code chunks [r4ds-27.4]
     </item>
     
     <item>
-      <title>REST APIs and web queries</title>
-      <link>/read/httr-1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/read/httr-1/</guid>
-      <description>Watch Working with Web Data in R, chapters 1 &amp;amp; 2.</description>
-    </item>
-    
-    <item>
-      <title>REST APIs and web queries</title>
-      <link>/read/httr-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/read/httr-2/</guid>
-      <description>Watch Working with Web Data in R, chapter 3.
-NOTE Also, please have your final project repo created and fill out proposal.md with your proposed project idea!</description>
-    </item>
-    
-    <item>
       <title>Reading for 2017-10-26</title>
       <link>/read/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -220,6 +201,25 @@ Read  Relational Data (*_join functions) r4ds-13.1 - 13.7  </description>
       
       <guid>/read/dplyr-4/</guid>
       <description> Watch  DataCamp Lessons: First three chapters of Working with Data in the Tidyverse  </description>
+    </item>
+    
+    <item>
+      <title>REST APIs and web queries</title>
+      <link>/read/httr-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/read/httr-1/</guid>
+      <description>Watch Working with Web Data in R, chapters 1 &amp;amp; 2.</description>
+    </item>
+    
+    <item>
+      <title>REST APIs and web queries</title>
+      <link>/read/httr-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/read/httr-2/</guid>
+      <description>Watch Working with Web Data in R, chapter 3.
+NOTE Also, please have your final project repo created and fill out proposal.md with your proposed project idea!</description>
     </item>
     
     <item>

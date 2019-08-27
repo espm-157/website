@@ -72,7 +72,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   identifier = "Piazza"
   name = "Forum"
   pre = "<i class='material-icons'>forum</i>"
-  url = "http://piazza.com/berkeley/fall2018/espm157"
+  url = "http://piazza.com/berkeley/fall2019/espm157"
 [[menu.footer]]
   weight = 4
   name = "Textbook"
@@ -87,7 +87,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   weight = 6
   name = "DataCamp"
   pre = "<i class='material-icons'>video_library</i>"
-  url = "https://www.datacamp.com/groups/espm-157-data-science-for-global-change-ecology"
+  url = "https://www.datacamp.com/enterprise/espm-157-data-science-for-global-change-ecology-aa13375c-ddc0-41aa-9afd-4ab883028f72"
 
 
 

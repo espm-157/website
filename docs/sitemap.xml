@@ -33,12 +33,10 @@
   
   <url>
     <loc>/archives/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/assignments/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -47,7 +45,6 @@
   
   <url>
     <loc>/categories/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -87,11 +84,11 @@
   </url>
   
   <url>
-    <loc>/read/geospatial-raster/</loc>
+    <loc>/read/geospatial-raster-vector/</loc>
   </url>
   
   <url>
-    <loc>/read/geospatial-raster-vector/</loc>
+    <loc>/read/geospatial-raster/</loc>
   </url>
   
   <url>
@@ -128,7 +125,6 @@
   
   <url>
     <loc>/livecode/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -144,20 +140,11 @@
   </url>
   
   <url>
-    <loc>/read/httr-1/</loc>
-  </url>
-  
-  <url>
-    <loc>/read/httr-2/</loc>
-  </url>
-  
-  <url>
     <loc>/read/docker/</loc>
   </url>
   
   <url>
     <loc>/read/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -169,8 +156,15 @@
   </url>
   
   <url>
+    <loc>/read/httr-1/</loc>
+  </url>
+  
+  <url>
+    <loc>/read/httr-2/</loc>
+  </url>
+  
+  <url>
     <loc>/rubrics/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -187,7 +181,6 @@
   
   <url>
     <loc>/tags/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -215,11 +208,11 @@
   </url>
   
   <url>
-    <loc>/read/r-pkgs/</loc>
+    <loc>/livecode/2018-10-08-functions/</loc>
   </url>
   
   <url>
-    <loc>/livecode/2018-10-08-functions/</loc>
+    <loc>/read/r-pkgs/</loc>
   </url>
   
 </urlset>
