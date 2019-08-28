@@ -12,11 +12,11 @@ description: |
   <span></span>     | <span></span>
   -----------|-------------------------------------------------------------------
   Instructor | **[Carl Boettiger](http://carlboettiger.info)**  <a href="mailto:cboettig@berkeley.edu" title="email"><i class="fa fa-envelope"></i></a><a href="https://twitter.com/cboettig" title="Twitter"> <i class="fa fa-twitter"></i></a> <a href="https://github.com/cboettig" title="GitHub"><i class="fa fa-github"></i></a> |  
-  GSIs        |  [Andy Rothstein](https://ourenvironment.berkeley.edu/people/andrew-rothstein) (Lead), [Heng Huang](https://ourenvironment.berkeley.edu/people/heng-huang) |  
+  GSIs        |  [Matt Kling](http://matthewkling.github.io) |  
   Location   |     110 Barrows Hall           |   
-  Times      | **Mon, Fri 12:00P - 2:00P**    |  
-  CCN        |   26798                        |  
-Office Hours | **Tues 11A** 146 Hilgard (Andy) & **Fri 11A** 203 Wellman (Prof B) |
+  Times      | **Wed, Fri 10:00A - 12:00P**    |  
+  CCN        |   27205                        |  
+Office Hours | TBD |
 
 
 
