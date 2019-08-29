@@ -170,8 +170,7 @@ Reading  R4DS 21.5: The map functions R4DS 21.6: Dealing with failure R4DS 21.7:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/rmarkdown-basics/</guid>
-      <description> Watch  Chapter 1: Authoring RMarkdown Reports (by Garrett Grolemund)  You should just complete the first chapter in this lesson.
-Reading  Introduction [r4ds-27.1] R Markdown [r4ds-27.2] Code chunks [r4ds-27.4]  Reference  R Markdown Cheat Sheet R Markdown Reference Guide  </description>
+      <description> Reading  Introduction [r4ds-27.1] R Markdown [r4ds-27.2] Code chunks [r4ds-27.4]  Reference  R Markdown Cheat Sheet R Markdown Reference Guide  </description>
     </item>
     
     <item>
@@ -228,7 +227,7 @@ NOTE Also, please have your final project repo created and fill out proposal.md 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/setup/</guid>
-      <description> Watch  DataCamp Lesson: RStudio IDE, Part I, Chapter 1: &amp;ldquo;Orientation&amp;rdquo; (by Garrett Grolemund).  Read  Prerequisites Running R code RStudio Cheat sheet (for reference)
+      <description> Read  Prerequisites Running R code RStudio Cheat sheet (for reference)
  Style guide Consistent style is an important element of communication and collaboration.
 Please review sections 1. Files and 2. Syntax. Most Syntax conventions can be automatically checked with lintr::lint(&amp;quot;assignment.Rmd&amp;quot;).
   </description>

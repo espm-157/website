@@ -3,10 +3,6 @@ title: Setup
 ---
 
 
-## Watch
-
-- DataCamp Lesson: **[RStudio IDE, Part I, Chapter 1: "Orientation"](https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-1)** (by Garrett Grolemund).
-
 ## Read
 
 - **[Prerequisites](http://r4ds.had.co.nz/introduction.html#prerequisites)**

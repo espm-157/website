@@ -3,13 +3,6 @@ title: "R Markdown Basics"
 ---
 
 
-## Watch
-
-- **[Chapter 1: Authoring RMarkdown Reports](https://www.datacamp.com/courses/reporting-with-r-markdown)** (by Garrett Grolemund)
-
-_You should just complete the first chapter in this lesson._
-
-
 ## Reading
 
 - Introduction **[[r4ds-27.1](http://r4ds.had.co.nz/r-markdown.html#introduction-18)]**

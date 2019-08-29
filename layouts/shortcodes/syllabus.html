@@ -8,7 +8,6 @@
     <th align="center" style="width:10%">Data</th>
     <th align="center" style="width:45%">Topics</th>
     <th align="center" style="width:5%">Read</th>
-    <th align="center" style="width:5%">Watch</th>
   </tr>
 
   {{ range $.Site.Data.lessons }}
@@ -27,13 +26,7 @@
           <i class="fa fa-book fa-lg"></i></font></td>
       {{ end }}
 
-      {{ if .watch }}
-      <td align="center"><a href="{{ .Site.baseurl }}/{{ .watch  }}">
-          <i class="fa fa-comment fa-lg"></i></a></td>
-      {{ else }}
-        <td align="center"><font color="f1f1f1">
-          <i class="fa fa-comment fa-lg"></i></font></td>
-      {{ end }}
+
 
     </tr>
     {{ end }}

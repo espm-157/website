@@ -688,6 +688,7 @@ class: inverse
 - reproducibility
 
 
+<!--
 ---
 class: inverse
 
@@ -698,13 +699,13 @@ class: inverse
 - ecological simulation
 - dynamical systems modeling, ODE & SDE simulations, bifurcation analysis, chaos, bet hedging
 - writing packages
-
+-->
 
 ---
 class: inverse
 
 
-## Spatial movement
+## Spatial data: climate envelopes
 
 - Vector & Raster data
 - projections and transforms
@@ -747,6 +748,26 @@ class: inverse
 class: inverse, center, middle
 
 # DataCamp
+
+---
+
+![](img/datacamp.png)
+
+---
+
+![](img/datacamp-noam.png)
+
+
+
+---
+
+
+![](img/datacamp-computerworld.png)
+
+---
+
+![](img/datacamp-buzzfeed.png)
+
 
 
 ---
