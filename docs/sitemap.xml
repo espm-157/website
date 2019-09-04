@@ -56,6 +56,10 @@
   </url>
   
   <url>
+    <loc>/read/dplyr-1/</loc>
+  </url>
+  
+  <url>
     <loc>/assignments/final/</loc>
   </url>
   
@@ -136,6 +140,10 @@
   </url>
   
   <url>
+    <loc>/read/basics/</loc>
+  </url>
+  
+  <url>
     <loc>/read/rmarkdown-basics/</loc>
   </url>
   
@@ -201,10 +209,6 @@
   
   <url>
     <loc>/read/workflows/</loc>
-  </url>
-  
-  <url>
-    <loc>/read/dplyr-1/</loc>
   </url>
   
   <url>

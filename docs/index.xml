@@ -18,7 +18,7 @@
       
       <guid>/syllabus/</guid>
       <description>warning  clear  Please note: Syllabus under development, subject to change    
- Date Module Data Topics Read   2019-08-28 home  Introduction &amp; setup        CLIMATE MODULE    2019-08-30   Individual assessment    2019-09-04   Workflow: GitHub, RMarkdown, Travis    2019-09-11   Visualization basics    2019-09-13   Manipulation basics    2019-09-18   Module wrap-up        OVERFISHING MODULE    2019-09-20 directions_boat  Relational data: groups    2019-09-25  directions_boat  Relational data: joins    2019-09-27  directions_boat  group_by and summarize    2019-10-02  directions_boat  Missing Values    2019-10-04  directions_boat  more dplyr    2019-10-09  directions_boat  Reproducibility    2019-10-11 bug_report memory Functions        GEOSPATIAL CHANGE MODULE    2019-10-16 my_location satellite geospatial intro, visualization    2019-10-18 my_location satellite vector data    2019-10-23 my_location satellite functional programming    2019-10-25 my_location satellite spatial data manipulation    2019-10-30 my_location satellite Reproducibility        MASS EXTINCTIONS MODULE    2019-11-01 trending_down widgets REST APIs    2019-11-06 trending_down widgets REST APIs    2019-11-08 trending_down widgets Regular Expressions    2019-11-13 trending_down widgets Data rectangling    2019-11-15  trending_down widgets Reproducibility &amp; Data sources        FINAL PROJECTS    2019-11-20 school  Final Projects    2019-11-22 school  Final Projects    2019-11-27 school  Final Projects      </description>
+ Date Module Data Topics Read   2019-08-28 home  Introduction &amp; setup        CLIMATE MODULE    2019-08-30   Workflow: GitHub, RMarkdown, Travis    2019-09-04   Programming and visualization basics    2019-09-11   Visualization basics    2019-09-13   Manipulation basics    2019-09-18   Module wrap-up        OVERFISHING MODULE    2019-09-20 directions_boat  Relational data: groups    2019-09-25  directions_boat  Relational data: joins    2019-09-27  directions_boat  group_by and summarize    2019-10-02  directions_boat  Missing Values    2019-10-04  directions_boat  more dplyr    2019-10-09  directions_boat  Reproducibility    2019-10-11 bug_report memory Functions        GEOSPATIAL CHANGE MODULE    2019-10-16 my_location satellite geospatial intro, visualization    2019-10-18 my_location satellite vector data    2019-10-23 my_location satellite functional programming    2019-10-25 my_location satellite spatial data manipulation    2019-10-30 my_location satellite Reproducibility        MASS EXTINCTIONS MODULE    2019-11-01 trending_down widgets REST APIs    2019-11-06 trending_down widgets REST APIs    2019-11-08 trending_down widgets Regular Expressions    2019-11-13 trending_down widgets Data rectangling    2019-11-15  trending_down widgets Reproducibility &amp; Data sources        FINAL PROJECTS    2019-11-20 school  Final Projects    2019-11-22 school  Final Projects    2019-11-27 school  Final Projects      </description>
     </item>
     
     <item>
@@ -95,6 +95,15 @@ What rolling average is used in computing the “trend” line? How does the tre
       <guid>/rubrics/climate/</guid>
       <description>3 pts for use of git hub
  0pts: no repo or a repo with no unique commits 1pts: evidence of at least one commit. read me not updated 2pts: evidence of semiregular commits, read me updated only partially - either missing name of team member or failing to update the read me from the template 3pts: evidence of multiple commits, read me updated to reflect the repos purpose, team member name and handle included   3 pts for Rmarkdown</description>
+    </item>
+    
+    <item>
+      <title>Climate Module: Working with Data</title>
+      <link>/read/dplyr-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/read/dplyr-1/</guid>
+      <description> Tutorial  Working with Data  Read  dplyr basic verbs: filter, arrange, select, and mutate, [r4ds-5.1 - 5.5]  DataCamp  Tidyverse Chapter 1: Data Wrangling (David Robinson)  </description>
     </item>
     
     <item>
@@ -217,9 +226,7 @@ Reading Geospatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/git-1/</guid>
-      <description> Watch  DataCamp Lesson: RStudio IDE, Part I, Chapter 1: &amp;ldquo;Orientation&amp;rdquo; (by Garrett Grolemund).
- DataCamp Lesson: RStudio IDE, Part II, Chapter 2: Version Control (by Garrett Grolemund).
-  Reading &amp;amp; Reference  Git Setup: HappyGitWithR.com Data Import: [r4ds-11]  </description>
+      <description> Reading  Git Setup: HappyGitWithR.com Data Import: [r4ds-11]  </description>
     </item>
     
     <item>
@@ -290,6 +297,15 @@ Reading  R4DS 21.5: The map functions R4DS 21.6: Dealing with failure R4DS 21.7:
     </item>
     
     <item>
+      <title>programming basics</title>
+      <link>/read/basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/read/basics/</guid>
+      <description> Complete the Programming Basics Primer on RStudio Cloud.  </description>
+    </item>
+    
+    <item>
       <title>R Markdown Basics</title>
       <link>/read/rmarkdown-basics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -352,10 +368,7 @@ NOTE Also, please have your final project repo created and fill out proposal.md 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/setup/</guid>
-      <description> Read  Prerequisites Running R code RStudio Cheat sheet (for reference)
- Style guide Consistent style is an important element of communication and collaboration.
-Please review sections 1. Files and 2. Syntax. Most Syntax conventions can be automatically checked with lintr::lint(&amp;quot;assignment.Rmd&amp;quot;).
-  </description>
+      <description> Read  Prerequisites Running R code RStudio Cheat sheet (for reference) Git Setup: HappyGitWithR.com  </description>
     </item>
     
     <item>
@@ -403,7 +416,7 @@ Almost everything we do will involve GitHub in some way. This tutorial will prov
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/ggplot-1/</guid>
-      <description> Watch  Tidyverse Chapter 1: Data Wrangling (David Robinson) Tidyverse Chapter 2: Data Visualization (David Robinson)  Read Plotting  Data Exploration [r4ds-2] First Steps [r4ds-3.2] Aesthetic mappings [r4ds-3.3] Common problems [r4ds-3.4] Facets r4ds-3.5 Geometric objects r4ds-3.6  Reference  Data Visualization Cheat Sheet cheatsheets-ggplot2-2.1  </description>
+      <description> Tutorial:  Complete Visualization Basics Primer from RStudio.cloud.  Read Plotting  Data Exploration [r4ds-2] First Steps [r4ds-3.2] Aesthetic mappings [r4ds-3.3] Common problems [r4ds-3.4] Facets r4ds-3.5 Geometric objects r4ds-3.6  DataCamp resources (optional)  Tidyverse Chapter 1: Data Wrangling (David Robinson) Tidyverse Chapter 2: Data Visualization (David Robinson)  Reference  Data Visualization Cheat Sheet cheatsheets-ggplot2-2.1  </description>
     </item>
     
     <item>
@@ -423,15 +436,6 @@ Almost everything we do will involve GitHub in some way. This tutorial will prov
       <guid>/read/workflows/</guid>
       <description>Please read the following two short sections:
  6. Workflow: scripts, and 8. Workflow: projects  </description>
-    </item>
-    
-    <item>
-      <title>Wrapping up Climate Module</title>
-      <link>/read/dplyr-1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/read/dplyr-1/</guid>
-      <description> Watch  Tidyverse Chapter 1: Data Wrangling (David Robinson)  Read  dplyr basic verbs: filter, arrange, select, and mutate, [r4ds-5.1 - 5.5]  </description>
     </item>
     
     <item>

@@ -21,6 +21,15 @@ Watch  Background abbreviated documentary, features many of the leading authors 
     </item>
     
     <item>
+      <title>Climate Module: Working with Data</title>
+      <link>/read/dplyr-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/read/dplyr-1/</guid>
+      <description> Tutorial  Working with Data  Read  dplyr basic verbs: filter, arrange, select, and mutate, [r4ds-5.1 - 5.5]  DataCamp  Tidyverse Chapter 1: Data Wrangling (David Robinson)  </description>
+    </item>
+    
+    <item>
       <title>Functions</title>
       <link>/read/functions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -122,9 +131,7 @@ Reading Geospatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/git-1/</guid>
-      <description> Watch  DataCamp Lesson: RStudio IDE, Part I, Chapter 1: &amp;ldquo;Orientation&amp;rdquo; (by Garrett Grolemund).
- DataCamp Lesson: RStudio IDE, Part II, Chapter 2: Version Control (by Garrett Grolemund).
-  Reading &amp;amp; Reference  Git Setup: HappyGitWithR.com Data Import: [r4ds-11]  </description>
+      <description> Reading  Git Setup: HappyGitWithR.com Data Import: [r4ds-11]  </description>
     </item>
     
     <item>
@@ -162,6 +169,15 @@ Reading  R4DS 21.5: The map functions R4DS 21.6: Dealing with failure R4DS 21.7:
       
       <guid>/read/iteration/</guid>
       <description>Watch  DataCamp Lesson: Functional Programming: Chapter 3 of Writing Functions in R.  Read  R for Data Science textbook on Iteration: [r4ds-21]  Note that simulations in time we are writing are an example of a sequential process, where each iteration depends on the previous iteration. These cannot be abstracted into apply or map functions. However, iterating over multiple parameters can!</description>
+    </item>
+    
+    <item>
+      <title>programming basics</title>
+      <link>/read/basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/read/basics/</guid>
+      <description> Complete the Programming Basics Primer on RStudio Cloud.  </description>
     </item>
     
     <item>
@@ -227,10 +243,7 @@ NOTE Also, please have your final project repo created and fill out proposal.md 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/setup/</guid>
-      <description> Read  Prerequisites Running R code RStudio Cheat sheet (for reference)
- Style guide Consistent style is an important element of communication and collaboration.
-Please review sections 1. Files and 2. Syntax. Most Syntax conventions can be automatically checked with lintr::lint(&amp;quot;assignment.Rmd&amp;quot;).
-  </description>
+      <description> Read  Prerequisites Running R code RStudio Cheat sheet (for reference) Git Setup: HappyGitWithR.com  </description>
     </item>
     
     <item>
@@ -249,7 +262,7 @@ Reading  Read the opening sections of chapter 13 on Strings and working with Reg
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/ggplot-1/</guid>
-      <description> Watch  Tidyverse Chapter 1: Data Wrangling (David Robinson) Tidyverse Chapter 2: Data Visualization (David Robinson)  Read Plotting  Data Exploration [r4ds-2] First Steps [r4ds-3.2] Aesthetic mappings [r4ds-3.3] Common problems [r4ds-3.4] Facets r4ds-3.5 Geometric objects r4ds-3.6  Reference  Data Visualization Cheat Sheet cheatsheets-ggplot2-2.1  </description>
+      <description> Tutorial:  Complete Visualization Basics Primer from RStudio.cloud.  Read Plotting  Data Exploration [r4ds-2] First Steps [r4ds-3.2] Aesthetic mappings [r4ds-3.3] Common problems [r4ds-3.4] Facets r4ds-3.5 Geometric objects r4ds-3.6  DataCamp resources (optional)  Tidyverse Chapter 1: Data Wrangling (David Robinson) Tidyverse Chapter 2: Data Visualization (David Robinson)  Reference  Data Visualization Cheat Sheet cheatsheets-ggplot2-2.1  </description>
     </item>
     
     <item>
@@ -269,15 +282,6 @@ Reading  Read the opening sections of chapter 13 on Strings and working with Reg
       <guid>/read/workflows/</guid>
       <description>Please read the following two short sections:
  6. Workflow: scripts, and 8. Workflow: projects  </description>
-    </item>
-    
-    <item>
-      <title>Wrapping up Climate Module</title>
-      <link>/read/dplyr-1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/read/dplyr-1/</guid>
-      <description> Watch  Tidyverse Chapter 1: Data Wrangling (David Robinson)  Read  dplyr basic verbs: filter, arrange, select, and mutate, [r4ds-5.1 - 5.5]  </description>
     </item>
     
     <item>
