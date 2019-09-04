@@ -73,6 +73,19 @@ even if something unexpected happens at the last minute you should already
 be close to done with the assignment. This policy also allows rapid
 feedback to be provided to students by returning assignments quickly.
 
+## Attendance Policy
+
+The course design really depends on students being in class, for every session.
+I expect students to make every effort attend every class.  However, I recognize
+that for some students, an occasional absence will be unavoidable.  Please notify
+the instructor and your project partner in advance of any absence. I will not
+require any note or explanation and trust you to make the right decisions for
+your own education, but advanced notice may help ameliorate the disruption. Keep up
+with the reading assignments while you are away and we will all work with you to get
+you back up to speed on what you miss. Participation grade will not be impacted as
+long as attendance is consistent with this policy.
+
+
 ## Learning Cooperatively
 
 I encourage you to discuss all of the course activities with your friends

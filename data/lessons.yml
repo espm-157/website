@@ -14,13 +14,12 @@ lessons:
     reading: "read/rmarkdown-basics"
     watch: "read/rmarkdown-basics"
     datatype: '<i class="fa fa-table"></i>'
-    topics: "Individual assessment"
+    topics: "Workflow: GitHub, RMarkdown, Travis"
     
   - module: "<i class='fa fa-lg fa-github'></i>"
     date: "2019-09-04"
-    topics: "Workflow: GitHub, RMarkdown, Travis"
-    reading: "read/git-1"
-    watch: "read/git-1"
+    topics: "Programming and visualization basics"
+    reading: "read/basics"
     assignment: ""
     
   - module: "<i class='fa fa-lg fa-thermometer-full'></i>"
@@ -28,8 +27,7 @@ lessons:
     datatype: '<i class="fa fa-table"></i>'
     topics: "Visualization basics"
     reading: "read/ggplot-1"
-    watch: "read/ggplot-1"
-    
+
   - module: "<i class='fa fa-lg fa-thermometer-full'></i>"
     date: "2019-09-13"
     datatype: '<i class="fa fa-table"></i>'

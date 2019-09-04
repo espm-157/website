@@ -3,11 +3,9 @@ title: "Visualization Basics"
 ---
 
 
-## Watch
+## Tutorial:
 
-- **[Tidyverse Chapter 1: Data Wrangling](https://www.datacamp.com/courses/introduction-to-the-tidyverse)** (David Robinson)
-- **[Tidyverse Chapter 2: Data Visualization](https://www.datacamp.com/courses/introduction-to-the-tidyverse)** (David Robinson)
-
+- Complete [Visualization Basics Primer](https://rstudio.cloud/learn/primers/1.1) from RStudio.cloud. 
 
 ## Read
 
@@ -19,6 +17,15 @@ title: "Visualization Basics"
 - Common problems **[[r4ds-3.4](http://r4ds.had.co.nz/data-visualisation.html#common-problems)]**
 - Facets **[r4ds-3.5](http://r4ds.had.co.nz/data-visualisation.html#facets)**
 - Geometric objects **[r4ds-3.6](http://r4ds.had.co.nz/data-visualisation.html#geometric-objects)**
+
+
+## DataCamp resources (optional)
+
+- **[Tidyverse Chapter 1: Data Wrangling](https://www.datacamp.com/courses/introduction-to-the-tidyverse)** (David Robinson)
+- **[Tidyverse Chapter 2: Data Visualization](https://www.datacamp.com/courses/introduction-to-the-tidyverse)** (David Robinson)
+
+
+
 
 <!--
 ### Wrangling
