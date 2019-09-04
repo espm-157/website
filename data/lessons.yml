@@ -19,6 +19,7 @@ lessons:
   - module: "<i class='fa fa-lg fa-github'></i>"
     date: "2019-09-04"
     topics: "Programming and visualization basics"
+    datatype: '<i class="fa fa-table"></i>'
     reading: "read/basics"
     assignment: ""
     
