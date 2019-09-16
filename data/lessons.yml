@@ -39,6 +39,7 @@ lessons:
   - module: "<i class='fa fa-lg fa-thermometer-full'></i>"
     date: "2019-09-18"
     datatype: '<i class="fa fa-table"></i>'
+    reading: "read/dplyr-2"
     topics: "Module wrap-up"
 
   - module: " "
