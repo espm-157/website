@@ -50,8 +50,8 @@ lessons:
     date: "2019-09-20"
     datatype: '<i class="fa fa-database"></i>'
     topics: "Relational data: groups"
-    reading: "read/dplyr-2"
-    watch: "read/dplyr-2"
+    reading: "read/fish"
+    watch: "read/fish"
     
   - module: " <i class='material-icons'>directions_boat</i>"  
     date: "2019-09-25"
