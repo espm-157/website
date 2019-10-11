@@ -167,6 +167,11 @@ lessons:
     date: "2019-11-15"
     datatype: '<i class="material-icons">widgets</i>'
     topics: "Reproducibility & Data sources"
+
+  - module: " <i class='material-icons'>trending_down</i>"
+    date: "2019-11-20"
+    datatype: '<i class="material-icons">widgets</i>'
+    topics: "Module wrap-up"
   
   - module: " "
     date: " "
@@ -174,12 +179,7 @@ lessons:
     
 #  - module: "<i class='material-icons'>nature_people</i>" 
 #    datatype: "<i class='material-icons'>share</i>"
-#    date: "2019-11-26"
 #    topics: "JSON-LD, graph queries"
-    
-  - module: "<i class='material-icons'>school</i>"
-    date: "2019-11-20"  
-    topics: "Final Projects"
     
   - module: "<i class='material-icons'>school</i>"
     date: "2019-11-22"  
@@ -188,7 +188,30 @@ lessons:
   - module: "<i class='material-icons'>school</i>"
     date: "2019-11-27"
     topics: "Final Projects"
+
+  - module: "<i class='material-icons'>school</i>"
+    date: "2019-12-04"  
+    topics: "Final Projects" 
     
+  - module: "<i class='material-icons'>school</i>"
+    date: "2019-12-06"
+    topics: "Final Projects"
+    
+  - module: "<i class='material-icons'>school</i>"
+    date: "2019-12-11"  
+    topics: "RRR week -- no attendance required" 
+    
+  - module: "<i class='material-icons'>school</i>"
+    date: "2019-12-13"
+    topics: "RRR week -- no attendance required"
+
+  - module: "<i class='material-icons'>school</i>"
+    date: "2019-12-16"
+    topics: "Final Projects DUE"
+    
+        
+    
+
 #  - module: "<i class='material-icons'>nature_people</i>"
 #    datatype: "<i class='material-icons'>share</i>"
 #    date: ""
