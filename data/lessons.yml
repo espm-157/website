@@ -81,66 +81,37 @@ lessons:
   - module: " <i class='material-icons'>directions_boat</i>"  
     date: "2019-10-09"
     datatype: '<i class="fa fa-database"></i>'
-    topics: "Reproducibility"
-        
-#  - module: "<i class='material-icons'>language</i>"
-#    topics: "web design"
-#    date: "2019-10-08"
-#    reading: "read/websites"
+    topics: "NO CLASS - power outage"
 
-    
-#  - module: " "
-#    date: " "
-#    topics: "<b>POPULATION DYNAMICS MODULE</b>"
- 
-  - module: "<i class='material-icons'>bug_report</i>"
+  - module: " <i class='material-icons'>directions_boat</i>"  
     date: "2019-10-11"
-    datatype: '<i class="material-icons">memory</i>'
-    topics: "Functions"
-#    reading: "read/functions"
-#    watch: "read/functions"
-
-# - module: " <i class='material-icons'>bug_report</i>"
-#    topics: "Iteration"
-#    date: "2019-10-15"  
-#    datatype: '<i class="material-icons">memory</i>'
-
-#  - module: " <i class='material-icons'>bug_report</i>"
-#    date: "2019-10-19"
-#    datatype: '<i class="material-icons">memory</i>'
-#    topics: "Iteration"
-#    reading: "read/iteration"
-#    watch: "read/iteration"
-       
-#  - module: " <i class='icon-rlogo'></i> <i class='fa fa-lg fa-gift'></i>"
-#    topics: "Writing R packages"
-#    reading: "read/r-pkgs"
+    datatype: '<i class="fa fa-database"></i>'
+    topics: "NO CLASS - power outage"
     
+  - module: " <i class='material-icons'>directions_boat</i>"  
+    date: "2019-10-16"
+    datatype: '<i class="fa fa-database"></i>'
+    topics: "wrap-up & External DBs"
+ 
+
   - module: " "
     date: " "
     topics: "<b>GEOSPATIAL CHANGE MODULE</b>"
     
   - module: "<i class='material-icons'>my_location</i>"  
-    date: "2019-10-16"
+    date: "2019-10-18"
     datatype: '<i class="material-icons">satellite</i>'
     topics: "geospatial intro, visualization"
     reading: "read/geospatial-1"
     watch: "read/geospatial-1"
     
   - module: "<i class='material-icons'>my_location</i>"
-    date: "2019-10-18"
+    date: "2019-10-23"
     datatype: '<i class="material-icons">satellite</i>'
     topics: "vector data"
     reading: "read/geospatial-2"
     watch: "read/geospatial-2"
 
-    
-  - module: "<i class='material-icons'>my_location</i>"
-    date: "2019-10-23"
-    datatype: '<i class="material-icons">satellite</i>'
-    topics: "functional programming"
-    reading: "read/functions"
-    watch: "read/functions"
 
   - module: "<i class='material-icons'>my_location</i>"
     date: "2019-10-25"
