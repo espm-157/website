@@ -109,14 +109,16 @@ lessons:
     date: "2019-10-23"
     datatype: '<i class="material-icons">satellite</i>'
     topics: "vector data"
-    reading: "read/geospatial-2"
-    watch: "read/geospatial-2"
+    reading: "read/geospatial-1"
+    watch: "read/geospatial-1"
 
 
   - module: "<i class='material-icons'>my_location</i>"
     date: "2019-10-25"
     datatype: '<i class="material-icons">satellite</i>'
     topics: "spatial data manipulation"
+    reading: "read/geospatial-2"
+
 
   - module: "<i class='material-icons'>my_location</i>"
     date: "2019-10-30"
