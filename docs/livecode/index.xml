@@ -20,6 +20,18 @@
     </item>
     
     <item>
+      <title>Extinctions Unit</title>
+      <link>/livecode/2019-11-01-extinction-api-intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/livecode/2019-11-01-extinction-api-intro/</guid>
+      <description>Extinctions Module Are we experiencing the sixth great extinction?
+What is the current pace of extinction? Is it accelerating? How does it compare to background extinction rates?
+ Background  Section Intro Video Ceballos et al (2015)  Our focal task will be to reproduce the result from Ceballos and colleagues showing the recent increase in extinction rates relative to the background rate:
+ Computational Topics  Accessing data from a RESTful API Error handling JSON data format Regular expressions Working with missing values   Additional references:  http://www.</description>
+    </item>
+    
+    <item>
       <title>Habitat Analysis of the Pacific Spiny Lumpsucker</title>
       <link>/livecode/spatial-tidy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

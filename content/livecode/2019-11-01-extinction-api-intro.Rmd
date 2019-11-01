@@ -1,0 +1,107 @@
+---
+title: "Extinctions Unit"
+author: "Your name, partner name"
+maketitle: true
+output: github_document
+---
+
+
+
+```{r include=FALSE}
+library("tidyverse")
+library("httr")
+library("jsonlite")
+#library("printr")
+knitr::opts_chunk$set(comment=NA)
+```
+
+
+
+## Extinctions Module
+
+_Are we experiencing the sixth great extinction?_  
+
+What is the current pace of extinction? Is it accelerating? How does it compare to background extinction rates?
+
+## Background
+
+- [Section Intro Video](https://youtu.be/QsH6ytm89GI)
+- [Ceballos et al (2015)](http://doi.org/10.1126/sciadv.1400253)
+
+Our focal task will be to reproduce the result from Ceballos and colleagues showing the recent increase in extinction rates relative to the background rate:
+
+![](https://espm-157.carlboettiger.info/img/extinctions.jpg)
+
+
+## Computational Topics
+
+- Accessing data from a RESTful API
+- Error handling
+- JSON data format
+- Regular expressions
+- Working with missing values
+
+## Additional references:
+
+- http://www.hhmi.org/biointeractive/biodiversity-age-humans (Video)
+- [Barnosky et al. (2011)](http://doi.org/10.1038/nature09678)
+- [Pimm et al (2014)](http://doi.org/10.1126/science.1246752)
+- [Sandom et al (2014)](http://dx.doi.org/10.1098/rspb.2013.3254)
+
+```{r}
+# install.packages("httr")
+library(httr)
+library(tidyverse)
+token = "9bb4facb6d23f48efbf424bb05c0c1ef1cf6f468393bc745d42179ac4aca5fee"
+
+```
+
+First let us access all the pages of the Species endpoint: 
+
+```{r}
+
+species <- "https://apiv3.iucnredlist.org/api/v3/species"
+page <- "/page/"
+page_number <- 0:10
+query <- "?token="
+token <- "9bb4facb6d23f48efbf424bb05c0c1ef1cf6f468393bc745d42179ac4aca5fee"
+
+all_pages <- paste0(species, page, page_number, query, token)
+all_results <- map(all_pages, GET)
+```
+
+Now let's try and turn that data into a "rectangle" (`data.frame`)
+```{r}
+row_to_tibble <- function(row) {
+  tibble(scientific_name = row$scientific_name, category = row$category)
+}
+get_result <- function(x){
+  x %>% content() %>% getElement("result") %>% map_dfr(row_to_tibble)
+}
+
+df <- all_results %>% map_dfr(get_result)
+
+df %>% filter(category == "EX")
+```
+
+
+```{r}
+all_extinct <- df %>% filter(category == "EX") %>% pull(scientific_name)
+## Here is an example, but we want to get `ex` from the list of all_extinct!
+ex <- "Mirogrex hulensis"
+base <- "https://apiv3.iucnredlist.org"
+narrative <- "/api/v3/species/narrative/" 
+
+url <- paste0(base, narrative, ex, query, token)
+GET(url)
+```
+
+
+
+
+
+
+
+
+
+

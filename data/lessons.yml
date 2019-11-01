@@ -143,28 +143,26 @@ lessons:
     date: "2019-11-01"
     datatype: '<i class="material-icons">widgets</i>'
     topics: "REST APIs"
-    watch: "read/httr-1"
+    
 
   - module: "<i class='material-icons'>trending_down</i>"
     date: "2019-11-06"
     datatype: '<i class="material-icons">widgets</i>'
     topics: "REST APIs"
-    watch: "read/httr-2"
+    reading: "read/httr-1"
     
   - module: "<i class='material-icons'>trending_down</i>"
     date: "2019-11-08"
     datatype: '<i class="material-icons">widgets</i>'
     topics: "Regular Expressions"
     reading: "read/strings-regex"
-    watch: "read/strings-regex"  
-    
+
   - module: "<i class='material-icons'>trending_down</i>"
     date: "2019-11-13"
     datatype: '<i class="material-icons">widgets</i>'
     topics: "Data rectangling"
-    reading: "read/purrr-2"
-    watch: "read/purrr-2"
-    
+    reading: "read/purrr-1"
+
   - module: " <i class='material-icons'>trending_down</i>"
     date: "2019-11-15"
     datatype: '<i class="material-icons">widgets</i>'

@@ -5,7 +5,7 @@ title: "Functions"
 
 ## Watch
 
--  DataCamp Lesson:  **[Writing Functions in R, Chapter 1-3](https://www.datacamp.com/courses/writing-functions-in-r)** (Hadley Wickham)
+-  DataCamp Lesson:  **[Writing Functions in R, Chapter 1-3](https://www.datacamp.com/courses/writing-functions-in-r)** 
 
 
 ## Read
