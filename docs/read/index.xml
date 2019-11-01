@@ -35,7 +35,7 @@ Watch  Background abbreviated documentary, features many of the leading authors 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/functions/</guid>
-      <description> Watch  DataCamp Lesson: Writing Functions in R, Chapter 1-3 (Hadley Wickham)  Read  R for Data Science textbook: [r4ds-19]  </description>
+      <description> Watch  DataCamp Lesson: Writing Functions in R, Chapter 1-3  Read  R for Data Science textbook: [r4ds-19]  </description>
     </item>
     
     <item>
@@ -149,17 +149,7 @@ Reading Geospatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/purrr-1/</guid>
-      <description>Watch Chapters 3 &amp;amp; 4 of Writing Functions in R. Theste two chapters are focused on purrr and it&amp;rsquo;s use in iteration, particulaly the map() family. It may seem surprising that these tools for iteration are buried in the second half of a course on writing functions, but as you will see, these concepts are closely linked through a style known as functional programming, which is particularly relevant to much data science type analyses.</description>
-    </item>
-    
-    <item>
-      <title>Iterate using purrr</title>
-      <link>/read/purrr-2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/read/purrr-2/</guid>
-      <description> Watch Chapters 4 &amp;amp; 5 of Writing Functions in R. (&amp;ldquo;Advanced input &amp;amp; output&amp;rdquo;, and &amp;ldquo;Robust functions&amp;rdquo;)
-Reading  R4DS 21.5: The map functions R4DS 21.6: Dealing with failure R4DS 21.7: Mapping over multiple arguments  </description>
+      <description> Reading  R4DS 21.5: The map functions R4DS 21.6: Dealing with failure R4DS 21.7: Mapping over multiple arguments  </description>
     </item>
     
     <item>
@@ -233,8 +223,7 @@ Read  Relational Data (*_join functions) r4ds-13.1 - 13.7  Explore  A nice visua
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/httr-2/</guid>
-      <description>Watch Working with Web Data in R, chapter 3.
-NOTE Also, please have your final project repo created and fill out proposal.md with your proposed project idea!</description>
+      <description>Watch Working with Web Data in R, chapter 3.</description>
     </item>
     
     <item>
