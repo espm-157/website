@@ -4,7 +4,7 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-  <meta name="generator" content="Hugo 0.57.2" />                                                                   
+  <meta name="generator" content="Hugo 0.68.3" />                                                                   
                
     
   <title>ESPM 157</title>
@@ -113,43 +113,36 @@
 		  	  <h2 class="title text-center">Geospatial Data &amp; Visualization</h2>
 		  	  <div class="row">
 		  	    <div class="col-md-6 col-md-offset-3" id="content">  
-	            
-
-<h2 id="reading">Reading</h2>
-
+	            <h2 id="reading">Reading</h2>
 <p>Our geospatial module is meant only as an introduction to geospatial data, an already-rich area in R that is in mid-Renaissance right now, just as tabular data was in the past few years since the introduction of <code>dplyr</code> and the rest of <code>tidyverse</code>.</p>
-
 <p>GeoSpatial Textbook: <strong><a href="https://geocompr.robinlovelace.net">Geocomputation with R</a></strong> (Lovelace, Nowosad, Muenchow)</p>
-
 <ul>
 <li><strong><a href="https://geocompr.robinlovelace.net/intro.html">Chapter 1: Introduction</a></strong></li>
 </ul>
-
 <h3 id="basic-visualization-tools">Basic Visualization tools</h3>
-
 <p>Also read over the following vignettes:</p>
-
 <ul>
 <li>Static maps: <strong><a href="https://cran.r-project.org/web/packages/tmap/vignettes/tmap-nutshell.html">tmap Vignette</a></strong></li>
 <li>Interactive maps: <strong><a href="https://r-spatial.github.io/mapview/articles/articles/mapview_01-basics.html">mapview Vignette</a></strong></li>
 </ul>
-
 <h2 id="watch">Watch</h2>
-
 <h3 id="updated">UPDATED</h3>
-
 <ul>
-<li><p>DataCamp now has a more modern course from Zev Ross, <strong><a href="https://www.datacamp.com/courses/spatial-analysis-in-r-with-sf-and-raster">Spatial Analysis in R with <code>sf</code> and <code>raster</code></a></strong> that more closely aligns with the tools we will be using in this module (matching the Geocomputation reading above).</p></li>
-
-<li><p><del>Charlotte Wickham&rsquo;s DataCamp course, <strong><a href="https://www.datacamp.com/courses/working-with-geospatial-data-in-r">Working with Geospatial Data</a></strong> doesn&rsquo;t cover the new/emerging spatial suite we will focus on, but still very relevant. Chapter 3, introducing the <code>raster</code> side of things, is (for the moment) the same one we will use. However, the <code>sf</code> package replaces the vector manipulation and mapping functions of <code>sp</code>, though many concepts carry over.  Least relevant are the older plotting strategies covered there, such as <code>ggmap</code>, where we will rely on newer <code>tmap</code>, <code>ggplot::geom_sf</code>, and <code>mapview</code> packages.</del></p></li>
+<li>
+<p>DataCamp now has a more modern course from Zev Ross, <strong><a href="https://www.datacamp.com/courses/spatial-analysis-in-r-with-sf-and-raster">Spatial Analysis in R with <code>sf</code> and <code>raster</code></a></strong> that more closely aligns with the tools we will be using in this module (matching the Geocomputation reading above).</p>
+</li>
+<li>
+<p><del>Charlotte Wickham&rsquo;s DataCamp course, <strong><a href="https://www.datacamp.com/courses/working-with-geospatial-data-in-r">Working with Geospatial Data</a></strong> doesn&rsquo;t cover the new/emerging spatial suite we will focus on, but still very relevant. Chapter 3, introducing the <code>raster</code> side of things, is (for the moment) the same one we will use. However, the <code>sf</code> package replaces the vector manipulation and mapping functions of <code>sp</code>, though many concepts carry over.  Least relevant are the older plotting strategies covered there, such as <code>ggmap</code>, where we will rely on newer <code>tmap</code>, <code>ggplot::geom_sf</code>, and <code>mapview</code> packages.</del></p>
+</li>
 </ul>
-
 <h3 id="references">References</h3>
-
 <ul>
-<li><p>I highly recommend browsing the <a href="https://cran.r-project.org/web/packages/sf/">excellent vignettes</a> of the <code>sf</code> package.  Vignettes are provided with most well-developed R packages and often provide the best and most up-to-date introduction to the package.</p></li>
-
-<li><p>Follow the <a href="http://r-spatial.org/">r-spatial blog &amp; website</a> for the latest news from the r-spatial community.  (Speaking of which, you can also follow the <a href="https://www.tidyverse.org/articles/">Tidyverse website/blog</a> for updates from there.)  Most of the package developers involved in these projects are also active in the <code>#rstats</code> corner of Twitter.</p></li>
+<li>
+<p>I highly recommend browsing the <a href="https://cran.r-project.org/web/packages/sf/">excellent vignettes</a> of the <code>sf</code> package.  Vignettes are provided with most well-developed R packages and often provide the best and most up-to-date introduction to the package.</p>
+</li>
+<li>
+<p>Follow the <a href="http://r-spatial.org/">r-spatial blog &amp; website</a> for the latest news from the r-spatial community.  (Speaking of which, you can also follow the <a href="https://www.tidyverse.org/articles/">Tidyverse website/blog</a> for updates from there.)  Most of the package developers involved in these projects are also active in the <code>#rstats</code> corner of Twitter.</p>
+</li>
 </ul>
 
 	          </div>
@@ -172,7 +165,7 @@
         
 
         <li>
-          <a href="http://piazza.com/berkeley/fall2019/espm157"><i class='material-icons'>forum</i> Forum</a>
+          <a href="https://espm-157.slack.com"><i class='material-icons'>forum</i> Forum</a>
         </li>
         
       
@@ -187,13 +180,6 @@
 
         <li>
           <a href="http://travis-ci.com/espm-157/"><i class='material-icons'>check_circle</i> Travis-CI</a>
-        </li>
-        
-      
-        
-
-        <li>
-          <a href="https://www.datacamp.com/enterprise/espm-157-data-science-for-global-change-ecology-aa13375c-ddc0-41aa-9afd-4ab883028f72"><i class='material-icons'>video_library</i> DataCamp</a>
         </li>
         
       

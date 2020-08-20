@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reads on ESPM 157</title>
@@ -26,7 +26,7 @@ Watch  Background abbreviated documentary, features many of the leading authors 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/dplyr-1/</guid>
-      <description> Tutorial  Working with Data  Read  dplyr basic verbs: filter, arrange, select, and mutate, [r4ds-5.1 - 5.5]  DataCamp  Tidyverse Chapter 1: Data Wrangling (David Robinson)  </description>
+      <description>Tutorial  Working with Data  Read  dplyr basic verbs: filter, arrange, select, and mutate, [r4ds-5.1 - 5.5]  DataCamp  Tidyverse Chapter 1: Data Wrangling (David Robinson)  </description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@ Watch  Background abbreviated documentary, features many of the leading authors 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/functions/</guid>
-      <description> Watch  DataCamp Lesson: Writing Functions in R, Chapter 1-3  Read  R for Data Science textbook: [r4ds-19]  </description>
+      <description>Watch  DataCamp Lesson: Writing Functions in R, Chapter 1-3  Read  R for Data Science textbook: [r4ds-19]  </description>
     </item>
     
     <item>
@@ -67,7 +67,7 @@ Reading Read from GeoComputation in R: Ch 3.3, 4.2, 4.3, ch 8.1 and 8.2</descrip
       <description>Reading Our geospatial module is meant only as an introduction to geospatial data, an already-rich area in R that is in mid-Renaissance right now, just as tabular data was in the past few years since the introduction of dplyr and the rest of tidyverse.
 GeoSpatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
  Chapter 1: Introduction  Basic Visualization tools Also read over the following vignettes:
- Static maps: tmap Vignette Interactive maps: mapview Vignette  Watch UPDATED  DataCamp now has a more modern course from Zev Ross, Spatial Analysis in R with sf and raster that more closely aligns with the tools we will be using in this module (matching the Geocomputation reading above).</description>
+ Static maps: tmap Vignette Interactive maps: mapview Vignette  Watch UPDATED   DataCamp now has a more modern course from Zev Ross, Spatial Analysis in R with sf and raster that more closely aligns with the tools we will be using in this module (matching the Geocomputation reading above).</description>
     </item>
     
     <item>
@@ -76,7 +76,7 @@ GeoSpatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/geospatial-io/</guid>
-      <description> Watch Spatial Analysis in R with sf and raster Chapter 1.
+      <description>Watch Spatial Analysis in R with sf and raster Chapter 1.
 Reading Geospatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
  Chapter 6: Geographic I/O  </description>
     </item>
@@ -88,11 +88,12 @@ Reading Geospatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
       
       <guid>/read/geospatial-raster-vector/</guid>
       <description>Reading Geospatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
- Chapter 2.1: Vector Data Chapter 2.2: Raster Data
- Chater 3.2: Vector attribute manipulation
- Chapter 3.3: Manipulating raster objects
- Chapter 4.2: Vector spatial operations
- Chapter 4.3: Raster spatial operations
+  Chapter 2.1: Vector Data
+  Chapter 2.2: Raster Data
+  Chater 3.2: Vector attribute manipulation
+  Chapter 3.3: Manipulating raster objects
+  Chapter 4.2: Vector spatial operations
+  Chapter 4.3: Raster spatial operations
   Watch Spatial Analysis in R with sf and raster</description>
     </item>
     
@@ -131,7 +132,7 @@ Reading Geospatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/git-1/</guid>
-      <description> Reading  Git Setup: HappyGitWithR.com Data Import: [r4ds-11]  </description>
+      <description>Reading  Git Setup: HappyGitWithR.com Data Import: [r4ds-11]  </description>
     </item>
     
     <item>
@@ -140,7 +141,7 @@ Reading Geospatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/dplyr-2/</guid>
-      <description> RStudio Primers  Isolating Data with dplyr Derive Information with dplyr  Textbook reference  group_by, summarize and friends [r4ds-5.6 - 5.7]  Datacamp  Tidyverse Chapter 3: Grouping and Summarizing (David Robinson)  </description>
+      <description>RStudio Primers  Isolating Data with dplyr Derive Information with dplyr  Textbook reference  group_by, summarize and friends [r4ds-5.6 - 5.7]  Datacamp  Tidyverse Chapter 3: Grouping and Summarizing (David Robinson)  </description>
     </item>
     
     <item>
@@ -149,7 +150,7 @@ Reading Geospatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/purrr-1/</guid>
-      <description> Reading  R4DS 21.5: The map functions R4DS 21.6: Dealing with failure R4DS 21.7: Mapping over multiple arguments  </description>
+      <description>Reading  R4DS 21.5: The map functions R4DS 21.6: Dealing with failure R4DS 21.7: Mapping over multiple arguments  </description>
     </item>
     
     <item>
@@ -176,7 +177,7 @@ Reading Geospatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/rmarkdown-basics/</guid>
-      <description> Reading  Introduction [r4ds-27.1] R Markdown [r4ds-27.2] Code chunks [r4ds-27.4]  Reference  R Markdown Cheat Sheet R Markdown Reference Guide  </description>
+      <description>Reading  Introduction [r4ds-27.1] R Markdown [r4ds-27.2] Code chunks [r4ds-27.4]  Reference  R Markdown Cheat Sheet R Markdown Reference Guide  </description>
     </item>
     
     <item>
@@ -186,7 +187,7 @@ Reading Geospatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
       
       <guid>/read/docker/</guid>
       <description>Install Docker (Community Edition, free &amp;amp; open source) for your laptop. (Mac, Windows, &amp;amp; Linux)
- Launch the Docker command line, and run: docker pull rocker/tidyverse to download the image we&amp;rsquo;ll be using in class. This is a large download (689 MB), so please attempt this ahead of time since we won&amp;rsquo;t all be able to download it at once. If either of these steps do not work for you, don&amp;rsquo;t worry, we should be able to fix any special cases in class.</description>
+  Launch the Docker command line, and run: docker pull rocker/tidyverse to download the image we&amp;rsquo;ll be using in class. This is a large download (689 MB), so please attempt this ahead of time since we won&amp;rsquo;t all be able to download it at once. If either of these steps do not work for you, don&amp;rsquo;t worry, we should be able to fix any special cases in class.</description>
     </item>
     
     <item>
@@ -205,7 +206,7 @@ Read  Relational Data (*_join functions) r4ds-13.1 - 13.7  Explore  A nice visua
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/dplyr-4/</guid>
-      <description> Watch  Tidyverse Chapter 3: Grouping and Summarizing (David Robinson)  </description>
+      <description>Watch  Tidyverse Chapter 3: Grouping and Summarizing (David Robinson)  </description>
     </item>
     
     <item>
@@ -232,7 +233,7 @@ Read  Relational Data (*_join functions) r4ds-13.1 - 13.7  Explore  A nice visua
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/setup/</guid>
-      <description> Read  Prerequisites Running R code RStudio Cheat sheet (for reference) Git Setup: HappyGitWithR.com  </description>
+      <description>Read  Prerequisites Running R code RStudio Cheat sheet (for reference) Git Setup: HappyGitWithR.com  </description>
     </item>
     
     <item>
@@ -241,7 +242,7 @@ Read  Relational Data (*_join functions) r4ds-13.1 - 13.7  Explore  A nice visua
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/strings-regex/</guid>
-      <description> Watch String Manipulation in R
+      <description>Watch String Manipulation in R
 Reading  Read the opening sections of chapter 13 on Strings and working with Regular Expressions: Sections 14.1 - 14.3.  References </description>
     </item>
     
@@ -251,7 +252,7 @@ Reading  Read the opening sections of chapter 13 on Strings and working with Reg
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/read/ggplot-1/</guid>
-      <description> Tutorial:  Complete Visualization Basics Primer from RStudio.cloud.  Read Plotting  Data Exploration [r4ds-2] First Steps [r4ds-3.2] Aesthetic mappings [r4ds-3.3] Common problems [r4ds-3.4] Facets r4ds-3.5 Geometric objects r4ds-3.6  DataCamp resources (optional)  Tidyverse Chapter 1: Data Wrangling (David Robinson) Tidyverse Chapter 2: Data Visualization (David Robinson)  Reference  Data Visualization Cheat Sheet cheatsheets-ggplot2-2.1  </description>
+      <description>Tutorial:  Complete Visualization Basics Primer from RStudio.cloud.  Read Plotting  Data Exploration [r4ds-2] First Steps [r4ds-3.2] Aesthetic mappings [r4ds-3.3] Common problems [r4ds-3.4] Facets r4ds-3.5 Geometric objects r4ds-3.6  DataCamp resources (optional)  Tidyverse Chapter 1: Data Wrangling (David Robinson) Tidyverse Chapter 2: Data Visualization (David Robinson)  Reference  Data Visualization Cheat Sheet cheatsheets-ggplot2-2.1  </description>
     </item>
     
     <item>

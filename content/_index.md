@@ -12,12 +12,24 @@ description: |
   <span></span>     | <span></span>
   -----------|-------------------------------------------------------------------
   Instructor | **[Carl Boettiger](http://carlboettiger.info)**  <a href="mailto:cboettig@berkeley.edu" title="email"><i class="fa fa-envelope"></i></a><a href="https://twitter.com/cboettig" title="Twitter"> <i class="fa fa-twitter"></i></a> <a href="https://github.com/cboettig" title="GitHub"><i class="fa fa-github"></i></a> |  
-  GSIs        |  [Matt Kling](http://matthewkling.github.io) |  
-  Location   |     110 Barrows Hall           |   
-  Times      | **Wed, Fri 10:00A - 12:00P**    |  
-  CCN        |   27205                        |  
+  GSIs        |  [Millie Chapman](https://milliechapman.netlify.app/) |  
+  Location   |     **ONLINE ONLY**           |   
+  Times      | **Mon, Weds 10:00A - 12:00P** (West Coast Time)   |  
+  CCN        |                           |  
 Office Hours | TBD |
 
+
+<div class="alert alert-warning">
+  <div class="container-fluid">
+	  <div class="alert-icon">
+		  <i class="material-icons">warning</i>
+		</div>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		<span aria-hidden="true"><i class="material-icons">clear</i></span>
+		</button>
+	  <b>Please note:</b>  ESPM-157 will be entirely online for Fall 2020.
+  </div>
+</div>
 
 
 ## Overview

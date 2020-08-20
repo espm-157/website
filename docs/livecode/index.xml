@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Livecodes on ESPM 157</title>
@@ -38,9 +38,8 @@ What is the current pace of extinction? Is it accelerating? How does it compare 
       
       <guid>/livecode/spatial-tidy/</guid>
       <description>We map potential areas of marine aquaculture for the super cute Pacific spiny lumpsucker (Eumicrotremus orbis)
-library(tidyverse) library(mapview) library(raster) library(sf) library(units) library(tmap) library(USAboundaries)  Key information for optimal growth:
- Sea surface temperatures between 12 and 18 degrees Celsius
- Net Primary Productivity between 2.6 and 3 mgC/m2/day  ## Loading the data west_coast &amp;lt;- st_read(&amp;quot;shapefiles/mpas_westcoast.shp&amp;quot;, quiet = TRUE) sst &amp;lt;- stack( list.files(&#39;rasters&#39;, pattern = &#39;average_&#39;, full.names = T) ) npp &amp;lt;- raster(&#39;rasters/annual_npp.</description>
+library(tidyverse) library(mapview) library(raster) library(sf) library(units) library(tmap) library(USAboundaries) Key information for optimal growth:
+ Sea surface temperatures between 12 and 18 degrees Celsius Net Primary Productivity between 2.6 and 3 mgC/m2/day  ## Loading the data west_coast &amp;lt;- st_read(&amp;quot;shapefiles/mpas_westcoast.shp&amp;quot;, quiet = TRUE) sst &amp;lt;- stack( list.files(&#39;rasters&#39;, pattern = &#39;average_&#39;, full.names = T) ) npp &amp;lt;- raster(&#39;rasters/annual_npp.</description>
     </item>
     
     <item>
