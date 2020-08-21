@@ -78,15 +78,6 @@ lessons:
     datatype: '<i class="fa fa-database"></i>'
     topics: "more dplyr"
  
-  - module: " <i class='material-icons'>directions_boat</i>"  
-    date: ""
-    datatype: '<i class="fa fa-database"></i>'
-    topics: "NO CLASS - power outage"
-
-  - module: " <i class='material-icons'>directions_boat</i>"  
-    date: ""
-    datatype: '<i class="fa fa-database"></i>'
-    topics: "NO CLASS - power outage"
     
   - module: " <i class='material-icons'>directions_boat</i>"  
     date: ""
