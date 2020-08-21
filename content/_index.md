@@ -1,9 +1,6 @@
 ---
 title: "ESPM 157: Data Science for Global Change Ecology"
 markup: "mmark"
-description: |
-  <a href="#content"><button class="btn btn-primary">Get started!</button></a>
-
 
 ---
 
