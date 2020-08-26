@@ -1,7 +1,7 @@
 lessons:
   - module: "<i class='material-icons'>home</i>"
     topics: "Introduction & setup"
-    date: "2019-08-26"
+    date: "2020-08-26"
     reading: "read/setup"
     watch: "read/setup"
     
@@ -10,34 +10,34 @@ lessons:
     topics: "<b>CLIMATE MODULE</b>"
     
   - module: "<i class='fa fa-lg fa-thermometer-full'></i>"
-    date: "2019-08-31"
+    date: "2020-08-31"
     reading: "read/rmarkdown-basics"
     watch: "read/rmarkdown-basics"
     datatype: '<i class="fa fa-table"></i>'
     topics: "Workflow: GitHub, RMarkdown, Travis"
     
   - module: "<i class='fa fa-lg fa-github'></i>"
-    date: "2019-09-02"
+    date: "2020-09-02"
     topics: "Programming and visualization basics"
     datatype: '<i class="fa fa-table"></i>'
     reading: "read/basics"
     assignment: ""
     
   - module: "<i class='fa fa-lg fa-thermometer-full'></i>"
-    date: "2019-09-09"
+    date: "2020-09-09"
     datatype: '<i class="fa fa-table"></i>'
     topics: "Visualization basics"
     reading: "read/ggplot-1"
 
   - module: "<i class='fa fa-lg fa-thermometer-full'></i>"
-    date: "2019-09-14"
+    date: "2020-09-14"
     datatype: '<i class="fa fa-table"></i>'
     topics: "Manipulation basics"
     reading: "read/dplyr-1"
     watch: "read/dplyr-1"
 
   - module: "<i class='fa fa-lg fa-thermometer-full'></i>"
-    date: "2019-09-16"
+    date: "2020-09-16"
     datatype: '<i class="fa fa-table"></i>'
     reading: "read/dplyr-2"
     topics: "Module wrap-up"
