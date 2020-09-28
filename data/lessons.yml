@@ -64,14 +64,12 @@ lessons:
     date: "2020-09-28"
     datatype: '<i class="fa fa-database"></i>'
     topics: "group_by and summarize"
-    reading: "read/fish"
-    watch: "read/fish"
 
   - module: " <i class='material-icons'>directions_boat</i>"  
     date: "2020-09-30"
     datatype: '<i class="fa fa-database"></i>'
     topics: "Missing Values"
-    read: "read/dplyr-4"
+    reading: "read/dplyr-4"
 
   - module: " <i class='material-icons'>directions_boat</i>"  
     date: "2020-09-05"
