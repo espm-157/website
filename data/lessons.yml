@@ -47,40 +47,40 @@ lessons:
     topics: "<b>OVERFISHING MODULE</b>"
     
   - module: "<i class='material-icons'>directions_boat</i>"
-    date: ""
+    date: "2020-09-21"
     datatype: '<i class="fa fa-database"></i>'
     topics: "Relational data: groups"
     reading: "read/fish"
     watch: "read/fish"
     
   - module: " <i class='material-icons'>directions_boat</i>"  
-    date: ""
+    date: "2020-09-23"
     datatype: "<i class='fa fa-database'></i>"
     topics: "Relational data: joins"
     reading: "read/dplyr-3"
     watch: "read/dplyr-3"
     
   - module: " <i class='material-icons'>directions_boat</i>"
-    date: ""
+    date: "2020-09-28"
     datatype: '<i class="fa fa-database"></i>'
     topics: "group_by and summarize"
     reading: "read/fish"
     watch: "read/fish"
 
   - module: " <i class='material-icons'>directions_boat</i>"  
-    date: ""
+    date: "2020-09-30"
     datatype: '<i class="fa fa-database"></i>'
     topics: "Missing Values"
-    watch: "read/dplyr-4"
+    read: "read/dplyr-4"
 
   - module: " <i class='material-icons'>directions_boat</i>"  
-    date: ""
+    date: "2020-09-05"
     datatype: '<i class="fa fa-database"></i>'
     topics: "more dplyr"
  
     
   - module: " <i class='material-icons'>directions_boat</i>"  
-    date: ""
+    date: "2020-09-07"
     datatype: '<i class="fa fa-database"></i>'
     topics: "wrap-up & External DBs"
  
