@@ -4,9 +4,10 @@ title: "Relational Data"
 
 ## Watch
 
+- [RStudio Primer: Joins](https://rstudio.cloud/learn/primers/4.3)
+
 - DataCamp Lesson: **[Joining Data with dplyr](https://www.datacamp.com/courses/joining-data-in-r-with-dplyr)**
 
-_Yes, this whole lesson is useful to really cover joins. You'll get most of what you need for the module with chapter 1, but take a look at the topics and videos of the later chapters as well._  
 
 ## Read
 
