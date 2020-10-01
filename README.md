@@ -13,7 +13,8 @@ which dictates the organizational structure of this repository.
 Markdown (and/or `.Rmd`) source files for the pages can be found in `content/`.  
 
 Rendered site files are found in `docs/` and hosted using [Netlify](https://www.netlify.com)
-at <https://espm-157.carlboettiger.info>.
+at [ESPM 157
+](https://espm-157.carlboettiger.info).
 
 This site is built using [Material Kit](https://github.com/creativetimofficial/material-kit)
 which implements Google's Material Design using [Bootstrap](https://getbootstrap.com) CSS.
