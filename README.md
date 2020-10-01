@@ -17,6 +17,7 @@ at <https://espm-157.carlboettiger.info>.
 
 This site is built using [Material Kit](https://github.com/creativetimofficial/material-kit)
 which implements Google's Material Design using [Bootstrap](https://getbootstrap.com) CSS.
+It is an amazing project. Please stay tuned.
 
 ## License
 
