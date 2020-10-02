@@ -1,4 +1,4 @@
-# website
+# Automatic Website Generation
 
 The course website is automatically generated using the [blogdown](https://github.com/rstudio/blogdown) R package:
 
@@ -6,7 +6,7 @@ The course website is automatically generated using the [blogdown](https://githu
 blogdown::serve_site()
 ```
 
-## Overview
+## Website Overview 
 
 `blogdown` sites use the popular static site generator [Hugo](https://gohugo.io),
 which dictates the organizational structure of this repository.  
