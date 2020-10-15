@@ -82,6 +82,12 @@ lessons:
     datatype: '<i class="fa fa-database"></i>'
     topics: "wrap-up & External DBs"
 
+  - module: " <i class='material-icons'>directions_boat</i>"  
+    date: "2020-10-12"
+    datatype: '<i class="fa fa-database"></i>'
+    topics: "wrap-up"
+
+
   - module: " "
     date: ""
     topics: "<b>GEOSPATIAL CHANGE MODULE</b>"
@@ -90,8 +96,6 @@ lessons:
     date: "2020-10-14"
     datatype: '<i class="material-icons">satellite</i>'
     topics: "geospatial intro, visualization"
-    reading: "read/geospatial-1"
-    watch: "read/geospatial-1"
     
   - module: "<i class='material-icons'>my_location</i>"
     date: "2020-10-19"
@@ -100,18 +104,20 @@ lessons:
     reading: "read/geospatial-1"
     watch: "read/geospatial-1"
 
-
   - module: "<i class='material-icons'>my_location</i>"
     date: "2020-10-21"
     datatype: '<i class="material-icons">satellite</i>'
     topics: "spatial data manipulation"
-    reading: "read/geospatial-2"
+    reading: "read/geospatial-1"
+    watch: "read/geospatial-1"
 
 
   - module: "<i class='material-icons'>my_location</i>"
     date: "2020-10-26"
     datatype: '<i class="material-icons">satellite</i>'
     topics: "Reproducibility"
+    reading: "read/geospatial-2"
+
 
   #- module: "<i class='fa fa-2x fa-docker'></i> <i class='material-icons'>cloud</i>"
   #  topics: "Tutorial: Docker & Cloud computing"
