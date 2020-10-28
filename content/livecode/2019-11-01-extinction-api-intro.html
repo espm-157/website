@@ -63,7 +63,7 @@ get_result &lt;- function(x){
 df &lt;- all_results %&gt;% map_dfr(get_result)
 
 df %&gt;% filter(category == &quot;EX&quot;)</code></pre>
-<pre><code># A tibble: 910 x 2
+<pre><code># A tibble: 914 x 2
    scientific_name            category
    &lt;chr&gt;                      &lt;chr&gt;   
  1 Mirogrex hulensis          EX      
@@ -76,7 +76,7 @@ df %&gt;% filter(category == &quot;EX&quot;)</code></pre>
  8 Achatinella dimorpha       EX      
  9 Achatinella elegans        EX      
 10 Achatinella juddii         EX      
-# … with 900 more rows</code></pre>
+# … with 904 more rows</code></pre>
 <pre class="r"><code>all_extinct &lt;- df %&gt;% filter(category == &quot;EX&quot;) %&gt;% pull(scientific_name)
 ## Here is an example, but we want to get `ex` from the list of all_extinct!
 ex &lt;- &quot;Mirogrex hulensis&quot;
@@ -86,7 +86,7 @@ narrative &lt;- &quot;/api/v3/species/narrative/&quot;
 url &lt;- paste0(base, narrative, ex, query, token)
 GET(url)</code></pre>
 <pre><code>Response [https://apiv3.iucnredlist.org/api/v3/species/narrative/Mirogrex hulensis?token=9bb4facb6d23f48efbf424bb05c0c1ef1cf6f468393bc745d42179ac4aca5fee]
-  Date: 2019-11-01 21:04
+  Date: 2020-10-28 17:01
   Status: 200
   Content-Type: application/json; charset=utf-8
   Size: 1.65 kB</code></pre>

@@ -29,6 +29,10 @@ output: github_document
 <p>We can perform a few simulations with different values of <code>r</code>:</p>
 <pre class="r"><code>simulate(50, 50, 1, 100) %&gt;%
   ggplot(aes(time, pop_size)) + geom_line()</code></pre>
+<pre><code>## Warning: `data_frame()` is deprecated as of tibble 1.1.0.
+## Please use `tibble()` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_warnings()` to see where this warning was generated.</code></pre>
 <p><img src="/livecode/2018-10-08-functions_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <pre class="r"><code>simulate(50, 50, 2.2, 100) %&gt;%
   ggplot(aes(time, pop_size)) + geom_line()</code></pre>

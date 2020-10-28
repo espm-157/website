@@ -121,7 +121,7 @@ lessons:
   - module: "<i class='material-icons'>my_location</i>"
     date: "2020-10-28"
     datatype: '<i class="material-icons">satellite</i>'
-    topics: "Finish up geospatial module (power outage extension)"
+    topics: "wrap-up (power outage extension)"
     reading: ""
     
   #- module: "<i class='fa fa-2x fa-docker'></i> <i class='material-icons'>cloud</i>"

@@ -4,7 +4,7 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-  <meta name="generator" content="Hugo 0.68.3" />                                                                   
+  <meta name="generator" content="Hugo 0.74.3" />                                                                   
                
     
   <title>ESPM 157</title>
@@ -139,6 +139,10 @@
 <p>We can perform a few simulations with different values of <code>r</code>:</p>
 <pre class="r"><code>simulate(50, 50, 1, 100) %&gt;%
   ggplot(aes(time, pop_size)) + geom_line()</code></pre>
+<pre><code>## Warning: `data_frame()` is deprecated as of tibble 1.1.0.
+## Please use `tibble()` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_warnings()` to see where this warning was generated.</code></pre>
 <p><img src="../../livecode/2018-10-08-functions_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <pre class="r"><code>simulate(50, 50, 2.2, 100) %&gt;%
   ggplot(aes(time, pop_size)) + geom_line()</code></pre>

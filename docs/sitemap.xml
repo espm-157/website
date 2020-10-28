@@ -8,11 +8,6 @@
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2017-04-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/policies/</loc>
     <lastmod>2017-04-13T00:00:00+00:00</lastmod>
   </url>
@@ -57,6 +52,10 @@
   
   <url>
     <loc>/read/dplyr-1/</loc>
+  </url>
+  
+  <url>
+    <loc>/</loc>
   </url>
   
   <url>
