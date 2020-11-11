@@ -151,24 +151,30 @@ lessons:
     reading: "read/httr-1"
     
   - module: "<i class='material-icons'>trending_down</i>"
-    date: ""
+    date: "2020-11-4"
     datatype: '<i class="material-icons">widgets</i>'
     topics: "Regular Expressions"
     reading: "read/strings-regex"
 
   - module: "<i class='material-icons'>trending_down</i>"
-    date: ""
+    date: "2020-11-9"
     datatype: '<i class="material-icons">widgets</i>'
     topics: "Data rectangling"
     reading: "read/purrr-1"
 
+  - module: "<i class='material-icons'>trending_down</i>"
+    date: "2020-11-11"
+    datatype: '<i class="material-icons">widgets</i>'
+    topics: "Veterans day - no class"
+    reading: ""
+
   - module: " <i class='material-icons'>trending_down</i>"
-    date: ""
+    date: "2020-11-16"
     datatype: '<i class="material-icons">widgets</i>'
     topics: "Reproducibility & Data sources"
 
   - module: " <i class='material-icons'>trending_down</i>"
-    date: ""
+    date: "2020-11-18"
     datatype: '<i class="material-icons">widgets</i>'
     topics: "Module wrap-up"
   

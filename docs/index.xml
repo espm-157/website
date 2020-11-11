@@ -2,48 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ESPM 157: Data Science for Global Change Ecology on ESPM 157</title>
-    <link>/</link>
+    <link>/espm-157/</link>
     <description>Recent content in ESPM 157: Data Science for Global Change Ecology on ESPM 157</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Wed, 19 Apr 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/espm-157/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>/syllabus/</link>
+      <link>/espm-157/syllabus/</link>
       <pubDate>Wed, 19 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/syllabus/</guid>
-      <description> warning  clear  Please note: Syllabus under development, subject to change      Date Module Data Topics Read   2020-08-26 home  Introduction &amp; setup        CLIMATE MODULE    2020-08-31   Workflow: GitHub, RMarkdown, Travis    2020-09-02   Programming and visualization basics    2020-09-09   Visualization basics    2020-09-14   Manipulation basics    2020-09-16   Module wrap-up        OVERFISHING MODULE    2020-09-21 directions_boat  Relational data: groups    2020-09-23  directions_boat  Relational data: joins    2020-09-28  directions_boat  group_by and summarize    2020-09-30  directions_boat  Missing Values    2020-10-05  directions_boat  more dplyr    2020-10-07  directions_boat  wrap-up &amp; External DBs    2020-10-12  directions_boat  wrap-up        GEOSPATIAL CHANGE MODULE    2020-10-14 my_location satellite geospatial intro, visualization    2020-10-19 my_location satellite more on vector &amp; raster data    2020-10-21 my_location satellite spatial data manipulation    2020-10-26 my_location satellite Reproducibility    2020-10-28 my_location satellite wrap-up (power outage extension)        MASS EXTINCTIONS MODULE    2020-11-2 trending_down widgets REST APIs    2020-11-4 trending_down widgets REST APIs     trending_down widgets Regular Expressions     trending_down widgets Data rectangling      trending_down widgets Reproducibility &amp; Data sources      trending_down widgets Module wrap-up        FINAL PROJECTS     school  Final Projects     school  NO CLASSES / Thanksgiving     school  Final Projects     school  Final Projects     school  RRR week -- no attendance required     school  RRR week -- no attendance required     school  Final Projects DUE     </description>
+      <guid>/espm-157/syllabus/</guid>
+      <description> warning  clear  Please note: Syllabus under development, subject to change      Date Module Data Topics Read   2020-08-26 home  Introduction &amp; setup        CLIMATE MODULE    2020-08-31   Workflow: GitHub, RMarkdown, Travis    2020-09-02   Programming and visualization basics    2020-09-09   Visualization basics    2020-09-14   Manipulation basics    2020-09-16   Module wrap-up        OVERFISHING MODULE    2020-09-21 directions_boat  Relational data: groups    2020-09-23  directions_boat  Relational data: joins    2020-09-28  directions_boat  group_by and summarize    2020-09-30  directions_boat  Missing Values    2020-10-05  directions_boat  more dplyr    2020-10-07  directions_boat  wrap-up &amp; External DBs    2020-10-12  directions_boat  wrap-up        GEOSPATIAL CHANGE MODULE    2020-10-14 my_location satellite geospatial intro, visualization    2020-10-19 my_location satellite more on vector &amp; raster data    2020-10-21 my_location satellite spatial data manipulation    2020-10-26 my_location satellite Reproducibility    2020-10-28 my_location satellite wrap-up (power outage extension)        MASS EXTINCTIONS MODULE    2020-11-2 trending_down widgets REST APIs    2020-11-4 trending_down widgets REST APIs    2020-11-4 trending_down widgets Regular Expressions    2020-11-9 trending_down widgets Data rectangling    2020-11-11 trending_down widgets Veterans day - no class    2020-11-16  trending_down widgets Reproducibility &amp; Data sources    2020-11-18  trending_down widgets Module wrap-up        FINAL PROJECTS     school  Final Projects     school  NO CLASSES / Thanksgiving     school  Final Projects     school  Final Projects     school  RRR week -- no attendance required     school  RRR week -- no attendance required     school  Final Projects DUE     </description>
     </item>
     
     <item>
       <title>Policies</title>
-      <link>/policies/</link>
+      <link>/espm-157/policies/</link>
       <pubDate>Thu, 13 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/policies/</guid>
+      <guid>/espm-157/policies/</guid>
       <description>Prerequisites You should be generally numerically literate, and some prior programming experience will be helpful. Students new to programming might find Hands on Programming with R to be helpful. Students with significant experience in programming and statistical analysis should find themselves well prepared but should find plenty still to learn in each lesson.
 Instructional Methods As a flipped classroom, students are provided with either reading or video material that they are expected to view/read prior to class.</description>
     </item>
     
     <item>
       <title></title>
-      <link>/about/</link>
+      <link>/espm-157/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/about/</guid>
+      <guid>/espm-157/about/</guid>
       <description>ESPM 157 </description>
     </item>
     
     <item>
       <title></title>
-      <link>/overview-notes/</link>
+      <link>/espm-157/overview-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/overview-notes/</guid>
+      <guid>/espm-157/overview-notes/</guid>
       <description>tutorial for Data Science Triad: GitHub, RMarkdown, Travis-CI
 rstudio Watch:
  RStudio IDE, Part I  Read: readings/setup.md
@@ -57,29 +58,29 @@ vis.1 Watch:
     
     <item>
       <title>2018-09-07 Class Notes</title>
-      <link>/livecode/2018-09-07-class-notes/</link>
+      <link>/espm-157/livecode/2018-09-07-class-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/livecode/2018-09-07-class-notes/</guid>
+      <guid>/espm-157/livecode/2018-09-07-class-notes/</guid>
       <description> Reminders  Focus on reading, exercises – Great work! open-ended questions, not always covered Piazza discussion forum pair coding   Overview  GitHub  Collaboration rmarkdown -&amp;gt; markdown  Travis  What, why? Debugging  R  readr separators ggplot2 – Grammar?? dplyr Syntax  Naming things Style   </description>
     </item>
     
     <item>
       <title>Background on Fish Collapse Data</title>
-      <link>/read/fish/</link>
+      <link>/espm-157/read/fish/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/fish/</guid>
+      <guid>/espm-157/read/fish/</guid>
       <description>The material for this session is a little different, aiming at background on the scientific issues rather than background on the method. Do take a moment to look over the papers and short documentary. Do also review the previous references to make sure you are comfortable with group_by() and summarize() patterns.
 Watch  Background abbreviated documentary, features many of the leading authors on both sides https://vimeo.com/44104959  Read  Original 2006 paper: Worm, B.</description>
     </item>
     
     <item>
       <title>Climate Exercise</title>
-      <link>/assignments/climate/</link>
+      <link>/espm-157/assignments/climate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/assignments/climate/</guid>
+      <guid>/espm-157/assignments/climate/</guid>
       <description>Unit I: Climate Change Module Warm-up exercise: Examining CO2 trends in R  Example from http://climate.nasa.gov/vital-signs/carbon-dioxide/ Raw data from ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_mm_mlo.txt  Which months are the CO2 values at the maximum? Minimum? Why is this?
 What rolling average is used in computing the “trend” line? How does the trend depend on the rolling average?
   Exercise I: Temperature Data Last year, 2015, has now been confirmed as the warmest year on record.</description>
@@ -87,29 +88,29 @@ What rolling average is used in computing the “trend” line? How does the tre
     
     <item>
       <title>Climate Module Rubric</title>
-      <link>/rubrics/climate/</link>
+      <link>/espm-157/rubrics/climate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rubrics/climate/</guid>
+      <guid>/espm-157/rubrics/climate/</guid>
       <description>3 pts for use of git hub
  0pts: no repo or a repo with no unique commits 1pts: evidence of at least one commit. read me not updated 2pts: evidence of semiregular commits, read me updated only partially - either missing name of team member or failing to update the read me from the template 3pts: evidence of multiple commits, read me updated to reflect the repos purpose, team member name and handle included    3 pts for Rmarkdown</description>
     </item>
     
     <item>
       <title>Climate Module: Working with Data</title>
-      <link>/read/dplyr-1/</link>
+      <link>/espm-157/read/dplyr-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/dplyr-1/</guid>
+      <guid>/espm-157/read/dplyr-1/</guid>
       <description>Tutorial  Working with Data  Read  dplyr basic verbs: filter, arrange, select, and mutate, [r4ds-5.1 - 5.5]  DataCamp  Tidyverse Chapter 1: Data Wrangling (David Robinson)  </description>
     </item>
     
     <item>
       <title>Extinctions Unit</title>
-      <link>/livecode/2019-11-01-extinction-api-intro/</link>
+      <link>/espm-157/livecode/2019-11-01-extinction-api-intro/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/livecode/2019-11-01-extinction-api-intro/</guid>
+      <guid>/espm-157/livecode/2019-11-01-extinction-api-intro/</guid>
       <description>Extinctions Module Are we experiencing the sixth great extinction?
 What is the current pace of extinction? Is it accelerating? How does it compare to background extinction rates?
  Background  Section Intro Video Ceballos et al (2015)  Our focal task will be to reproduce the result from Ceballos and colleagues showing the recent increase in extinction rates relative to the background rate:
@@ -118,57 +119,57 @@ What is the current pace of extinction? Is it accelerating? How does it compare 
     
     <item>
       <title>Final Project: Proposal</title>
-      <link>/assignments/final/</link>
+      <link>/espm-157/assignments/final/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/assignments/final/</guid>
+      <guid>/espm-157/assignments/final/</guid>
       <description>Projects should essentially look like any of our modules, but with you identifying the dataset and questions rather than working from a template. You may choose to replicate a figure from an existing study, but are also encouraged to use this opportunity to perform some exploratory analysis on data you may be using in your DS421 team projects or your own dissertation research. Remember that as with modules, finals will be graded on workflow and presentation rather than particular conclusions.</description>
     </item>
     
     <item>
       <title>Fish Module Rubric</title>
-      <link>/rubrics/fish/</link>
+      <link>/espm-157/rubrics/fish/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rubrics/fish/</guid>
+      <guid>/espm-157/rubrics/fish/</guid>
       <description>2 pt for use of GitHub  are both users pushing/pulling? have they successfully dealt with merge conflicts (if any)? have they updated their repository README with names and module details?   2 pts for travis  is their build passing? is the travis badge included and displaying correctly on their .md documents   2 pts for Rmarkdown  do they include a .md file along with their .</description>
     </item>
     
     <item>
       <title>Functions</title>
-      <link>/read/functions/</link>
+      <link>/espm-157/read/functions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/functions/</guid>
+      <guid>/espm-157/read/functions/</guid>
       <description>Watch  DataCamp Lesson: Writing Functions in R, Chapter 1-3  Read  R for Data Science textbook: [r4ds-19]  </description>
     </item>
     
     <item>
       <title>Geospatial Data &amp; Visualization</title>
-      <link>/read/geospatial-1/</link>
+      <link>/espm-157/read/geospatial-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/geospatial-1/</guid>
+      <guid>/espm-157/read/geospatial-1/</guid>
       <description>DataCamp Chapters 1 &amp;amp; 2 in Spatial Analysis in R with sf &amp;amp; raster
 Reading Read from GeoComputation in R: Ch 1, 2.1, 2.2, 3.2, 3.3</description>
     </item>
     
     <item>
       <title>Geospatial Data &amp; Visualization</title>
-      <link>/read/geospatial-2/</link>
+      <link>/espm-157/read/geospatial-2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/geospatial-2/</guid>
+      <guid>/espm-157/read/geospatial-2/</guid>
       <description>DataCamp Chapters 3 &amp;amp; 4 in Spatial Analysis in R with sf &amp;amp; raster
 Reading Read from GeoComputation in R: Ch 3.3, 4.2, 4.3, ch 8.1 and 8.2</description>
     </item>
     
     <item>
       <title>Geospatial Data &amp; Visualization</title>
-      <link>/read/geospatial-orig/</link>
+      <link>/espm-157/read/geospatial-orig/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/geospatial-orig/</guid>
+      <guid>/espm-157/read/geospatial-orig/</guid>
       <description>Reading Our geospatial module is meant only as an introduction to geospatial data, an already-rich area in R that is in mid-Renaissance right now, just as tabular data was in the past few years since the introduction of dplyr and the rest of tidyverse.
 GeoSpatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
  Chapter 1: Introduction  Basic Visualization tools Also read over the following vignettes:
@@ -177,10 +178,10 @@ GeoSpatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
     
     <item>
       <title>Geospatial Data Input/Output</title>
-      <link>/read/geospatial-io/</link>
+      <link>/espm-157/read/geospatial-io/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/geospatial-io/</guid>
+      <guid>/espm-157/read/geospatial-io/</guid>
       <description>Watch Spatial Analysis in R with sf and raster Chapter 1.
 Reading Geospatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
  Chapter 6: Geographic I/O  </description>
@@ -188,10 +189,10 @@ Reading Geospatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
     
     <item>
       <title>Geospatial Raster and Vector Data</title>
-      <link>/read/geospatial-raster-vector/</link>
+      <link>/espm-157/read/geospatial-raster-vector/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/geospatial-raster-vector/</guid>
+      <guid>/espm-157/read/geospatial-raster-vector/</guid>
       <description>Reading Geospatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
   Chapter 2.1: Vector Data
   Chapter 2.2: Raster Data
@@ -204,57 +205,57 @@ Reading Geospatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
     
     <item>
       <title>Geospatial Raster Data</title>
-      <link>/read/geospatial-raster/</link>
+      <link>/espm-157/read/geospatial-raster/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/geospatial-raster/</guid>
+      <guid>/espm-157/read/geospatial-raster/</guid>
       <description>Reading Geospatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
  Chapter 2.2: Raster Data Chapter 3.3: Manipulating raster objects Chapter 4.3: Raster spatial operations  Watch Spatial Analysis in R with sf and raster</description>
     </item>
     
     <item>
       <title>Geospatial Vector Data</title>
-      <link>/read/geospatial-vector/</link>
+      <link>/espm-157/read/geospatial-vector/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/geospatial-vector/</guid>
+      <guid>/espm-157/read/geospatial-vector/</guid>
       <description>Reading Geospatial Textbook: Geocomputation with R (Lovelace, Nowosad, Muenchow)
  Chapter 2.1: Vector Data Chater 3.2: Vector attribute manipulation Chapter 4.2: Vector spatial operations  Watch Spatial Analysis in R with sf and raster.</description>
     </item>
     
     <item>
       <title>Getting help</title>
-      <link>/read/getting-help/</link>
+      <link>/espm-157/read/getting-help/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/getting-help/</guid>
+      <guid>/espm-157/read/getting-help/</guid>
       <description> R&amp;rsquo;s Documentation Getting Help Guide 1.6: Getting Help  </description>
     </item>
     
     <item>
       <title>Git Basics &amp; Importing Data</title>
-      <link>/read/git-1/</link>
+      <link>/espm-157/read/git-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/git-1/</guid>
+      <guid>/espm-157/read/git-1/</guid>
       <description>Reading  Git Setup: HappyGitWithR.com Data Import: [r4ds-11]  </description>
     </item>
     
     <item>
       <title>Grouping and Summarizing</title>
-      <link>/read/dplyr-2/</link>
+      <link>/espm-157/read/dplyr-2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/dplyr-2/</guid>
+      <guid>/espm-157/read/dplyr-2/</guid>
       <description>RStudio Primers  Isolating Data with dplyr Derive Information with dplyr  Textbook reference  group_by, summarize and friends [r4ds-5.6 - 5.7]  Datacamp  Tidyverse Chapter 3: Grouping and Summarizing (David Robinson)  </description>
     </item>
     
     <item>
       <title>Habitat Analysis of the Pacific Spiny Lumpsucker</title>
-      <link>/livecode/spatial-tidy/</link>
+      <link>/espm-157/livecode/spatial-tidy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/livecode/spatial-tidy/</guid>
+      <guid>/espm-157/livecode/spatial-tidy/</guid>
       <description>We map potential areas of marine aquaculture for the super cute Pacific spiny lumpsucker (Eumicrotremus orbis)
 library(tidyverse) library(mapview) library(raster) library(sf) library(units) library(tmap) library(USAboundaries) Key information for optimal growth:
  Sea surface temperatures between 12 and 18 degrees Celsius Net Primary Productivity between 2.6 and 3 mgC/m2/day  ## Loading the data west_coast &amp;lt;- st_read(&amp;quot;shapefiles/mpas_westcoast.shp&amp;quot;, quiet = TRUE) sst &amp;lt;- stack( list.files(&#39;rasters&#39;, pattern = &#39;average_&#39;, full.names = T) ) npp &amp;lt;- raster(&#39;rasters/annual_npp.</description>
@@ -262,74 +263,74 @@ library(tidyverse) library(mapview) library(raster) library(sf) library(units) l
     
     <item>
       <title>Iterate using purrr</title>
-      <link>/read/purrr-1/</link>
+      <link>/espm-157/read/purrr-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/purrr-1/</guid>
+      <guid>/espm-157/read/purrr-1/</guid>
       <description>Reading  R4DS 21.5: The map functions R4DS 21.6: Dealing with failure R4DS 21.7: Mapping over multiple arguments  </description>
     </item>
     
     <item>
       <title>Iteration</title>
-      <link>/read/iteration/</link>
+      <link>/espm-157/read/iteration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/iteration/</guid>
+      <guid>/espm-157/read/iteration/</guid>
       <description>Watch  DataCamp Lesson: Functional Programming: Chapter 3 of Writing Functions in R.  Read  R for Data Science textbook on Iteration: [r4ds-21]  Note that simulations in time we are writing are an example of a sequential process, where each iteration depends on the previous iteration. These cannot be abstracted into apply or map functions. However, iterating over multiple parameters can!</description>
     </item>
     
     <item>
       <title>Modules</title>
-      <link>/module-table/</link>
+      <link>/espm-157/module-table/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/module-table/</guid>
+      <guid>/espm-157/module-table/</guid>
       <description>Module Candidate paper Data Format Technical skills   timeline Climate Change Petit et al. (1999)  Tabular data   Parsing tabular data, visualization (readr, ggplot2)   directions_boat Overfishing   Worm et al. (2006)  Relational databases  groups, joins, filters. SQL (dplyr, tidyr)   bug_report Ecological Simulations  May (1974)  memory Simulated data Functional programming, (purrr)   my_location Range shifts Pinsky et al.</description>
     </item>
     
     <item>
       <title>Modules</title>
-      <link>/modules/</link>
+      <link>/espm-157/modules/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/modules/</guid>
+      <guid>/espm-157/modules/</guid>
       <description>Climate Change   Tabular data What is the evidence for a changing climate? In this unit, we will examine some of the most important indicators of global climate change: including CO2 concentration, global mean temperature, sea level rise, land ice sheet melt, and arctic sea ice cover. We will wrangle a wide range of tabular data file formats used by NOAA and other agencies and introduce the fundamentals of data visualization with ggplot2 and data processing with basic functions from the readr, tidyr, and dplyr packages as we seek to replicate the principle results of climate change over the last decades and also the past thousands of years.</description>
     </item>
     
     <item>
       <title>programming basics</title>
-      <link>/read/basics/</link>
+      <link>/espm-157/read/basics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/basics/</guid>
+      <guid>/espm-157/read/basics/</guid>
       <description> Complete the Programming Basics Primer on RStudio Cloud.  </description>
     </item>
     
     <item>
       <title>R Markdown Basics</title>
-      <link>/read/rmarkdown-basics/</link>
+      <link>/espm-157/read/rmarkdown-basics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/rmarkdown-basics/</guid>
+      <guid>/espm-157/read/rmarkdown-basics/</guid>
       <description>Reading  Introduction [r4ds-27.1] R Markdown [r4ds-27.2] Code chunks [r4ds-27.4]  Reference  R Markdown Cheat Sheet R Markdown Reference Guide  </description>
     </item>
     
     <item>
       <title>Reading for 2017-10-26</title>
-      <link>/read/docker/</link>
+      <link>/espm-157/read/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/docker/</guid>
+      <guid>/espm-157/read/docker/</guid>
       <description>Install Docker (Community Edition, free &amp;amp; open source) for your laptop. (Mac, Windows, &amp;amp; Linux)
   Launch the Docker command line, and run: docker pull rocker/tidyverse to download the image we&amp;rsquo;ll be using in class. This is a large download (689 MB), so please attempt this ahead of time since we won&amp;rsquo;t all be able to download it at once. If either of these steps do not work for you, don&amp;rsquo;t worry, we should be able to fix any special cases in class.</description>
     </item>
     
     <item>
       <title>Relational Data</title>
-      <link>/read/dplyr-3/</link>
+      <link>/espm-157/read/dplyr-3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/dplyr-3/</guid>
+      <guid>/espm-157/read/dplyr-3/</guid>
       <description>Watch   RStudio Primer: Joins
   DataCamp Lesson: Joining Data with dplyr
   Read  Relational Data (*_join functions) r4ds-13.1 - 13.7  Explore  A nice visual summary of each of the types of joins can be found in this R package https://github.com/gadenbuie/tidyexplain. See the README and animated GIFs for examples.  </description>
@@ -337,65 +338,65 @@ library(tidyverse) library(mapview) library(raster) library(sf) library(units) l
     
     <item>
       <title>Relational Data</title>
-      <link>/read/dplyr-4/</link>
+      <link>/espm-157/read/dplyr-4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/dplyr-4/</guid>
+      <guid>/espm-157/read/dplyr-4/</guid>
       <description>Watch  Tidyverse Chapter 3: Grouping and Summarizing (David Robinson)  Read R4DS Chapter 5.6: grouped summaries</description>
     </item>
     
     <item>
       <title>REST APIs and web queries</title>
-      <link>/read/httr-1/</link>
+      <link>/espm-157/read/httr-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/httr-1/</guid>
+      <guid>/espm-157/read/httr-1/</guid>
       <description>Watch Working with Web Data in R, chapters 1 &amp;amp; 2.</description>
     </item>
     
     <item>
       <title>REST APIs and web queries</title>
-      <link>/read/httr-2/</link>
+      <link>/espm-157/read/httr-2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/httr-2/</guid>
+      <guid>/espm-157/read/httr-2/</guid>
       <description>Watch Working with Web Data in R, chapter 3.</description>
     </item>
     
     <item>
       <title>Setup</title>
-      <link>/read/setup/</link>
+      <link>/espm-157/read/setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/setup/</guid>
+      <guid>/espm-157/read/setup/</guid>
       <description>Read  Prerequisites Running R code RStudio Cheat sheet (for reference) Git Setup: HappyGitWithR.com  </description>
     </item>
     
     <item>
       <title>Spatial Module Rubric</title>
-      <link>/rubrics/spatial/</link>
+      <link>/espm-157/rubrics/spatial/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/rubrics/spatial/</guid>
+      <guid>/espm-157/rubrics/spatial/</guid>
       <description>2 pt for use of git hub  are both users pushing/pulling? have they successfully dealt with merge conflicts? have they updated their repository README with names and module details?   2 pts for travis  is their build passing? is the travis badge included and displaying correctly on their .md documents   2 pts for Rmarkdown  do they include a .md file along with their .</description>
     </item>
     
     <item>
       <title>Strings and regex</title>
-      <link>/read/strings-regex/</link>
+      <link>/espm-157/read/strings-regex/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/strings-regex/</guid>
+      <guid>/espm-157/read/strings-regex/</guid>
       <description>Watch String Manipulation in R
 Reading  Read the opening sections of chapter 13 on Strings and working with Regular Expressions: Sections 14.1 - 14.3.  References </description>
     </item>
     
     <item>
       <title>Teaming activities</title>
-      <link>/team-building/</link>
+      <link>/espm-157/team-building/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/team-building/</guid>
+      <guid>/espm-157/team-building/</guid>
       <description>Team-building questions, as a spectrum   Dogs or Cats (https://www.williamrchase.com/post/is-hadley-wickham-a-cat-or-dog-person-a-twitter-tidytext-analysis/)
   Do you prefer to learn from &amp;ldquo;official documentation&amp;rdquo;&amp;rdquo; or go right to some examples?
   Expertise in programming or domain knowledge?
@@ -404,57 +405,57 @@ Reading  Read the opening sections of chapter 13 on Strings and working with Reg
     
     <item>
       <title>Tools</title>
-      <link>/tools/</link>
+      <link>/espm-157/tools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tools/</guid>
+      <guid>/espm-157/tools/</guid>
       <description>  GitHub     R    cloud Cloud computing     Docker               </description>
     </item>
     
     <item>
       <title>Tutorials</title>
-      <link>/tutorials/</link>
+      <link>/espm-157/tutorials/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tutorials/</guid>
+      <guid>/espm-157/tutorials/</guid>
       <description>Almost everything we do will involve GitHub in some way. This tutorial will provide a brief introduction to our GitHub-based workflow and review common git patterns for resolving issues you may encounter in working collaboratively.
 RMarkdown Notebooks Most of your work will take place inside an RMarkdown notebook. While we will rely primarily on the github_document format, RMarkdown supports a wide variety of output formats that you can use to create pdf documents (including particular journal formats) slideshows, websites, ebooks and interactive tutorials.</description>
     </item>
     
     <item>
       <title>Visualization Basics</title>
-      <link>/read/ggplot-1/</link>
+      <link>/espm-157/read/ggplot-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/ggplot-1/</guid>
+      <guid>/espm-157/read/ggplot-1/</guid>
       <description>Tutorial:  Complete Visualization Basics Primer from RStudio.cloud.  Read Plotting  Data Exploration [r4ds-2] First Steps [r4ds-3.2] Aesthetic mappings [r4ds-3.3] Common problems [r4ds-3.4] Facets r4ds-3.5 Geometric objects r4ds-3.6  DataCamp resources (optional)  Tidyverse Chapter 1: Data Wrangling (David Robinson) Tidyverse Chapter 2: Data Visualization (David Robinson)  Reference  Data Visualization Cheat Sheet cheatsheets-ggplot2-2.1  </description>
     </item>
     
     <item>
       <title>Websites</title>
-      <link>/read/websites/</link>
+      <link>/espm-157/read/websites/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/websites/</guid>
+      <guid>/espm-157/read/websites/</guid>
       <description>This class will be a tutorial unit on making websites in R. Being familiar with the basic elements of web design (HTML, CSS, domain names) able being able to quickly build a lightweight website is an important skill for any data scientist, although rarely part of data science curriculum. Our goal will be to introduce some of the common platforms and strategies for building a website. Unlike our modules, tutorials are aimed more at exposure than mastery of any particular concepts or tools.</description>
     </item>
     
     <item>
       <title>Workflows</title>
-      <link>/read/workflows/</link>
+      <link>/espm-157/read/workflows/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/workflows/</guid>
+      <guid>/espm-157/read/workflows/</guid>
       <description>Please read the following two short sections:
  6. Workflow: scripts, and 8. Workflow: projects  </description>
     </item>
     
     <item>
       <title>Writing functions in R</title>
-      <link>/livecode/2018-10-08-functions/</link>
+      <link>/espm-157/livecode/2018-10-08-functions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/livecode/2018-10-08-functions/</guid>
+      <guid>/espm-157/livecode/2018-10-08-functions/</guid>
       <description>library(tidyverse) Today we will be learning to write our own functions in R. Consider the discrete Logistic growth function:
 \[x_{t+1} = x_t + r x_t \left(1 - \frac{x_t}{K} \right)\]
 Here we exress this function in R:
@@ -464,10 +465,10 @@ simulate &amp;lt;- function(max_time, x0, r, K){ x &amp;lt;- numeric(max_time) x
     
     <item>
       <title>Writing R Packages</title>
-      <link>/read/r-pkgs/</link>
+      <link>/espm-157/read/r-pkgs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/read/r-pkgs/</guid>
+      <guid>/espm-157/read/r-pkgs/</guid>
       <description>Today&amp;rsquo;s class will introduce the basic idea of an R package as a fundamental unit for sharing re-usable R functions. We will re-organize our population dynamics assignment repo into the structure required for an R package.
 While writing a minimal R package is really pretty simple, R packages are still considered an advanced topic and rightly the subject of completely separate books. We recommend Hadley Wickham&amp;rsquo;s Writing R Packages which is available in press or online for more detailed reading.</description>
     </item>
