@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Livecodes on ESPM 157</title>
-    <link>/espm-157/livecode/</link>
+    <link>/livecode/</link>
     <description>Recent content in Livecodes on ESPM 157</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="/espm-157/livecode/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/livecode/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>2018-09-07 Class Notes</title>
-      <link>/espm-157/livecode/2018-09-07-class-notes/</link>
+      <link>/livecode/2018-09-07-class-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/espm-157/livecode/2018-09-07-class-notes/</guid>
+      <guid>/livecode/2018-09-07-class-notes/</guid>
       <description> Reminders  Focus on reading, exercises – Great work! open-ended questions, not always covered Piazza discussion forum pair coding   Overview  GitHub  Collaboration rmarkdown -&amp;gt; markdown  Travis  What, why? Debugging  R  readr separators ggplot2 – Grammar?? dplyr Syntax  Naming things Style   </description>
     </item>
     
     <item>
       <title>Extinctions Unit</title>
-      <link>/espm-157/livecode/2019-11-01-extinction-api-intro/</link>
+      <link>/livecode/2019-11-01-extinction-api-intro/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/espm-157/livecode/2019-11-01-extinction-api-intro/</guid>
+      <guid>/livecode/2019-11-01-extinction-api-intro/</guid>
       <description>Extinctions Module Are we experiencing the sixth great extinction?
 What is the current pace of extinction? Is it accelerating? How does it compare to background extinction rates?
  Background  Section Intro Video Ceballos et al (2015)  Our focal task will be to reproduce the result from Ceballos and colleagues showing the recent increase in extinction rates relative to the background rate:
@@ -33,10 +33,10 @@ What is the current pace of extinction? Is it accelerating? How does it compare 
     
     <item>
       <title>Habitat Analysis of the Pacific Spiny Lumpsucker</title>
-      <link>/espm-157/livecode/spatial-tidy/</link>
+      <link>/livecode/spatial-tidy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/espm-157/livecode/spatial-tidy/</guid>
+      <guid>/livecode/spatial-tidy/</guid>
       <description>We map potential areas of marine aquaculture for the super cute Pacific spiny lumpsucker (Eumicrotremus orbis)
 library(tidyverse) library(mapview) library(raster) library(sf) library(units) library(tmap) library(USAboundaries) Key information for optimal growth:
  Sea surface temperatures between 12 and 18 degrees Celsius Net Primary Productivity between 2.6 and 3 mgC/m2/day  ## Loading the data west_coast &amp;lt;- st_read(&amp;quot;shapefiles/mpas_westcoast.shp&amp;quot;, quiet = TRUE) sst &amp;lt;- stack( list.files(&#39;rasters&#39;, pattern = &#39;average_&#39;, full.names = T) ) npp &amp;lt;- raster(&#39;rasters/annual_npp.</description>
@@ -44,10 +44,10 @@ library(tidyverse) library(mapview) library(raster) library(sf) library(units) l
     
     <item>
       <title>Writing functions in R</title>
-      <link>/espm-157/livecode/2018-10-08-functions/</link>
+      <link>/livecode/2018-10-08-functions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/espm-157/livecode/2018-10-08-functions/</guid>
+      <guid>/livecode/2018-10-08-functions/</guid>
       <description>library(tidyverse) Today we will be learning to write our own functions in R. Consider the discrete Logistic growth function:
 \[x_{t+1} = x_t + r x_t \left(1 - \frac{x_t}{K} \right)\]
 Here we exress this function in R:

@@ -3,224 +3,223 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/espm-157/syllabus/</loc>
+    <loc>/syllabus/</loc>
     <lastmod>2017-04-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/espm-157/</loc>
-    <lastmod>2017-04-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/espm-157/policies/</loc>
+    <loc>/policies/</loc>
     <lastmod>2017-04-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/espm-157/about/</loc>
+    <loc>/about/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/espm-157/overview-notes/</loc>
+    <loc>/overview-notes/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/espm-157/livecode/2018-09-07-class-notes/</loc>
+    <loc>/livecode/2018-09-07-class-notes/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/archives/</loc>
+    <loc>/archives/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/assignments/</loc>
+    <loc>/assignments/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/fish/</loc>
+    <loc>/read/fish/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/categories/</loc>
+    <loc>/categories/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/assignments/climate/</loc>
+    <loc>/assignments/climate/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/rubrics/climate/</loc>
+    <loc>/rubrics/climate/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/dplyr-1/</loc>
+    <loc>/read/dplyr-1/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/livecode/2019-11-01-extinction-api-intro/</loc>
+    <loc>/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/assignments/final/</loc>
+    <loc>/livecode/2019-11-01-extinction-api-intro/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/rubrics/fish/</loc>
+    <loc>/assignments/final/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/functions/</loc>
+    <loc>/rubrics/fish/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/geospatial-1/</loc>
+    <loc>/read/functions/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/geospatial-2/</loc>
+    <loc>/read/geospatial-1/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/geospatial-orig/</loc>
+    <loc>/read/geospatial-2/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/geospatial-io/</loc>
+    <loc>/read/geospatial-orig/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/geospatial-raster-vector/</loc>
+    <loc>/read/geospatial-io/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/geospatial-raster/</loc>
+    <loc>/read/geospatial-raster-vector/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/geospatial-vector/</loc>
+    <loc>/read/geospatial-raster/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/getting-help/</loc>
+    <loc>/read/geospatial-vector/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/git-1/</loc>
+    <loc>/read/getting-help/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/dplyr-2/</loc>
+    <loc>/read/git-1/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/livecode/spatial-tidy/</loc>
+    <loc>/read/dplyr-2/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/purrr-1/</loc>
+    <loc>/livecode/spatial-tidy/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/iteration/</loc>
+    <loc>/read/purrr-1/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/livecode/</loc>
+    <loc>/read/iteration/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/module-table/</loc>
+    <loc>/livecode/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/modules/</loc>
+    <loc>/module-table/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/basics/</loc>
+    <loc>/modules/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/rmarkdown-basics/</loc>
+    <loc>/read/basics/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/docker/</loc>
+    <loc>/read/rmarkdown-basics/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/</loc>
+    <loc>/read/docker/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/dplyr-3/</loc>
+    <loc>/read/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/dplyr-4/</loc>
+    <loc>/read/dplyr-3/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/httr-1/</loc>
+    <loc>/read/dplyr-4/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/httr-2/</loc>
+    <loc>/read/httr-1/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/rubrics/</loc>
+    <loc>/read/httr-2/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/setup/</loc>
+    <loc>/rubrics/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/rubrics/spatial/</loc>
+    <loc>/read/setup/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/strings-regex/</loc>
+    <loc>/rubrics/spatial/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/tags/</loc>
+    <loc>/read/strings-regex/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/team-building/</loc>
+    <loc>/tags/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/tools/</loc>
+    <loc>/team-building/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/tutorials/</loc>
+    <loc>/tools/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/ggplot-1/</loc>
+    <loc>/tutorials/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/websites/</loc>
+    <loc>/read/ggplot-1/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/workflows/</loc>
+    <loc>/read/websites/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/livecode/2018-10-08-functions/</loc>
+    <loc>/read/workflows/</loc>
   </url>
   
   <url>
-    <loc>/espm-157/read/r-pkgs/</loc>
+    <loc>/livecode/2018-10-08-functions/</loc>
+  </url>
+  
+  <url>
+    <loc>/read/r-pkgs/</loc>
   </url>
   
 </urlset>

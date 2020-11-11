@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rubrics on ESPM 157</title>
-    <link>/espm-157/rubrics/</link>
+    <link>/rubrics/</link>
     <description>Recent content in Rubrics on ESPM 157</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="/espm-157/rubrics/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/rubrics/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Climate Module Rubric</title>
-      <link>/espm-157/rubrics/climate/</link>
+      <link>/rubrics/climate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/espm-157/rubrics/climate/</guid>
+      <guid>/rubrics/climate/</guid>
       <description>3 pts for use of git hub
  0pts: no repo or a repo with no unique commits 1pts: evidence of at least one commit. read me not updated 2pts: evidence of semiregular commits, read me updated only partially - either missing name of team member or failing to update the read me from the template 3pts: evidence of multiple commits, read me updated to reflect the repos purpose, team member name and handle included    3 pts for Rmarkdown</description>
     </item>
     
     <item>
       <title>Fish Module Rubric</title>
-      <link>/espm-157/rubrics/fish/</link>
+      <link>/rubrics/fish/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/espm-157/rubrics/fish/</guid>
+      <guid>/rubrics/fish/</guid>
       <description>2 pt for use of GitHub  are both users pushing/pulling? have they successfully dealt with merge conflicts (if any)? have they updated their repository README with names and module details?   2 pts for travis  is their build passing? is the travis badge included and displaying correctly on their .md documents   2 pts for Rmarkdown  do they include a .md file along with their .</description>
     </item>
     
     <item>
       <title>Spatial Module Rubric</title>
-      <link>/espm-157/rubrics/spatial/</link>
+      <link>/rubrics/spatial/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/espm-157/rubrics/spatial/</guid>
+      <guid>/rubrics/spatial/</guid>
       <description>2 pt for use of git hub  are both users pushing/pulling? have they successfully dealt with merge conflicts? have they updated their repository README with names and module details?   2 pts for travis  is their build passing? is the travis badge included and displaying correctly on their .md documents   2 pts for Rmarkdown  do they include a .md file along with their .</description>
     </item>
     
