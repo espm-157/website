@@ -1,89 +1,89 @@
 lessons:
   - module: "<i class='material-icons'>home</i>"
     topics: "Introduction & setup"
-    date: "2020-08-26"
+    date: "2021-08-25"
     reading: "read/setup"
     watch: "read/setup"
     
-  - module: " "
-    date: " "
+  - module: ""
+    date: ""
     topics: "<b>CLIMATE MODULE</b>"
     
   - module: "<i class='fa fa-lg fa-thermometer-full'></i>"
-    date: "2020-08-31"
+    date: "2021-08-30"
     reading: "read/rmarkdown-basics"
     watch: "read/rmarkdown-basics"
     datatype: '<i class="fa fa-table"></i>'
     topics: "Workflow: GitHub, RMarkdown, Travis"
     
   - module: "<i class='fa fa-lg fa-github'></i>"
-    date: "2020-09-02"
+    date: "2021-09-01"
     topics: "Programming and visualization basics"
     datatype: '<i class="fa fa-table"></i>'
     reading: "read/basics"
     assignment: ""
     
   - module: "<i class='fa fa-lg fa-thermometer-full'></i>"
-    date: "2020-09-09"
+    date: "2021-09-06"
     datatype: '<i class="fa fa-table"></i>'
     topics: "Visualization basics"
     reading: "read/ggplot-1"
 
   - module: "<i class='fa fa-lg fa-thermometer-full'></i>"
-    date: "2020-09-14"
+    date: "2021-09-08"
     datatype: '<i class="fa fa-table"></i>'
     topics: "Manipulation basics"
     reading: "read/dplyr-1"
     watch: "read/dplyr-1"
 
   - module: "<i class='fa fa-lg fa-thermometer-full'></i>"
-    date: "2020-09-16"
+    date: ""
     datatype: '<i class="fa fa-table"></i>'
     reading: "read/dplyr-2"
     topics: "Module wrap-up"
 
   - module: " "
-    date: " "
+    date: ""
     topics: "<b>OVERFISHING MODULE</b>"
     
   - module: "<i class='material-icons'>directions_boat</i>"
-    date: "2020-09-21"
+    date: ""
     datatype: '<i class="fa fa-database"></i>'
     topics: "Relational data: groups"
     reading: "read/fish"
     watch: "read/fish"
     
   - module: " <i class='material-icons'>directions_boat</i>"  
-    date: "2020-09-23"
+    date: ""
     datatype: "<i class='fa fa-database'></i>"
     topics: "Relational data: joins"
     reading: "read/dplyr-3"
     watch: "read/dplyr-3"
     
   - module: " <i class='material-icons'>directions_boat</i>"
-    date: "2020-09-28"
+    date: ""
     datatype: '<i class="fa fa-database"></i>'
     topics: "group_by and summarize"
 
   - module: " <i class='material-icons'>directions_boat</i>"  
-    date: "2020-09-30"
+    date: ""
     datatype: '<i class="fa fa-database"></i>'
     topics: "Missing Values"
     reading: "read/dplyr-4"
 
   - module: " <i class='material-icons'>directions_boat</i>"  
-    date: "2020-10-05"
+    date: ""
     datatype: '<i class="fa fa-database"></i>'
     topics: "more dplyr"
  
     
   - module: " <i class='material-icons'>directions_boat</i>"  
-    date: "2020-10-07"
+    date: ""
     datatype: '<i class="fa fa-database"></i>'
     topics: "wrap-up & External DBs"
 
   - module: " <i class='material-icons'>directions_boat</i>"  
-    date: "2020-10-12"
+    date: ""
     datatype: '<i class="fa fa-database"></i>'
     topics: "wrap-up"
 
@@ -93,19 +93,19 @@ lessons:
     topics: "<b>GEOSPATIAL CHANGE MODULE</b>"
     
   - module: "<i class='material-icons'>my_location</i>"  
-    date: "2020-10-14"
+    date: ""
     datatype: '<i class="material-icons">satellite</i>'
     topics: "geospatial intro, visualization"
     
   - module: "<i class='material-icons'>my_location</i>"
-    date: "2020-10-19"
+    date: ""
     datatype: '<i class="material-icons">satellite</i>'
     topics: "more on vector & raster data"
     reading: "read/geospatial-1"
     watch: "read/geospatial-1"
 
   - module: "<i class='material-icons'>my_location</i>"
-    date: "2020-10-21"
+    date: ""
     datatype: '<i class="material-icons">satellite</i>'
     topics: "spatial data manipulation"
     reading: "read/geospatial-1"
@@ -113,13 +113,13 @@ lessons:
 
 
   - module: "<i class='material-icons'>my_location</i>"
-    date: "2020-10-26"
+    date: ""
     datatype: '<i class="material-icons">satellite</i>'
     topics: "Reproducibility"
     reading: "read/geospatial-2"
 
   - module: "<i class='material-icons'>my_location</i>"
-    date: "2020-10-28"
+    date: ""
     datatype: '<i class="material-icons">satellite</i>'
     topics: "wrap-up (power outage extension)"
     reading: ""
@@ -139,42 +139,42 @@ lessons:
     topics: "<b>MASS EXTINCTIONS MODULE</b>"
     
   - module: "<i class='material-icons'>trending_down</i>"
-    date: "2020-11-2"
+    date: ""
     datatype: '<i class="material-icons">widgets</i>'
     topics: "REST APIs"
     
 
   - module: "<i class='material-icons'>trending_down</i>"
-    date: "2020-11-4"
+    date: ""
     datatype: '<i class="material-icons">widgets</i>'
     topics: "REST APIs"
     reading: "read/httr-1"
     
   - module: "<i class='material-icons'>trending_down</i>"
-    date: "2020-11-4"
+    date: ""
     datatype: '<i class="material-icons">widgets</i>'
     topics: "Regular Expressions"
     reading: "read/strings-regex"
 
   - module: "<i class='material-icons'>trending_down</i>"
-    date: "2020-11-9"
+    date: ""
     datatype: '<i class="material-icons">widgets</i>'
     topics: "Data rectangling"
     reading: "read/purrr-1"
 
   - module: "<i class='material-icons'>trending_down</i>"
-    date: "2020-11-11"
+    date: ""
     datatype: '<i class="material-icons">widgets</i>'
     topics: "Veterans day - no class"
     reading: ""
 
   - module: " <i class='material-icons'>trending_down</i>"
-    date: "2020-11-16"
+    date: ""
     datatype: '<i class="material-icons">widgets</i>'
     topics: "Reproducibility & Data sources"
 
   - module: " <i class='material-icons'>trending_down</i>"
-    date: "2020-11-18"
+    date: ""
     datatype: '<i class="material-icons">widgets</i>'
     topics: "Module wrap-up"
   
@@ -187,7 +187,7 @@ lessons:
 #    topics: "JSON-LD, graph queries"
     
   - module: "<i class='material-icons'>school</i>"
-    date: ""  
+    date: ""
     topics: "Final Projects" 
     
   - module: "<i class='material-icons'>school</i>"
@@ -195,7 +195,7 @@ lessons:
     topics: "NO CLASSES / Thanksgiving"
 
   - module: "<i class='material-icons'>school</i>"
-    date: ""  
+    date: ""
     topics: "Final Projects" 
     
   - module: "<i class='material-icons'>school</i>"
@@ -203,7 +203,7 @@ lessons:
     topics: "Final Projects"
     
   - module: "<i class='material-icons'>school</i>"
-    date: ""  
+    date: ""
     topics: "RRR week -- no attendance required" 
     
   - module: "<i class='material-icons'>school</i>"
