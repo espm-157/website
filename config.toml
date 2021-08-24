@@ -72,7 +72,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   identifier = "Slack"
   name = "Forum"
   pre = "<i class='material-icons'>forum</i>"
-  url = "https://espm-157.slack.com"
+  url = "espm157-fall2021.slack.com"
 [[menu.footer]]
   weight = 4
   name = "Textbook"
