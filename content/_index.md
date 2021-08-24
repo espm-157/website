@@ -9,10 +9,9 @@ markup: "mmark"
   <span></span>     | <span></span>
   -----------|-------------------------------------------------------------------
   Instructor | **[Carl Boettiger](http://carlboettiger.info)**  <a href="mailto:cboettig@berkeley.edu" title="email"><i class="fa fa-envelope"></i></a><a href="https://twitter.com/cboettig" title="Twitter"> <i class="fa fa-twitter"></i></a> <a href="https://github.com/cboettig" title="GitHub"><i class="fa fa-github"></i></a> |  
-  GSIs        |  [Millie Chapman](https://milliechapman.netlify.app/) |  
-  Location   |     **ONLINE ONLY**           |   
+  GSIs        |  [Maggie Grundler](https://www.berkeley.edu/directory/results?search-term=Maggie+Grundler) |  
+  Location   |     **110 Social Sciences**           |   
   Times      | **Mon, Weds 10:00A - 12:00P** (West Coast Time)   |  
-  CCN        |                           |  
 Office Hours | TBD |
 
 
