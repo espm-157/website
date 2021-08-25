@@ -96,11 +96,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   name = "Overfishing"
   url = "#fish"
 [[menu.sidebar]]
-  weight = 3
-  pre = " <i class='material-icons'>bug_report</i>"
-  name = "Ecological Simulation"
-  url = "#popdyn"
-[[menu.sidebar]]
   weight = 4
   pre = " <i class='material-icons'>my_location</i>"
   name = "Geospatial"
