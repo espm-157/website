@@ -24,13 +24,13 @@ lessons:
     assignment: ""
     
   - module: "<i class='fa fa-lg fa-thermometer-full'></i>"
-    date: "2021-09-06"
+    date: "2021-09-08"
     datatype: '<i class="fa fa-table"></i>'
     topics: "Visualization basics"
     reading: "read/ggplot-1"
 
   - module: "<i class='fa fa-lg fa-thermometer-full'></i>"
-    date: "2021-09-08"
+    date: "2021-09-13"
     datatype: '<i class="fa fa-table"></i>'
     topics: "Manipulation basics"
     reading: "read/dplyr-1"
