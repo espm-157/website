@@ -36,5 +36,5 @@ title: "Visualization Basics"
 
 ### Reference
 
-- Data Visualization Cheat Sheet **[cheatsheets-ggplot2-2.1](https://www.rstudio.com/wp-content/uploads/2016/11/ggplot2-cheatsheet-2.1.pdf)**
+- Data Visualization Cheat Sheet **[cheatsheets-ggplot2-2.1](https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf)**
 
