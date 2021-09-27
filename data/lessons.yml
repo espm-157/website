@@ -37,7 +37,7 @@ lessons:
     watch: "read/dplyr-1"
 
   - module: "<i class='fa fa-lg fa-thermometer-full'></i>"
-    date: ""
+    date: "2021-09-15"
     datatype: '<i class="fa fa-table"></i>'
     reading: "read/dplyr-2"
     topics: "Module wrap-up"
@@ -47,29 +47,30 @@ lessons:
     topics: "<b>OVERFISHING MODULE</b>"
     
   - module: "<i class='material-icons'>directions_boat</i>"
-    date: ""
+    date: "2021-09-20"
     datatype: '<i class="fa fa-database"></i>'
     topics: "Relational data: groups"
     reading: "read/fish"
     watch: "read/fish"
     
   - module: " <i class='material-icons'>directions_boat</i>"  
-    date: ""
+    date: "2021-09-27"
     datatype: "<i class='fa fa-database'></i>"
     topics: "Relational data: joins"
     reading: "read/dplyr-3"
     watch: "read/dplyr-3"
     
   - module: " <i class='material-icons'>directions_boat</i>"
-    date: ""
+    date: "2021-09-29"
     datatype: '<i class="fa fa-database"></i>'
     topics: "group_by and summarize"
+    reading: "read/dplyr-4"
 
   - module: " <i class='material-icons'>directions_boat</i>"  
     date: ""
     datatype: '<i class="fa fa-database"></i>'
     topics: "Missing Values"
-    reading: "read/dplyr-4"
+    reading: 
 
   - module: " <i class='material-icons'>directions_boat</i>"  
     date: ""
