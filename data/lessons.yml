@@ -67,26 +67,26 @@ lessons:
     reading: "read/dplyr-4"
 
   - module: " <i class='material-icons'>directions_boat</i>"  
-    date: ""
+    date: "2021-10-04"
     datatype: '<i class="fa fa-database"></i>'
     topics: "Missing Values"
     reading: 
 
   - module: " <i class='material-icons'>directions_boat</i>"  
-    date: ""
+    date: "2021-10-06"
     datatype: '<i class="fa fa-database"></i>'
-    topics: "more dplyr"
+    topics: "Forecasting Mini-module"
  
     
-  - module: " <i class='material-icons'>directions_boat</i>"  
-    date: ""
-    datatype: '<i class="fa fa-database"></i>'
-    topics: "wrap-up & External DBs"
+ # - module: " <i class='material-icons'>directions_boat</i>"  
+#    date: ""
+#    datatype: '<i class="fa fa-database"></i>'
+#    topics: "wrap-up & External DBs"
 
-  - module: " <i class='material-icons'>directions_boat</i>"  
-    date: ""
-    datatype: '<i class="fa fa-database"></i>'
-    topics: "wrap-up"
+#  - module: " <i class='material-icons'>directions_boat</i>"  
+#    date: ""
+#    datatype: '<i class="fa fa-database"></i>'
+#    topics: "wrap-up"
 
 
   - module: " "
@@ -94,35 +94,35 @@ lessons:
     topics: "<b>GEOSPATIAL CHANGE MODULE</b>"
     
   - module: "<i class='material-icons'>my_location</i>"  
-    date: ""
+    date: "2021-10-11"
     datatype: '<i class="material-icons">satellite</i>'
     topics: "geospatial intro, visualization"
     
   - module: "<i class='material-icons'>my_location</i>"
-    date: ""
+    date: "2021-10-13"
     datatype: '<i class="material-icons">satellite</i>'
     topics: "more on vector & raster data"
     reading: "read/geospatial-1"
     watch: "read/geospatial-1"
 
   - module: "<i class='material-icons'>my_location</i>"
-    date: ""
+    date: "2021-10-18"
     datatype: '<i class="material-icons">satellite</i>'
     topics: "spatial data manipulation"
-    reading: "read/geospatial-1"
-    watch: "read/geospatial-1"
-
-
-  - module: "<i class='material-icons'>my_location</i>"
-    date: ""
-    datatype: '<i class="material-icons">satellite</i>'
-    topics: "Reproducibility"
     reading: "read/geospatial-2"
+    watch: "read/geospatial-2"
+
 
   - module: "<i class='material-icons'>my_location</i>"
-    date: ""
+    date: "2021-10-20"
     datatype: '<i class="material-icons">satellite</i>'
-    topics: "wrap-up (power outage extension)"
+    topics: "Reproducible publishing"
+    reading: "read/websites"
+
+  - module: "<i class='material-icons'>my_location</i>"
+    date: "2021-10-25"
+    datatype: '<i class="material-icons">satellite</i>'
+    topics: "wrap-up"
     reading: ""
     
   #- module: "<i class='fa fa-2x fa-docker'></i> <i class='material-icons'>cloud</i>"
@@ -130,54 +130,50 @@ lessons:
   #  reading: "read/docker"
   #  date: ""
 
-#  - module: "<i class='material-icons'>school</i>"
-#    date: ""
-#    topics: "Final Project Proposals"
-#    reading: "assignments/final"
+  - module: "<i class='material-icons'>school</i>"
+    date: "2021-10-27"
+    topics: "Final Project Proposals"
+    reading: "assignments/final"
 
   - module: " "
     date: ""
     topics: "<b>MASS EXTINCTIONS MODULE</b>"
     
   - module: "<i class='material-icons'>trending_down</i>"
-    date: ""
+    date: "2021-11-01"
     datatype: '<i class="material-icons">widgets</i>'
     topics: "REST APIs"
     
 
   - module: "<i class='material-icons'>trending_down</i>"
-    date: ""
+    date: "2021-11-03"
     datatype: '<i class="material-icons">widgets</i>'
     topics: "REST APIs"
     reading: "read/httr-1"
     
   - module: "<i class='material-icons'>trending_down</i>"
-    date: ""
+    date: "2021-11-08"
     datatype: '<i class="material-icons">widgets</i>'
     topics: "Regular Expressions"
     reading: "read/strings-regex"
 
   - module: "<i class='material-icons'>trending_down</i>"
-    date: ""
+    date: "2021-11-10"
     datatype: '<i class="material-icons">widgets</i>'
     topics: "Data rectangling"
     reading: "read/purrr-1"
 
   - module: "<i class='material-icons'>trending_down</i>"
-    date: ""
+    date: "2021-11-15"
     datatype: '<i class="material-icons">widgets</i>'
-    topics: "Veterans day - no class"
+    topics: ""
     reading: ""
 
   - module: " <i class='material-icons'>trending_down</i>"
-    date: ""
-    datatype: '<i class="material-icons">widgets</i>'
-    topics: "Reproducibility & Data sources"
-
-  - module: " <i class='material-icons'>trending_down</i>"
-    date: ""
+    date: "2021-11-17"
     datatype: '<i class="material-icons">widgets</i>'
     topics: "Module wrap-up"
+
   
   - module: " "
     date: ""
@@ -192,15 +188,15 @@ lessons:
     topics: "Final Projects" 
     
   - module: "<i class='material-icons'>school</i>"
-    date: ""
-    topics: "NO CLASSES / Thanksgiving"
+    date: "2021-11-22"
+    topics: "Final Projects" 
 
   - module: "<i class='material-icons'>school</i>"
-    date: ""
+    date: "2021-11-29"
     topics: "Final Projects" 
     
   - module: "<i class='material-icons'>school</i>"
-    date: ""
+    date: "2021-12-01"
     topics: "Final Projects"
     
   - module: "<i class='material-icons'>school</i>"
@@ -212,7 +208,7 @@ lessons:
     topics: "RRR week -- no attendance required"
 
   - module: "<i class='material-icons'>school</i>"
-    date: ""
+    date: "2021-12-13"
     topics: "Final Projects DUE"
     
         
