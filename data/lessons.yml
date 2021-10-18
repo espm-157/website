@@ -166,7 +166,7 @@ lessons:
   - module: "<i class='material-icons'>trending_down</i>"
     date: "2021-11-15"
     datatype: '<i class="material-icons">widgets</i>'
-    topics: ""
+    topics: "Functional Programming"
     reading: ""
 
   - module: " <i class='material-icons'>trending_down</i>"
