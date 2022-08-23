@@ -5,14 +5,19 @@
     <link>/</link>
     <description>Recent content in ESPM 157: Data Science for Global Change Ecology on ESPM 157</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title></title>
       <link>/syllabus/</link>
       <pubDate>Wed, 19 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>/syllabus/</guid>
-      <description> warning  clear  Please note: Syllabus under development, subject to change      Date Module Data Topics Read   2021-08-25 home  Introduction &amp; setup       CLIMATE MODULE    2021-08-30   Workflow: GitHub, RMarkdown, Travis    2021-09-01   Programming and visualization basics    2021-09-08   Visualization basics    2021-09-13   Manipulation basics    2021-09-15   Module wrap-up        OVERFISHING MODULE    2021-09-20 directions_boat  Relational data: groups    2021-09-27  directions_boat  Relational data: joins    2021-09-29  directions_boat  group_by and summarize    2021-10-04  directions_boat  Missing Values    2021-10-06  directions_boat  Forecasting Mini-module        GEOSPATIAL CHANGE MODULE    2021-10-11 my_location satellite geospatial intro, visualization    2021-10-13 my_location satellite more on vector &amp; raster data    2021-10-18 my_location satellite spatial data manipulation    2021-10-20 my_location satellite Reproducible publishing    2021-10-25 my_location satellite wrap-up    2021-10-27 school  Final Project Proposals        MASS EXTINCTIONS MODULE    2021-11-01 trending_down widgets REST APIs    2021-11-03 trending_down widgets REST APIs    2021-11-08 trending_down widgets Regular Expressions    2021-11-10 trending_down widgets Data rectangling    2021-11-15 trending_down widgets Functional Programming    2021-11-17  trending_down widgets Module wrap-up        FINAL PROJECTS     school  Final Projects    2021-11-22 school  Final Projects    2021-11-29 school  Final Projects    2021-12-01 school  Final Projects     school  RRR week -- no attendance required     school  RRR week -- no attendance required    2021-12-13 school  Final Projects DUE      </description>
+      <description> warning  clear  Please note: Syllabus under development, subject to change      Date Module Data Topics Read   2022-08-24 home  Introduction &amp; setup       CLIMATE MODULE    2022-08-29   Workflow: GitHub, RMarkdown, Travis    2022-08-31   Programming and visualization basics    2022-09-07   Visualization basics    2022-09-12   Manipulation basics    2022-09-14   Module wrap-up        OVERFISHING MODULE    2022-09-19 directions_boat  Relational data: groups    2022-09-21  directions_boat  Relational data: joins    2022-09-26  directions_boat  group_by and summarize    2022-09-28  directions_boat  Missing Values    2022-10-03  directions_boat  Forecasting Mini-module        GEOSPATIAL CHANGE MODULE    2022-10-05 my_location satellite geospatial intro, visualization    2022-10-10 my_location satellite more on vector &amp; raster data    2022-10-15 my_location satellite spatial data manipulation    2022-10-17 my_location satellite Reproducible publishing    2022-10-19 my_location satellite wrap-up    2022-10-24 school  Final Project Proposals        MASS EXTINCTIONS MODULE    2022-10-26 trending_down widgets REST APIs    2022-10-31 trending_down widgets REST APIs    2022-11-02 trending_down widgets Regular Expressions    2022-11-07 trending_down widgets Data rectangling    2022-11-09 trending_down widgets Functional Programming    2022-11-14  trending_down widgets Module wrap-up        FINAL PROJECTS     school  Final Projects    2022-11-16 school  Final Projects    2022-11-21 school  Final Projects    2022-11-28 school  Final Projects    2022-11-30 school  Final Projects     school  RRR week -- no attendance required     school  RRR week -- no attendance required    2022-12-12 school  Final Projects DUE      </description>
     </item>
     
     <item>
@@ -393,7 +398,7 @@ Reading  Read the opening sections of chapter 13 on Strings and working with Reg
       
       <guid>/team-building/</guid>
       <description>Team-building questions, as a spectrum   Dogs or Cats (https://www.williamrchase.com/post/is-hadley-wickham-a-cat-or-dog-person-a-twitter-tidytext-analysis/)
-  Do you prefer to learn from &amp;ldquo;official documentation&amp;rdquo;&amp;quot; or go right to some examples?
+  Do you prefer to learn from &amp;ldquo;official documentation&amp;rdquo;&amp;rdquo; or go right to some examples?
   Expertise in programming or domain knowledge?
   </description>
     </item>

@@ -9,7 +9,7 @@ markup: "mmark"
   <span></span>     | <span></span>
   -----------|-------------------------------------------------------------------
   Instructor | **[Carl Boettiger](http://carlboettiger.info)**  <a href="mailto:cboettig@berkeley.edu" title="email"><i class="fa fa-envelope"></i></a><a href="https://twitter.com/cboettig" title="Twitter"> <i class="fa fa-twitter"></i></a> <a href="https://github.com/cboettig" title="GitHub"><i class="fa fa-github"></i></a> |  
-  GSIs        |  [Maggie Grundler](https://www.berkeley.edu/directory/results?search-term=Maggie+Grundler) |  
+  GSIs        |  [Amy van Scoyoc](https://ourenvironment.berkeley.edu/users/1553057) |  
   Location   |     **110 Social Sciences**           |   
   Times      | **Mon, Weds 10:00A - 12:00P** (West Coast Time)   |  
 Office Hours | TBD |
@@ -19,16 +19,14 @@ Office Hours | TBD |
 
 ## Overview
 
-This course is designed for upper division undergraduate students regardless of prior experience. We aim to be accessible to those new to programming, but those who have been using R for years will find new material in this opinionated and fast moving area.  The course is project focused and centered around five [modules](/modules) reproducing important results in global change ecology.  A series of short [tutorials](/tutorials) will introduce relevant technology, but most concepts will be first introduced in reading outside of class, leaving class time to focus on the more complex examples encountered in the modules.  
+This course is designed for upper division undergraduate students regardless of prior experience. We aim to be accessible to those new to programming, but those who have been using R for years will find new material in this opinionated and fast moving area.  The course is project focused and centered around four core [modules](/modules) reproducing important results in global change ecology.  A series of short [tutorials](/tutorials) will introduce relevant technology, but most concepts will be first introduced in reading outside of class, leaving class time to focus on the more complex examples encountered in the modules.  
 
 ## Approach
 
 This course will use a [flipped classroom](https://en.wikipedia.org/wiki/Flipped_classroom) model, with new material
-introduced in reading assignments prior to class while class time will
-focus on applying these skills to explore interesting data sets. We
-will move though four modules, each introducing a new data set and
-new scientific questions, while also introducing a new skill area and 
-building on previous skills. Students will be expected to work collaboratively
+introduced in reading assignments *prior* to class, while class time will
+focus on applying these skills to explore interesting data sets.
+Students will be expected to work collaboratively
 in and out of class, and course content and grading will emphasize
 communication and reproducibility of an analysis as much as scientific
 or technical completeness.  The [Course Syllabus](/syllabus/)

@@ -30,6 +30,14 @@ challenging topics class may start with 20-30 minute demonstrations on
 the concepts followed by time to work on exercises.
 
 
+Many UC Berkeley classes, especially in data science, are delivered in 
+large-format lectures that may be recorded but provide little opportunity
+for individual and in-person interaction with the professor.
+_This class is different_.
+In-class time creates a space for valuable one-on-one and small group instruction
+from course staff and peers while working on challenging and open-ended problems.
+
+
 ## Assignment policy
 
 Data science is about analyzing real-world data sets, and so a series

@@ -60,7 +60,11 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   pre = "<i class='material-icons'>gavel</i>"
   url = "/policies"
 
-
+[[menu.footer]]
+  weight = 1
+  name = "RStudio Hub"
+  pre = "<i class='material-icons'>cloud</i>"
+  url = "http://r.datahub.berkeley.edu/"
 [[menu.footer]]
   weight = 2
   identifier = "GitHub"
@@ -69,10 +73,10 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   url = "https://github.com/espm-157"
 [[menu.footer]]
   weight = 3
-  identifier = "Slack"
+  identifier = "chat"
   name = "Forum"
   pre = "<i class='material-icons'>forum</i>"
-  url = "https://espm157-fall2021.slack.com"
+  url = "https://edstem.org/us/courses/25462/discussion/"
 [[menu.footer]]
   weight = 4
   name = "Textbook"
