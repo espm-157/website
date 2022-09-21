@@ -5,11 +5,7 @@
     <link>/rubrics/</link>
     <description>Recent content in Rubrics on ESPM 157</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="/rubrics/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="/rubrics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Climate Module Rubric</title>
       <link>/rubrics/climate/</link>
