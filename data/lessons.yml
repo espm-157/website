@@ -78,6 +78,12 @@ lessons:
     topics: "Missing Values"
     reading: 
 
+  - module: " <i class='material-icons'>directions_boat</i>"  
+    date: "2022-10-05"
+    datatype: '<i class="fa fa-database"></i>'
+    topics: "Module wrap-up"
+    reading: 
+
     
  # - module: " <i class='material-icons'>directions_boat</i>"  
 #    date: ""
@@ -95,19 +101,19 @@ lessons:
     topics: "<b>GEOSPATIAL CHANGE MODULE</b>"
     
   - module: "<i class='material-icons'>my_location</i>"  
-    date: "2022-10-05"
+    date: "2022-10-10"
     datatype: '<i class="material-icons">satellite</i>'
     topics: "geospatial intro, visualization"
     
   - module: "<i class='material-icons'>my_location</i>"
-    date: "2022-10-10"
+    date: "2022-10-12"
     datatype: '<i class="material-icons">satellite</i>'
     topics: "more on vector & raster data"
     reading: "read/geospatial-1"
     watch: "read/geospatial-1"
 
   - module: "<i class='material-icons'>my_location</i>"
-    date: "2022-10-15"
+    date: "2022-10-17"
     datatype: '<i class="material-icons">satellite</i>'
     topics: "spatial data manipulation"
     reading: "read/geospatial-2"
@@ -115,19 +121,19 @@ lessons:
 
 
   - module: " <i class='material-icons'>directions_boat</i>"  
-    date: "2022-10-17"
+    date: "2022-10-19"
     datatype: '<i class="fa fa-database"></i>'
     topics: "Forecasting Mini-module"
  
 
   - module: "<i class='material-icons'>my_location</i>"
-    date: "2022-10-19"
+    date: "2022-10-24"
     datatype: '<i class="material-icons">satellite</i>'
     topics: "Reproducible publishing"
     reading: "read/websites"
 
   - module: "<i class='material-icons'>my_location</i>"
-    date: "2022-10-24"
+    date: "2022-10-26"
     datatype: '<i class="material-icons">satellite</i>'
     topics: "wrap-up"
     reading: ""
@@ -138,7 +144,6 @@ lessons:
   #  date: ""
 
   - module: "<i class='material-icons'>school</i>"
-    date: "2022-10-26"
     topics: "Final Project Proposals"
     reading: "assignments/final"
 
