@@ -4,3 +4,4 @@
 *.zip
 *.xlsx
 blogdown
+.hugo_build.lock

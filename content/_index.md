@@ -8,10 +8,10 @@ markup: "mmark"
 
   <span></span>     | <span></span>
   -----------|-------------------------------------------------------------------
-  Instructor | **[Carl Boettiger](http://carlboettiger.info)**  <a href="mailto:cboettig@berkeley.edu" title="email"><i class="fa fa-envelope"></i></a><a href="https://twitter.com/cboettig" title="Twitter"> <i class="fa fa-twitter"></i></a> <a href="https://github.com/cboettig" title="GitHub"><i class="fa fa-github"></i></a> |  
-  GSIs        |  [Amy van Scoyoc](https://ourenvironment.berkeley.edu/users/1553057) |  
+  Instructor | **[Carl Boettiger](http://carlboettiger.info)**  <a href="mailto:cboettig@berkeley.edu" title="email"><i class="fa fa-envelope"></i></a> <a href="https://github.com/cboettig" title="GitHub"><i class="fa fa-github"></i></a> |  
+  GSIs        |  [Ellery Vaughan](https://www.berkeley.edu/directory/?search-type=cn&search-base=all&search-term=Vaughan,%20Ellery&uid=1875167) <a href="mailto:ellery_vaughan@berkeley.edu" title="email"><i class="fa fa-envelope"></i></a> |  
   Location   |     **110 Social Sciences**           |   
-  Times      | **Mon, Weds 10:00A - 12:00P** (West Coast Time)   |  
+  Times      | **Mon, Weds 12:00P - 2:00P**    |  
 Office Hours | TBD |
 
 

@@ -4,7 +4,7 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-  <meta name="generator" content="Hugo 0.83.1" />                                                                   
+  <meta name="generator" content="Hugo 0.92.2" />                                                                   
                
     
   <title>ESPM 157</title>
@@ -105,7 +105,7 @@
 		  	    <div class="col-md-6 col-md-offset-3" id="content">  
 	            <p>We map potential areas of marine aquaculture for the super cute
 Pacific spiny lumpsucker (<em>Eumicrotremus orbis</em>)</p>
-<pre><code class="language-{r}" data-lang="{r}">library(tidyverse)
+<pre tabindex="0"><code class="language-{r}" data-lang="{r}">library(tidyverse)
 library(mapview)  
 library(raster)   
 library(sf)          
@@ -118,20 +118,20 @@ library(USAboundaries)
 <li>Net Primary Productivity between <strong>2.6 and 3 mgC/m2/day</strong></li>
 </ul>
 <!-- raw HTML omitted -->
-<pre><code class="language-{r}" data-lang="{r}">## Loading the data
+<pre tabindex="0"><code class="language-{r}" data-lang="{r}">## Loading the data
 west_coast &lt;- st_read(&quot;shapefiles/mpas_westcoast.shp&quot;, quiet = TRUE)
 sst &lt;- stack( list.files('rasters', pattern = 'average_', full.names = T) )
 npp &lt;- raster('rasters/annual_npp.tif')
-</code></pre><pre><code class="language-{r}" data-lang="{r}"># convert units and projections
+</code></pre><pre tabindex="0"><code class="language-{r}" data-lang="{r}"># convert units and projections
 
 #K_factor &lt;- as.numeric(set_units(set_units(0, &quot;Celsius&quot;), &quot;K&quot;))
 sstAvg &lt;- mean(sst) %&gt;% raster::calc(fun = function(x) x - 273.15)
 sstProj &lt;- projectRaster(sstAvg, crs = crs(npp))
 names(sstProj) &lt;- &quot;sst&quot;
-</code></pre><pre><code class="language-{r}" data-lang="{r}"># get a vector layer with state boundary data, also in the local projection
+</code></pre><pre tabindex="0"><code class="language-{r}" data-lang="{r}"># get a vector layer with state boundary data, also in the local projection
 land &lt;- us_states() %&gt;%
   st_transform(crs(npp, asText=TRUE)) 
-</code></pre><pre><code class="language-{r}" data-lang="{r}">habitat_stack &lt;- stack(
+</code></pre><pre tabindex="0"><code class="language-{r}" data-lang="{r}">habitat_stack &lt;- stack(
    list(
    sst = raster::calc(sstProj, function(x) between(x, 12, 18)),
    mpp = raster::calc(npp, function(x) between(x, 2.6, 3))
@@ -144,7 +144,7 @@ habitat &lt;- habitat_stack %&gt;%
   calc(function(x) x == 2)
 
 names(habitat) &lt;- &quot;lumpsucker_habitat&quot;
-</code></pre><pre><code class="language-{r}" data-lang="{r}">tm_shape(habitat) + 
+</code></pre><pre tabindex="0"><code class="language-{r}" data-lang="{r}">tm_shape(habitat) + 
   tm_raster(&quot;lumpsucker_habitat&quot;) + 
   tm_shape(land) +
   tm_polygons(&quot;state_name&quot;, legend.show = FALSE) + 
