@@ -9,7 +9,7 @@ markup: "mmark"
 
 You should be generally numerically literate, and some prior programming
 experience will be helpful. Students new to programming might find
-[Hands on Programming with R](http://amzn.com/1449359019) to be helpful.
+[Hands on Programming with R](https://rstudio-education.github.io/hopr/) to be helpful.
 Students with significant experience in programming and statistical analysis
 should find themselves well prepared but should find plenty still to learn
 in each lesson.
@@ -44,14 +44,25 @@ Data science is about analyzing real-world data sets, and so a series
 of projects involving real data are a required part of the course. You
 may work alone or with a single partner on all projects. 
 
-All assignments are due by immediately **before** the start of class on the day indicated. Assignments
-should be submitted as instructed.
+All assignments are due by immediately **before** the start of class on the day indicated. Assignments should be submitted as instructed.
+
+
+## Generative AI
+
+Students may use all available resources, including texts, websites, people, and
+software in performing their assignments.  All resources must be appropriately 
+cited.  Students may use generative AI platforms to assist in preparing code,
+text, or images if they so chose, but are responsible for acknowledging and 
+seeking to validate any such content. Many generative AI models neither document
+nor acknowledge their sources, placing their content in ethically and legally
+dubious position. Generative AI also has a substantial and inequitable
+environmental footprint, and labor practices of RLHF-based training have been
+[sharply](https://www.theguardian.com/technology/2023/aug/02/ai-chatbot-training-human-toll-content-moderator-meta-openai) [critiqued](https://aibusiness.com/verticals/eleven-openai-employees-break-off-to-establish-anthropic-raise-124m).
+
 
 ## Grading
 
 Grades will be assigned using the following weighted components:
-
-{.table .table-striped}
 
 component      | weight   
 ---------------|-----
@@ -59,8 +70,7 @@ Final Project  | 30%
 HW Exercises   | 60% 
 Participation  | 10% 
 
-Details of grading criteria will not usually be announced in advance. It is expected
-that students in this course will have a wide range of prior experience
+Details of grading criteria will not usually be announced in advance. It is expected that students in this course will have a wide range of prior experience
 and ability, and grading will aim to reflect learning and effort in the course.
 It is certainly possible for all students to receive high grades in this course
 if all of you show mastery of the material and completely attempt all assignments.
@@ -68,9 +78,9 @@ if all of you show mastery of the material and completely attempt all assignment
 
 ## Make-up policy
 
-Late assignments will be docked 20% and will not be accepted more than 48
-hours late except in cases of genuine emergencies that can be documented
-by the student or in cases where this has been discussed and approved in
+Late assignments may be docked 20% and will not be accepted more than 48
+hours late except in cases of genuine emergencies
+or in cases where this has been discussed and approved in
 advance. This policy is based on the idea that in order to learn how to
 use computers well, students should be working with them at multiple times
 each week. Time has been allotted in class for working on assignments and
@@ -84,7 +94,7 @@ feedback to be provided to students by returning assignments quickly.
 ## Attendance Policy
 
 The lab-based, hands on course design really depends on students being in class, for every session.
-I expect students to make every effort attend every class.  I cannot accomodate
+I expect students to make every effort attend every class.  I cannot accommodate
 scheduling conflicts that would cause a student to regularly miss part of class,
 which would be unfair to partners during pair work.  However, I recognize
 that now and again an occasional absence will be unavoidable.  Please notify
@@ -153,12 +163,12 @@ There are no quizzes or exams in this course.
 
 ## Course Technology
 
-Students are required to provide their own laptops and to install free
-and open source software on those laptops. 
-Support will be provided by the instructor in the
-installation of required software. If you don’t have access to a
-laptop please contact the instructor and they will do their best to
-provide you with one.
+Students are required to provide their own laptops to access free
+and open source software, primarily through online platforms.
+All assignments can be completed on the university-hosted RStudio DataHub,
+<https://r.datahub.berkeley.edu>, using most machines with a modern browser.
+If you don’t have access to a laptop please contact the instructor and
+they will do their best to provide you with one.
 
 
 ## Materials & Resources
