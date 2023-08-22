@@ -1,5 +1,5 @@
 ---
-title: "ESPM 157: Data Science for Global Change Ecology"
+title: "ESPM 157: Data Science in Global Change Ecology"
 output: "github_document"
 always_allow_html: true
 
