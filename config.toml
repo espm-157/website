@@ -79,7 +79,7 @@ unsafe= true
   identifier = "chat"
   name = "Forum"
   pre = "<i class='material-icons'>forum</i>"
-  url = "https://edstem.org/us/courses/25462/discussion/"
+  url = "https://espm-157.slack.com/"
 [[menu.footer]]
   weight = 4
   name = "Textbook"
