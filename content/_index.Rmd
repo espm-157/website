@@ -12,7 +12,7 @@ dt = data.frame(c("Instructor", "GSIs", "Location", "Times", "Office Hours"),
        'Ellery Vaughan <a href="mailto:ellery_vaughan@berkeley.edu" title="email"><i class="fa fa-envelope"></i></a>',
        "110 Social Sciences", 
        "Mon, Weds 12:00P - 2:00P",
-       "TBD")
+       "Mon 2p, 110 SSB")
        )
 library(kableExtra)
 names(dt) <- c("","")

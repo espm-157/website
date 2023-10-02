@@ -1,7 +1,5 @@
----
-title: "ESPM 157: Data Science for Global Change Ecology"
----
-
+ESPM 157: Data Science in Global Change Ecology
+================
 
 <table class="table table-striped table-hover" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -53,7 +51,7 @@ Mon, Weds 12:00P - 2:00P
 Office Hours
 </td>
 <td style="text-align:left;">
-TBD
+Mon 2p, 110 SSB
 </td>
 </tr>
 </tbody>

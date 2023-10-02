@@ -8,6 +8,9 @@
     <loc>/policies/</loc>
     <lastmod>2017-04-13T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/</loc>
+    <priority>0</priority>
+  </url><url>
     <loc>/about/</loc>
     <priority>0</priority>
   </url><url>
@@ -32,8 +35,6 @@
     <loc>/rubrics/climate/</loc>
   </url><url>
     <loc>/read/dplyr-1/</loc>
-  </url><url>
-    <loc>/</loc>
   </url><url>
     <loc>/livecode/2019-11-01-extinction-api-intro/</loc>
   </url><url>
