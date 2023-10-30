@@ -120,13 +120,11 @@ lessons:
     reading: "read/geospatial-2"
     watch: "read/geospatial-2"
 
-
-  - module: " <i class='material-icons'>directions_boat</i>"  
+  - module: "<i class='material-icons'>my_location</i>"
     date: "2023-10-25"
-    datatype: '<i class="fa fa-database"></i>'
-    topics: "Forecasting Mini-module"
+    datatype: '<i class="material-icons">satellite</i>'
+    topics: "spatial data + renv"
  
-
   - module: "<i class='material-icons'>my_location</i>"
     date: "2023-10-30"
     datatype: '<i class="material-icons">satellite</i>'
@@ -136,7 +134,19 @@ lessons:
   - module: "<i class='material-icons'>my_location</i>"
     date: "2023-11-01"
     datatype: '<i class="material-icons">satellite</i>'
-    topics: "wrap-up"
+    topics: "spatial continues"
+    reading: ""
+    
+  - module: "<i class='material-icons'>my_location</i>"
+    date: "2023-11-06"
+    datatype: '<i class="material-icons">satellite</i>'
+    topics: "spatial continues"
+    reading: ""    
+
+  - module: "<i class='material-icons'>my_location</i>"
+    date: "2023-11-08"
+    datatype: '<i class="material-icons">satellite</i>'
+    topics: "spatial continues"
     reading: ""
     
   #- module: "<i class='fa fa-2x fa-docker'></i> <i class='material-icons'>cloud</i>"
@@ -152,32 +162,28 @@ lessons:
     date: ""
     topics: "<b>MASS EXTINCTIONS MODULE</b>"
     
-  - module: "<i class='material-icons'>trending_down</i>"
-    date: "2023-11-06"
-    datatype: '<i class="material-icons">widgets</i>'
-    topics: "REST APIs"
-    
+
 
   - module: "<i class='material-icons'>trending_down</i>"
-    date: "2023-11-08"
+    date: "2023-11-13"
     datatype: '<i class="material-icons">widgets</i>'
     topics: "REST APIs"
     reading: "read/httr-1"
     
   - module: "<i class='material-icons'>trending_down</i>"
-    date: "2023-11-13"
+    date: "2023-11-15"
     datatype: '<i class="material-icons">widgets</i>'
     topics: "Regular Expressions"
     reading: "read/strings-regex"
 
   - module: "<i class='material-icons'>trending_down</i>"
-    date: "2023-11-15"
+    date: "2023-11-20"
     datatype: '<i class="material-icons">widgets</i>'
     topics: "Data rectangling"
     reading: "read/purrr-1"
 
   - module: "<i class='material-icons'>trending_down</i>"
-    date: "2023-11-20"
+    date: "2023-11-27"
     datatype: '<i class="material-icons">widgets</i>'
     topics: "Functional Programming"
     reading: ""
