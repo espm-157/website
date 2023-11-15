@@ -182,12 +182,6 @@ lessons:
     topics: "Data rectangling"
     reading: "read/purrr-1"
 
-  - module: "<i class='material-icons'>trending_down</i>"
-    date: "2023-11-27"
-    datatype: '<i class="material-icons">widgets</i>'
-    topics: "Functional Programming"
-    reading: ""
-
   - module: " <i class='material-icons'>trending_down</i>"
     date: "2023-11-27"
     datatype: '<i class="material-icons">widgets</i>'
@@ -202,20 +196,17 @@ lessons:
 #    datatype: "<i class='material-icons'>share</i>"
 #    topics: "JSON-LD, graph queries"
     
-  - module: "<i class='material-icons'>school</i>"
-    date: ""
-    topics: "Final Projects" 
-    
+
   - module: "<i class='material-icons'>school</i>"
     date: "2023-11-29"
     topics: "Final Projects"
     
   - module: "<i class='material-icons'>school</i>"
-    date: ""
+    date: "2023-12-04"
     topics: "RRR week -- no attendance required" 
     
   - module: "<i class='material-icons'>school</i>"
-    date: ""
+    date: "2023-12-08"
     topics: "RRR week -- no attendance required"
 
   - module: "<i class='material-icons'>school</i>"
