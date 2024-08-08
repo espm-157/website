@@ -1,0 +1,8 @@
+format: jb-book
+root: index
+parts:
+- caption: Overview
+  chapters:
+  - file: overview/modules
+  - file: overview/syllabus
+  - file: overview/policies
