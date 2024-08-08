@@ -1,7 +1,1 @@
-.Rproj.user
-.DS_Store
-.Rhistory
-*.zip
-*.xlsx
-blogdown
-.hugo_build.lock
+.ipynb_checkpoints

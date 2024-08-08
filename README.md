@@ -1,23 +1,12 @@
-# website
+# Public  website for Berkeley Statistics 159/259, Reproducible and Collaborative Statistical Data Science, Spring 2023
 
-The course website is automatically generated using the [blogdown](https://github.com/rstudio/blogdown) R package:
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UCB-stat-159-s23/site/HEAD)
 
-```r
-blogdown::serve_site()
-```
+This repository contains all source materials (lecture notes, homework
+assignments, etc.) for the class, and is available as a static website
+[here](https://ucb-stat-159-s23.github.io/site), rendered
+automatically with JupyterBook on any commit to the `main` branch.
 
-## Overview
+Instructor: [Fernando Perez](https://fperez.org)
 
-`blogdown` sites use the popular static site generator [Hugo](https://gohugo.io),
-which dictates the organizational structure of this repository.  
-Markdown (and/or `.Rmd`) source files for the pages can be found in `content/`.  
-
-Rendered site files are found in `docs/` and hosted using [Netlify](https://www.netlify.com)
-at <https://espm-157.carlboettiger.info>.
-
-This site is built using [Material Kit](https://github.com/creativetimofficial/material-kit)
-which implements Google's Material Design using [Bootstrap](https://getbootstrap.com) CSS.
-
-## License
-
-All content is licensed CC-BY unless otherwise indicated.  
+<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
