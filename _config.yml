@@ -5,7 +5,8 @@
 title     : Data Science in Global Change Ecology # Left navbar
 author    : Carl Boettiger
 copyright : "2024"  # Goes in the footer
-logo      : berkeley-logo-white.png # Above title, left navbar
+logo      : hex.png # Above title, left navbar
+exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
 
 # Render content from stored notebooks
 execute:
@@ -37,11 +38,44 @@ repository:
 html:
   use_repository_button : true
   use_issues_button     : true
+  favicon : "_static/favicon.png"
   announcement          : "" # A banner announcement at the top of the site.
+  extra_footer: |
+        <div class="container color-text-muted" style="margin-top: 1em;">
+        <style>
+        .icon-2x {
+        font-size: 2em;
+        margin-right: 1em; /* Add horizontal space between icons */
+        }
+        </style>
+        <a href="https://datahub.berkeley.edu"><i class="fa-solid fa-server icon-2x"></i></a>
+        <a href="https://github.com/espm-157"><i class="fa-brands fa-github icon-2x"></i></a>
+        <a href="https://espm-157.slack.com/"><i class="fa-brands fa-slack icon-2x"></i></a>
+        <span style="float: right;"><img src="_static/img/cc-by.svg"/></span>
+        </div>
 
-launch_buttons:
-  binderhub_url: "https://mybinder.org"
-  notebook_interface: "jupyterlab"
+
+    
+sphinx:
+  config:
+    html_show_copyright: false
+    html_show_sphinx: false
+    html_authors: false
+    html_theme: "shibuya"
+    html_theme_options: {
+        "slack_url": "https://espm-157.slack.com", 
+        "github_url": "https://github.com/espm-157",
+       
+    }
+    html_context: {
+        "source_type": "github",
+        "source_user": "espm-157",
+        "source_repo": "website",
+        "source_version": "main",  # Optional
+        }
+    
+
+
 
 # Uncomment this later if bibliographic references are desired
 # See: https://jupyterbook.org/en/stable/tutorials/references.html

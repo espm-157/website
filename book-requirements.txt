@@ -7,3 +7,4 @@ jupyter-sphinx==0.4.0
 markdown-it-py==2.2.0
 markupsafe==2.1.2
 myst-nb==0.17.1
+shibuya
