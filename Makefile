@@ -1,4 +1,4 @@
-BASE=https://jupyterhub.thelio.carlboettiger.info
+BASE="jupyterhub.thelio.carlboettiger.info"
 ## Makefile to build JupyterBook for this repository
 ## - html-hub: build static website so it can be viewed on hosted JupyterHub (via URL proxy).
 .PHONY: html-hub
