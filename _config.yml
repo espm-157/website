@@ -1,0 +1,54 @@
+#############################################################################
+# JupyterBook settings
+# See: https://jupyterbook.org/en/stable/customize/config.html
+
+title     : Data Science in Global Change Ecology # Left navbar
+author    : Carl Boettiger
+copyright : "2024"  # Goes in the footer
+logo      : berkeley-logo-white.png # Above title, left navbar
+
+# Render content from stored notebooks
+execute:
+  execute_notebooks: 'off'
+
+# Let's build everything - it takes a bit longer but lets us easily preview
+# files that are in draft/progress on the live site, without exposing them
+# in the TOC/nav tools.
+only_build_toc_files: false
+
+# Enable some myst extensions beyond the default.
+parse:
+  myst_enable_extensions: 
+    - amsmath
+    - dollarmath
+    - html_admonition
+    - html_image
+    - linkify
+    - colon_fence
+    - substitution
+    - tasklist
+
+# Add links to GitHub repo
+# For more info: https://jupyterbook.org/en/stable/basics/repository.html
+repository:
+  url    : https://github.com/espm-157/website
+  branch : main
+
+html:
+  use_repository_button : true
+  use_issues_button     : true
+  announcement          : "" # A banner announcement at the top of the site.
+
+launch_buttons:
+  binderhub_url: "https://mybinder.org"
+  notebook_interface: "jupyterlab"
+
+# Uncomment this later if bibliographic references are desired
+# See: https://jupyterbook.org/en/stable/tutorials/references.html
+
+# bibtex_bibfiles:
+#   - references.bib
+#
+# sphinx:
+#   config:
+#     bibtex_reference_style: author_year

@@ -1,0 +1,9 @@
+# Packages for Jupyter book. These are normal packages, but we put them in a
+# separate section so they are easier to manually sync between the main
+# environment.yml file and a pip requirements file that _only_ builds
+# jupyterbook sites using Github Actions.
+jupyter-book==0.15.0
+jupyter-sphinx==0.4.0
+markdown-it-py==2.2.0
+markupsafe==2.1.2
+myst-nb==0.17.1
