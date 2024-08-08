@@ -2,119 +2,115 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/syllabus/</loc>
+    <loc>//localhost:4321/</loc>
     <lastmod>2017-04-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/policies/</loc>
+    <loc>//localhost:4321/syllabus/</loc>
+    <lastmod>2017-04-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:4321/policies/</loc>
     <lastmod>2017-04-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/about/</loc>
-    <priority>0</priority>
+    <loc>//localhost:4321/about/</loc>
   </url><url>
-    <loc>/overview-notes/</loc>
-    <priority>0</priority>
+    <loc>//localhost:4321/overview-notes/</loc>
   </url><url>
-    <loc>/pedagogy/</loc>
-    <priority>0</priority>
+    <loc>//localhost:4321/pedagogy/</loc>
   </url><url>
-    <loc>/livecode/2018-09-07-class-notes/</loc>
+    <loc>//localhost:4321/livecode/2018-09-07-class-notes/</loc>
   </url><url>
-    <loc>/archives/</loc>
+    <loc>//localhost:4321/archives/</loc>
   </url><url>
-    <loc>/assignments/</loc>
+    <loc>//localhost:4321/assignments/</loc>
   </url><url>
-    <loc>/read/fish/</loc>
+    <loc>//localhost:4321/read/fish/</loc>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>//localhost:4321/categories/</loc>
   </url><url>
-    <loc>/assignments/climate/</loc>
+    <loc>//localhost:4321/assignments/climate/</loc>
   </url><url>
-    <loc>/rubrics/climate/</loc>
+    <loc>//localhost:4321/rubrics/climate/</loc>
   </url><url>
-    <loc>/read/dplyr-1/</loc>
+    <loc>//localhost:4321/read/dplyr-1/</loc>
   </url><url>
-    <loc>/</loc>
+    <loc>//localhost:4321/livecode/2019-11-01-extinction-api-intro/</loc>
   </url><url>
-    <loc>/livecode/2019-11-01-extinction-api-intro/</loc>
+    <loc>//localhost:4321/assignments/final/</loc>
   </url><url>
-    <loc>/assignments/final/</loc>
+    <loc>//localhost:4321/rubrics/fish/</loc>
   </url><url>
-    <loc>/rubrics/fish/</loc>
+    <loc>//localhost:4321/read/functions/</loc>
   </url><url>
-    <loc>/read/functions/</loc>
+    <loc>//localhost:4321/read/geospatial-1/</loc>
   </url><url>
-    <loc>/read/geospatial-1/</loc>
+    <loc>//localhost:4321/read/geospatial-2/</loc>
   </url><url>
-    <loc>/read/geospatial-2/</loc>
+    <loc>//localhost:4321/read/geospatial-orig/</loc>
   </url><url>
-    <loc>/read/geospatial-orig/</loc>
+    <loc>//localhost:4321/read/geospatial-io/</loc>
   </url><url>
-    <loc>/read/geospatial-io/</loc>
+    <loc>//localhost:4321/read/geospatial-raster-vector/</loc>
   </url><url>
-    <loc>/read/geospatial-raster-vector/</loc>
+    <loc>//localhost:4321/read/geospatial-raster/</loc>
   </url><url>
-    <loc>/read/geospatial-raster/</loc>
+    <loc>//localhost:4321/read/geospatial-vector/</loc>
   </url><url>
-    <loc>/read/geospatial-vector/</loc>
+    <loc>//localhost:4321/read/getting-help/</loc>
   </url><url>
-    <loc>/read/getting-help/</loc>
+    <loc>//localhost:4321/read/git-1/</loc>
   </url><url>
-    <loc>/read/git-1/</loc>
+    <loc>//localhost:4321/read/dplyr-2/</loc>
   </url><url>
-    <loc>/read/dplyr-2/</loc>
+    <loc>//localhost:4321/read/purrr-1/</loc>
   </url><url>
-    <loc>/livecode/spatial-tidy/</loc>
+    <loc>//localhost:4321/read/iteration/</loc>
   </url><url>
-    <loc>/read/purrr-1/</loc>
+    <loc>//localhost:4321/livecode/</loc>
   </url><url>
-    <loc>/read/iteration/</loc>
+    <loc>//localhost:4321/module-table/</loc>
   </url><url>
-    <loc>/livecode/</loc>
+    <loc>//localhost:4321/modules/</loc>
   </url><url>
-    <loc>/module-table/</loc>
+    <loc>//localhost:4321/read/basics/</loc>
   </url><url>
-    <loc>/modules/</loc>
+    <loc>//localhost:4321/read/rmarkdown-basics/</loc>
   </url><url>
-    <loc>/read/basics/</loc>
+    <loc>//localhost:4321/read/docker/</loc>
   </url><url>
-    <loc>/read/rmarkdown-basics/</loc>
+    <loc>//localhost:4321/read/</loc>
   </url><url>
-    <loc>/read/docker/</loc>
+    <loc>//localhost:4321/read/dplyr-3/</loc>
   </url><url>
-    <loc>/read/</loc>
+    <loc>//localhost:4321/read/dplyr-4/</loc>
   </url><url>
-    <loc>/read/dplyr-3/</loc>
+    <loc>//localhost:4321/read/httr-1/</loc>
   </url><url>
-    <loc>/read/dplyr-4/</loc>
+    <loc>//localhost:4321/read/httr-2/</loc>
   </url><url>
-    <loc>/read/httr-1/</loc>
+    <loc>//localhost:4321/rubrics/</loc>
   </url><url>
-    <loc>/read/httr-2/</loc>
+    <loc>//localhost:4321/read/setup/</loc>
   </url><url>
-    <loc>/rubrics/</loc>
+    <loc>//localhost:4321/rubrics/spatial/</loc>
   </url><url>
-    <loc>/read/setup/</loc>
+    <loc>//localhost:4321/read/strings-regex/</loc>
   </url><url>
-    <loc>/rubrics/spatial/</loc>
+    <loc>//localhost:4321/tags/</loc>
   </url><url>
-    <loc>/read/strings-regex/</loc>
+    <loc>//localhost:4321/team-building/</loc>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>//localhost:4321/tools/</loc>
   </url><url>
-    <loc>/team-building/</loc>
+    <loc>//localhost:4321/tutorials/</loc>
   </url><url>
-    <loc>/tools/</loc>
+    <loc>//localhost:4321/read/ggplot-1/</loc>
   </url><url>
-    <loc>/tutorials/</loc>
+    <loc>//localhost:4321/read/websites/</loc>
   </url><url>
-    <loc>/read/ggplot-1/</loc>
+    <loc>//localhost:4321/read/workflows/</loc>
   </url><url>
-    <loc>/read/websites/</loc>
+    <loc>//localhost:4321/livecode/2018-10-08-functions/</loc>
   </url><url>
-    <loc>/read/workflows/</loc>
-  </url><url>
-    <loc>/livecode/2018-10-08-functions/</loc>
-  </url><url>
-    <loc>/read/r-pkgs/</loc>
+    <loc>//localhost:4321/read/r-pkgs/</loc>
   </url>
 </urlset>

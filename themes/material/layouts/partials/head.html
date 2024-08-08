@@ -2,7 +2,6 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-  {{ .Hugo.Generator }}                                                                   
   {{ with .Site.Params.name }}<meta name="author" content="{{ . }}">{{ end }}             
   {{ with .Site.Params.role }}<meta name="description" content="{{ . }}">{{ end }}  
   <title>{{ .Site.Title }}</title>
@@ -30,7 +29,5 @@
   <link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}">       
   {{ end }}
     
-  <link rel="alternate" href="{{ .RSSLink | default .Site.RSSLink  }}" type="application/rss+xml" title="{{ .Site.Title }}">
-  <link rel="feed" href="{{ .RSSLink | default .Site.RSSLink }}" type="application/rss+xml" title="{{ .Site.Title }}">
   <link rel="canonical" href="{{ .Permalink }}">
 </head>

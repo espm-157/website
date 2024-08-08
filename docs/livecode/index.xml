@@ -2,54 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Livecodes on ESPM 157</title>
-    <link>/livecode/</link>
+    <link>//localhost:4321/livecode/</link>
     <description>Recent content in Livecodes on ESPM 157</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/livecode/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:4321/livecode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2018-09-07 Class Notes</title>
-      <link>/livecode/2018-09-07-class-notes/</link>
+      <link>//localhost:4321/livecode/2018-09-07-class-notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/livecode/2018-09-07-class-notes/</guid>
-      <description> Reminders  Focus on reading, exercises – Great work! open-ended questions, not always covered Piazza discussion forum pair coding   Overview  GitHub  Collaboration rmarkdown -&amp;gt; markdown  Travis  What, why? Debugging  R  readr separators ggplot2 – Grammar?? dplyr Syntax  Naming things Style   </description>
+      <guid>//localhost:4321/livecode/2018-09-07-class-notes/</guid>
+      <description> Reminders Focus on reading, exercises – Great work! open-ended questions, not always covered Piazza discussion forum pair coding Overview GitHub Collaboration rmarkdown -&amp;gt; markdown Travis What, why? Debugging R readr separators ggplot2 – Grammar?? dplyr Syntax Naming things Style </description>
     </item>
-    
     <item>
       <title>Extinctions Unit</title>
-      <link>/livecode/2019-11-01-extinction-api-intro/</link>
+      <link>//localhost:4321/livecode/2019-11-01-extinction-api-intro/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/livecode/2019-11-01-extinction-api-intro/</guid>
-      <description>Extinctions Module Are we experiencing the sixth great extinction?
-What is the current pace of extinction? Is it accelerating? How does it compare to background extinction rates?
- Background  Section Intro Video Ceballos et al (2015)  Our focal task will be to reproduce the result from Ceballos and colleagues showing the recent increase in extinction rates relative to the background rate:
- Computational Topics  Accessing data from a RESTful API Error handling JSON data format Regular expressions Working with missing values   Additional references:  http://www.</description>
+      <guid>//localhost:4321/livecode/2019-11-01-extinction-api-intro/</guid>
+      <description>Extinctions Module Are we experiencing the sixth great extinction?&#xA;What is the current pace of extinction? Is it accelerating? How does it compare to background extinction rates?&#xA;Background Section Intro Video Ceballos et al (2015) Our focal task will be to reproduce the result from Ceballos and colleagues showing the recent increase in extinction rates relative to the background rate:&#xA;Computational Topics Accessing data from a RESTful API Error handling JSON data format Regular expressions Working with missing values Additional references: http://www.</description>
     </item>
-    
-    <item>
-      <title>Habitat Analysis of the Pacific Spiny Lumpsucker</title>
-      <link>/livecode/spatial-tidy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/livecode/spatial-tidy/</guid>
-      <description>We map potential areas of marine aquaculture for the super cute Pacific spiny lumpsucker (Eumicrotremus orbis)
-library(tidyverse) library(mapview) library(raster) library(sf) library(units) library(tmap) library(USAboundaries) Key information for optimal growth:
- Sea surface temperatures between 12 and 18 degrees Celsius Net Primary Productivity between 2.6 and 3 mgC/m2/day  ## Loading the data west_coast &amp;lt;- st_read(&amp;quot;shapefiles/mpas_westcoast.shp&amp;quot;, quiet = TRUE) sst &amp;lt;- stack( list.files(&#39;rasters&#39;, pattern = &#39;average_&#39;, full.names = T) ) npp &amp;lt;- raster(&#39;rasters/annual_npp.</description>
-    </item>
-    
     <item>
       <title>Writing functions in R</title>
-      <link>/livecode/2018-10-08-functions/</link>
+      <link>//localhost:4321/livecode/2018-10-08-functions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/livecode/2018-10-08-functions/</guid>
-      <description>library(tidyverse) Today we will be learning to write our own functions in R. Consider the discrete Logistic growth function:
-\[x_{t+1} = x_t + r x_t \left(1 - \frac{x_t}{K} \right)\]
-Here we exress this function in R:
-growth &amp;lt;- function(xt, r, K){ r * xt * (1 - xt / K) } We can simulate the function as follows:
-simulate &amp;lt;- function(max_time, x0, r, K){ x &amp;lt;- numeric(max_time) x[1] &amp;lt;- x0 for (t in 1:(max_time - 1)) { x[t + 1] &amp;lt;- x[t] + growth(x[t], r = r, K) } pop_data &amp;lt;- data_frame(time = 1:max_time, pop_size = x) pop_data } We can perform a few simulations with different values of r:</description>
+      <guid>//localhost:4321/livecode/2018-10-08-functions/</guid>
+      <description>library(tidyverse) Today we will be learning to write our own functions in R. Consider the discrete Logistic growth function:&#xA;\[x_{t+1} = x_t + r x_t \left(1 - \frac{x_t}{K} \right)\]&#xA;Here we exress this function in R:&#xA;growth &amp;lt;- function(xt, r, K){ r * xt * (1 - xt / K) } We can simulate the function as follows:&#xA;simulate &amp;lt;- function(max_time, x0, r, K){ x &amp;lt;- numeric(max_time) x[1] &amp;lt;- x0 for (t in 1:(max_time - 1)) { x[t + 1] &amp;lt;- x[t] + growth(x[t], r = r, K) } pop_data &amp;lt;- data_frame(time = 1:max_time, pop_size = x) pop_data } We can perform a few simulations with different values of r:</description>
     </item>
-    
   </channel>
 </rss>

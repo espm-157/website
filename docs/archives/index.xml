@@ -2,9 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Archives on ESPM 157</title>
-    <link>/archives/</link>
+    <link>//localhost:4321/archives/</link>
     <description>Recent content in Archives on ESPM 157</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/archives/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:4321/archives/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
