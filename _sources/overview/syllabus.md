@@ -128,7 +128,7 @@ they will do their best to provide you with one.
 
 ## Disability accommodations
 
-Our course aspires towards [univerisal design](https://en.wikipedia.org/wiki/Universal_Design_for_Learning)
+Our course aspires towards [universal design](https://en.wikipedia.org/wiki/Universal_Design_for_Learning)
 principles to minimize the need for common accommodations such as extra time on written exams or
 recording devices for lectures (we have no timed exams and no lectures).
 We are always keen to improve the design and provide additional accomdations to make this course accessible for all students.  
