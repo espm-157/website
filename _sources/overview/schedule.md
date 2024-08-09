@@ -12,7 +12,7 @@
 {material-regular}`auto_graph;1.5em;sd-text-warning` Communication: declarative visualization, jupyter notebooks
 
 +++
-<a href="https://github.com/espm-157/climate-python-template"><i class="i-simpleicons github"></i> assigment template </a>
+<a href="https://github.com/espm-157/climate-python-template"><i class="i-simpleicons github"></i> climate template </a>
 
 :::
 
@@ -24,7 +24,7 @@
 {material-regular}`auto_graph;1.5em;sd-text-warning` Communication: Myst, pdf/LaTeX, html outputs  
 
 +++
-<a href="https://github.com/espm-157/fish-python-template"><i class="i-simpleicons github"></i> assigment template </a>
+<a href="https://github.com/espm-157/fish-python-template"><i class="i-simpleicons github"></i> fish template </a>
 
 :::
 
@@ -38,7 +38,7 @@
 {material-regular}`auto_graph;1.5em;sd-text-warning` Communication: Geospatial visualziation  
 
 +++
-<a href="https://github.com/espm-157/spatial-python-template"><i class="i-simpleicons github"></i> assigment template </a>
+<a href="https://github.com/espm-157/spatial-python-template"><i class="i-simpleicons github"></i> spatial template </a>
 
 :::
 
@@ -50,7 +50,7 @@
 {material-regular}`auto_graph;1.5em;sd-text-warning` `streamlit`, reactive design  
 
 +++
-<a href="https://github.com/espm-157/llm-python-template"><i class="i-simpleicons github"></i> assigment template </a>
+<a href="https://github.com/espm-157/llm-python-template"><i class="i-simpleicons github"></i> llm template </a>
 
 
 :::
