@@ -1,4 +1,4 @@
-# Schedule
+# {material-regular}`view_module` Module Overview
 
 
 ::::{grid}
@@ -59,9 +59,11 @@
 ::::
 
 
+---
 
 
-# Weekly Plan
+
+# {material-regular}`calendar_month` Weekly Plan
 
 Hold on tight and don't put too much faith in this.
 
