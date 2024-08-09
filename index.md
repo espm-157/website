@@ -8,8 +8,7 @@ title: "ESPM-157: Data Science in Global Change Ecology"
 ![](https://climate.nasa.gov/system/internal_resources/details/original/417_1263_banner-science-1600x500.jpg)
 
 <center>
-<h1>ESPM-157:</h1>
-<h1>Data Science in Global Change Ecology</h1>
+<h1>ESPM-157: Data Science in Global Change Ecology</h1>
 </center>
 
 
