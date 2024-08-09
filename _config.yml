@@ -58,13 +58,20 @@ html:
     
 sphinx:
   config:
+    project: "ESPM-157"
     html_show_copyright: false
     html_show_sphinx: false
-    html_authors: false
     html_theme: "shibuya"
+    templates_path: ["_templates"]
     html_theme_options: {
         "slack_url": "https://espm-157.slack.com", 
         "github_url": "https://github.com/espm-157",
+        "nav_links": [
+        {
+            "title": "Home",
+            "url": "index"
+        },
+    ]
        
     }
     html_context: {
