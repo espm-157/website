@@ -35,6 +35,7 @@ repository:
   url    : https://github.com/espm-157/website
   branch : main
 
+## Jupyter-Book, not recognized by current theme
 html:
   use_repository_button : true
   use_issues_button     : true
@@ -55,7 +56,7 @@ html:
         </div>
 
 
-    
+## shibuya sphinx theme, configure here    
 sphinx:
   config:
     project: "ESPM-157"
@@ -79,6 +80,7 @@ sphinx:
         "source_user": "espm-157",
         "source_repo": "website",
         "source_version": "main",  # Optional
+        "source_docs_path": "/"
         }
     
 

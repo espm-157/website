@@ -19,7 +19,6 @@ title: "ESPM-157: Data Science in Global Change Ecology"
 {material-regular}`person;2em;sd-text-primary` [Carl Boettiger](https://carlboettiger.info)  
 {material-regular}`person;2em;sd-text-primary` Amanda Wik, Teaching Assistant  
 {material-regular}`person;2em;sd-text-primary` Tyler Bernard, Teaching Assistant
-
 :::
 
 :::{grid-item-card} Logistics
