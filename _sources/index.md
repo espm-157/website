@@ -29,3 +29,10 @@ title: "ESPM-157: Data Science in Global Change Ecology"
 ::::
 
 
+ESPM-157 seeks to introduce students to cutting-edge skills in data science and computer coding, including GitHub,
+reproducible notebooks, databases, data visualization, geospatial analysis and more in an inclusive and hands-on
+collaborative setting. See our [syllabus](https://espm-157.carlboettiger.info/overview/syllabus.html) and [schedule overview](https://espm-157.carlboettiger.info/overview/schedule.html)
+for details. _Please see_ [enrollment](https://espm-157.carlboettiger.info/overview/syllabus.html#enrollment) if you questions about getting into this course!
+
+
+
