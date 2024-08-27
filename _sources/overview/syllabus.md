@@ -118,12 +118,10 @@ There are no quizzes or in-class exams in this course.
 
 ## Course Technology
 
-Students are required to provide their own laptops to access free
-and open source software, primarily through online platforms.
-All assignments can be completed on the university-hosted DataHub,
-<https://datahub.berkeley.edu>, using most machines with a modern browser.
-If you don’t have access to a laptop please contact the instructor and
-they will do their best to provide you with one.
+Students should bring a laptop and charger to each class. You do not need a
+fancy machine -- any device with a keyboard, web browser and wifi should be sufficient
+to connect to our cloud-based compute platform which will be doing all the heavy lifting.
+If you don’t have access to a laptop please request a device through our campus [STEP program](https://studenttech.berkeley.edu/step).
 
 
 ## Disability accommodations
