@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" data-accent-color="violet" data-content_root="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>The Grammar of Graphics - Data Science in Global Change Ecology</title><link rel="shortcut icon" href="../_static/favicon.png"/><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(localStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/shibuya.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link media="print" rel="stylesheet" type="text/css" href="../_static/print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/simpleicons.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    <meta property="og:type" content="website"/><meta property="og:title" content="The Grammar of Graphics"/>
+<meta name="twitter:card" content="summary"/>
+  </head>
+<body><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand" href="../index.html">
+      <img class="light-logo" src="../_static/hex.png" alt="ESPM-157" height="28" loading="lazy" />
+      <img class="dark-logo" src="../_static/hex.png" alt="ESPM-157" height="28" loading="lazy" />
+      <strong>ESPM-157</strong>
+    </a>
+    <div class="sy-head-nav" id="HeadNav">
+      <nav class="sy-head-links"><ul><li class="link"><a href="../index.html">Home</a></li></ul></nav>
+      <div class="sy-head-extra flex items-center print:hidden"><form class="searchbox flex items-center" action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <kbd>/</kbd>
+</form><div class="sy-head-socials">
+  <a href="https://github.com/espm-157" aria-label="GitHub">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </a>
+  <a href="https://espm-157.slack.com" aria-label="Slack">
+    <iconify-icon icon="simple-icons:slack"></iconify-icon>
+  </a><a href="https://datahub.berkeley.edu" aria-label="JupyterHub">            
+ <i class="i-simpleicons jupyter"></i>
+</a>
+</div>
+
+      <!--
+      <svg role="img" viewBox="0 0 24 24" height="24" xmlns="http://www.w3.org/2000/svg"><title>Jupyter</title><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"/></svg>
+      -->
+
+ <!--    
+<img height="24" src="https://cdn.simpleicons.org/jupyter" />
+ --></div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden"><button class="js-theme theme-switch flex items-center"
+data-aria-auto="Switch to light color mode"
+data-aria-light="Switch to dark color mode"
+data-aria-dark="Switch to auto color mode">
+<i class="i-lucide theme-icon"></i>
+</button><button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="HeadNav" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2 -translate-x-2"></span>
+          <span class="hamburger_3 -translate-x-1"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading" aria-level="3"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/syllabus.html"><svg version="4.0.0.63c5cb3" width="1.0em" height="1.0em" class="sd-material-icon sd-material-icon-gavel" viewBox="0 0 24 24" aria-hidden="true"><g><rect fill="none" height="24" width="24" x="0"></rect></g><g><g><rect height="20" transform="matrix(0.7075 -0.7067 0.7067 0.7075 -5.6854 13.7194)" width="4" x="11.73" y="3.73"></rect><rect height="8" transform="matrix(0.707 -0.7072 0.7072 0.707 0.3157 11.246)" width="4" x="11.73" y="1.24"></rect><rect height="8" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -8.1722 7.7256)" width="4" x="3.24" y="9.73"></rect><rect height="2" width="12" x="1" y="21"></rect></g></g></svg> Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/schedule.html"><svg version="4.0.0.63c5cb3" width="1.0em" height="1.0em" class="sd-material-icon sd-material-icon-view_module" viewBox="0 0 20 20" aria-hidden="true"><rect fill="none" height="20" width="20"></rect><path d="M8,15v-4.5h4V15H8z M13,9.5h4V5h-4V9.5z M8,5v4.5h4V5H8z M7,9.5V5H3v4.5H7z M13,10.5V15h4v-4.5H13z M7,10.5H3V15h4V10.5z"></path></svg> Module Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/schedule.html#svg-version-4-0-0-63c5cb3-width-1-0em-height-1-0em-class-sd-material-icon-sd-material-icon-calendar-month-viewbox-0-0-20-20-aria-hidden-true-g-rect-fill-none-height-20-width-20-rect-g-g-path-d-m15-5-4h14v2h-1-5v2h-5v2h6v2h4-5c3-67-4-3-4-68-3-5-5v11c3-17-32-3-67-18-4-5-18h11c0-83-0-1-5-0-68-1-5-1-5v-11-c17-4-68-16-33-4-15-5-4z-m15-5-16-5h-11v9h11v16-5z-m7-5-12h6v-1-5h1-5v12z-m10-75-12h-1-5v-1-5h1-5v12z-m14-12h-1-5v-1-5h14v12z-m7-5-15h6v-1-5h1-5v15z-m10-75-15h-1-5v-1-5h1-5v15z-m14-15h-1-5v-1-5h14v15z-path-g-svg-weekly-plan"><svg version="4.0.0.63c5cb3" width="1.0em" height="1.0em" class="sd-material-icon sd-material-icon-calendar_month" viewBox="0 0 20 20" aria-hidden="true"><g><rect fill="none" height="20" width="20"></rect></g><g><path d="M15.5,4H14V2h-1.5v2h-5V2H6v2H4.5C3.67,4,3,4.68,3,5.5v11C3,17.32,3.67,18,4.5,18h11c0.83,0,1.5-0.68,1.5-1.5v-11 C17,4.68,16.33,4,15.5,4z M15.5,16.5h-11V9h11V16.5z M7.5,12H6v-1.5h1.5V12z M10.75,12h-1.5v-1.5h1.5V12z M14,12h-1.5v-1.5H14V12z M7.5,15H6v-1.5h1.5V15z M10.75,15h-1.5v-1.5h1.5V15z M14,15h-1.5v-1.5H14V15z"></path></g></svg> Weekly Plan</a></li>
+</ul>
+
+        </div>
+      </div></div>
+  </aside>
+  <div class="lside-overlay js-menu" role="button" aria-label="Close left sidebar" aria-controls="lside" aria-expanded="false"></div>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-lucide close"></i>
+    </button>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
+<li><a class="reference internal" href="#the-power-of-abstractions">The Power of Abstractions</a></li>
+<li><a class="reference internal" href="#additional-reading">Additional Reading</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</div><a class="js-repo-stats repo-stats flex items-center" href="https://github.com/espm-157/website"
+  data-type="github" data-user="espm-157" data-repo="website">
+  <span class="w-8 flex items-center justify-around shrink-0 text-3xl">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </span>
+  <span class="flex-grow px-2 break-all">
+    <span>espm-157/website</span>
+    <span class="flex text-sm repo-stats-count">
+      <span class="flex items-center pr-3">
+        <iconify-icon icon="lucide:star"></iconify-icon>
+        <strong class="js-repo-stars ml-1">0</strong>
+      </span>
+      <span class="flex items-center">
+        <iconify-icon icon="lucide:git-fork"></iconify-icon>
+        <strong class="js-repo-forks ml-1">0</strong>
+      </span>
+    </span>
+  </span>
+</a><div class="edit-this-page">
+  <a href="https://github.com/espm-157/website/blob/main/reading/04-visualization-basics.md">Edit this page</a>
+</div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6"><div class="sy-breadcrumbs" role="navigation">
+  <div class="sy-breadcrumbs-inner flex items-center">
+    <div class="md:hidden mr-3">
+      <button class="js-menu" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+        <i class="i-lucide menu"></i>
+      </button>
+    </div>
+    <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="../index.html"><span itemprop="name">ESPM-157</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="1" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <strong itemprop="name">The Grammar of Graphics</strong>
+        <meta itemprop="position" content="2" />
+      </li></ol>
+    <div class="xl:hidden ml-1">
+      <button class="js-menu" aria-label="Show table of contents" type="button" aria-controls="rside"
+        aria-expanded="false">
+        <i class="i-lucide outdent"></i>
+      </button>
+    </div>
+  </div>
+</div><div class="flex flex-col break-words justify-between">
+      <div class="min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
+        <article class="yue" role="main">
+          <p>Courses involving computer programming frequently start with control structures and data structures.  Extensive education research has underscored the value in starting with visualization. Visualization offers ‘early wins’, producing something that is compelling and often fun. Like many of our skills, we will continue to refine and extend our knowledge of data visualization throughout each stage of the course,  Mastery comes through repetition.</p>
+<section class="tex2jax_ignore mathjax_ignore" id="the-grammar-of-graphics">
+<h1>The Grammar of Graphics<a class="headerlink" href="#the-grammar-of-graphics" title="Permalink to this heading">¶</a></h1>
+<p>The seaborn Object Interface implements the <a class="reference external" href="https://www.amazon.com/dp/0387245448">Grammar of Graphics</a> in python. This approach to data visualization provides a powerful <em>abstraction</em> around data visualization concepts. The theory has been around for a long time, but has become mainstream in data science through the work of Hadley Wickham and <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> implementation in R.  Python libraries have only begun to adopt this concept more recently, but it can now be found in many python visualization libraries, including <code class="docutils literal notranslate"><span class="pre">plotnine</span></code>, <code class="docutils literal notranslate"><span class="pre">altair</span></code>, and <code class="docutils literal notranslate"><span class="pre">seaborn</span></code>’s object interface.[^1]</p>
+<p>[1]: Choosing packages is an important but tricky question. Many academic courses pretend to dismiss the issue, arguing that if students learn the fundamental principles, they will always be able to use the whatever package is fashionable at the time.  There is some truth to this, but ignores obvious realities in the learning experience.  The large, decentralized and rapidly moving landscape of python nevertheless makes this choice difficult, especially in comparison to the R language, where for the past decade at least, a single company with intense focus on pedagogy and predictable standards have created and promoted the tightly integrated and widely adoptied <code class="docutils literal notranslate"><span class="pre">tidyverse</span></code>.  Of those mentioned implementing a grammar of graphics: <code class="docutils literal notranslate"><span class="pre">plotnine</span></code> is nearly-identical translation of the <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> syntax into python. It has only the core functionality of <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> and a smaller user community.  <code class="docutils literal notranslate"><span class="pre">altair</span></code> provides python bindings to the popular <code class="docutils literal notranslate"><span class="pre">vega</span></code> library in javascript which also implementing the grammar of graphics, and can be particularly useful in generating dashboards where interactive javascript can enrich the design. <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> is already a popular within the Python community, and it’s recently added object-oriented syntax provides a more ‘pythonic’ design than the aforementioned examples built around the syntax of other languages.</p>
+<section id="the-power-of-abstractions">
+<h2>The Power of Abstractions<a class="headerlink" href="#the-power-of-abstractions" title="Permalink to this heading">¶</a></h2>
+<p>The fundemental principle of the grammar of graphics is that it expresses <em>mappings</em> from data to aesthetics of a graph (color, size, x/y position, etc). For instance, different colors are often used in graphs to indicate different groups:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="kn">import</span> <span class="nn">ibis</span>
+</span><span data-line="2"><span class="n">df</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../data/co2.csv&quot;</span><span class="p">)</span>
+</span><span data-line="3"><span class="n">df</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
+</span></pre></div>
+</div>
+</div>
+</div>
+<p>The grammar of graphics always maps data (i.e. columns) to abstract aesthetics.  For instance, the categorical values in the “name” column can be mapped to indicate the color:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="kn">import</span> <span class="nn">seaborn.objects</span> <span class="k">as</span> <span class="nn">so</span>
+</span><span data-line="2"><span class="p">(</span>
+</span><span data-line="3">    <span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;decimal_date&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+</span><span data-line="4">    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Line</span><span class="p">())</span>
+</span><span data-line="5"><span class="p">)</span>
+</span></pre></div>
+</div>
+</div>
+</div>
+<p>Many early plotting engines such as <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and even the original <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> do not fully reflect these principles. Learning the grammar makes it much easier to make and modify complex charts, while also encouraging best-practices such as tidy data and semantic code.
+Contrast this code with an alternative syntax that specifies the color manually:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</span><span data-line="2"><span class="n">df1</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">pivot_wider</span><span class="p">()</span>
+</span><span data-line="3"><span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;decimal_date&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;co2&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+</span><span data-line="4"><span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;decimal_date&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;smooth&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+</div>
+</div>
+<p>In this syntax, <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> still refer to columns of the data, but <code class="docutils literal notranslate"><span class="pre">color</span></code> is asserted manually.  The relationship between color and data structure is not captured here.  If we wanted to use a different color scheme, we would have to manually update each assertion.  This is harder to generalize and more error-prone.  Note also that while this approach is somewhat more concise for a single x/y line, it quickly becomes more verbose, repeating many parts that do not need repeating in the previous approach.  We will avoid this older syntax.</p>
+<p>In this example we can spot other advantages as well, such as default color theme informed by visualization research, and syntax that encourages the use of “tidy” data, in which columns represent variables and rows represent observations. This is sometimes called ‘long’ form, and more formally known as Cobb’s Third Normal Form. This format takes some getting used to, and frequently requires some transformation or ‘tidying’ to achieve, since many wild-caught data examples do not follow this best practice, especially older and smaller datasets.  We will have more to say about this later.</p>
+</section>
+<section id="additional-reading">
+<h2>Additional Reading<a class="headerlink" href="#additional-reading" title="Permalink to this heading">¶</a></h2>
+<p>Read through the following tutorials on Seaborn</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.anaconda.com/blog/an-introduction-to-the-seaborn-objects-system">Object Interface Introduction</a></p></li>
+<li><p><a class="reference external" href="https://anaconda.cloud/seaborn-objects-system">Object Interface Walk-through</a></p></li>
+</ul>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
+<p><a class="reference external" href="https://seaborn.pydata.org/tutorial/objects_interface.html">Seaborn Object Interface</a></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./reading"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+        </article><button class="back-to-top" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+  </svg>
+  <span>Back to top</span>
+</button><div class="navigation flex print:hidden"></div></div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright">
+  <p>
+    Made with
+    
+    <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+  </p>
+</div>
+      <div class="sy-foot-socials">
+<a href="https://github.com/espm-157" aria-label="GitHub">
+  <iconify-icon icon="simple-icons:github"></iconify-icon>
+</a>
+<a href="https://espm-157.slack.com" aria-label="Slack">
+  <iconify-icon icon="simple-icons:slack"></iconify-icon>
+</a><a href="https://datahub.berkeley.edu" aria-label="JupyterHub">
+    <i class="i-simpleicons jupyter"></i>
+  </a>
+</div>
+
+    </div>
+  </div>
+</footer>
+      <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+      <script src="../_static/jquery.js"></script>
+      <script src="../_static/underscore.js"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+      <script src="../_static/doctools.js"></script>
+      <script src="../_static/clipboard.min.js"></script>
+      <script src="../_static/copybutton.js"></script>
+      <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../_static/design-tabs.js"></script>
+      <script src="../_static/shibuya.js"></script>
+      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+      <script async="async" src="../_static/sphinx-thebe.js"></script></body>
+</html>

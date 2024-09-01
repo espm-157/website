@@ -92,7 +92,13 @@ data-aria-dark="Switch to auto color mode">
     <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
       <i class="i-lucide close"></i>
     </button>
-    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><a class="js-repo-stats repo-stats flex items-center" href="https://github.com/espm-157/website"
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
+<li><a class="reference internal" href="#automated-deploy">Automated Deploy</a></li>
+<li><a class="reference internal" href="#local-build-preview">Local Build/Preview</a></li>
+<li><a class="reference internal" href="#themes">Themes</a></li>
+<li><a class="reference internal" href="#previous-versions">Previous versions</a></li>
+</ul>
+</div><a class="js-repo-stats repo-stats flex items-center" href="https://github.com/espm-157/website"
   data-type="github" data-user="espm-157" data-repo="website">
   <span class="w-8 flex items-center justify-around shrink-0 text-3xl">
     <iconify-icon icon="simple-icons:github"></iconify-icon>
@@ -144,7 +150,31 @@ data-aria-dark="Switch to auto color mode">
 <h1>website for ESPM 157<a class="headerlink" href="#website-for-espm-157" title="Permalink to this heading">¶</a></h1>
 <p><a class="reference external" href="https://espm-157.carlboettiger.info">https://espm-157.carlboettiger.info</a></p>
 <p>As part of our course migration into python, this website is now being built with jupyter-book, and still under development.</p>
+<section id="automated-deploy">
+<h2>Automated Deploy<a class="headerlink" href="#automated-deploy" title="Permalink to this heading">¶</a></h2>
+<p>Edit markdown source files, site should render automatically via GitHub Actions, see <code class="docutils literal notranslate"><span class="pre">.github/workflows</span></code></p>
+</section>
+<section id="local-build-preview">
+<h2>Local Build/Preview<a class="headerlink" href="#local-build-preview" title="Permalink to this heading">¶</a></h2>
+<p>Make sure requirements are installed via <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span></code> or equivalently:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">pip</span> <span class="n">install</span> <span class="n">book</span><span class="o">-</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</span></pre></div>
+</div>
+<p>Render site and preview:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">make</span> <span class="n">html</span>
+</span><span data-line="2"><span class="n">make</span> <span class="n">serve</span>
+</span></pre></div>
+</div>
+<p>Preview at <code class="docutils literal notranslate"><span class="pre">https://${BASE}${JUPYTERHUB_SERVICE_PREFIX}proxy/8000/index.html&quot;</span></code>.  Adjust <code class="docutils literal notranslate"><span class="pre">BASE</span></code> env var in Makefile to your server (or <code class="docutils literal notranslate"><span class="pre">localhost</span></code>).</p>
+</section>
+<section id="themes">
+<h2>Themes<a class="headerlink" href="#themes" title="Permalink to this heading">¶</a></h2>
+<p>Site is currently built using <a class="reference external" href="https://github.com/lepture/shibuya">shibuya</a> theme for sphinx, which is not explicitly supported by jupyter-book.  Specifically, most configurations in the <code class="docutils literal notranslate"><span class="pre">html</span></code> section of <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> for jupyterbook will not be recognized, but the theme can be configured using standard sphinx configuration via the <code class="docutils literal notranslate"><span class="pre">sphinx.config</span></code> section.</p>
+</section>
+<section id="previous-versions">
+<h2>Previous versions<a class="headerlink" href="#previous-versions" title="Permalink to this heading">¶</a></h2>
 <p>For reference, see the <a class="reference external" href="https://espm-157.github.io/website-r/">course website</a> for the R-based version of this course, last taught in Fall 2023.  This version was built with <code class="docutils literal notranslate"><span class="pre">blogdown</span></code> / <code class="docutils literal notranslate"><span class="pre">hugo</span></code> using a custom theme based on the open source Material-Kit from Creative Tim.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
