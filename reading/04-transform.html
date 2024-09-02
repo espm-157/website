@@ -2,7 +2,7 @@
 <html lang="en" data-accent-color="violet" data-content_root="">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>The Grammar of Graphics - Data Science in Global Change Ecology</title><link rel="shortcut icon" href="../_static/favicon.png"/><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Transforming Data - Data Science in Global Change Ecology</title><link rel="shortcut icon" href="../_static/favicon.png"/><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><script>
     function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
     setColorMode(localStorage._theme||"auto");
   </script><link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -23,7 +23,7 @@
   --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
 }
 </style>
-    <meta property="og:type" content="website"/><meta property="og:title" content="The Grammar of Graphics"/>
+    <meta property="og:type" content="website"/><meta property="og:title" content="Transforming Data"/>
 <meta name="twitter:card" content="summary"/>
   </head>
 <body><div class="sy-head">
@@ -83,6 +83,13 @@ data-aria-dark="Switch to auto color mode">
 <li class="toctree-l1"><a class="reference internal" href="../overview/schedule.html"><svg version="4.0.0.63c5cb3" width="1.0em" height="1.0em" class="sd-material-icon sd-material-icon-view_module" viewBox="0 0 20 20" aria-hidden="true"><rect fill="none" height="20" width="20"></rect><path d="M8,15v-4.5h4V15H8z M13,9.5h4V5h-4V9.5z M8,5v4.5h4V5H8z M7,9.5V5H3v4.5H7z M13,10.5V15h4v-4.5H13z M7,10.5H3V15h4V10.5z"></path></svg> Module Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../overview/schedule.html#svg-version-4-0-0-63c5cb3-width-1-0em-height-1-0em-class-sd-material-icon-sd-material-icon-calendar-month-viewbox-0-0-20-20-aria-hidden-true-g-rect-fill-none-height-20-width-20-rect-g-g-path-d-m15-5-4h14v2h-1-5v2h-5v2h6v2h4-5c3-67-4-3-4-68-3-5-5v11c3-17-32-3-67-18-4-5-18h11c0-83-0-1-5-0-68-1-5-1-5v-11-c17-4-68-16-33-4-15-5-4z-m15-5-16-5h-11v9h11v16-5z-m7-5-12h6v-1-5h1-5v12z-m10-75-12h-1-5v-1-5h1-5v12z-m14-12h-1-5v-1-5h14v12z-m7-5-15h6v-1-5h1-5v15z-m10-75-15h-1-5v-1-5h1-5v15z-m14-15h-1-5v-1-5h14v15z-path-g-svg-weekly-plan"><svg version="4.0.0.63c5cb3" width="1.0em" height="1.0em" class="sd-material-icon sd-material-icon-calendar_month" viewBox="0 0 20 20" aria-hidden="true"><g><rect fill="none" height="20" width="20"></rect></g><g><path d="M15.5,4H14V2h-1.5v2h-5V2H6v2H4.5C3.67,4,3,4.68,3,5.5v11C3,17.32,3.67,18,4.5,18h11c0.83,0,1.5-0.68,1.5-1.5v-11 C17,4.68,16.33,4,15.5,4z M15.5,16.5h-11V9h11V16.5z M7.5,12H6v-1.5h1.5V12z M10.75,12h-1.5v-1.5h1.5V12z M14,12h-1.5v-1.5H14V12z M7.5,15H6v-1.5h1.5V15z M10.75,15h-1.5v-1.5h1.5V15z M14,15h-1.5v-1.5H14V15z"></path></g></svg> Weekly Plan</a></li>
 </ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Textbook</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="00-preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01-github-jupyter.html">Intro to GitHub &amp; JupyterHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-visualization-basics.html">Visualization Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-data-access.html">Accessing Real World Data</a></li>
+</ul>
 
         </div>
       </div></div>
@@ -93,9 +100,8 @@ data-aria-dark="Switch to auto color mode">
       <i class="i-lucide close"></i>
     </button>
     <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
-<li><a class="reference internal" href="#the-power-of-abstractions">The Power of Abstractions</a></li>
-<li><a class="reference internal" href="#additional-reading">Additional Reading</a></li>
-<li><a class="reference internal" href="#references">References</a></li>
+<li><a class="reference internal" href="#tidy-data">Tidy Data</a></li>
+<li><a class="reference internal" href="#concepts-libraries">Concepts &amp; Libraries</a></li>
 </ul>
 </div><a class="js-repo-stats repo-stats flex items-center" href="https://github.com/espm-157/website"
   data-type="github" data-user="espm-157" data-repo="website">
@@ -116,7 +122,7 @@ data-aria-dark="Switch to auto color mode">
     </span>
   </span>
 </a><div class="edit-this-page">
-  <a href="https://github.com/espm-157/website/blob/main/reading/04-visualization-basics.md">Edit this page</a>
+  <a href="https://github.com/espm-157/website/blob/main/reading/04-transform.md">Edit this page</a>
 </div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
   </aside>
   <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
@@ -132,7 +138,7 @@ data-aria-dark="Switch to auto color mode">
         <span>/</span>
         <meta itemprop="position" content="1" />
       </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <strong itemprop="name">The Grammar of Graphics</strong>
+        <strong itemprop="name">Transforming Data</strong>
         <meta itemprop="position" content="2" />
       </li></ol>
     <div class="xl:hidden ml-1">
@@ -145,61 +151,18 @@ data-aria-dark="Switch to auto color mode">
 </div><div class="flex flex-col break-words justify-between">
       <div class="min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
         <article class="yue" role="main">
-          <p>Courses involving computer programming frequently start with control structures and data structures.  Extensive education research has underscored the value in starting with visualization. Visualization offers ‘early wins’, producing something that is compelling and often fun. Like many of our skills, we will continue to refine and extend our knowledge of data visualization throughout each stage of the course,  Mastery comes through repetition.</p>
-<section class="tex2jax_ignore mathjax_ignore" id="the-grammar-of-graphics">
-<h1>The Grammar of Graphics<a class="headerlink" href="#the-grammar-of-graphics" title="Permalink to this heading">¶</a></h1>
-<p>The seaborn Object Interface implements the <a class="reference external" href="https://www.amazon.com/dp/0387245448">Grammar of Graphics</a> in python. This approach to data visualization provides a powerful <em>abstraction</em> around data visualization concepts. The theory has been around for a long time, but has become mainstream in data science through the work of Hadley Wickham and <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> implementation in R.  Python libraries have only begun to adopt this concept more recently, but it can now be found in many python visualization libraries, including <code class="docutils literal notranslate"><span class="pre">plotnine</span></code>, <code class="docutils literal notranslate"><span class="pre">altair</span></code>, and <code class="docutils literal notranslate"><span class="pre">seaborn</span></code>’s object interface.[^1]</p>
-<p>[1]: Choosing packages is an important but tricky question. Many academic courses pretend to dismiss the issue, arguing that if students learn the fundamental principles, they will always be able to use the whatever package is fashionable at the time.  There is some truth to this, but ignores obvious realities in the learning experience.  The large, decentralized and rapidly moving landscape of python nevertheless makes this choice difficult, especially in comparison to the R language, where for the past decade at least, a single company with intense focus on pedagogy and predictable standards have created and promoted the tightly integrated and widely adoptied <code class="docutils literal notranslate"><span class="pre">tidyverse</span></code>.  Of those mentioned implementing a grammar of graphics: <code class="docutils literal notranslate"><span class="pre">plotnine</span></code> is nearly-identical translation of the <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> syntax into python. It has only the core functionality of <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> and a smaller user community.  <code class="docutils literal notranslate"><span class="pre">altair</span></code> provides python bindings to the popular <code class="docutils literal notranslate"><span class="pre">vega</span></code> library in javascript which also implementing the grammar of graphics, and can be particularly useful in generating dashboards where interactive javascript can enrich the design. <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> is already a popular within the Python community, and it’s recently added object-oriented syntax provides a more ‘pythonic’ design than the aforementioned examples built around the syntax of other languages.</p>
-<section id="the-power-of-abstractions">
-<h2>The Power of Abstractions<a class="headerlink" href="#the-power-of-abstractions" title="Permalink to this heading">¶</a></h2>
-<p>The fundemental principle of the grammar of graphics is that it expresses <em>mappings</em> from data to aesthetics of a graph (color, size, x/y position, etc). For instance, different colors are often used in graphs to indicate different groups:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="kn">import</span> <span class="nn">ibis</span>
-</span><span data-line="2"><span class="n">df</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../data/co2.csv&quot;</span><span class="p">)</span>
-</span><span data-line="3"><span class="n">df</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
-</span></pre></div>
-</div>
-</div>
-</div>
-<p>The grammar of graphics always maps data (i.e. columns) to abstract aesthetics.  For instance, the categorical values in the “name” column can be mapped to indicate the color:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="kn">import</span> <span class="nn">seaborn.objects</span> <span class="k">as</span> <span class="nn">so</span>
-</span><span data-line="2"><span class="p">(</span>
-</span><span data-line="3">    <span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;decimal_date&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
-</span><span data-line="4">    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Line</span><span class="p">())</span>
-</span><span data-line="5"><span class="p">)</span>
-</span></pre></div>
-</div>
-</div>
-</div>
-<p>Many early plotting engines such as <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and even the original <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> do not fully reflect these principles. Learning the grammar makes it much easier to make and modify complex charts, while also encouraging best-practices such as tidy data and semantic code.
-Contrast this code with an alternative syntax that specifies the color manually:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-</span><span data-line="2"><span class="n">df1</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">pivot_wider</span><span class="p">()</span>
-</span><span data-line="3"><span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;decimal_date&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;co2&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
-</span><span data-line="4"><span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;decimal_date&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;smooth&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
-</span></pre></div>
-</div>
-</div>
-</div>
-<p>In this syntax, <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> still refer to columns of the data, but <code class="docutils literal notranslate"><span class="pre">color</span></code> is asserted manually.  The relationship between color and data structure is not captured here.  If we wanted to use a different color scheme, we would have to manually update each assertion.  This is harder to generalize and more error-prone.  Note also that while this approach is somewhat more concise for a single x/y line, it quickly becomes more verbose, repeating many parts that do not need repeating in the previous approach.  We will avoid this older syntax.</p>
-<p>In this example we can spot other advantages as well, such as default color theme informed by visualization research, and syntax that encourages the use of “tidy” data, in which columns represent variables and rows represent observations. This is sometimes called ‘long’ form, and more formally known as Cobb’s Third Normal Form. This format takes some getting used to, and frequently requires some transformation or ‘tidying’ to achieve, since many wild-caught data examples do not follow this best practice, especially older and smaller datasets.  We will have more to say about this later.</p>
+          <section class="tex2jax_ignore mathjax_ignore" id="transforming-data">
+<h1>Transforming Data<a class="headerlink" href="#transforming-data" title="Permalink to this heading">¶</a></h1>
+<section id="tidy-data">
+<h2>Tidy Data<a class="headerlink" href="#tidy-data" title="Permalink to this heading">¶</a></h2>
+<p>Analysis-ready data, or ‘tidy data’, is a central concept in data science.</p>
 </section>
-<section id="additional-reading">
-<h2>Additional Reading<a class="headerlink" href="#additional-reading" title="Permalink to this heading">¶</a></h2>
-<p>Read through the following tutorials on Seaborn</p>
+<section id="concepts-libraries">
+<h2>Concepts &amp; Libraries<a class="headerlink" href="#concepts-libraries" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.anaconda.com/blog/an-introduction-to-the-seaborn-objects-system">Object Interface Introduction</a></p></li>
-<li><p><a class="reference external" href="https://anaconda.cloud/seaborn-objects-system">Object Interface Walk-through</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pandas</span></code> and it’s discontents.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ibis-framework</span></code></p></li>
 </ul>
-</section>
-<section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
-<p><a class="reference external" href="https://seaborn.pydata.org/tutorial/objects_interface.html">Seaborn Object Interface</a></p>
 </section>
 </section>
 
