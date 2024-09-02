@@ -5,4 +5,12 @@ parts:
   chapters:
   - file: overview/syllabus
   - file: overview/schedule
-
+- caption: Textbook
+  chapters:
+  - file: reading/00-preface  
+  - file: reading/01-github-jupyter
+  - file: reading/02-visualization-basics
+  - file: reading/03-data-access
+  
+  
+  
