@@ -40,14 +40,14 @@
   <input type="text" name="q" placeholder="Search" />
   <kbd>/</kbd>
 </form><div class="sy-head-socials">
-  <a href="https://github.com/espm-157" aria-label="GitHub">
+  <a href="https://github.com/espm-157-f24" aria-label="GitHub">
     <iconify-icon icon="simple-icons:github"></iconify-icon>
   </a>
   <a href="https://espm-157.slack.com" aria-label="Slack">
     <iconify-icon icon="simple-icons:slack"></iconify-icon>
-  </a><a href="https://datahub.berkeley.edu" aria-label="JupyterHub">            
- <i class="i-simpleicons jupyter"></i>
-</a>
+  </a><a href="https://nature.datahub.berkeley.edu" aria-label="JupyterHub">            
+  <iconify-icon icon="simple-icons:jupyter"></iconify-icon>
+  </a>
 </div>
 
       <!--
@@ -103,6 +103,7 @@ data-aria-dark="Switch to auto color mode">
 <li><a class="reference internal" href="#automated-deploy">Automated Deploy</a></li>
 <li><a class="reference internal" href="#local-build-preview">Local Build/Preview</a></li>
 <li><a class="reference internal" href="#themes">Themes</a></li>
+<li><a class="reference internal" href="#developing">Developing</a></li>
 <li><a class="reference internal" href="#previous-versions">Previous versions</a></li>
 </ul>
 </div><a class="js-repo-stats repo-stats flex items-center" href="https://github.com/espm-157/website"
@@ -178,6 +179,14 @@ data-aria-dark="Switch to auto color mode">
 <h2>Themes<a class="headerlink" href="#themes" title="Permalink to this heading">¶</a></h2>
 <p>Site is currently built using <a class="reference external" href="https://github.com/lepture/shibuya">shibuya</a> theme for sphinx, which is not explicitly supported by jupyter-book.  Specifically, most configurations in the <code class="docutils literal notranslate"><span class="pre">html</span></code> section of <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> for jupyterbook will not be recognized, but the theme can be configured using standard sphinx configuration via the <code class="docutils literal notranslate"><span class="pre">sphinx.config</span></code> section.</p>
 </section>
+<section id="developing">
+<h2>Developing<a class="headerlink" href="#developing" title="Permalink to this heading">¶</a></h2>
+<p>Custom navbar and footer:  edit <code class="docutils literal notranslate"><span class="pre">_templates/parials/foot-socials.html</span></code> and <code class="docutils literal notranslate"><span class="pre">_templates/partials/nav-socials.html</span></code> accordingly as in the example there.  Note that icons must use <code class="docutils literal notranslate"><span class="pre">iconify-icon</span></code> tags, as in:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="o">&lt;</span><span class="n">iconify</span><span class="o">-</span><span class="n">icon</span> <span class="n">icon</span><span class="o">=</span><span class="s2">&quot;simple-icons:jupyter&quot;</span><span class="o">&gt;&lt;/</span><span class="n">iconify</span><span class="o">-</span><span class="n">icon</span><span class="o">&gt;</span>
+</span></pre></div>
+</div>
+<p>To add additional icons, it is necessary to compile them using the <code class="docutils literal notranslate"><span class="pre">genicons.js</span></code> script with path to icon svgs, e.g. from <a class="reference external" href="https://simpleicons.org/">https://simpleicons.org/</a>, and add then add the resulting CSS lines to the custom css files in <code class="docutils literal notranslate"><span class="pre">_static</span></code>.  Note that <a class="reference external" href="https://jupyterbook.org/en/stable/advanced/html.html">Jupyterbook will automatically</a> pick up css files in <code class="docutils literal notranslate"><span class="pre">_static</span></code>.</p>
+</section>
 <section id="previous-versions">
 <h2>Previous versions<a class="headerlink" href="#previous-versions" title="Permalink to this heading">¶</a></h2>
 <p>For reference, see the <a class="reference external" href="https://espm-157.github.io/website-r/">course website</a> for the R-based version of this course, last taught in Fall 2023.  This version was built with <code class="docutils literal notranslate"><span class="pre">blogdown</span></code> / <code class="docutils literal notranslate"><span class="pre">hugo</span></code> using a custom theme based on the open source Material-Kit from Creative Tim.</p>
@@ -223,13 +232,13 @@ data-aria-dark="Switch to auto color mode">
   </p>
 </div>
       <div class="sy-foot-socials">
-<a href="https://github.com/espm-157" aria-label="GitHub">
+<a href="https://github.com/espm-157-f24" aria-label="GitHub">
   <iconify-icon icon="simple-icons:github"></iconify-icon>
 </a>
 <a href="https://espm-157.slack.com" aria-label="Slack">
   <iconify-icon icon="simple-icons:slack"></iconify-icon>
-</a><a href="https://datahub.berkeley.edu" aria-label="JupyterHub">
-    <i class="i-simpleicons jupyter"></i>
+</a><a href="https://nature.datahub.berkeley.edu" aria-label="JupyterHub">
+  <iconify-icon icon="simple-icons:jupyter"></iconify-icon>
   </a>
 </div>
 
