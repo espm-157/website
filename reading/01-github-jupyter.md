@@ -30,7 +30,7 @@ GitHub is a commercial website platform acquired by Microsoft and widely used by
 - Create an acount on [GitHub](https://github.com)
 - Use the GitHub Classroom magic link distributed in class to create a GitHub repository under the course's GitHub Organization [espm-157](https://github.com/espm-157).
 
-As we progress, we will learn more about how to use `git` and GitHub -- how to recover earlier versions, create branches and pull requests, leverage automation in GitHub Actions and much else.  
+Continue below.  As we progress, we will learn more about how to use `git` and GitHub -- how to recover earlier versions, create branches and pull requests, leverage automation in GitHub Actions and much else.  
 
 
 ### JupyterHub
@@ -41,3 +41,15 @@ The [Project Jupyter](https://en.wikipedia.org/wiki/Project_Jupyter) is an open-
 
 JupyterHub, JupyterLab, and Jupyter Notebooks -- the Jupyter ecosystem is a rich and changing landscape, which can often be confusing!  A JupyterHub (such as ours, <https://nature.datahub.berkeley.edu>, sometimes refered to at Berkeley as a DataHub) can serve many users with individual instances of the JupyterLab (a web-based [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)), which can in turn allow a user to work with many Jupyter Notebooks (and many other file formats and interfaces, including RStudio and the open-source Visual Studio Code Server).  Jupyter Notebooks are individual files (previously known as ipython notebooks, and still indicated with `ipynb` extension), a JSON-based serialization combining code, code outputs, and markdown text.  These notebooks are used throughout the data science community in industry and academia, and can be used not only in a JupyterLab IDE but in a wide variety of IDEs that have shamelessly copied it, including Google Colab, Microsoft VSCode, and Amazon SageMaker.  
 
+### GitHub + Jupyterhub
+
+Try to `clone` a our "authentication" repo, <https://github.com/espm-157-f24/auth> into your Jupyterhub using the Clone Repository button from the Git menu (left side).  (We will review this together in class).
+
+![](/_static/img/git-clone.png)
+
+Then use the "File" menu on the left side to open the `auth` folder and then opn the Jupyter Notebook, `github-login.ipynb`.  Try running the cell in that notebook.
+
+![](/_static/img/file-menu.png)
+
+
+Tada! You have authenticated with GitHub on your Jupyterhub.  In future, you will only need to re-open this login notebook to authenticate. 
