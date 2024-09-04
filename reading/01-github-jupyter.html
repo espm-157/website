@@ -103,6 +103,7 @@ data-aria-dark="Switch to auto color mode">
 <li><a class="reference internal" href="#cloud-platforms">Cloud Platforms</a></li>
 <li><a class="reference internal" href="#github">GitHub</a></li>
 <li><a class="reference internal" href="#jupyterhub">JupyterHub</a></li>
+<li><a class="reference internal" href="#github-jupyterhub">GitHub + Jupyterhub</a></li>
 </ul>
 </div><a class="js-repo-stats repo-stats flex items-center" href="https://github.com/espm-157/website"
   data-type="github" data-user="espm-157" data-repo="website">
@@ -167,7 +168,7 @@ data-aria-dark="Switch to auto color mode">
 <li><p>Create an acount on <a class="reference external" href="https://github.com">GitHub</a></p></li>
 <li><p>Use the GitHub Classroom magic link distributed in class to create a GitHub repository under the course’s GitHub Organization <a class="reference external" href="https://github.com/espm-157">espm-157</a>.</p></li>
 </ul>
-<p>As we progress, we will learn more about how to use <code class="docutils literal notranslate"><span class="pre">git</span></code> and GitHub – how to recover earlier versions, create branches and pull requests, leverage automation in GitHub Actions and much else.</p>
+<p>Continue below.  As we progress, we will learn more about how to use <code class="docutils literal notranslate"><span class="pre">git</span></code> and GitHub – how to recover earlier versions, create branches and pull requests, leverage automation in GitHub Actions and much else.</p>
 </section>
 <section id="jupyterhub">
 <h2>JupyterHub<a class="headerlink" href="#jupyterhub" title="Permalink to this heading">¶</a></h2>
@@ -176,6 +177,14 @@ data-aria-dark="Switch to auto color mode">
 <li><p>Log in to our JupyterHub, <a class="reference external" href="https://nature.datahub.berkeley.edu">https://nature.datahub.berkeley.edu</a></p></li>
 </ul>
 <p>JupyterHub, JupyterLab, and Jupyter Notebooks – the Jupyter ecosystem is a rich and changing landscape, which can often be confusing!  A JupyterHub (such as ours, <a class="reference external" href="https://nature.datahub.berkeley.edu">https://nature.datahub.berkeley.edu</a>, sometimes refered to at Berkeley as a DataHub) can serve many users with individual instances of the JupyterLab (a web-based <a class="reference external" href="https://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a>), which can in turn allow a user to work with many Jupyter Notebooks (and many other file formats and interfaces, including RStudio and the open-source Visual Studio Code Server).  Jupyter Notebooks are individual files (previously known as ipython notebooks, and still indicated with <code class="docutils literal notranslate"><span class="pre">ipynb</span></code> extension), a JSON-based serialization combining code, code outputs, and markdown text.  These notebooks are used throughout the data science community in industry and academia, and can be used not only in a JupyterLab IDE but in a wide variety of IDEs that have shamelessly copied it, including Google Colab, Microsoft VSCode, and Amazon SageMaker.</p>
+</section>
+<section id="github-jupyterhub">
+<h2>GitHub + Jupyterhub<a class="headerlink" href="#github-jupyterhub" title="Permalink to this heading">¶</a></h2>
+<p>Try to <code class="docutils literal notranslate"><span class="pre">clone</span></code> a our “authentication” repo, <a class="reference external" href="https://github.com/espm-157-f24/auth">https://github.com/espm-157-f24/auth</a> into your Jupyterhub using the Clone Repository button from the Git menu (left side).  (We will review this together in class).</p>
+<p><img alt="" src="../_images/git-clone.png" /></p>
+<p>Then use the “File” menu on the left side to open the <code class="docutils literal notranslate"><span class="pre">auth</span></code> folder and then opn the Jupyter Notebook, <code class="docutils literal notranslate"><span class="pre">github-login.ipynb</span></code>.  Try running the cell in that notebook.</p>
+<p><img alt="" src="../_images/file-menu.png" /></p>
+<p>Tada! You have authenticated with GitHub on your Jupyterhub.  In future, you will only need to re-open this login notebook to authenticate.</p>
 </section>
 </section>
 
