@@ -41,9 +41,13 @@ The [Project Jupyter](https://en.wikipedia.org/wiki/Project_Jupyter) is an open-
 
 JupyterHub, JupyterLab, and Jupyter Notebooks -- the Jupyter ecosystem is a rich and changing landscape, which can often be confusing!  A JupyterHub (such as ours, <https://nature.datahub.berkeley.edu>, sometimes refered to at Berkeley as a DataHub) can serve many users with individual instances of the JupyterLab (a web-based [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)), which can in turn allow a user to work with many Jupyter Notebooks (and many other file formats and interfaces, including RStudio and the open-source Visual Studio Code Server).  Jupyter Notebooks are individual files (previously known as ipython notebooks, and still indicated with `ipynb` extension), a JSON-based serialization combining code, code outputs, and markdown text.  These notebooks are used throughout the data science community in industry and academia, and can be used not only in a JupyterLab IDE but in a wide variety of IDEs that have shamelessly copied it, including Google Colab, Microsoft VSCode, and Amazon SageMaker.  
 
-### GitHub + Jupyterhub
+### Initial setup
 
-Try to `clone` a our "authentication" repo, <https://github.com/espm-157-f24/auth> into your Jupyterhub using the Clone Repository button from the Git menu (left side).  (We will review this together in class).
+**Authentication** 
+
+There's a few one-time setup steps we need to work with Git and GitHub from Jupyterhub.  First, in order to access _private_ repositories, we need a way for our JupyterHub instance to authenticate our identity when trying to access our private stuff on GitHub, or when trying to share (write) stuff to our GitHub account. For security purposes, we will use a token-based authentication process to authenticate with GitHub.
+
+Try to `clone` our "authentication" repo, <https://github.com/espm-157-f24/auth> into your Jupyterhub using the Clone Repository button from the Git menu (left side).  (We will review this together in class).
 
 ![](/_static/img/git-clone.png)
 
@@ -52,4 +56,19 @@ Then use the "File" menu on the left side to open the `auth` folder and then opn
 ![](/_static/img/file-menu.png)
 
 
-Tada! You have authenticated with GitHub on your Jupyterhub.  In future, you will only need to re-open this login notebook to authenticate. 
+Tada! You have authenticated with GitHub on your Jupyterhub.  In future, you will only need to re-open this login notebook to authenticate, as it will remain on your JupyterHub.
+
+You can now clone private repositories.  Note that before you can clone a new repository, you will need to navigate your file-pane out of the current `auth/` repo and back to the home directory by clicking the folder icon.
+
+
+**Introduce yourself to git**
+
+Commits in Git are 'signed' to indicate who made the changes.  The first time git is set up it needs to know the user's name and email by running the following commands in a terminal.  Use the "launcher" menu in Jupyter to open a new terminal and run the following commands. 
+
+```
+git config --global user.name "Your Name"
+git config --global user.email "you@berkeley.edu"
+```
+
+Some users perfer to use pseudonyms. The email does not have to be valid, though using the same address as you registered with GitHub will let it display your commits as comming from you.  Now that git knows who you are, we are ready to start making our own 'commits'.  
+
