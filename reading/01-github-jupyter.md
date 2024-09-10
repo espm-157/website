@@ -70,5 +70,5 @@ git config --global user.name "Your Name"
 git config --global user.email "you@berkeley.edu"
 ```
 
-Some users perfer to use pseudonyms. The email does not have to be valid, though using the same address as you registered with GitHub will let it display your commits as comming from you.  Now that git knows who you are, we are ready to start making our own 'commits'.  
+Some users perfer to use pseudonyms. The email does not have to be valid, though using the same address as you registered with GitHub will let it display your commits as comming from you.  Now that git knows who you are, we are ready to start making our own commits.  
 
