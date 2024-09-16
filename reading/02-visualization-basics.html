@@ -89,6 +89,7 @@ data-aria-dark="Switch to auto color mode">
 <li class="toctree-l1"><a class="reference internal" href="01-github-jupyter.html">Intro to GitHub &amp; JupyterHub</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Visualization Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03-data-access.html">Accessing Real World Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-transform.html">Transforming Data</a></li>
 </ul>
 
         </div>
@@ -121,7 +122,7 @@ data-aria-dark="Switch to auto color mode">
     </span>
   </span>
 </a><div class="edit-this-page">
-  <a href="https://github.com/espm-157/website/blob/main/reading/02-visualization-basics.md">Edit this page</a>
+  <a href="https://github.com/espm-157/website/blob/main/reading/02-visualization-basics.ipynb">Edit this page</a>
 </div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
   </aside>
   <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
@@ -160,17 +161,112 @@ data-aria-dark="Switch to auto color mode">
 <p>The fundemental principle of the grammar of graphics is that it expresses <em>mappings</em> from data to aesthetics of a graph (color, size, x/y position, etc). For instance, different colors are often used in graphs to indicate different groups:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="kn">import</span> <span class="nn">ibis</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="kn">import</span> <span class="nn">ibis</span>
 </span><span data-line="2"><span class="n">df</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../data/co2.csv&quot;</span><span class="p">)</span>
 </span><span data-line="3"><span class="n">df</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
 </span></pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>decimal_date</th>
+      <th>name</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1958.2027</td>
+      <td>co2</td>
+      <td>315.71</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1958.2027</td>
+      <td>smooth</td>
+      <td>314.44</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1958.2877</td>
+      <td>co2</td>
+      <td>317.45</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1958.2877</td>
+      <td>smooth</td>
+      <td>315.16</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1958.3699</td>
+      <td>co2</td>
+      <td>317.51</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1589</th>
+      <td>2024.3750</td>
+      <td>smooth</td>
+      <td>423.61</td>
+    </tr>
+    <tr>
+      <th>1590</th>
+      <td>2024.4583</td>
+      <td>co2</td>
+      <td>426.91</td>
+    </tr>
+    <tr>
+      <th>1591</th>
+      <td>2024.4583</td>
+      <td>smooth</td>
+      <td>424.44</td>
+    </tr>
+    <tr>
+      <th>1592</th>
+      <td>2024.5417</td>
+      <td>co2</td>
+      <td>425.55</td>
+    </tr>
+    <tr>
+      <th>1593</th>
+      <td>2024.5417</td>
+      <td>smooth</td>
+      <td>425.10</td>
+    </tr>
+  </tbody>
+</table>
+<p>1594 rows × 3 columns</p>
+</div></div></div>
 </div>
 <p>The grammar of graphics always maps data (i.e. columns) to abstract aesthetics.  For instance, the categorical values in the “name” column can be mapped to indicate the color:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="c1"># Modern</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="c1"># Modern</span>
 </span><span data-line="2"><span class="kn">import</span> <span class="nn">seaborn.objects</span> <span class="k">as</span> <span class="nn">so</span>
 </span><span data-line="3"><span class="p">(</span>
 </span><span data-line="4">    <span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;decimal_date&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
@@ -179,18 +275,27 @@ data-aria-dark="Switch to auto color mode">
 </span></pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/6ae1ffdbd2b93a44af6a42d28a09b0225056dcbf45585ba56c67b569233d1242.png" src="../_images/6ae1ffdbd2b93a44af6a42d28a09b0225056dcbf45585ba56c67b569233d1242.png" />
+</div>
 </div>
 <p>Many early plotting engines such as <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and even the original <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> do not fully reflect these principles. Learning the grammar makes it much easier to make and modify complex charts, while also encouraging best-practices such as tidy data and semantic code.
 Contrast this code with an alternative syntax that specifies the color manually:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="c1"># Example of older verbose code</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="c1"># Example of older verbose code</span>
 </span><span data-line="2"><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 </span><span data-line="3"><span class="n">df1</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">pivot_wider</span><span class="p">()</span>
 </span><span data-line="4"><span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;decimal_date&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;co2&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
 </span><span data-line="5"><span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;decimal_date&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;smooth&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
 </span></pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span data-line="1">&lt;Axes: xlabel=&#39;decimal_date&#39;, ylabel=&#39;co2&#39;&gt;
+</span></pre></div>
+</div>
+<img alt="../_images/eac3260ef9fae3b3481f41eae5d97ada10eb847b6e631470692a624436a2db32.png" src="../_images/eac3260ef9fae3b3481f41eae5d97ada10eb847b6e631470692a624436a2db32.png" />
 </div>
 </div>
 <p>In this syntax, <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> still refer to columns of the data, but <code class="docutils literal notranslate"><span class="pre">color</span></code> is asserted manually.  The relationship between color and data structure is not captured here.  If we wanted to use a different color scheme, we would have to manually update each assertion.  This is harder to generalize and more error-prone.  Note also that while this approach is somewhat more concise for a single x/y line, it quickly becomes more verbose, repeating many parts that do not need repeating in the previous approach.  We will avoid this older syntax.</p>
