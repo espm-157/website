@@ -73,7 +73,7 @@ Week     | Module                                      | Topics                 
 week 1   | {material-regular}`device_thermostat;1.5em` | GitHub, JupyterHub         | [{material-regular}`book;1.5em;sd-text-info`](/reading/01-github-jupyter/)
 week 2   | {material-regular}`device_thermostat;1.5em` | viz: `seaborn`             | [{material-regular}`book;1.5em;sd-text-info`](/reading/02-visualization-basics/)
 week 3   | {material-regular}`device_thermostat;1.5em` | data: `pandas` / `ibis`    | [{material-regular}`book;1.5em;sd-text-info`](/reading/03-data-access/)
-week 4   | {material-regular}`device_thermostat;1.5em` | Collab,  PRs, CI           | [{material-regular}`book;1.5em;sd-text-info`](#)
+week 4   | {material-regular}`device_thermostat;1.5em` | Collab,  PRs, CI           | [{material-regular}`book;1.5em;sd-text-info`](/reading/04-transform/)
 week 5   | {material-regular}`directions_boat;1.5em`   | Module intro               | [{material-regular}`book;1.5em;sd-text-info`](#)
 week 6   | {material-regular}`directions_boat;1.5em`   | RDBs, joins                | [{material-regular}`book;1.5em;sd-text-info`](#)
 week 7   | {material-regular}`directions_boat;1.5em`   | discovery                  | [{material-regular}`book;1.5em;sd-text-info`](#)
