@@ -39,6 +39,7 @@ df.to_pandas()
 The grammar of graphics always maps data (i.e. columns) to abstract aesthetics.  For instance, the categorical values in the "name" column can be mapped to indicate the color:
 
 ```{code-cell} ipython3
+# Modern
 import seaborn.objects as so
 (
     so.Plot(df, x = 'decimal_date', y='value', color="name")
@@ -50,6 +51,7 @@ Many early plotting engines such as `matplotlib` and even the original `seaborn`
 Contrast this code with an alternative syntax that specifies the color manually:
 
 ```{code-cell} ipython3
+# Example of older verbose code
 import seaborn as sns
 df1 = df.pivot_wider()
 sns.lineplot(df1, x="decimal_date", y = "co2", color="blue")
