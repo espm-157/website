@@ -101,7 +101,6 @@ data-aria-dark="Switch to auto color mode">
     </button>
     <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
 <li><a class="reference internal" href="#tidy-data">Tidy Data</a></li>
-<li><a class="reference internal" href="#concepts-libraries">Concepts &amp; Libraries</a></li>
 </ul>
 </div><a class="js-repo-stats repo-stats flex items-center" href="https://github.com/espm-157/website"
   data-type="github" data-user="espm-157" data-repo="website">
@@ -155,14 +154,74 @@ data-aria-dark="Switch to auto color mode">
 <h1>Transforming Data<a class="headerlink" href="#transforming-data" title="Permalink to this heading">¶</a></h1>
 <section id="tidy-data">
 <h2>Tidy Data<a class="headerlink" href="#tidy-data" title="Permalink to this heading">¶</a></h2>
-<p>Analysis-ready data, or ‘tidy data’, is a central concept in data science.</p>
-</section>
-<section id="concepts-libraries">
-<h2>Concepts &amp; Libraries<a class="headerlink" href="#concepts-libraries" title="Permalink to this heading">¶</a></h2>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pandas</span></code> and it’s discontents.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ibis-framework</span></code></p></li>
-</ul>
+<p>Analysis-ready data, or ‘tidy data’, is a central concept in data science.  The term was coined by Hadley Wickham<a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> to describe best practices long known in the relational database community, specifically, conventions around formatting tabular data known as <a class="reference external" href="https://en.wikipedia.org/wiki/Third_normal_form">Cobb’s Third Normal Form</a>. In this form, each row represents an observation and each column represents a variable. These conventions allow us to leverage powerful software and techniques for data analysis and visualization more easily, as many such tools are designed with tidy data structures in mind.  However, wild-caught data often does not follow these rules. Consider this example of NASA data on land ice mass:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span><span data-line="2">
+</span><span data-line="3"><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;http://climate.nasa.gov/system/internal_resources/details/original/499_GRN_ANT_mass_changes.csv&quot;</span><span class="p">,</span>
+</span><span data-line="4">                <span class="n">skiprows</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;greenland&#39;</span><span class="p">,</span> <span class="s1">&#39;antarctica&#39;</span><span class="p">])</span>
+</span><span data-line="5"><span class="n">df</span>
+</span></pre></div>
+</div>
+</div>
+</div>
+<p>The column heading we have called ‘greenland’ is not a single variable (feature) being observed, but in fact a mashup of two different variables – the ice mass (in gigatons) on the location of Greenland. (In the original data file it has the name <code class="docutils literal notranslate"><span class="pre">Greenland</span> <span class="pre">mass</span> <span class="pre">(Gt)</span></code>, which more clearly indicates this mash-up but does not follow our naming conventions.  Likewise the column called ‘antarctica’ again measures land ice mass, but at a different location.  A “tidy” version of this data would use one column to indicate location (Greenland or Antarctica) and another column to indicate ice mass at that location.</p>
+<p>To fix this, we need to <em>pivot</em> the data table into a “long” form, with a single column for ice mass and a single column for location.  While there are many ways to do this, we will rely on the <code class="docutils literal notranslate"><span class="pre">ibis</span></code> framework which provides one of the most consistent and powerful interfaces for tabular data operations.  We begin by loading the ibis library and establishing a “connection” to a backend engine.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="kn">import</span> <span class="nn">ibis</span>
+</span><span data-line="2"><span class="kn">from</span> <span class="nn">ibis</span> <span class="kn">import</span> <span class="n">selectors</span> <span class="k">as</span> <span class="n">s</span>
+</span><span data-line="3"><span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+</span></pre></div>
+</div>
+</div>
+</div>
+<p>We add our pandas table to the ibis connection using the method <code class="docutils literal notranslate"><span class="pre">create_table</span></code>.  This allows us to manipulate the table using ibis methods rather than pandas.  We will later see other ways to create <code class="docutils literal notranslate"><span class="pre">ibis</span></code> tables directly from a wide range of data other than pandas data.frames.</p>
+<p>We then use the <code class="docutils literal notranslate"><span class="pre">pivot_longer()</span></code> method to transform our data.  We use the <code class="docutils literal notranslate"><span class="pre">ibis.selectors</span></code> methods to indicate which columns we are aggregating in the pivot.  Optionally, we indicate the name of the new column that will contain the previous column names (greenland, antarctica) and the name of the column that will contain the cell values (the ice mass).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">land_ice</span> <span class="o">=</span> <span class="p">(</span><span class="n">con</span>
+</span><span data-line="2"> <span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="s2">&quot;land_ice&quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span data-line="3"> <span class="o">.</span><span class="n">pivot_longer</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">any_of</span><span class="p">(</span><span class="s1">&#39;greenland&#39;</span><span class="p">,</span> <span class="s1">&#39;antarctica&#39;</span><span class="p">),</span>
+</span><span data-line="4">               <span class="n">names_to</span><span class="o">=</span> <span class="s2">&quot;location&quot;</span><span class="p">,</span> <span class="n">values_to</span> <span class="o">=</span> <span class="s2">&quot;ice_mass&quot;</span><span class="p">)</span>
+</span><span data-line="5"><span class="p">)</span>
+</span><span data-line="6">
+</span><span data-line="7"><span class="n">land_ice</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</span></pre></div>
+</div>
+</div>
+</div>
+<p>Note the use of <code class="docutils literal notranslate"><span class="pre">.execute()</span></code> at the end of the ibis command to see the results.  <code class="docutils literal notranslate"><span class="pre">ibis</span></code> uses a sophisticated strategy called “lazy evaluation”, in which it does not actually run the code we provide until absolutely necessary.  While this feels cumbersome now, these small extra steps will pay big dividends for us when we move to big data sources that historically courses have needed to teach entirely different tools for.</p>
+<p>Now that are data is ‘tidy’, some operations are much easier. For instance, plotting two lines, with a legend, merely requires the single aesthetic mapping of color to the location column: <code class="docutils literal notranslate"><span class="pre">color</span> <span class="pre">=</span> <span class="pre">&quot;location&quot;</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="kn">import</span> <span class="nn">seaborn.objects</span> <span class="k">as</span> <span class="nn">so</span>
+</span><span data-line="2"><span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">land_ice</span><span class="p">,</span> 
+</span><span data-line="3">             <span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> 
+</span><span data-line="4">             <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;ice_mass&quot;</span><span class="p">,</span> 
+</span><span data-line="5">             <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;location&quot;</span><span class="p">)</span>
+</span><span data-line="6">     <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Line</span><span class="p">())</span>
+</span><span data-line="7">    <span class="p">)</span>
+</span><span data-line="8">
+</span><span data-line="9"><span class="n">p</span>
+</span></pre></div>
+</div>
+</div>
+</div>
+<p>We can map this additional column to different aesthetics just as easily.  This illustrates the value of well-structured data and abstract grammar for operating on it.  For instance, having subplots (facets) based on this data:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">p</span><span class="o">.</span><span class="n">facet</span><span class="p">(</span><span class="s2">&quot;location&quot;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+</div>
+</div>
+<hr class="footnotes docutils" />
+<aside class="footnote brackets" id="id2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Wickham (2014). Tidy data.  Journal of Statistical Software 14(10) DOI:10.18637/jss.v059.i10 <a class="reference external" href="https://vita.had.co.nz/papers/tidy-data.pdf">https://vita.had.co.nz/papers/tidy-data.pdf</a></p>
+</aside>
 </section>
 </section>
 
