@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en" data-accent-color="violet" data-content_root="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ibis Single Table Verbs - Data Science in Global Change Ecology</title><link rel="shortcut icon" href="../_static/favicon.png"/><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(localStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/shibuya.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link media="print" rel="stylesheet" type="text/css" href="../_static/print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/simpleicons.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    <meta property="og:type" content="website"/><meta property="og:title" content="ibis Single Table Verbs"/>
+<meta name="twitter:card" content="summary"/>
+  </head>
+<body><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand" href="../index.html">
+      <img class="light-logo" src="../_static/hex.png" alt="ESPM-157" height="28" loading="lazy" />
+      <img class="dark-logo" src="../_static/hex.png" alt="ESPM-157" height="28" loading="lazy" />
+      <strong>ESPM-157</strong>
+    </a>
+    <div class="sy-head-nav" id="HeadNav">
+      <nav class="sy-head-links"><ul><li class="link"><a href="../index.html">Home</a></li></ul></nav>
+      <div class="sy-head-extra flex items-center print:hidden"><form class="searchbox flex items-center" action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <kbd>/</kbd>
+</form><div class="sy-head-socials">
+  <a href="https://github.com/espm-157-f24" aria-label="GitHub">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </a>
+  <a href="https://espm-157.slack.com" aria-label="Slack">
+    <iconify-icon icon="simple-icons:slack"></iconify-icon>
+  </a><a href="https://nature.datahub.berkeley.edu" aria-label="JupyterHub">            
+  <iconify-icon icon="simple-icons:jupyter"></iconify-icon>
+  </a>
+</div>
+
+      <!--
+      <svg role="img" viewBox="0 0 24 24" height="24" xmlns="http://www.w3.org/2000/svg"><title>Jupyter</title><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"/></svg>
+      -->
+
+ <!--    
+<img height="24" src="https://cdn.simpleicons.org/jupyter" />
+ --></div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden"><button class="js-theme theme-switch flex items-center"
+data-aria-auto="Switch to light color mode"
+data-aria-light="Switch to dark color mode"
+data-aria-dark="Switch to auto color mode">
+<i class="i-lucide theme-icon"></i>
+</button><button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="HeadNav" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2 -translate-x-2"></span>
+          <span class="hamburger_3 -translate-x-1"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading" aria-level="3"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/syllabus.html"><svg version="4.0.0.63c5cb3" width="1.0em" height="1.0em" class="sd-material-icon sd-material-icon-gavel" viewBox="0 0 24 24" aria-hidden="true"><g><rect fill="none" height="24" width="24" x="0"></rect></g><g><g><rect height="20" transform="matrix(0.7075 -0.7067 0.7067 0.7075 -5.6854 13.7194)" width="4" x="11.73" y="3.73"></rect><rect height="8" transform="matrix(0.707 -0.7072 0.7072 0.707 0.3157 11.246)" width="4" x="11.73" y="1.24"></rect><rect height="8" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -8.1722 7.7256)" width="4" x="3.24" y="9.73"></rect><rect height="2" width="12" x="1" y="21"></rect></g></g></svg> Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/schedule.html"><svg version="4.0.0.63c5cb3" width="1.0em" height="1.0em" class="sd-material-icon sd-material-icon-view_module" viewBox="0 0 20 20" aria-hidden="true"><rect fill="none" height="20" width="20"></rect><path d="M8,15v-4.5h4V15H8z M13,9.5h4V5h-4V9.5z M8,5v4.5h4V5H8z M7,9.5V5H3v4.5H7z M13,10.5V15h4v-4.5H13z M7,10.5H3V15h4V10.5z"></path></svg> Module Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/schedule.html#svg-version-4-0-0-63c5cb3-width-1-0em-height-1-0em-class-sd-material-icon-sd-material-icon-calendar-month-viewbox-0-0-20-20-aria-hidden-true-g-rect-fill-none-height-20-width-20-rect-g-g-path-d-m15-5-4h14v2h-1-5v2h-5v2h6v2h4-5c3-67-4-3-4-68-3-5-5v11c3-17-32-3-67-18-4-5-18h11c0-83-0-1-5-0-68-1-5-1-5v-11-c17-4-68-16-33-4-15-5-4z-m15-5-16-5h-11v9h11v16-5z-m7-5-12h6v-1-5h1-5v12z-m10-75-12h-1-5v-1-5h1-5v12z-m14-12h-1-5v-1-5h14v12z-m7-5-15h6v-1-5h1-5v15z-m10-75-15h-1-5v-1-5h1-5v15z-m14-15h-1-5v-1-5h14v15z-path-g-svg-weekly-plan"><svg version="4.0.0.63c5cb3" width="1.0em" height="1.0em" class="sd-material-icon sd-material-icon-calendar_month" viewBox="0 0 20 20" aria-hidden="true"><g><rect fill="none" height="20" width="20"></rect></g><g><path d="M15.5,4H14V2h-1.5v2h-5V2H6v2H4.5C3.67,4,3,4.68,3,5.5v11C3,17.32,3.67,18,4.5,18h11c0.83,0,1.5-0.68,1.5-1.5v-11 C17,4.68,16.33,4,15.5,4z M15.5,16.5h-11V9h11V16.5z M7.5,12H6v-1.5h1.5V12z M10.75,12h-1.5v-1.5h1.5V12z M14,12h-1.5v-1.5H14V12z M7.5,15H6v-1.5h1.5V15z M10.75,15h-1.5v-1.5h1.5V15z M14,15h-1.5v-1.5H14V15z"></path></g></svg> Weekly Plan</a></li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Textbook</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="00-preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01-github-jupyter.html">Intro to GitHub &amp; JupyterHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-visualization-basics.html">Visualization Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-data-access.html">Accessing Real World Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-transform.html">Transforming Data</a></li>
+</ul>
+
+        </div>
+      </div></div>
+  </aside>
+  <div class="lside-overlay js-menu" role="button" aria-label="Close left sidebar" aria-controls="lside" aria-expanded="false"></div>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-lucide close"></i>
+    </button>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
+<li><a class="reference internal" href="#learning-goals">Learning Goals</a></li>
+<li><a class="reference internal" href="#getting-started">Getting started</a></li>
+<li><a class="reference internal" href="#previewing-data-head-and-execute">Previewing data: <code class="docutils literal notranslate"><span class="pre">head()</span></code> and <code class="docutils literal notranslate"><span class="pre">execute()</span></code></a></li>
+<li><a class="reference internal" href="#select-and-distinct"><code class="docutils literal notranslate"><span class="pre">select()</span></code> and <code class="docutils literal notranslate"><span class="pre">distinct()</span></code></a></li>
+</ul>
+</div><a class="js-repo-stats repo-stats flex items-center" href="https://github.com/espm-157/website"
+  data-type="github" data-user="espm-157" data-repo="website">
+  <span class="w-8 flex items-center justify-around shrink-0 text-3xl">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </span>
+  <span class="flex-grow px-2 break-all">
+    <span>espm-157/website</span>
+    <span class="flex text-sm repo-stats-count">
+      <span class="flex items-center pr-3">
+        <iconify-icon icon="lucide:star"></iconify-icon>
+        <strong class="js-repo-stars ml-1">0</strong>
+      </span>
+      <span class="flex items-center">
+        <iconify-icon icon="lucide:git-fork"></iconify-icon>
+        <strong class="js-repo-forks ml-1">0</strong>
+      </span>
+    </span>
+  </span>
+</a><div class="edit-this-page">
+  <a href="https://github.com/espm-157/website/blob/main/reading/06-ibis-1.ipynb">Edit this page</a>
+</div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6"><div class="sy-breadcrumbs" role="navigation">
+  <div class="sy-breadcrumbs-inner flex items-center">
+    <div class="md:hidden mr-3">
+      <button class="js-menu" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+        <i class="i-lucide menu"></i>
+      </button>
+    </div>
+    <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="../index.html"><span itemprop="name">ESPM-157</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="1" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <strong itemprop="name"><code class="docutils literal notranslate"><span class="pre">ibis</span></code> Single Table Verbs</strong>
+        <meta itemprop="position" content="2" />
+      </li></ol>
+    <div class="xl:hidden ml-1">
+      <button class="js-menu" aria-label="Show table of contents" type="button" aria-controls="rside"
+        aria-expanded="false">
+        <i class="i-lucide outdent"></i>
+      </button>
+    </div>
+  </div>
+</div><div class="flex flex-col break-words justify-between">
+      <div class="min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
+        <article class="yue" role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="ibis-single-table-verbs">
+<h1><code class="docutils literal notranslate"><span class="pre">ibis</span></code> Single Table Verbs<a class="headerlink" href="#ibis-single-table-verbs" title="Permalink to this heading">¶</a></h1>
+<p>We will be focusing on how to use the <code class="docutils literal notranslate"><span class="pre">ibis</span></code> package, a successor to the popular <code class="docutils literal notranslate"><span class="pre">pandas</span></code> package, for manipulating tabular data. We begin by importing the <code class="docutils literal notranslate"><span class="pre">ibis</span></code> package.   (We include two additional imports from the package which are commonly referred to using their short names, the table placeholder <code class="docutils literal notranslate"><span class="pre">_</span></code> instead of <code class="docutils literal notranslate"><span class="pre">ibis._</span></code>, and the selectors methods as <code class="docutils literal notranslate"><span class="pre">s</span></code> instead of the verbose <code class="docutils literal notranslate"><span class="pre">ibis.selectors</span></code>.  We will see these in action later).</p>
+<section id="learning-goals">
+<h2>Learning Goals<a class="headerlink" href="#learning-goals" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>establish a connection with <code class="docutils literal notranslate"><span class="pre">duckdb.connect()</span></code></p></li>
+<li><p>use <code class="docutils literal notranslate"><span class="pre">head()</span></code> and <code class="docutils literal notranslate"><span class="pre">excute()</span></code> to preview large data</p></li>
+<li><p>use <code class="docutils literal notranslate"><span class="pre">select()</span></code>, <code class="docutils literal notranslate"><span class="pre">distinct()</span></code>, <code class="docutils literal notranslate"><span class="pre">filter()</span></code> and <code class="docutils literal notranslate"><span class="pre">count()</span></code> to explore data.</p></li>
+</ul>
+</section>
+<section id="getting-started">
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this heading">¶</a></h2>
+<p>To use <code class="docutils literal notranslate"><span class="pre">ibis</span></code>, we must also select a backend.  We will always be using the quite new and very powerful <code class="docutils literal notranslate"><span class="pre">duckdb</span></code> backend for all of our tasks.  We select a backend by creating a “connection”.  The details here are not important for us, we can treat this first block as “boilerplate” starting code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="kn">import</span> <span class="nn">ibis</span>
+</span><span data-line="2"><span class="kn">from</span> <span class="nn">ibis</span> <span class="kn">import</span> <span class="n">_</span>
+</span><span data-line="3"><span class="kn">import</span> <span class="nn">ibis.selectors</span> <span class="k">as</span> <span class="nn">s</span>
+</span><span data-line="4">
+</span><span data-line="5"><span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+</span></pre></div>
+</div>
+</div>
+</div>
+<p>We are now ready to read in our data.  We will begin by reading the metrics table from the direct access link, as indicated in the URL below.  <code class="docutils literal notranslate"><span class="pre">con.read_csv()</span></code> is quite similar to the <code class="docutils literal notranslate"><span class="pre">pandas.read_csv()</span></code> we saw in module 1, though the optional arguments get some different names and are not quite as flexibile.  One important option for our purposes will be the how to indicate missing values.  In the past, we’ve seen negative values like <code class="docutils literal notranslate"><span class="pre">-99</span></code> be used to indicate missing values.  That convention reflects limitations of early software, which had no natural concept of “missing”. More modern conventions indicating missing values as “NULL” or “NA”.  We indicate the data has chosen the latter:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">metrics_url</span> <span class="o">=</span> <span class="s2">&quot;https://huggingface.co/datasets/cboettig/ram_fisheries/resolve/main/v4.65/tsmetrics.csv&quot;</span>
+</span><span data-line="2"><span class="n">tsmetrics</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">metrics_url</span><span class="p">,</span> <span class="n">nullstr</span><span class="o">=</span><span class="s2">&quot;NA&quot;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="previewing-data-head-and-execute">
+<h2>Previewing data: <code class="docutils literal notranslate"><span class="pre">head()</span></code> and <code class="docutils literal notranslate"><span class="pre">execute()</span></code><a class="headerlink" href="#previewing-data-head-and-execute" title="Permalink to this heading">¶</a></h2>
+<p>Let’s take a look at our new table:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">tsmetrics</span>
+</span></pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_l4bhrp24vrhpniccwuijlv76sm
+  tscategory   string
+  tsshort      string
+  tslong       string
+  tsunitsshort string
+  tsunitslong  string
+  tsunique     string
+</pre>
+</div></div>
+</div>
+<p>This doesn’t look like a pretty pandas table! Where are the values?  Actually, as we become more familiar with <code class="docutils literal notranslate"><span class="pre">ibis</span></code> we learn to appreciate the display choice here.  <code class="docutils literal notranslate"><span class="pre">ibis</span></code> is designed for working with very big data. An important part of this is something called <em>lazy evaluation</em>. Even downloading a very large fle might take a long time, and trying to load a large dataset into python all at once can exceed available RAM and crash the kernel.  Instead, <code class="docutils literal notranslate"><span class="pre">ibis</span></code> merely “peeks” at the data over the remote connection – without even downloading it! It tells us the names of each column and the data type (e.g. string, or numeric, etc) that the read_csv method has ‘guessed’ for the data.  As we will see, this is often the most useful information anway.</p>
+<p>If we we do want to see a few example rows, we can use the method <code class="docutils literal notranslate"><span class="pre">head()</span></code> on the table, <code class="docutils literal notranslate"><span class="pre">tsmetrics.head()</span></code>, to say we want only want to see the top of the data frame.  Optionally we can specify how many rows we want to preview, e.g. <code class="docutils literal notranslate"><span class="pre">tsmetrics.head(10)</span></code> to see 10 (the default is 5). Let’s try it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">tsmetrics</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</span></pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">r0 := DatabaseTable: ibis_read_csv_l4bhrp24vrhpniccwuijlv76sm
+  tscategory   string
+  tsshort      string
+  tslong       string
+  tsunitsshort string
+  tsunitslong  string
+  tsunique     string
+
+Limit[r0, n=5]
+</pre>
+</div></div>
+</div>
+<p>That’s not the top of 5 rows!  Once again, <code class="docutils literal notranslate"><span class="pre">ibis</span></code> is being lazy.  We see the same definition of the table as before, only this time it has a name <code class="docutils literal notranslate"><span class="pre">r0</span></code>, and we see a “plan of execution”, that ibis will return the first 5 rows <code class="docutils literal notranslate"><span class="pre">Limit[r0,</span> <span class="pre">5]</span></code>.  We can force it to execute this plan with <code class="docutils literal notranslate"><span class="pre">execute()</span></code> :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">tsmetrics</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</span></pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>tscategory</th>
+      <th>tsshort</th>
+      <th>tslong</th>
+      <th>tsunitsshort</th>
+      <th>tsunitslong</th>
+      <th>tsunique</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>OTHER TIME SERIES DATA</td>
+      <td>AQ</td>
+      <td>Aquaculture</td>
+      <td>MT</td>
+      <td>metric tons</td>
+      <td>AQ-MT</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>OTHER TIME SERIES DATA</td>
+      <td>ASP</td>
+      <td>Annual surplus production</td>
+      <td>MT</td>
+      <td>Metric tons</td>
+      <td>ASP-MT</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>TOTAL BIOMASS</td>
+      <td>BdivBmgtpref</td>
+      <td>General biomass time series preferentially rel...</td>
+      <td>dimensionless</td>
+      <td>dimensionless</td>
+      <td>BdivBmgtpref-dimensionless</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>TOTAL BIOMASS</td>
+      <td>BdivBmgttouse</td>
+      <td>General biomass time series relative to manage...</td>
+      <td>dimensionless</td>
+      <td>dimensionless</td>
+      <td>BdivBmgttouse-dimensionless</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>TOTAL BIOMASS</td>
+      <td>BdivBmsypref</td>
+      <td>General biomass time series preferentially rel...</td>
+      <td>dimensionless</td>
+      <td>dimensionless</td>
+      <td>BdivBmsypref-dimensionless</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>At last, we are starting to see what the data really looks like. Data tables can quickly become much to large to explore by simply trying to eyeball every row.  For instance, we notice the first column, <code class="docutils literal notranslate"><span class="pre">tscategory</span></code>, shows a few different possible categories for the various metrics in the database.  So, how many distinct categories are there?</p>
+</section>
+<section id="select-and-distinct">
+<h2><code class="docutils literal notranslate"><span class="pre">select()</span></code> and <code class="docutils literal notranslate"><span class="pre">distinct()</span></code><a class="headerlink" href="#select-and-distinct" title="Permalink to this heading">¶</a></h2>
+<p>To answer this, we will introduce a few more methods of data table manipulation. <code class="docutils literal notranslate"><span class="pre">select()</span></code> selects one or more <em>columns</em> of a given table, while <code class="docutils literal notranslate"><span class="pre">distinct()</span></code> returns only distinct (unique) rows of the table.  Note that both of these methods share a common pattern – they both apply to a table (not some piece of a table, like a row or column or cell), and they both return a new table as well that is some subset of the old table.  table in, table out.  This design is very intentional – by having methods designed specificially to operate on tables and return tables, we can easily stack or chain these together, (also true of <code class="docutils literal notranslate"><span class="pre">head()</span></code> and execute()`.  So let’s try and see distinct categories:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="p">(</span><span class="n">tsmetrics</span>
+</span><span data-line="2"> <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;tscategory&quot;</span><span class="p">)</span>
+</span><span data-line="3"> <span class="o">.</span><span class="n">distinct</span><span class="p">()</span>
+</span><span data-line="4"> <span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</span><span data-line="5"> <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</span><span data-line="6"><span class="p">)</span>
+</span><span data-line="7"> 
+</span></pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>tscategory</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>CATCH or LANDINGS</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FISHING MORTALITY</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>OTHER TIME SERIES DATA</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>SPAWNING STOCK BIOMASS or CPUE</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>PRODUCTION</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>TOTAL BIOMASS</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>RECRUITS (NOTE: RECRUITS ARE OFFSET IN TIME SE...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>TIME UNITS</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Note that we have stacked these methods together with each step on it’s own line by wrapping the whole thing inside <code class="docutils literal notranslate"><span class="pre">()</span></code> parentheses.  This can make a long “chain” of commands easier to read.  While we have asked for no more that 10 values, we have gotten back only 8 – so we now know there are only 8 categories.  What if we had selected two columns instead before using <code class="docutils literal notranslate"><span class="pre">distinct()</span></code>?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="p">(</span><span class="n">tsmetrics</span>
+</span><span data-line="2"> <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;tscategory&quot;</span><span class="p">,</span> <span class="s2">&quot;tsshort&quot;</span><span class="p">)</span>
+</span><span data-line="3"> <span class="o">.</span><span class="n">distinct</span><span class="p">()</span>
+</span><span data-line="4"> <span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</span><span data-line="5"> <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</span><span data-line="6"><span class="p">)</span>
+</span></pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>tscategory</th>
+      <th>tsshort</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>SPAWNING STOCK BIOMASS or CPUE</td>
+      <td>CPUE-A8</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>SPAWNING STOCK BIOMASS or CPUE</td>
+      <td>CPUEraw-5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>SPAWNING STOCK BIOMASS or CPUE</td>
+      <td>CPUEraw</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>SPAWNING STOCK BIOMASS or CPUE</td>
+      <td>CPUEstand-4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>SPAWNING STOCK BIOMASS or CPUE</td>
+      <td>CPUEstand</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>CATCH or LANDINGS</td>
+      <td>CUSTC</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>OTHER TIME SERIES DATA</td>
+      <td>DIS</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>OTHER TIME SERIES DATA</td>
+      <td>EFFORT</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>OTHER TIME SERIES DATA</td>
+      <td>EFFORT-A2</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>FISHING MORTALITY</td>
+      <td>ER-3</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./reading"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+        </article><button class="back-to-top" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+  </svg>
+  <span>Back to top</span>
+</button><div class="navigation flex print:hidden"></div></div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright">
+  <p>
+    Made with
+    
+    <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+  </p>
+</div>
+      <div class="sy-foot-socials">
+<a href="https://github.com/espm-157-f24" aria-label="GitHub">
+  <iconify-icon icon="simple-icons:github"></iconify-icon>
+</a>
+<a href="https://espm-157.slack.com" aria-label="Slack">
+  <iconify-icon icon="simple-icons:slack"></iconify-icon>
+</a><a href="https://nature.datahub.berkeley.edu" aria-label="JupyterHub">
+  <iconify-icon icon="simple-icons:jupyter"></iconify-icon>
+  </a>
+</div>
+
+    </div>
+  </div>
+</footer>
+      <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+      <script src="../_static/jquery.js"></script>
+      <script src="../_static/underscore.js"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+      <script src="../_static/doctools.js"></script>
+      <script src="../_static/clipboard.min.js"></script>
+      <script src="../_static/copybutton.js"></script>
+      <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../_static/design-tabs.js"></script>
+      <script src="../_static/shibuya.js"></script>
+      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+      <script async="async" src="../_static/sphinx-thebe.js"></script></body>
+</html>
