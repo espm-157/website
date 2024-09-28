@@ -163,7 +163,7 @@ data-aria-dark="Switch to auto color mode">
 <ul class="simple">
 <li><p>establish a connection with <code class="docutils literal notranslate"><span class="pre">duckdb.connect()</span></code></p></li>
 <li><p>use <code class="docutils literal notranslate"><span class="pre">head()</span></code> and <code class="docutils literal notranslate"><span class="pre">excute()</span></code> to preview large data</p></li>
-<li><p>use <code class="docutils literal notranslate"><span class="pre">select()</span></code>, <code class="docutils literal notranslate"><span class="pre">distinct()</span></code>, <code class="docutils literal notranslate"><span class="pre">filter()</span></code> and <code class="docutils literal notranslate"><span class="pre">count()</span></code> to explore data.</p></li>
+<li><p>use <code class="docutils literal notranslate"><span class="pre">select()</span></code>, <code class="docutils literal notranslate"><span class="pre">distinct()</span></code>, <code class="docutils literal notranslate"><span class="pre">filter()</span></code> to explore data.</p></li>
 </ul>
 </section>
 <section id="getting-started">
@@ -391,7 +391,7 @@ Limit[r0, n=5]
 </table>
 </div></div></div>
 </div>
-<p>Note that we have stacked these methods together with each step on it’s own line by wrapping the whole thing inside <code class="docutils literal notranslate"><span class="pre">()</span></code> parentheses.  This can make a long “chain” of commands easier to read.  While we have asked for no more that 10 values, we have gotten back only 8 – so we now know there are only 8 categories.  What if we had selected two columns instead before using <code class="docutils literal notranslate"><span class="pre">distinct()</span></code>?</p>
+<p>Note that we have stacked these methods together with each step on it’s own line by wrapping the whole thing inside <code class="docutils literal notranslate"><span class="pre">()</span></code> parentheses.  This can make a long “chain” of commands easier to read.  While we have asked for no more that 10 values, we have gotten back only 8 – so we now know there are only 8 categories.  What if we had selected two columns instead before using <code class="docutils literal notranslate"><span class="pre">distinct()</span></code>?  Let’s try it out:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="p">(</span><span class="n">tsmetrics</span>
@@ -481,6 +481,7 @@ Limit[r0, n=5]
 </table>
 </div></div></div>
 </div>
+<p>Note that we now get distinct combinations of <code class="docutils literal notranslate"><span class="pre">tscategory</span></code> and <code class="docutils literal notranslate"><span class="pre">tsshort</span></code>.  There are a lot more such combinations!  How many more?  We will be exploring how to compute such summaries in our next section.</p>
 </section>
 </section>
 
