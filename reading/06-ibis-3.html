@@ -93,7 +93,6 @@ data-aria-dark="Switch to auto color mode">
 <li class="toctree-l1"><a class="reference internal" href="05-ibis-1.html"><code class="docutils literal notranslate"><span class="pre">ibis</span></code> Single Table Verbs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06-ibis-2.html"><code class="docutils literal notranslate"><span class="pre">ibis</span></code> Table Joins</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">ibis</span></code> mutates and aggregates</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#stock-assessments">Stock “assessments”</a></li>
 </ul>
 
         </div>
@@ -105,14 +104,9 @@ data-aria-dark="Switch to auto color mode">
       <i class="i-lucide close"></i>
     </button>
     <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
-<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">ibis</span></code> mutates and aggregates</a><ul>
 <li><a class="reference internal" href="#learning-goals">Learning Goals</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#stock-assessments">Stock “assessments”</a><ul>
+<li><a class="reference internal" href="#stock-assessments">Stock &#8220;assessments&#8221;</a></li>
 <li><a class="reference internal" href="#order-by"><code class="docutils literal notranslate"><span class="pre">order_by()</span></code></a></li>
-</ul>
-</li>
 </ul>
 </div><a class="js-repo-stats repo-stats flex items-center" href="https://github.com/espm-157/website"
   data-type="github" data-user="espm-157" data-repo="website">
@@ -194,9 +188,8 @@ data-aria-dark="Switch to auto color mode">
 </div>
 </div>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="stock-assessments">
-<h1>Stock “assessments”<a class="headerlink" href="#stock-assessments" title="Permalink to this heading">¶</a></h1>
+<section id="stock-assessments">
+<h2>Stock “assessments”<a class="headerlink" href="#stock-assessments" title="Permalink to this heading">¶</a></h2>
 <p>The next thing we need to know is a stock assessment.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -205,7 +198,7 @@ data-aria-dark="Switch to auto color mode">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_kdfhmpv3mbhxza64mcvwq5zjby
+<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_7c4pueeglfflvievrwtdlx7wcu
   assessid       string
   assessorid     string
   stockid        string
@@ -432,34 +425,35 @@ data-aria-dark="Switch to auto color mode">
     </tr>
     <tr>
       <th>1507</th>
-      <td>EFLOUNIIIa-IV</td>
-      <td>4</td>
+      <td>NPOUTVIa</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>1508</th>
-      <td>NEPHFU34</td>
-      <td>3</td>
+      <td>PLAIC7d</td>
+      <td>10</td>
     </tr>
     <tr>
       <th>1509</th>
-      <td>NEPHIV</td>
-      <td>3</td>
+      <td>PLAICIIIa</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>1510</th>
-      <td>BOARVI-VIII</td>
-      <td>6</td>
+      <td>POLLNS-VI-IIIa</td>
+      <td>11</td>
     </tr>
     <tr>
       <th>1511</th>
-      <td>HMACKIIa-IVa-Vb-VIa-VII-VIII</td>
-      <td>7</td>
+      <td>WHITIIIa</td>
+      <td>4</td>
     </tr>
   </tbody>
 </table>
 <p>1512 rows × 2 columns</p>
 </div></div></div>
 </div>
+</section>
 <section id="order-by">
 <h2><code class="docutils literal notranslate"><span class="pre">order_by()</span></code><a class="headerlink" href="#order-by" title="Permalink to this heading">¶</a></h2>
 <p>Which <code class="docutils literal notranslate"><span class="pre">stockid</span></code>s have the most assessments?  We can re-order the rows by different columns using the <code class="docutils literal notranslate"><span class="pre">order_by()</span></code>. (Changing the row order does not alter any individual row itself – that would mess up the data.  Each row is moved as a unit).  By default, <code class="docutils literal notranslate"><span class="pre">order</span></code> is always <em>increasing</em>, smallest to largest, A to Z.  While that might be intuitive for dates or names, if we want to see which stocks have the <em>most</em> assessments, we need <code class="docutils literal notranslate"><span class="pre">n</span></code> to be in descending order.  We indicate this by appending the <code class="docutils literal notranslate"><span class="pre">.desc()</span></code> method to the column:</p>
@@ -474,89 +468,6 @@ data-aria-dark="Switch to auto color mode">
 </span></pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>stockid</th>
-      <th>n</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>CODIIIaW-IV-VIId</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>CODFAPL</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>CODBA2224</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>HERRRIGA</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>HADICE</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>1507</th>
-      <td>SSALMLWASH</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1508</th>
-      <td>STROUT22-32</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1509</th>
-      <td>BLRAYVIIe</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1510</th>
-      <td>SGRAYVI-VII</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1511</th>
-      <td>PLAICIIIa</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-<p>1512 rows × 2 columns</p>
-</div></div></div>
 </div>
 </section>
 </section>
