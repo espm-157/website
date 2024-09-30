@@ -13,6 +13,7 @@ parts:
   - file: reading/03-data-access
   - file: reading/04-transform
   - file: reading/05-ibis-1
+  - file: reading/06-ibis-2
   
   
   
