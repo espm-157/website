@@ -107,7 +107,10 @@ data-aria-dark="Switch to auto color mode">
 <li><a class="reference internal" href="#learning-goals">Learning Goals</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#stock-assessments">Stock “assessments”</a></li>
+<li><a class="reference internal" href="#stock-assessments">Stock “assessments”</a><ul>
+<li><a class="reference internal" href="#order-by"><code class="docutils literal notranslate"><span class="pre">order_by()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </div><a class="js-repo-stats repo-stats flex items-center" href="https://github.com/espm-157/website"
   data-type="github" data-user="espm-157" data-repo="website">
@@ -200,7 +203,7 @@ data-aria-dark="Switch to auto color mode">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_ldxnvs2lbzcblprbeqrxubgcye
+<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_kdfhmpv3mbhxza64mcvwq5zjby
   assessid       string
   assessorid     string
   stockid        string
@@ -397,28 +400,28 @@ data-aria-dark="Switch to auto color mode">
   <tbody>
     <tr>
       <th>0</th>
-      <td>CODIIIaW-IV-VIId</td>
-      <td>12</td>
+      <td>CSALMAKPSWUD</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>HERRNIRS</td>
-      <td>11</td>
+      <td>CSALMANDREAR</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>HERRNS-IIIa-VIId</td>
-      <td>11</td>
+      <td>CSALMCHIGCD</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>POLLFAPL</td>
-      <td>11</td>
+      <td>CSALMFISHC</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>WHITNS-VIId</td>
-      <td>11</td>
+      <td>CSALMKANEKTOKR</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>...</th>
@@ -427,37 +430,45 @@ data-aria-dark="Switch to auto color mode">
     </tr>
     <tr>
       <th>1507</th>
-      <td>SSALMQUIN</td>
-      <td>1</td>
+      <td>EFLOUNIIIa-IV</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>1508</th>
-      <td>SPRAYVI-VIIbj</td>
-      <td>1</td>
+      <td>NEPHFU34</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>1509</th>
-      <td>TBSKAIXa</td>
-      <td>1</td>
+      <td>NEPHIV</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>1510</th>
-      <td>TBSKAVI</td>
-      <td>1</td>
+      <td>BOARVI-VIII</td>
+      <td>6</td>
     </tr>
     <tr>
       <th>1511</th>
-      <td>TBSKAVIIe</td>
-      <td>1</td>
+      <td>HMACKIIa-IVa-Vb-VIa-VII-VIII</td>
+      <td>7</td>
     </tr>
   </tbody>
 </table>
 <p>1512 rows × 2 columns</p>
 </div></div></div>
 </div>
+<section id="order-by">
+<h2><code class="docutils literal notranslate"><span class="pre">order_by()</span></code><a class="headerlink" href="#order-by" title="Permalink to this heading">¶</a></h2>
+<p>Which <code class="docutils literal notranslate"><span class="pre">stockid</span></code>s have the most assessments?  We can re-order the rows by different columns using the <code class="docutils literal notranslate"><span class="pre">order_by()</span></code>. (Changing the row order does not alter any individual row itself – that would mess up the data.  Each row is moved as a unit).  By default, <code class="docutils literal notranslate"><span class="pre">order</span></code> is always <em>increasing</em>, smallest to largest, A to Z.  While that might be intuitive for dates or names, if we want to see which stocks have the <em>most</em> assessments, we need <code class="docutils literal notranslate"><span class="pre">n</span></code> to be in descending order.  We indicate this by appending the <code class="docutils literal notranslate"><span class="pre">.desc()</span></code> method to the column:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">assessment</span><span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">stockid</span><span class="p">)</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">assessyear</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">assessid</span><span class="o">=</span><span class="n">_</span><span class="o">.</span><span class="n">assessid</span><span class="o">.</span><span class="n">last</span><span class="p">())</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">stockid</span> <span class="o">==</span> <span class="s2">&quot;CODIIIaW-IV-VIId&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="p">(</span><span class="n">assessment</span>
+</span><span data-line="2"> <span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">stockid</span><span class="p">)</span>
+</span><span data-line="3"> <span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">_</span><span class="o">.</span><span class="n">count</span><span class="p">())</span>
+</span><span data-line="4"> <span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">n</span><span class="o">.</span><span class="n">desc</span><span class="p">())</span>
+</span><span data-line="5"> <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</span><span data-line="6"><span class="p">)</span>
 </span></pre></div>
 </div>
 </div>
@@ -481,52 +492,71 @@ data-aria-dark="Switch to auto color mode">
     <tr style="text-align: right;">
       <th></th>
       <th>stockid</th>
-      <th>assessid</th>
+      <th>n</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
       <td>CODIIIaW-IV-VIId</td>
-      <td>WGNSSK-CODIIIaW-IV-VIId-1963-2021-ICESIMP2021-2</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>CODFAPL</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>CODBA2224</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>HERRRIGA</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>HADICE</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1507</th>
+      <td>SSALMLWASH</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1508</th>
+      <td>STROUT22-32</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1509</th>
+      <td>BLRAYVIIe</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1510</th>
+      <td>SGRAYVI-VII</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1511</th>
+      <td>PLAICIIIa</td>
+      <td>1</td>
     </tr>
   </tbody>
 </table>
+<p>1512 rows × 2 columns</p>
 </div></div></div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">timeseries</span>
-</span></pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">stock</span>
-</span></pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_aee33mgu3rfsnammlaymycd2lu
-  stockid         string
-  tsn             int64
-  scientificname  string
-  commonname      string
-  areaid          string
-  stocklong       string
-  region          string
-  primary_country string
-  primary_FAOarea int64
-  ISO3_code       string
-  GRSF_uuid       string
-  GRSF_areaid     string
-  inmyersdb       int64
-  myersstockid    string
-  state           string
-</pre>
-</div></div>
-</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">

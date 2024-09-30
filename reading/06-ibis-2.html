@@ -105,6 +105,7 @@ data-aria-dark="Switch to auto color mode">
     <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
 <li><a class="reference internal" href="#learning-goals">Learning Goals</a></li>
 <li><a class="reference internal" href="#fish-stocks">Fish &#8216;stocks&#8217;</a></li>
+<li><a class="reference internal" href="#exercise">Exercise</a></li>
 </ul>
 </div><a class="js-repo-stats repo-stats flex items-center" href="https://github.com/espm-157/website"
   data-type="github" data-user="espm-157" data-repo="website">
@@ -196,7 +197,7 @@ data-aria-dark="Switch to auto color mode">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_aee33mgu3rfsnammlaymycd2lu
+<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_tkfrwhpf5nbtnhythuks5xl6qa
   stockid         string
   tsn             int64
   scientificname  string
@@ -444,21 +445,16 @@ data-aria-dark="Switch to auto color mode">
 <p>We again have a column called <code class="docutils literal notranslate"><span class="pre">stockid</span></code>. While we no longer have columns such as <code class="docutils literal notranslate"><span class="pre">commonname</span></code> or <code class="docutils literal notranslate"><span class="pre">scientificname</span></code> to tell us what species each row in the timeseries is measuring, we now know that we can look up that information in the stock table using the <code class="docutils literal notranslate"><span class="pre">stockid</span></code>. Such a column is often called a “foreign key”, because it matches the primary key of a separate table.  (it appears the timeseries data has no ‘primary key’ of it’s own – no column that has a unique value for each row.). Rather than have to switch back and forth between two tables, we can <strong>join</strong> the two tables on <code class="docutils literal notranslate"><span class="pre">stockid</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="o">%%time</span> # notebook &#39;magic&#39; will time how long this cell takes to run.
-</span><span data-line="2"><span class="p">(</span><span class="n">stock</span>
-</span><span data-line="3"> <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">commonname</span> <span class="o">==</span> <span class="s2">&quot;Atlantic cod&quot;</span><span class="p">)</span>
-</span><span data-line="4"> <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">timeseries</span><span class="p">,</span> <span class="s2">&quot;stockid&quot;</span><span class="p">)</span>
-</span><span data-line="5"> <span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</span><span data-line="6"> <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
-</span><span data-line="7"><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="p">(</span><span class="n">stock</span>
+</span><span data-line="2"> <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">commonname</span> <span class="o">==</span> <span class="s2">&quot;Atlantic cod&quot;</span><span class="p">)</span>
+</span><span data-line="3"> <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">timeseries</span><span class="p">,</span> <span class="s2">&quot;stockid&quot;</span><span class="p">)</span>
+</span><span data-line="4"> <span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</span><span data-line="5"> <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</span><span data-line="6"><span class="p">)</span>
 </span></pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span data-line="1">CPU times: user 541 ms, sys: 372 ms, total: 914 ms
-</span><span data-line="2">Wall time: 3.11 s
-</span></pre></div>
-</div>
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -621,7 +617,10 @@ data-aria-dark="Switch to auto color mode">
 </div>
 <p>Effectively all this has done is take our timeseries table and for each stockid, add extra columns explaining what the stock table tells us about the stockid - species names, areas, and so on. The join has made our data is much wider than before – we have all the <strong>columns</strong> from <em>both</em> tables.  (Note that both tables happened to have one column with the same name, <code class="docutils literal notranslate"><span class="pre">stocklong</span></code>.  A truly tidy database would not have done this – we can easily see that this information belongs in the stock table.  Because our database cannot assume these are the same when we join, it has renamed the one on the “right” (from timeseries) as “stocklong_right” to distinguish them).  Because each <code class="docutils literal notranslate"><span class="pre">stockid</span></code> was repeated in the timeseries table, now all this other information is repeated too.  This is not as inefficient as it may sound, thanks to internal optimizations in the database.</p>
 <p>While it is clear even from this <code class="docutils literal notranslate"><span class="pre">head()</span></code> preview that we have the columns from both tables, what about the rows?  Our stock table was already filtered to a subset of rows containing only Cod stocks.  This join (technically called an “inner join”) has kept only those <code class="docutils literal notranslate"><span class="pre">stockid</span></code>s, so we now have timeseries only about Cod!  In fact, we could have instead joined the full tables for all stock ids, and then applied the filter for <code class="docutils literal notranslate"><span class="pre">commonname</span></code>.</p>
-<p><strong>Exercise</strong> Try further exploring this resulting table using <code class="docutils literal notranslate"><span class="pre">select()</span></code> and <code class="docutils literal notranslate"><span class="pre">distinct()</span></code> to get a better sense of what rows are here.  You may also try plotting the data to understand some of these patterns.</p>
+</section>
+<section id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">¶</a></h2>
+<p>Try further exploring this resulting table using <code class="docutils literal notranslate"><span class="pre">select()</span></code> and <code class="docutils literal notranslate"><span class="pre">distinct()</span></code> to get a better sense of what rows are here.  You will notice additional “*id” columns, like <code class="docutils literal notranslate"><span class="pre">asssesid</span></code> or <code class="docutils literal notranslate"><span class="pre">areaid</span></code> matching other tables in the data.  Explore filtering and joinging with these tables as well.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">assessment</span>
@@ -629,7 +628,7 @@ data-aria-dark="Switch to auto color mode">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_jkhv3h3r4zcptfu7yqsrorup4y
+<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_tinwz7qunneljbmugezc6vxcli
   assessid       string
   assessorid     string
   stockid        string
@@ -688,22 +687,22 @@ data-aria-dark="Switch to auto color mode">
     </tr>
     <tr>
       <th>1</th>
-      <td>HERRNIRS</td>
+      <td>SEELNSSA3</td>
       <td>11</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>HERRNS-IIIa-VIId</td>
+      <td>ANGLVIIIc-IXa</td>
       <td>11</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>POLLFAPL</td>
+      <td>POLLNS-VI-IIIa</td>
       <td>11</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>WHITNS-VIId</td>
+      <td>HERRNIRS</td>
       <td>11</td>
     </tr>
     <tr>
@@ -786,6 +785,16 @@ data-aria-dark="Switch to auto color mode">
 </span></pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_ozkvqzpzdbcy7mx2jnw7rd4ym4
+  assessid  string
+  stockid   string
+  stocklong string
+  tsid      string
+  tsyear    int64
+  tsvalue   float64
+</pre>
+</div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -794,7 +803,7 @@ data-aria-dark="Switch to auto color mode">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_aee33mgu3rfsnammlaymycd2lu
+<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_tkfrwhpf5nbtnhythuks5xl6qa
   stockid         string
   tsn             int64
   scientificname  string

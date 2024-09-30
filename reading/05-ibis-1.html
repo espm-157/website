@@ -107,6 +107,12 @@ data-aria-dark="Switch to auto color mode">
 <li><a class="reference internal" href="#getting-started">Getting started</a></li>
 <li><a class="reference internal" href="#previewing-data-head-and-execute">Previewing data: <code class="docutils literal notranslate"><span class="pre">head()</span></code> and <code class="docutils literal notranslate"><span class="pre">execute()</span></code></a></li>
 <li><a class="reference internal" href="#select-and-distinct"><code class="docutils literal notranslate"><span class="pre">select()</span></code> and <code class="docutils literal notranslate"><span class="pre">distinct()</span></code></a></li>
+<li><a class="reference internal" href="#filter"><code class="docutils literal notranslate"><span class="pre">filter()</span></code></a><ul>
+<li><a class="reference internal" href="#column-selection-and">column selection and <code class="docutils literal notranslate"><span class="pre">.</span></code></a></li>
+<li><a class="reference internal" href="#not"><code class="docutils literal notranslate"><span class="pre">==</span></code> not <code class="docutils literal notranslate"><span class="pre">=</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#next-steps">Next steps</a></li>
 </ul>
 </div><a class="js-repo-stats repo-stats flex items-center" href="https://github.com/espm-157/website"
   data-type="github" data-user="espm-157" data-repo="website">
@@ -201,7 +207,7 @@ data-aria-dark="Switch to auto color mode">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_l4bhrp24vrhpniccwuijlv76sm
+<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_ienvx6pgrzgavp6a6pjm3si4mu
   tscategory   string
   tsshort      string
   tslong       string
@@ -220,7 +226,7 @@ data-aria-dark="Switch to auto color mode">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">r0 := DatabaseTable: ibis_read_csv_l4bhrp24vrhpniccwuijlv76sm
+<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">r0 := DatabaseTable: ibis_read_csv_ienvx6pgrzgavp6a6pjm3si4mu
   tscategory   string
   tsshort      string
   tslong       string
@@ -392,13 +398,17 @@ Limit[r0, n=5]
 </table>
 </div></div></div>
 </div>
-<p>Note that we have stacked these methods together with each step on it’s own line by wrapping the whole thing inside <code class="docutils literal notranslate"><span class="pre">()</span></code> parentheses.  This can make a long “chain” of commands easier to read.  While we have asked for no more that 10 values, we have gotten back only 8 – so we now know there are only 8 categories.  What if we had selected two columns instead before using <code class="docutils literal notranslate"><span class="pre">distinct()</span></code>?  Let’s try it out:</p>
+<p>Note that we have stacked these methods together with each step on it’s own line by wrapping the whole thing inside <code class="docutils literal notranslate"><span class="pre">()</span></code> parentheses.  This can make a long “chain” of commands easier to read.  While we have asked for no more that 10 values, we have gotten back only 8 – so we now know there are only 8 categories.</p>
+</section>
+<section id="filter">
+<h2><code class="docutils literal notranslate"><span class="pre">filter()</span></code><a class="headerlink" href="#filter" title="Permalink to this heading">¶</a></h2>
+<p>What are the different unit types within, say, the “CATCH or LANDINGS” category?  This requires a subset of <em>rows</em> (a <em>filter</em>), rather than a subset of columns (<code class="docutils literal notranslate"><span class="pre">select()</span></code>):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="p">(</span><span class="n">tsmetrics</span>
-</span><span data-line="2"> <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;tscategory&quot;</span><span class="p">,</span> <span class="s2">&quot;tsshort&quot;</span><span class="p">)</span>
+</span><span data-line="2"> <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">tscategory</span> <span class="o">==</span> <span class="s2">&quot;CATCH or LANDINGS&quot;</span><span class="p">)</span>
 </span><span data-line="3"> <span class="o">.</span><span class="n">distinct</span><span class="p">()</span>
-</span><span data-line="4"> <span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</span><span data-line="4"> <span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span>
 </span><span data-line="5"> <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
 </span><span data-line="6"><span class="p">)</span>
 </span></pre></div>
@@ -425,64 +435,171 @@ Limit[r0, n=5]
       <th></th>
       <th>tscategory</th>
       <th>tsshort</th>
+      <th>tslong</th>
+      <th>tsunitsshort</th>
+      <th>tsunitslong</th>
+      <th>tsunique</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>SPAWNING STOCK BIOMASS or CPUE</td>
-      <td>CPUE-A8</td>
+      <td>CATCH or LANDINGS</td>
+      <td>CdivMSY-conv</td>
+      <td>Catch divided by MSY calculated from converted...</td>
+      <td>ratio</td>
+      <td>ratio</td>
+      <td>CdivMSY-conv-ratio</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>SPAWNING STOCK BIOMASS or CPUE</td>
-      <td>CPUEraw-5</td>
+      <td>CATCH or LANDINGS</td>
+      <td>CdivMSY</td>
+      <td>Catch divided by MSY</td>
+      <td>ratio</td>
+      <td>ratio</td>
+      <td>CdivMSY-ratio</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>SPAWNING STOCK BIOMASS or CPUE</td>
-      <td>CPUEraw</td>
+      <td>CATCH or LANDINGS</td>
+      <td>TAC-A2</td>
+      <td>Total allowable catch In subarea</td>
+      <td>MT</td>
+      <td>Metric tons</td>
+      <td>TAC-A2-MT</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>SPAWNING STOCK BIOMASS or CPUE</td>
-      <td>CPUEstand-4</td>
+      <td>CATCH or LANDINGS</td>
+      <td>TC-3</td>
+      <td>Total catch. Use only when there is more than ...</td>
+      <td>E03</td>
+      <td>Thousands</td>
+      <td>TC-3-E03</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>SPAWNING STOCK BIOMASS or CPUE</td>
-      <td>CPUEstand</td>
+      <td>CATCH or LANDINGS</td>
+      <td>TL-1</td>
+      <td>Total landings. Use only when there is more th...</td>
+      <td>E03MT</td>
+      <td>Thousands of metric tons</td>
+      <td>TL-1-E03MT</td>
     </tr>
     <tr>
       <th>5</th>
       <td>CATCH or LANDINGS</td>
-      <td>CUSTC</td>
+      <td>TL-A1</td>
+      <td>Total landings in subarea</td>
+      <td>MT</td>
+      <td>Metric tons</td>
+      <td>TL-A1-MT</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>OTHER TIME SERIES DATA</td>
-      <td>DIS</td>
+      <td>CATCH or LANDINGS</td>
+      <td>TL-A3</td>
+      <td>Total landings in subarea</td>
+      <td>MT</td>
+      <td>Metric tons</td>
+      <td>TL-A3-MT</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>OTHER TIME SERIES DATA</td>
-      <td>EFFORT</td>
+      <td>CATCH or LANDINGS</td>
+      <td>CdivMSY-dvmb</td>
+      <td>Catch divided by MSY calculated from reference...</td>
+      <td>ratio</td>
+      <td>ratio</td>
+      <td>CdivMSY-dvmb-ratio</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>OTHER TIME SERIES DATA</td>
-      <td>EFFORT-A2</td>
+      <td>CATCH or LANDINGS</td>
+      <td>Cpair-CMB</td>
+      <td>Catch or landings that is paired with TAC comb...</td>
+      <td>MT</td>
+      <td>Metric tons</td>
+      <td>Cpair-CMB-MT</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>FISHING MORTALITY</td>
-      <td>ER-3</td>
+      <td>CATCH or LANDINGS</td>
+      <td>Cpair</td>
+      <td>Catch or landings that is paired with TAC</td>
+      <td>MT</td>
+      <td>Metric tons</td>
+      <td>Cpair-MT</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>CATCH or LANDINGS</td>
+      <td>RecC</td>
+      <td>Recreational catch</td>
+      <td>E00</td>
+      <td>Individuals</td>
+      <td>RecC-E00</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>CATCH or LANDINGS</td>
+      <td>TAC-2</td>
+      <td>Total allowable catch</td>
+      <td>MT</td>
+      <td>Metric tons</td>
+      <td>TAC-2-MT</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>CATCH or LANDINGS</td>
+      <td>TAC-A3</td>
+      <td>Total allowable catch In subarea</td>
+      <td>MT</td>
+      <td>Metric tons</td>
+      <td>TAC-A3-MT</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>CATCH or LANDINGS</td>
+      <td>TAC-CMB</td>
+      <td>Total allowable catch combined beyond just thi...</td>
+      <td>MT</td>
+      <td>Metric tons</td>
+      <td>TAC-CMB-MT</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-<p>Note that we now get distinct combinations of <code class="docutils literal notranslate"><span class="pre">tscategory</span></code> and <code class="docutils literal notranslate"><span class="pre">tsshort</span></code>.  There are a lot more such combinations!  How many more?  We will be exploring how to compute such summaries in our next section.</p>
+<p>This syntax to subset rows (filter) is more complicated than columns (select) – to find rows containing “CATCH or LANDINGS” we have to indicate <em>which</em> column to look for.</p>
+<section id="column-selection-and">
+<h3>column selection and <code class="docutils literal notranslate"><span class="pre">.</span></code><a class="headerlink" href="#column-selection-and" title="Permalink to this heading">¶</a></h3>
+<p>For python to know that we are looking for the column called “tscategory”, we use the column selection <code class="docutils literal notranslate"><span class="pre">_.tscategory</span></code>.  This is actually a shorthand for the pattern <code class="docutils literal notranslate"><span class="pre">tsmetrics.tscategory</span></code> – the <code class="docutils literal notranslate"><span class="pre">_</span></code> is a placeholder for “the current table” in our chain.  Extracting a single column with <code class="docutils literal notranslate"><span class="pre">.</span></code> is itself something of a shorthand, it is equivalent to using the selector <code class="docutils literal notranslate"><span class="pre">[</span></code>, as <code class="docutils literal notranslate"><span class="pre">tsmetrics[&quot;category&quot;]</span></code>.  When a column name is also the name of a table method, we may need to fall back on the square bracket convention.  So why use a dot at all?  In addition to taking two less characters to write, the <code class="docutils literal notranslate"><span class="pre">.</span></code> method allows “tab completion” of the column name, which helps us avoid typos.  Note that our <code class="docutils literal notranslate"><span class="pre">select()</span></code> method recognizes either syntax, you can do: <code class="docutils literal notranslate"><span class="pre">tsmetrics.select(_.tscategory)</span></code>.  This looks slightly more cryptic, but benefits from autocomplete and matches the sytnax of other functions.</p>
+</section>
+<section id="not">
+<h3><code class="docutils literal notranslate"><span class="pre">==</span></code> not <code class="docutils literal notranslate"><span class="pre">=</span></code><a class="headerlink" href="#not" title="Permalink to this heading">¶</a></h3>
+<p>Another common mistake is to use a single <code class="docutils literal notranslate"><span class="pre">=</span></code> sign rather than <code class="docutils literal notranslate"><span class="pre">==</span></code> in filter.  Recall that <code class="docutils literal notranslate"><span class="pre">=</span></code> is used in variable assignment, <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">1</span></code> sets the value of <code class="docutils literal notranslate"><span class="pre">a</span></code> as 1.  Double-equals is a “boolean operator”, that tests if the statement is True or False:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span data-line="2"><span class="n">a</span> <span class="o">==</span> <span class="mi">1</span>
+</span></pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span data-line="1">True
+</span></pre></div>
+</div>
+</div>
+</div>
+<p>Other boolean operators include <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">!=</span></code> (not equal) and so forth. The important thing is to know that we can do boolean comparisons, this syntax is easy to look up.</p>
+</section>
+</section>
+<section id="next-steps">
+<h2>Next steps<a class="headerlink" href="#next-steps" title="Permalink to this heading">¶</a></h2>
+<p>Explore the datasets in this collection using <code class="docutils literal notranslate"><span class="pre">select()</span></code>, <code class="docutils literal notranslate"><span class="pre">distinct()</span></code> and <code class="docutils literal notranslate"><span class="pre">filter()</span></code>.  We will return to this list of Catch units after we become more aquainted with the remaining tables.</p>
+<p>This syntax is harder than <code class="docutils literal notranslate"><span class="pre">select()</span></code> – we can’t just filter for “CATCH or LANDINGS” without indicating which column we are looking in.  To signal that <code class="docutils literal notranslate"><span class="pre">tscategory</span></code> is a column name and not just a piece of text, we use the subsetting notation, <code class="docutils literal notranslate"><span class="pre">_.tscategory</span></code>.  This is merely a shorthand for the more verbose:</p>
 </section>
 </section>
 
