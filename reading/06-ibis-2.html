@@ -199,7 +199,7 @@ data-aria-dark="Switch to auto color mode">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_tkfrwhpf5nbtnhythuks5xl6qa
+<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_v4fblezl6jahlpkem4wb2wqefq
   stockid         string
   tsn             int64
   scientificname  string
@@ -223,9 +223,11 @@ data-aria-dark="Switch to auto color mode">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="p">(</span><span class="n">stock</span>
 </span><span data-line="2"> <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">commonname</span> <span class="o">==</span> <span class="s2">&quot;Atlantic cod&quot;</span><span class="p">)</span>
-</span><span data-line="3"> <span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</span><span data-line="4"> <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
-</span><span data-line="5"><span class="p">)</span>
+</span><span data-line="3"> <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">stockid</span><span class="p">,</span> <span class="n">_</span><span class="o">.</span><span class="n">scientificname</span><span class="p">,</span> <span class="n">_</span><span class="o">.</span><span class="n">commonname</span><span class="p">,</span> 
+</span><span data-line="4">         <span class="n">_</span><span class="o">.</span><span class="n">areaid</span><span class="p">,</span> <span class="n">_</span><span class="o">.</span><span class="n">region</span><span class="p">,</span> <span class="n">_</span><span class="o">.</span><span class="n">primary_country</span><span class="p">,</span> <span class="n">_</span><span class="o">.</span><span class="n">ISO3_code</span><span class="p">)</span>
+</span><span data-line="5"> <span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</span><span data-line="6"> <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</span><span data-line="7"><span class="p">)</span>
 </span></pre></div>
 </div>
 </div>
@@ -249,118 +251,73 @@ data-aria-dark="Switch to auto color mode">
     <tr style="text-align: right;">
       <th></th>
       <th>stockid</th>
-      <th>tsn</th>
       <th>scientificname</th>
       <th>commonname</th>
       <th>areaid</th>
-      <th>stocklong</th>
       <th>region</th>
       <th>primary_country</th>
-      <th>primary_FAOarea</th>
       <th>ISO3_code</th>
-      <th>GRSF_uuid</th>
-      <th>GRSF_areaid</th>
-      <th>inmyersdb</th>
-      <th>myersstockid</th>
-      <th>state</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
       <td>COD1ABCDE</td>
-      <td>164712</td>
       <td>Gadus morhua</td>
       <td>Atlantic cod</td>
       <td>multinational-ICES-1ABCDE</td>
-      <td>Atlantic cod NAFO 1ABCDE</td>
       <td>Canada East Coast</td>
       <td>Greenland</td>
-      <td>21</td>
       <td>GRL</td>
-      <td>01203eac-f124-34d5-80c0-44ce978b328e</td>
-      <td>fao:21.1.A;fao:21.1.B;fao:21.1.C;fao:21.1.D;fa...</td>
-      <td>0</td>
-      <td>None</td>
-      <td>Current</td>
     </tr>
     <tr>
       <th>1</th>
       <td>COD1F-XIV</td>
-      <td>164712</td>
       <td>Gadus morhua</td>
       <td>Atlantic cod</td>
       <td>multinational-ICES-1F-XIV</td>
-      <td>Atlantic cod NAFO 1F and ICES 14</td>
       <td>Europe non EU</td>
       <td>Greenland</td>
-      <td>27</td>
       <td>GRL</td>
-      <td>269f6c1e-e0cd-3fcb-b2cc-41d338ac824e</td>
-      <td>fao:21.1.F;fao:27.14</td>
-      <td>0</td>
-      <td>None</td>
-      <td>Current</td>
     </tr>
     <tr>
       <th>2</th>
       <td>COD1IN</td>
-      <td>164712</td>
       <td>Gadus morhua</td>
       <td>Atlantic cod</td>
       <td>multinational-ICES-1IN</td>
-      <td>Atlantic cod NAFO Subarea 1 (inshore)</td>
       <td>Canada East Coast</td>
       <td>Greenland</td>
-      <td>21</td>
       <td>GRL</td>
-      <td>437d0699-5695-336d-b139-bc69de390334</td>
-      <td>fao:21.1</td>
-      <td>0</td>
-      <td>None</td>
-      <td>Current</td>
     </tr>
     <tr>
       <th>3</th>
       <td>COD2J3KL</td>
-      <td>164712</td>
       <td>Gadus morhua</td>
       <td>Atlantic cod</td>
       <td>Canada-DFO-2J3KL</td>
-      <td>Atlantic cod Southern Labrador-Eastern Newfoun...</td>
       <td>Canada East Coast</td>
       <td>Canada</td>
-      <td>21</td>
       <td>CAN</td>
-      <td>c9055c35-a306-3a63-83b5-525d9f484840</td>
-      <td>fao:21.2.J;fao:21.3.K;fao:21.3.L</td>
-      <td>1</td>
-      <td>COD2J3KL</td>
-      <td>Current</td>
     </tr>
     <tr>
       <th>4</th>
       <td>COD3M</td>
-      <td>164712</td>
       <td>Gadus morhua</td>
       <td>Atlantic cod</td>
       <td>multinational-NAFO-3M</td>
-      <td>Atlantic cod Flemish Cap</td>
       <td>Canada East Coast</td>
       <td>Portugal</td>
-      <td>21</td>
       <td>PRT</td>
-      <td>ad76fd62-8f75-33d0-82cd-380f9c9f2533</td>
-      <td>fao:21.3.M</td>
-      <td>1</td>
-      <td>COD3M</td>
-      <td>Current</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-<p>Lots of stocks of Atlantic cod!  Each row begins with a unique <code class="docutils literal notranslate"><span class="pre">stockid</span></code>.  A column that uniquely identifies each row in a given table is often referred to as the “primary key” for that table (and is often but not necessarily listed first).  The rows that follow give us some sense of what defines a “stock” as a species in an area: we see a few different identifiers for the species: <code class="docutils literal notranslate"><span class="pre">commonname</span></code>, <code class="docutils literal notranslate"><span class="pre">scientificname</span></code> and a ‘taxonomic serial number’ or <code class="docutils literal notranslate"><span class="pre">tsn</span></code>.  We also see information abot the area the stock occurs in – such as areaid, region, and primary country, as well as “primary_FAOarea” and the primary country’s ISO3_code.  While we have found the Cod, we haven’t yet found any data about the cod catch over time!  For that we will need to look in the timeseries data.  Let’s see how it is organized:</p>
+<p>Lots of stocks of Atlantic cod!  Each row begins with a unique <code class="docutils literal notranslate"><span class="pre">stockid</span></code>.  A column that uniquely identifies each row in a given table is often referred to as the “primary key” for that table (and is often but not necessarily listed first).
+The rows that follow give us some sense of what defines a “stock” as a species in an area: we see a few different identifiers for the species: <code class="docutils literal notranslate"><span class="pre">commonname</span></code>, <code class="docutils literal notranslate"><span class="pre">scientificname</span></code>.
+We also see information abot the area the stock occurs in – such as areaid, region, and primary country.  (For display purposes we selected only a subset of columns).<br />
+While we have found the Cod, we haven’t yet found any data about the cod catch over time!  For that we will need to look in the timeseries data.  Let’s see how it is organized:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">timeseries</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
@@ -451,8 +408,10 @@ data-aria-dark="Switch to auto color mode">
 </span><span data-line="2"> <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">commonname</span> <span class="o">==</span> <span class="s2">&quot;Atlantic cod&quot;</span><span class="p">)</span>
 </span><span data-line="3"> <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">timeseries</span><span class="p">,</span> <span class="s2">&quot;stockid&quot;</span><span class="p">)</span>
 </span><span data-line="4"> <span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</span><span data-line="5"> <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
-</span><span data-line="6"><span class="p">)</span>
+</span><span data-line="5"> <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">stockid</span><span class="p">,</span> <span class="n">_</span><span class="o">.</span><span class="n">scientificname</span><span class="p">,</span> <span class="n">_</span><span class="o">.</span><span class="n">tsid</span><span class="p">,</span> <span class="n">_</span><span class="o">.</span><span class="n">tsyear</span><span class="p">,</span> 
+</span><span data-line="6">         <span class="n">_</span><span class="o">.</span><span class="n">tsvalue</span><span class="p">,</span> <span class="n">_</span><span class="o">.</span><span class="n">stocklong</span><span class="p">,</span> <span class="n">_</span><span class="o">.</span><span class="n">stocklong_right</span><span class="p">)</span> <span class="c1"># subset of columns to keep display narrow</span>
+</span><span data-line="7"> <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</span><span data-line="8"><span class="p">)</span>
 </span></pre></div>
 </div>
 </div>
@@ -476,142 +435,64 @@ data-aria-dark="Switch to auto color mode">
     <tr style="text-align: right;">
       <th></th>
       <th>stockid</th>
-      <th>tsn</th>
       <th>scientificname</th>
-      <th>commonname</th>
-      <th>areaid</th>
-      <th>stocklong</th>
-      <th>region</th>
-      <th>primary_country</th>
-      <th>primary_FAOarea</th>
-      <th>ISO3_code</th>
-      <th>GRSF_uuid</th>
-      <th>GRSF_areaid</th>
-      <th>inmyersdb</th>
-      <th>myersstockid</th>
-      <th>state</th>
-      <th>assessid</th>
-      <th>stocklong_right</th>
       <th>tsid</th>
       <th>tsyear</th>
       <th>tsvalue</th>
+      <th>stocklong</th>
+      <th>stocklong_right</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
       <td>COD4VsW</td>
-      <td>164712</td>
       <td>Gadus morhua</td>
-      <td>Atlantic cod</td>
-      <td>Canada-DFO-4VsW</td>
-      <td>Atlantic cod Eastern Scotian Shelf</td>
-      <td>Canada East Coast</td>
-      <td>Canada</td>
-      <td>21</td>
-      <td>CAN</td>
-      <td>4e12fcb9-141a-3eef-af10-23f19f4e4f11</td>
-      <td>fao:21.4.V.s;fao:21.4.W</td>
-      <td>1</td>
-      <td>COD4VsW</td>
-      <td>Current</td>
-      <td>DFO-MAR-COD4VsW-1958-2002-PREFONTAINE</td>
-      <td>Atlantic cod Eastern Scotian Shelf</td>
       <td>CdivMEANC-ratio</td>
       <td>1958</td>
       <td>0.997804</td>
+      <td>Atlantic cod Eastern Scotian Shelf</td>
+      <td>Atlantic cod Eastern Scotian Shelf</td>
     </tr>
     <tr>
       <th>1</th>
       <td>COD4VsW</td>
-      <td>164712</td>
       <td>Gadus morhua</td>
-      <td>Atlantic cod</td>
-      <td>Canada-DFO-4VsW</td>
-      <td>Atlantic cod Eastern Scotian Shelf</td>
-      <td>Canada East Coast</td>
-      <td>Canada</td>
-      <td>21</td>
-      <td>CAN</td>
-      <td>4e12fcb9-141a-3eef-af10-23f19f4e4f11</td>
-      <td>fao:21.4.V.s;fao:21.4.W</td>
-      <td>1</td>
-      <td>COD4VsW</td>
-      <td>Current</td>
-      <td>DFO-MAR-COD4VsW-1958-2002-PREFONTAINE</td>
-      <td>Atlantic cod Eastern Scotian Shelf</td>
       <td>CdivMEANC-ratio</td>
       <td>1959</td>
       <td>1.706091</td>
+      <td>Atlantic cod Eastern Scotian Shelf</td>
+      <td>Atlantic cod Eastern Scotian Shelf</td>
     </tr>
     <tr>
       <th>2</th>
       <td>COD4VsW</td>
-      <td>164712</td>
       <td>Gadus morhua</td>
-      <td>Atlantic cod</td>
-      <td>Canada-DFO-4VsW</td>
-      <td>Atlantic cod Eastern Scotian Shelf</td>
-      <td>Canada East Coast</td>
-      <td>Canada</td>
-      <td>21</td>
-      <td>CAN</td>
-      <td>4e12fcb9-141a-3eef-af10-23f19f4e4f11</td>
-      <td>fao:21.4.V.s;fao:21.4.W</td>
-      <td>1</td>
-      <td>COD4VsW</td>
-      <td>Current</td>
-      <td>DFO-MAR-COD4VsW-1958-2002-PREFONTAINE</td>
-      <td>Atlantic cod Eastern Scotian Shelf</td>
       <td>CdivMEANC-ratio</td>
       <td>1960</td>
       <td>1.308003</td>
+      <td>Atlantic cod Eastern Scotian Shelf</td>
+      <td>Atlantic cod Eastern Scotian Shelf</td>
     </tr>
     <tr>
       <th>3</th>
       <td>COD4VsW</td>
-      <td>164712</td>
       <td>Gadus morhua</td>
-      <td>Atlantic cod</td>
-      <td>Canada-DFO-4VsW</td>
-      <td>Atlantic cod Eastern Scotian Shelf</td>
-      <td>Canada East Coast</td>
-      <td>Canada</td>
-      <td>21</td>
-      <td>CAN</td>
-      <td>4e12fcb9-141a-3eef-af10-23f19f4e4f11</td>
-      <td>fao:21.4.V.s;fao:21.4.W</td>
-      <td>1</td>
-      <td>COD4VsW</td>
-      <td>Current</td>
-      <td>DFO-MAR-COD4VsW-1958-2002-PREFONTAINE</td>
-      <td>Atlantic cod Eastern Scotian Shelf</td>
       <td>CdivMEANC-ratio</td>
       <td>1961</td>
       <td>1.713846</td>
+      <td>Atlantic cod Eastern Scotian Shelf</td>
+      <td>Atlantic cod Eastern Scotian Shelf</td>
     </tr>
     <tr>
       <th>4</th>
       <td>COD4VsW</td>
-      <td>164712</td>
       <td>Gadus morhua</td>
-      <td>Atlantic cod</td>
-      <td>Canada-DFO-4VsW</td>
-      <td>Atlantic cod Eastern Scotian Shelf</td>
-      <td>Canada East Coast</td>
-      <td>Canada</td>
-      <td>21</td>
-      <td>CAN</td>
-      <td>4e12fcb9-141a-3eef-af10-23f19f4e4f11</td>
-      <td>fao:21.4.V.s;fao:21.4.W</td>
-      <td>1</td>
-      <td>COD4VsW</td>
-      <td>Current</td>
-      <td>DFO-MAR-COD4VsW-1958-2002-PREFONTAINE</td>
-      <td>Atlantic cod Eastern Scotian Shelf</td>
       <td>CdivMEANC-ratio</td>
       <td>1962</td>
       <td>1.685411</td>
+      <td>Atlantic cod Eastern Scotian Shelf</td>
+      <td>Atlantic cod Eastern Scotian Shelf</td>
     </tr>
   </tbody>
 </table>
@@ -630,7 +511,7 @@ data-aria-dark="Switch to auto color mode">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_tinwz7qunneljbmugezc6vxcli
+<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_52rlwfdjjbf4rffp5d34j4cuxa
   assessid       string
   assessorid     string
   stockid        string
@@ -689,22 +570,22 @@ data-aria-dark="Switch to auto color mode">
     </tr>
     <tr>
       <th>1</th>
-      <td>SEELNSSA3</td>
+      <td>POLLIEG</td>
       <td>11</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>ANGLVIIIc-IXa</td>
+      <td>HAKENRTN</td>
       <td>11</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>POLLNS-VI-IIIa</td>
+      <td>HERRNIRS</td>
       <td>11</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>HERRNIRS</td>
+      <td>HERRNS-IIIa-VIId</td>
       <td>11</td>
     </tr>
     <tr>
@@ -714,27 +595,27 @@ data-aria-dark="Switch to auto color mode">
     </tr>
     <tr>
       <th>1507</th>
-      <td>SSALMQUIN</td>
+      <td>SSALMLWASH</td>
       <td>1</td>
     </tr>
     <tr>
       <th>1508</th>
-      <td>SPRAYVI-VIIbj</td>
+      <td>STROUT22-32</td>
       <td>1</td>
     </tr>
     <tr>
       <th>1509</th>
-      <td>TBSKAIXa</td>
+      <td>BLRAYVIIe</td>
       <td>1</td>
     </tr>
     <tr>
       <th>1510</th>
-      <td>TBSKAVI</td>
+      <td>SGRAYVI-VII</td>
       <td>1</td>
     </tr>
     <tr>
       <th>1511</th>
-      <td>TBSKAVIIe</td>
+      <td>PLAICIIIa</td>
       <td>1</td>
     </tr>
   </tbody>
@@ -788,7 +669,7 @@ data-aria-dark="Switch to auto color mode">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_ozkvqzpzdbcy7mx2jnw7rd4ym4
+<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_qoxovyrtjfbifanq72wnhpfbau
   assessid  string
   stockid   string
   stocklong string
@@ -805,7 +686,7 @@ data-aria-dark="Switch to auto color mode">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_tkfrwhpf5nbtnhythuks5xl6qa
+<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_v4fblezl6jahlpkem4wb2wqefq
   stockid         string
   tsn             int64
   scientificname  string
