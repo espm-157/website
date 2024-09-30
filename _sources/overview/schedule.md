@@ -76,7 +76,7 @@ week 3   | {material-regular}`device_thermostat;1.5em` | data: `pandas` / `ibis`
 week 4   | {material-regular}`device_thermostat;1.5em` | Collab,  PRs, CI           | [{material-regular}`book;1.5em;sd-text-info`](/reading/04-transform/)
 week 5   | {material-regular}`directions_boat;1.5em`   | Module intro               | [{material-regular}`book;1.5em;sd-text-info`](/reading/05-ibis-1/)
 week 6   | {material-regular}`directions_boat;1.5em`   | RDBs, joins                | [{material-regular}`book;1.5em;sd-text-info`](/reading/05-ibis-2/)
-week 7   | {material-regular}`directions_boat;1.5em`   | discovery                  | [{material-regular}`book;1.5em;sd-text-info`](#)
+week 7   | {material-regular}`directions_boat;1.5em`   | discovery                  | [{material-regular}`book;1.5em;sd-text-info`](/reading/05-ibis-3/)
 week 8   | {material-regular}`satellite_alt;1.5em`     | spatial data types         | [{material-regular}`book;1.5em;sd-text-info`](#)
 week 9   | {material-regular}`satellite_alt;1.5em`     | spatial data viz           | [{material-regular}`book;1.5em;sd-text-info`](#)
 week 10  | {material-regular}`satellite_alt;1.5em`     | spatial data analysis      | [{material-regular}`book;1.5em;sd-text-info`](#)
