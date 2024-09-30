@@ -2,7 +2,7 @@
 <html lang="en" data-accent-color="violet" data-content_root="">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Transforming Data - Data Science in Global Change Ecology</title><link rel="shortcut icon" href="../_static/favicon.png"/><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="ibis Single Table Verbs" href="05-ibis-1.html" /><link rel="prev" title="Accessing Real World Data" href="03-data-access.html" /><script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ibis mutates and aggregates - Data Science in Global Change Ecology</title><link rel="shortcut icon" href="../_static/favicon.png"/><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><script>
     function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
     setColorMode(localStorage._theme||"auto");
   </script><link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -23,7 +23,7 @@
   --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
 }
 </style>
-    <meta property="og:type" content="website"/><meta property="og:title" content="Transforming Data"/>
+    <meta property="og:type" content="website"/><meta property="og:title" content="ibis mutates and aggregates"/>
 <meta name="twitter:card" content="summary"/>
   </head>
 <body><div class="sy-head">
@@ -84,12 +84,12 @@ data-aria-dark="Switch to auto color mode">
 <li class="toctree-l1"><a class="reference internal" href="../overview/schedule.html#svg-version-4-0-0-63c5cb3-width-1-0em-height-1-0em-class-sd-material-icon-sd-material-icon-calendar-month-viewbox-0-0-20-20-aria-hidden-true-g-rect-fill-none-height-20-width-20-rect-g-g-path-d-m15-5-4h14v2h-1-5v2h-5v2h6v2h4-5c3-67-4-3-4-68-3-5-5v11c3-17-32-3-67-18-4-5-18h11c0-83-0-1-5-0-68-1-5-1-5v-11-c17-4-68-16-33-4-15-5-4z-m15-5-16-5h-11v9h11v16-5z-m7-5-12h6v-1-5h1-5v12z-m10-75-12h-1-5v-1-5h1-5v12z-m14-12h-1-5v-1-5h14v12z-m7-5-15h6v-1-5h1-5v15z-m10-75-15h-1-5v-1-5h1-5v15z-m14-15h-1-5v-1-5h14v15z-path-g-svg-weekly-plan"><svg version="4.0.0.63c5cb3" width="1.0em" height="1.0em" class="sd-material-icon sd-material-icon-calendar_month" viewBox="0 0 20 20" aria-hidden="true"><g><rect fill="none" height="20" width="20"></rect></g><g><path d="M15.5,4H14V2h-1.5v2h-5V2H6v2H4.5C3.67,4,3,4.68,3,5.5v11C3,17.32,3.67,18,4.5,18h11c0.83,0,1.5-0.68,1.5-1.5v-11 C17,4.68,16.33,4,15.5,4z M15.5,16.5h-11V9h11V16.5z M7.5,12H6v-1.5h1.5V12z M10.75,12h-1.5v-1.5h1.5V12z M14,12h-1.5v-1.5H14V12z M7.5,15H6v-1.5h1.5V15z M10.75,15h-1.5v-1.5h1.5V15z M14,15h-1.5v-1.5H14V15z"></path></g></svg> Weekly Plan</a></li>
 </ul>
 <p class="caption" role="heading" aria-level="3"><span class="caption-text">Textbook</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="00-preface.html">Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="01-github-jupyter.html">Intro to GitHub &amp; JupyterHub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02-visualization-basics.html">Visualization Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03-data-access.html">Accessing Real World Data</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Transforming Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-transform.html">Transforming Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="05-ibis-1.html"><code class="docutils literal notranslate"><span class="pre">ibis</span></code> Single Table Verbs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06-ibis-2.html"><code class="docutils literal notranslate"><span class="pre">ibis</span></code> Table Joins</a></li>
 </ul>
@@ -103,7 +103,11 @@ data-aria-dark="Switch to auto color mode">
       <i class="i-lucide close"></i>
     </button>
     <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
-<li><a class="reference internal" href="#tidy-data">Tidy Data</a></li>
+<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">ibis</span></code> mutates and aggregates</a><ul>
+<li><a class="reference internal" href="#learning-goals">Learning Goals</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#stock-assessments">Stock “assessments”</a></li>
 </ul>
 </div><a class="js-repo-stats repo-stats flex items-center" href="https://github.com/espm-157/website"
   data-type="github" data-user="espm-157" data-repo="website">
@@ -124,7 +128,7 @@ data-aria-dark="Switch to auto color mode">
     </span>
   </span>
 </a><div class="edit-this-page">
-  <a href="https://github.com/espm-157/website/blob/main/reading/04-transform.ipynb">Edit this page</a>
+  <a href="https://github.com/espm-157/website/blob/main/reading/06-ibis-3.ipynb">Edit this page</a>
 </div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
   </aside>
   <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
@@ -140,7 +144,7 @@ data-aria-dark="Switch to auto color mode">
         <span>/</span>
         <meta itemprop="position" content="1" />
       </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <strong itemprop="name">Transforming Data</strong>
+        <strong itemprop="name"><code class="docutils literal notranslate"><span class="pre">ibis</span></code> mutates and aggregates</strong>
         <meta itemprop="position" content="2" />
       </li></ol>
     <div class="xl:hidden ml-1">
@@ -153,139 +157,78 @@ data-aria-dark="Switch to auto color mode">
 </div><div class="flex flex-col break-words justify-between">
       <div class="min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
         <article class="yue" role="main">
-          <section class="tex2jax_ignore mathjax_ignore" id="transforming-data">
-<h1>Transforming Data<a class="headerlink" href="#transforming-data" title="Permalink to this heading">¶</a></h1>
-<section id="tidy-data">
-<h2>Tidy Data<a class="headerlink" href="#tidy-data" title="Permalink to this heading">¶</a></h2>
-<p>Analysis-ready data, or ‘tidy data’, is a central concept in data science.  The term was coined by Hadley Wickham<a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> to describe best practices long known in the relational database community, specifically, conventions around formatting tabular data known as <a class="reference external" href="https://en.wikipedia.org/wiki/Third_normal_form">Cobb’s Third Normal Form</a>. In this form, each row represents an observation and each column represents a variable. These conventions allow us to leverage powerful software and techniques for data analysis and visualization more easily, as many such tools are designed with tidy data structures in mind.  However, wild-caught data often does not follow these rules. Consider this example of NASA data on land ice mass:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</span><span data-line="2">
-</span><span data-line="3"><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;http://climate.nasa.gov/system/internal_resources/details/original/499_GRN_ANT_mass_changes.csv&quot;</span><span class="p">,</span>
-</span><span data-line="4">                <span class="n">skiprows</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;greenland&#39;</span><span class="p">,</span> <span class="s1">&#39;antarctica&#39;</span><span class="p">])</span>
-</span><span data-line="5"><span class="n">df</span>
-</span></pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>date</th>
-      <th>greenland</th>
-      <th>antarctica</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2002.29</td>
-      <td>1490.68</td>
-      <td>967.20</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2002.35</td>
-      <td>1485.69</td>
-      <td>978.55</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2002.62</td>
-      <td>1286.84</td>
-      <td>512.02</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2002.71</td>
-      <td>1257.85</td>
-      <td>858.85</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2002.79</td>
-      <td>1257.17</td>
-      <td>693.87</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>135</th>
-      <td>2014.45</td>
-      <td>-1672.08</td>
-      <td>-1021.70</td>
-    </tr>
-    <tr>
-      <th>136</th>
-      <td>2014.62</td>
-      <td>-1985.59</td>
-      <td>-1067.84</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>2014.71</td>
-      <td>-2024.82</td>
-      <td>-780.87</td>
-    </tr>
-    <tr>
-      <th>138</th>
-      <td>2014.79</td>
-      <td>-1973.96</td>
-      <td>-904.38</td>
-    </tr>
-    <tr>
-      <th>139</th>
-      <td>2014.88</td>
-      <td>-1911.78</td>
-      <td>-1009.80</td>
-    </tr>
-  </tbody>
-</table>
-<p>140 rows × 3 columns</p>
-</div></div></div>
-</div>
-<p>The column heading we have called ‘greenland’ is not a single variable (feature) being observed, but in fact a mashup of two different variables – the ice mass (in gigatons) on the location of Greenland. (In the original data file it has the name <code class="docutils literal notranslate"><span class="pre">Greenland</span> <span class="pre">mass</span> <span class="pre">(Gt)</span></code>, which more clearly indicates this mash-up but does not follow our naming conventions.  Likewise the column called ‘antarctica’ again measures land ice mass, but at a different location.  A “tidy” version of this data would use one column to indicate location (Greenland or Antarctica) and another column to indicate ice mass at that location.</p>
-<p>To fix this, we need to <em>pivot</em> the data table into a “long” form, with a single column for ice mass and a single column for location.  While there are many ways to do this, we will rely on the <code class="docutils literal notranslate"><span class="pre">ibis</span></code> framework which provides one of the most consistent and powerful interfaces for tabular data operations.  We begin by loading the ibis library and establishing a “connection” to a backend engine.</p>
+          <section class="tex2jax_ignore mathjax_ignore" id="ibis-mutates-and-aggregates">
+<h1><code class="docutils literal notranslate"><span class="pre">ibis</span></code> mutates and aggregates<a class="headerlink" href="#ibis-mutates-and-aggregates" title="Permalink to this heading">¶</a></h1>
+<section id="learning-goals">
+<h2>Learning Goals<a class="headerlink" href="#learning-goals" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>use <code class="docutils literal notranslate"><span class="pre">group_by()</span></code> and <code class="docutils literal notranslate"><span class="pre">aggregate()</span></code> patterns to summarize data</p></li>
+<li><p>use <code class="docutils literal notranslate"><span class="pre">mutate()</span></code> to create an new column that is a function of data from existing columns in a table.</p></li>
+<li><p>use <code class="docutils literal notranslate"><span class="pre">order_by()</span></code> to arrange rows by one or more columns.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="kn">import</span> <span class="nn">ibis</span>
-</span><span data-line="2"><span class="kn">from</span> <span class="nn">ibis</span> <span class="kn">import</span> <span class="n">selectors</span> <span class="k">as</span> <span class="n">s</span>
-</span><span data-line="3"><span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+</span><span data-line="2"><span class="kn">from</span> <span class="nn">ibis</span> <span class="kn">import</span> <span class="n">_</span>
+</span><span data-line="3"><span class="kn">import</span> <span class="nn">ibis.selectors</span> <span class="k">as</span> <span class="nn">s</span>
+</span><span data-line="4">
+</span><span data-line="5"><span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
 </span></pre></div>
 </div>
 </div>
 </div>
-<p>We add our pandas table to the ibis connection using the method <code class="docutils literal notranslate"><span class="pre">create_table</span></code>.  This allows us to manipulate the table using ibis methods rather than pandas.  We will later see other ways to create <code class="docutils literal notranslate"><span class="pre">ibis</span></code> tables directly from a wide range of data other than pandas data.frames.</p>
-<p>We then use the <code class="docutils literal notranslate"><span class="pre">pivot_longer()</span></code> method to transform our data.  We use the <code class="docutils literal notranslate"><span class="pre">ibis.selectors</span></code> methods to indicate which columns we are aggregating in the pivot.  Optionally, we indicate the name of the new column that will contain the previous column names (greenland, antarctica) and the name of the column that will contain the cell values (the ice mass).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">land_ice</span> <span class="o">=</span> <span class="p">(</span><span class="n">con</span>
-</span><span data-line="2"> <span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="s2">&quot;land_ice&quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span><span data-line="3"> <span class="o">.</span><span class="n">pivot_longer</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">any_of</span><span class="p">(</span><span class="s1">&#39;greenland&#39;</span><span class="p">,</span> <span class="s1">&#39;antarctica&#39;</span><span class="p">),</span>
-</span><span data-line="4">               <span class="n">names_to</span><span class="o">=</span> <span class="s2">&quot;location&quot;</span><span class="p">,</span> <span class="n">values_to</span> <span class="o">=</span> <span class="s2">&quot;ice_mass&quot;</span><span class="p">)</span>
-</span><span data-line="5"><span class="p">)</span>
-</span><span data-line="6">
-</span><span data-line="7"><span class="n">land_ice</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">base_url</span> <span class="o">=</span> <span class="s2">&quot;https://huggingface.co/datasets/cboettig/ram_fisheries/resolve/main/v4.65/&quot;</span>
+</span><span data-line="2">
+</span><span data-line="3"><span class="n">stock</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">base_url</span> <span class="o">+</span> <span class="s2">&quot;stock.csv&quot;</span><span class="p">,</span> <span class="n">nullstr</span><span class="o">=</span><span class="s2">&quot;NA&quot;</span><span class="p">)</span>
+</span><span data-line="4"><span class="n">timeseries</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">base_url</span> <span class="o">+</span> <span class="s2">&quot;timeseries.csv&quot;</span><span class="p">,</span> <span class="n">nullstr</span><span class="o">=</span><span class="s2">&quot;NA&quot;</span><span class="p">)</span>
+</span><span data-line="5"><span class="n">assessment</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">base_url</span> <span class="o">+</span> <span class="s2">&quot;assessment.csv&quot;</span><span class="p">,</span> <span class="n">nullstr</span><span class="o">=</span><span class="s2">&quot;NA&quot;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="stock-assessments">
+<h1>Stock “assessments”<a class="headerlink" href="#stock-assessments" title="Permalink to this heading">¶</a></h1>
+<p>The next thing we need to know is a stock assessment.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">assessment</span>
+</span></pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_ldxnvs2lbzcblprbeqrxubgcye
+  assessid       string
+  assessorid     string
+  stockid        string
+  stocklong      string
+  recorder       string
+  daterecorded   timestamp(6)
+  dateloaded     timestamp(6)
+  assessyear     string
+  assesssource   string
+  contacts       string
+  notes          string
+  pdffile        string
+  assess         int64
+  refpoints      int64
+  assessmethod   string
+  assesscomments string
+  xlsfilename    string
+  mostrecent     int64
+</pre>
+</div></div>
+</div>
+<p>Are some <code class="docutils literal notranslate"><span class="pre">stockid</span></code>s assessed multiple times? One intuitive idea is to <code class="docutils literal notranslate"><span class="pre">filter()</span></code> for a single stockid, and see if we get back multiple rows (multiple assessments).  Let’s take a look at “COD2J3KL”:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="p">(</span><span class="n">assessment</span>
+</span><span data-line="2"> <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">stockid</span> <span class="o">==</span> <span class="s2">&quot;COD2J3KL&quot;</span><span class="p">)</span>
+</span><span data-line="3"> <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</span><span data-line="4"><span class="p">)</span>
 </span></pre></div>
 </div>
 </div>
@@ -308,120 +251,282 @@ data-aria-dark="Switch to auto color mode">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>date</th>
-      <th>location</th>
-      <th>ice_mass</th>
+      <th>assessid</th>
+      <th>assessorid</th>
+      <th>stockid</th>
+      <th>stocklong</th>
+      <th>recorder</th>
+      <th>daterecorded</th>
+      <th>dateloaded</th>
+      <th>assessyear</th>
+      <th>assesssource</th>
+      <th>contacts</th>
+      <th>notes</th>
+      <th>pdffile</th>
+      <th>assess</th>
+      <th>refpoints</th>
+      <th>assessmethod</th>
+      <th>assesscomments</th>
+      <th>xlsfilename</th>
+      <th>mostrecent</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>2002.29</td>
-      <td>greenland</td>
-      <td>1490.68</td>
+      <td>DFO-COD2J3KL-1959-2014-WATSON</td>
+      <td>DFO</td>
+      <td>COD2J3KL</td>
+      <td>Atlantic cod Southern Labrador-Eastern Newfoun...</td>
+      <td>WATSON</td>
+      <td>2016-02-25</td>
+      <td>2016-02-18</td>
+      <td>1959-2014</td>
+      <td>http://www.dfo-mpo.gc.ca/csas-sccs/publication...</td>
+      <td>NULL</td>
+      <td>NULL</td>
+      <td>NULL</td>
+      <td>1</td>
+      <td>1</td>
+      <td>SURBA</td>
+      <td>NULL</td>
+      <td>WATSON_COD2J3KL_2014-DH-edited.xlsx</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2002.29</td>
-      <td>antarctica</td>
-      <td>967.20</td>
+      <td>DFO-NFLD-COD2J3KL-1850-2011-CHING</td>
+      <td>DFO-NFLD</td>
+      <td>COD2J3KL</td>
+      <td>Atlantic cod Southern Labrador-Eastern Newfoun...</td>
+      <td>CHING</td>
+      <td>2013-10-22</td>
+      <td>2001-12-31</td>
+      <td>1850-2011</td>
+      <td>NULL</td>
+      <td>NULL</td>
+      <td>NULL</td>
+      <td>Stock Assesment of Northern (2J3KL) Cod in 2013</td>
+      <td>1</td>
+      <td>1</td>
+      <td>SURBA</td>
+      <td>NULL</td>
+      <td>/home/srdbadmin/srdb/spreadsheets/CHING-COD2J3...</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2002.35</td>
-      <td>greenland</td>
-      <td>1485.69</td>
+      <td>DFO-NFLD-COD2J3KL-1959-2018-ASHBROOK</td>
+      <td>DFO-NFLD</td>
+      <td>COD2J3KL</td>
+      <td>Atlantic cod Southern Labrador-Eastern Newfoun...</td>
+      <td>ASHBROOK</td>
+      <td>2019-06-20</td>
+      <td>2019-08-22</td>
+      <td>1959-2018</td>
+      <td>http://www.dfo-mpo.gc.ca/csas-sccs/Publication...</td>
+      <td>NULL</td>
+      <td>NULL</td>
+      <td>AtlanticCod.2J3KL.pdf</td>
+      <td>1</td>
+      <td>1</td>
+      <td>ICA</td>
+      <td>NULL</td>
+      <td>ASHBROOK-COD2J3KL-2018-DH-edited.xlsx</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>2002.35</td>
-      <td>antarctica</td>
-      <td>978.55</td>
+      <td>DFO-NFLD-COD2J3KL-1959-2021-HIVELY</td>
+      <td>DFO-NFLD</td>
+      <td>COD2J3KL</td>
+      <td>Atlantic cod Southern Labrador-Eastern Newfoun...</td>
+      <td>HIVELY</td>
+      <td>2023-11-08</td>
+      <td>2023-11-10</td>
+      <td>1959-2021</td>
+      <td>NULL</td>
+      <td>NULL</td>
+      <td>Science Advisory Report 2022/041</td>
+      <td>NULL</td>
+      <td>1</td>
+      <td>1</td>
+      <td>ICA</td>
+      <td>NULL</td>
+      <td>CND_vers4.62_updates.xlsx</td>
+      <td>999</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Indeed, it looks like their are four assessments of this stock, each conducted in different years and spanning different periods in time!  <code class="docutils literal notranslate"><span class="pre">filter()</span></code>ing for each possible stockid would be tedious though. These four assessments that correspond to this stockid</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="p">(</span><span class="n">assessment</span>
+</span><span data-line="2"> <span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">stockid</span><span class="p">)</span>
+</span><span data-line="3"> <span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">_</span><span class="o">.</span><span class="n">count</span><span class="p">())</span>
+</span><span data-line="4"> <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</span><span data-line="5"><span class="p">)</span>
+</span></pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>stockid</th>
+      <th>n</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>CODIIIaW-IV-VIId</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>HERRNIRS</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>HERRNS-IIIa-VIId</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>POLLFAPL</td>
+      <td>11</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>2002.62</td>
-      <td>greenland</td>
-      <td>1286.84</td>
+      <td>WHITNS-VIId</td>
+      <td>11</td>
     </tr>
     <tr>
       <th>...</th>
       <td>...</td>
       <td>...</td>
-      <td>...</td>
     </tr>
     <tr>
-      <th>275</th>
-      <td>2014.71</td>
-      <td>antarctica</td>
-      <td>-780.87</td>
+      <th>1507</th>
+      <td>SSALMQUIN</td>
+      <td>1</td>
     </tr>
     <tr>
-      <th>276</th>
-      <td>2014.79</td>
-      <td>greenland</td>
-      <td>-1973.96</td>
+      <th>1508</th>
+      <td>SPRAYVI-VIIbj</td>
+      <td>1</td>
     </tr>
     <tr>
-      <th>277</th>
-      <td>2014.79</td>
-      <td>antarctica</td>
-      <td>-904.38</td>
+      <th>1509</th>
+      <td>TBSKAIXa</td>
+      <td>1</td>
     </tr>
     <tr>
-      <th>278</th>
-      <td>2014.88</td>
-      <td>greenland</td>
-      <td>-1911.78</td>
+      <th>1510</th>
+      <td>TBSKAVI</td>
+      <td>1</td>
     </tr>
     <tr>
-      <th>279</th>
-      <td>2014.88</td>
-      <td>antarctica</td>
-      <td>-1009.80</td>
+      <th>1511</th>
+      <td>TBSKAVIIe</td>
+      <td>1</td>
     </tr>
   </tbody>
 </table>
-<p>280 rows × 3 columns</p>
+<p>1512 rows × 2 columns</p>
 </div></div></div>
 </div>
-<p>Note the use of <code class="docutils literal notranslate"><span class="pre">.execute()</span></code> at the end of the ibis command to see the results.  <code class="docutils literal notranslate"><span class="pre">ibis</span></code> uses a sophisticated strategy called “lazy evaluation”, in which it does not actually run the code we provide until absolutely necessary.  While this feels cumbersome now, these small extra steps will pay big dividends for us when we move to big data sources that historically courses have needed to teach entirely different tools for.</p>
-<p>Now that are data is ‘tidy’, some operations are much easier. For instance, plotting two lines, with a legend, merely requires the single aesthetic mapping of color to the location column: <code class="docutils literal notranslate"><span class="pre">color</span> <span class="pre">=</span> <span class="pre">&quot;location&quot;</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="kn">import</span> <span class="nn">seaborn.objects</span> <span class="k">as</span> <span class="nn">so</span>
-</span><span data-line="2"><span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">land_ice</span><span class="p">,</span> 
-</span><span data-line="3">             <span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> 
-</span><span data-line="4">             <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;ice_mass&quot;</span><span class="p">,</span> 
-</span><span data-line="5">             <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;location&quot;</span><span class="p">)</span>
-</span><span data-line="6">     <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Line</span><span class="p">())</span>
-</span><span data-line="7">    <span class="p">)</span>
-</span><span data-line="8">
-</span><span data-line="9"><span class="n">p</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">assessment</span><span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">stockid</span><span class="p">)</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">assessyear</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">assessid</span><span class="o">=</span><span class="n">_</span><span class="o">.</span><span class="n">assessid</span><span class="o">.</span><span class="n">last</span><span class="p">())</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">stockid</span> <span class="o">==</span> <span class="s2">&quot;CODIIIaW-IV-VIId&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
 </span></pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/260cead6872769a5bb52017df0dc21fae7dc26b8d9a45a21bb4b274bcd3d53af.png" src="../_images/260cead6872769a5bb52017df0dc21fae7dc26b8d9a45a21bb4b274bcd3d53af.png" />
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>stockid</th>
+      <th>assessid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>CODIIIaW-IV-VIId</td>
+      <td>WGNSSK-CODIIIaW-IV-VIId-1963-2021-ICESIMP2021-2</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
-</div>
-<p>We can map this additional column to different aesthetics just as easily.  This illustrates the value of well-structured data and abstract grammar for operating on it.  For instance, having subplots (facets) based on this data:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">p</span><span class="o">.</span><span class="n">facet</span><span class="p">(</span><span class="s2">&quot;location&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">timeseries</span>
+</span></pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">stock</span>
 </span></pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/8d6cf8eb0687399fe59d9bb276dc02d07710b1ddb5c3ba2dad556a4da2930940.png" src="../_images/8d6cf8eb0687399fe59d9bb276dc02d07710b1ddb5c3ba2dad556a4da2930940.png" />
+<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_aee33mgu3rfsnammlaymycd2lu
+  stockid         string
+  tsn             int64
+  scientificname  string
+  commonname      string
+  areaid          string
+  stocklong       string
+  region          string
+  primary_country string
+  primary_FAOarea int64
+  ISO3_code       string
+  GRSF_uuid       string
+  GRSF_areaid     string
+  inmyersdb       int64
+  myersstockid    string
+  state           string
+</pre>
+</div></div>
 </div>
-</div>
-<hr class="footnotes docutils" />
-<aside class="footnote brackets" id="id2" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>Wickham (2014). Tidy data.  Journal of Statistical Software 14(10) DOI:10.18637/jss.v059.i10 <a class="reference external" href="https://vita.had.co.nz/papers/tidy-data.pdf">https://vita.had.co.nz/papers/tidy-data.pdf</a></p>
-</aside>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -448,21 +553,7 @@ data-aria-dark="Switch to auto color mode">
     <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
   </svg>
   <span>Back to top</span>
-</button><div class="navigation flex print:hidden"><div class="navigation-prev">
-    <a href="03-data-access.html">
-      <i class="i-lucide chevron-left"></i>
-      <div class="page-info">
-        <span>Previous</span><div class="title">Accessing Real World Data</div></div>
-    </a>
-  </div><div class="navigation-next">
-    <a href="05-ibis-1.html">
-      <div class="page-info">
-        <span>Next</span>
-        <div class="title"><code class="docutils literal notranslate"><span class="pre">ibis</span></code> Single Table Verbs</div>
-      </div>
-      <i class="i-lucide chevron-right"></i>
-    </a>
-  </div></div></div>
+</button><div class="navigation flex print:hidden"></div></div>
     </div>
   </main>
 </div>
