@@ -2,7 +2,7 @@
 <html lang="en" data-accent-color="violet" data-content_root="">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ibis mutates and aggregates - Data Science in Global Change Ecology</title><link rel="shortcut icon" href="../_static/favicon.png"/><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="prev" title="ibis Table Joins" href="06-ibis-2.html" /><script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ibis: mutate and more aggregates - Data Science in Global Change Ecology</title><link rel="shortcut icon" href="../_static/favicon.png"/><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><script>
     function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
     setColorMode(localStorage._theme||"auto");
   </script><link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -23,7 +23,7 @@
   --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
 }
 </style>
-    <meta property="og:type" content="website"/><meta property="og:title" content="ibis mutates and aggregates"/>
+    <meta property="og:type" content="website"/><meta property="og:title" content="ibis: mutate and more aggregates"/>
 <meta name="twitter:card" content="summary"/>
   </head>
 <body><div class="sy-head">
@@ -84,7 +84,7 @@ data-aria-dark="Switch to auto color mode">
 <li class="toctree-l1"><a class="reference internal" href="../overview/schedule.html#svg-version-4-0-0-63c5cb3-width-1-0em-height-1-0em-class-sd-material-icon-sd-material-icon-calendar-month-viewbox-0-0-20-20-aria-hidden-true-g-rect-fill-none-height-20-width-20-rect-g-g-path-d-m15-5-4h14v2h-1-5v2h-5v2h6v2h4-5c3-67-4-3-4-68-3-5-5v11c3-17-32-3-67-18-4-5-18h11c0-83-0-1-5-0-68-1-5-1-5v-11-c17-4-68-16-33-4-15-5-4z-m15-5-16-5h-11v9h11v16-5z-m7-5-12h6v-1-5h1-5v12z-m10-75-12h-1-5v-1-5h1-5v12z-m14-12h-1-5v-1-5h14v12z-m7-5-15h6v-1-5h1-5v15z-m10-75-15h-1-5v-1-5h1-5v15z-m14-15h-1-5v-1-5h14v15z-path-g-svg-weekly-plan"><svg version="4.0.0.63c5cb3" width="1.0em" height="1.0em" class="sd-material-icon sd-material-icon-calendar_month" viewBox="0 0 20 20" aria-hidden="true"><g><rect fill="none" height="20" width="20"></rect></g><g><path d="M15.5,4H14V2h-1.5v2h-5V2H6v2H4.5C3.67,4,3,4.68,3,5.5v11C3,17.32,3.67,18,4.5,18h11c0.83,0,1.5-0.68,1.5-1.5v-11 C17,4.68,16.33,4,15.5,4z M15.5,16.5h-11V9h11V16.5z M7.5,12H6v-1.5h1.5V12z M10.75,12h-1.5v-1.5h1.5V12z M14,12h-1.5v-1.5H14V12z M7.5,15H6v-1.5h1.5V15z M10.75,15h-1.5v-1.5h1.5V15z M14,15h-1.5v-1.5H14V15z"></path></g></svg> Weekly Plan</a></li>
 </ul>
 <p class="caption" role="heading" aria-level="3"><span class="caption-text">Textbook</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="00-preface.html">Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="01-github-jupyter.html">Intro to GitHub &amp; JupyterHub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02-visualization-basics.html">Visualization Basics</a></li>
@@ -92,7 +92,7 @@ data-aria-dark="Switch to auto color mode">
 <li class="toctree-l1"><a class="reference internal" href="04-transform.html">Transforming Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="05-ibis-1.html"><code class="docutils literal notranslate"><span class="pre">ibis</span></code> Single Table Verbs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06-ibis-2.html"><code class="docutils literal notranslate"><span class="pre">ibis</span></code> Table Joins</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">ibis</span></code> mutates and aggregates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06-ibis-3.html"><code class="docutils literal notranslate"><span class="pre">ibis</span></code> mutates and aggregates</a></li>
 </ul>
 
         </div>
@@ -105,8 +105,6 @@ data-aria-dark="Switch to auto color mode">
     </button>
     <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
 <li><a class="reference internal" href="#learning-goals">Learning Goals</a></li>
-<li><a class="reference internal" href="#stock-assessments">Stock &#8220;assessments&#8221;</a></li>
-<li><a class="reference internal" href="#order-by"><code class="docutils literal notranslate"><span class="pre">order_by()</span></code></a></li>
 </ul>
 </div><a class="js-repo-stats repo-stats flex items-center" href="https://github.com/espm-157/website"
   data-type="github" data-user="espm-157" data-repo="website">
@@ -127,7 +125,7 @@ data-aria-dark="Switch to auto color mode">
     </span>
   </span>
 </a><div class="edit-this-page">
-  <a href="https://github.com/espm-157/website/blob/main/reading/06-ibis-3.ipynb">Edit this page</a>
+  <a href="https://github.com/espm-157/website/blob/main/reading/07-ibis-4.ipynb">Edit this page</a>
 </div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
   </aside>
   <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
@@ -143,7 +141,7 @@ data-aria-dark="Switch to auto color mode">
         <span>/</span>
         <meta itemprop="position" content="1" />
       </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <strong itemprop="name"><code class="docutils literal notranslate"><span class="pre">ibis</span></code> mutates and aggregates</strong>
+        <strong itemprop="name"><code class="docutils literal notranslate"><span class="pre">ibis</span></code>: mutate and more aggregates</strong>
         <meta itemprop="position" content="2" />
       </li></ol>
     <div class="xl:hidden ml-1">
@@ -156,21 +154,22 @@ data-aria-dark="Switch to auto color mode">
 </div><div class="flex flex-col break-words justify-between">
       <div class="min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
         <article class="yue" role="main">
-          <section class="tex2jax_ignore mathjax_ignore" id="ibis-mutates-and-aggregates">
-<h1><code class="docutils literal notranslate"><span class="pre">ibis</span></code> mutates and aggregates<a class="headerlink" href="#ibis-mutates-and-aggregates" title="Permalink to this heading">¶</a></h1>
+          <section class="tex2jax_ignore mathjax_ignore" id="ibis-mutate-and-more-aggregates">
+<h1><code class="docutils literal notranslate"><span class="pre">ibis</span></code>: mutate and more aggregates<a class="headerlink" href="#ibis-mutate-and-more-aggregates" title="Permalink to this heading">¶</a></h1>
 <section id="learning-goals">
 <h2>Learning Goals<a class="headerlink" href="#learning-goals" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>use <code class="docutils literal notranslate"><span class="pre">group_by()</span></code> and <code class="docutils literal notranslate"><span class="pre">aggregate()</span></code> patterns to summarize data</p></li>
-<li><p>use <code class="docutils literal notranslate"><span class="pre">order_by()</span></code> to arrange rows by one or more columns.</p></li>
+<li><p>use <code class="docutils literal notranslate"><span class="pre">mutate()</span></code> to create an new column that is a function of data from existing columns in a table.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="kn">import</span> <span class="nn">ibis</span>
 </span><span data-line="2"><span class="kn">from</span> <span class="nn">ibis</span> <span class="kn">import</span> <span class="n">_</span>
 </span><span data-line="3"><span class="kn">import</span> <span class="nn">ibis.selectors</span> <span class="k">as</span> <span class="nn">s</span>
-</span><span data-line="4">
-</span><span data-line="5"><span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+</span><span data-line="4"><span class="kn">import</span> <span class="nn">seaborn.objects</span> <span class="k">as</span> <span class="nn">so</span> 
+</span><span data-line="5">
+</span><span data-line="6"><span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
 </span></pre></div>
 </div>
 </div>
@@ -178,315 +177,163 @@ data-aria-dark="Switch to auto color mode">
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">base_url</span> <span class="o">=</span> <span class="s2">&quot;https://huggingface.co/datasets/cboettig/ram_fisheries/resolve/main/v4.65/&quot;</span>
-</span><span data-line="2">
-</span><span data-line="3"><span class="n">stock</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">base_url</span> <span class="o">+</span> <span class="s2">&quot;stock.csv&quot;</span><span class="p">,</span> <span class="n">nullstr</span><span class="o">=</span><span class="s2">&quot;NA&quot;</span><span class="p">)</span>
-</span><span data-line="4"><span class="n">timeseries</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">base_url</span> <span class="o">+</span> <span class="s2">&quot;timeseries.csv&quot;</span><span class="p">,</span> <span class="n">nullstr</span><span class="o">=</span><span class="s2">&quot;NA&quot;</span><span class="p">)</span>
-</span><span data-line="5"><span class="n">assessment</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">base_url</span> <span class="o">+</span> <span class="s2">&quot;assessment.csv&quot;</span><span class="p">,</span> <span class="n">nullstr</span><span class="o">=</span><span class="s2">&quot;NA&quot;</span><span class="p">)</span>
+</span><span data-line="2"><span class="n">stock</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">base_url</span> <span class="o">+</span> <span class="s2">&quot;stock.csv&quot;</span><span class="p">,</span> <span class="n">nullstr</span><span class="o">=</span><span class="s2">&quot;NA&quot;</span><span class="p">)</span>
+</span><span data-line="3"><span class="n">timeseries</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">base_url</span> <span class="o">+</span> <span class="s2">&quot;timeseries.csv&quot;</span><span class="p">,</span> <span class="n">nullstr</span><span class="o">=</span><span class="s2">&quot;NA&quot;</span><span class="p">)</span>
 </span></pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="stock-assessments">
-<h2>Stock “assessments”<a class="headerlink" href="#stock-assessments" title="Permalink to this heading">¶</a></h2>
-<p>The next thing we need to know is a stock assessment.</p>
+<p>Last time we reached the conclusion that we wanted to average across multiple assessments:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">assessment</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">cod_stocks</span> <span class="o">=</span> <span class="p">(</span>
+</span><span data-line="2">  <span class="n">timeseries</span>
+</span><span data-line="3">  <span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">stock</span><span class="p">,</span> <span class="s2">&quot;stockid&quot;</span><span class="p">)</span>
+</span><span data-line="4">  <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">tsid</span> <span class="o">==</span> <span class="s2">&quot;TCbest-MT&quot;</span><span class="p">)</span>
+</span><span data-line="5">  <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">commonname</span> <span class="o">==</span> <span class="s2">&quot;Atlantic cod&quot;</span><span class="p">)</span>
+</span><span data-line="6">  <span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">tsyear</span><span class="p">,</span> <span class="n">_</span><span class="o">.</span><span class="n">stockid</span><span class="p">,</span> <span class="n">_</span><span class="o">.</span><span class="n">primary_country</span><span class="p">,</span> <span class="n">_</span><span class="o">.</span><span class="n">primary_FAOarea</span><span class="p">)</span>
+</span><span data-line="7">  <span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">catch</span> <span class="o">=</span> <span class="n">_</span><span class="o">.</span><span class="n">tsvalue</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</span><span data-line="8"><span class="p">)</span>
+</span></pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">cod_stocks</span>
 </span></pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">DatabaseTable: ibis_read_csv_hq3yjgckubazzecvlvn55m5asm
-  assessid       string
-  assessorid     string
-  stockid        string
-  stocklong      string
-  recorder       string
-  daterecorded   timestamp(6)
-  dateloaded     timestamp(6)
-  assessyear     string
-  assesssource   string
-  contacts       string
-  notes          string
-  pdffile        string
-  assess         int64
-  refpoints      int64
-  assessmethod   string
-  assesscomments string
-  xlsfilename    string
-  mostrecent     int64
+<div class="output text_html"><pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">r0 := DatabaseTable: ibis_read_csv_oqvhqgdgtvffpdkwj2e2hhgkmi
+  assessid  string
+  stockid   string
+  stocklong string
+  tsid      string
+  tsyear    int64
+  tsvalue   float64
+
+r1 := DatabaseTable: ibis_read_csv_jvtzdli36jbcdkhuwkurh7rv7y
+  stockid         string
+  tsn             int64
+  scientificname  string
+  commonname      string
+  areaid          string
+  stocklong       string
+  region          string
+  primary_country string
+  primary_FAOarea int64
+  ISO3_code       string
+  GRSF_uuid       string
+  GRSF_areaid     string
+  inmyersdb       int64
+  myersstockid    string
+  state           string
+
+r2 := JoinChain[r0]
+  JoinLink[inner, r1]
+    r0.stockid == r1.stockid
+  values:
+    assessid:        r0.assessid
+    stockid:         r0.stockid
+    stocklong:       r0.stocklong
+    tsid:            r0.tsid
+    tsyear:          r0.tsyear
+    tsvalue:         r0.tsvalue
+    tsn:             r1.tsn
+    scientificname:  r1.scientificname
+    commonname:      r1.commonname
+    areaid:          r1.areaid
+    stocklong_right: r1.stocklong
+    region:          r1.region
+    primary_country: r1.primary_country
+    primary_FAOarea: r1.primary_FAOarea
+    ISO3_code:       r1.ISO3_code
+    GRSF_uuid:       r1.GRSF_uuid
+    GRSF_areaid:     r1.GRSF_areaid
+    inmyersdb:       r1.inmyersdb
+    myersstockid:    r1.myersstockid
+    state:           r1.state
+
+r3 := Filter[r2]
+  r2.tsid == 'TCbest-MT'
+
+r4 := Filter[r3]
+  r3.commonname == 'Atlantic cod'
+
+Aggregate[r4]
+  groups:
+    tsyear:          r4.tsyear
+    stockid:         r4.stockid
+    primary_country: r4.primary_country
+  metrics:
+    catch: Mean(r4.tsvalue)
 </pre>
 </div></div>
 </div>
-<p>Are some <code class="docutils literal notranslate"><span class="pre">stockid</span></code>s assessed multiple times? One intuitive idea is to <code class="docutils literal notranslate"><span class="pre">filter()</span></code> for a single stockid, and see if we get back multiple rows (multiple assessments).  Let’s take a look at “COD2J3KL”:</p>
+<p>This is great, but we have a lot of individual cod stocks:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="p">(</span><span class="n">assessment</span>
-</span><span data-line="2"> <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">stockid</span> <span class="o">==</span> <span class="s2">&quot;COD2J3KL&quot;</span><span class="p">)</span>
-</span><span data-line="3"> <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">assessid</span><span class="p">,</span> <span class="n">_</span><span class="o">.</span><span class="n">assessorid</span><span class="p">,</span> <span class="n">_</span><span class="o">.</span><span class="n">stockid</span><span class="p">,</span>
-</span><span data-line="4">         <span class="n">_</span><span class="o">.</span><span class="n">daterecorded</span><span class="p">,</span> <span class="n">_</span><span class="o">.</span><span class="n">assessyear</span><span class="p">)</span> <span class="c1"># pick a subset of columns to focus on</span>
-</span><span data-line="5"> <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
-</span><span data-line="6"><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="p">(</span>
+</span><span data-line="2">    <span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">cod_stocks</span><span class="p">,</span> 
+</span><span data-line="3">        <span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;tsyear&quot;</span><span class="p">,</span>
+</span><span data-line="4">            <span class="n">y</span><span class="o">=</span><span class="s2">&quot;catch&quot;</span><span class="p">,</span>
+</span><span data-line="5">            <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;stockid&quot;</span><span class="p">)</span>
+</span><span data-line="6">    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Lines</span><span class="p">(</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
+</span><span data-line="7">    <span class="o">.</span><span class="n">layout</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+</span><span data-line="8"><span class="p">)</span>
 </span></pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>assessid</th>
-      <th>assessorid</th>
-      <th>stockid</th>
-      <th>daterecorded</th>
-      <th>assessyear</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>DFO-COD2J3KL-1959-2014-WATSON</td>
-      <td>DFO</td>
-      <td>COD2J3KL</td>
-      <td>2016-02-25</td>
-      <td>1959-2014</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>DFO-NFLD-COD2J3KL-1850-2011-CHING</td>
-      <td>DFO-NFLD</td>
-      <td>COD2J3KL</td>
-      <td>2013-10-22</td>
-      <td>1850-2011</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>DFO-NFLD-COD2J3KL-1959-2018-ASHBROOK</td>
-      <td>DFO-NFLD</td>
-      <td>COD2J3KL</td>
-      <td>2019-06-20</td>
-      <td>1959-2018</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>DFO-NFLD-COD2J3KL-1959-2021-HIVELY</td>
-      <td>DFO-NFLD</td>
-      <td>COD2J3KL</td>
-      <td>2023-11-08</td>
-      <td>1959-2021</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<img alt="../_images/291839d6f8d79baa08fbb051e756db3072971169a21dfc05cf5330e56ef8494a.png" src="../_images/291839d6f8d79baa08fbb051e756db3072971169a21dfc05cf5330e56ef8494a.png" />
 </div>
-<p>Indeed, it looks like their are four assessments of this stock, each conducted in different years and spanning different periods in time!  <code class="docutils literal notranslate"><span class="pre">filter()</span></code>ing for each possible stockid would be tedious though. These four assessments that correspond to this stockid</p>
+</div>
+<p>Our good friend, the <code class="docutils literal notranslate"><span class="pre">COD2J3KL</span></code> series shows up with it’s remarkable declines, but what’s going on with those highly variable but very large catches?  This will obviously impact our assessment of whether or not the species as a whole has collapsed.  This is too many stocks to easily explore, let’s try breakint this out by at the by country:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="p">(</span><span class="n">assessment</span>
-</span><span data-line="2"> <span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">stockid</span><span class="p">)</span>
-</span><span data-line="3"> <span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">_</span><span class="o">.</span><span class="n">count</span><span class="p">())</span>
-</span><span data-line="4"> <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
-</span><span data-line="5"><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="p">(</span>
+</span><span data-line="2">    <span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">cod_stocks</span><span class="p">,</span> 
+</span><span data-line="3">            <span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;tsyear&quot;</span><span class="p">,</span> 
+</span><span data-line="4">            <span class="n">y</span><span class="o">=</span><span class="s2">&quot;catch&quot;</span><span class="p">,</span> 
+</span><span data-line="5">            <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;stockid&quot;</span><span class="p">,</span>
+</span><span data-line="6">            <span class="n">group</span> <span class="o">=</span> <span class="s2">&quot;primary_country&quot;</span><span class="p">)</span>
+</span><span data-line="7">    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Lines</span><span class="p">(</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
+</span><span data-line="8">    <span class="o">.</span><span class="n">facet</span><span class="p">(</span><span class="s2">&quot;primary_country&quot;</span><span class="p">,</span> <span class="n">wrap</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span>
+</span><span data-line="9">    <span class="o">.</span><span class="n">layout</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+</span><span data-line="10"><span class="p">)</span>
 </span></pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>stockid</th>
-      <th>n</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>CSALMAKPSWUD</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>CSALMANDREAR</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>CSALMCHIGCD</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>CSALMFISHC</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>CSALMKANEKTOKR</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>1507</th>
-      <td>NPOUTVIa</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>1508</th>
-      <td>PLAIC7d</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <th>1509</th>
-      <td>PLAICIIIa</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1510</th>
-      <td>POLLNS-VI-IIIa</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>1511</th>
-      <td>WHITIIIa</td>
-      <td>4</td>
-    </tr>
-  </tbody>
-</table>
-<p>1512 rows × 2 columns</p>
-</div></div></div>
+<img alt="../_images/910307d32b8c8839f966cf88c1857cbdb5713f016a17e33b915b7465742ec7d5.png" src="../_images/910307d32b8c8839f966cf88c1857cbdb5713f016a17e33b915b7465742ec7d5.png" />
 </div>
-</section>
-<section id="order-by">
-<h2><code class="docutils literal notranslate"><span class="pre">order_by()</span></code><a class="headerlink" href="#order-by" title="Permalink to this heading">¶</a></h2>
-<p>Which <code class="docutils literal notranslate"><span class="pre">stockid</span></code>s have the most assessments?  We can re-order the rows by different columns using the <code class="docutils literal notranslate"><span class="pre">order_by()</span></code>. (Changing the row order does not alter any individual row itself – that would mess up the data.  Each row is moved as a unit).  By default, <code class="docutils literal notranslate"><span class="pre">order</span></code> is always <em>increasing</em>, smallest to largest, A to Z.  While that might be intuitive for dates or names, if we want to see which stocks have the <em>most</em> assessments, we need <code class="docutils literal notranslate"><span class="pre">n</span></code> to be in descending order.  We indicate this by appending the <code class="docutils literal notranslate"><span class="pre">.desc()</span></code> method to the column:</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="p">(</span><span class="n">assessment</span>
-</span><span data-line="2"> <span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">stockid</span><span class="p">)</span>
-</span><span data-line="3"> <span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">_</span><span class="o">.</span><span class="n">count</span><span class="p">())</span>
-</span><span data-line="4"> <span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">n</span><span class="o">.</span><span class="n">desc</span><span class="p">())</span>
-</span><span data-line="5"> <span class="o">.</span><span class="n">execute</span><span class="p">()</span>
-</span><span data-line="6"><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="p">(</span>
+</span><span data-line="2">    <span class="n">so</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">cod_stocks</span><span class="p">,</span> 
+</span><span data-line="3">            <span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;tsyear&quot;</span><span class="p">,</span> 
+</span><span data-line="4">            <span class="n">y</span><span class="o">=</span><span class="s2">&quot;catch&quot;</span><span class="p">,</span> 
+</span><span data-line="5">            <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;stockid&quot;</span><span class="p">,</span>
+</span><span data-line="6">            <span class="n">group</span> <span class="o">=</span> <span class="s2">&quot;primary_FAOarea&quot;</span><span class="p">)</span>
+</span><span data-line="7">    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">so</span><span class="o">.</span><span class="n">Lines</span><span class="p">(</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
+</span><span data-line="8">    <span class="o">.</span><span class="n">facet</span><span class="p">(</span><span class="s2">&quot;primary_FAOarea&quot;</span><span class="p">,</span> <span class="n">wrap</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span>
+</span><span data-line="9">    <span class="o">.</span><span class="n">layout</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+</span><span data-line="10"><span class="p">)</span>
 </span></pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>stockid</th>
-      <th>n</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>CODIIIaW-IV-VIId</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>HADICE</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>CODFAPL</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>CODBA2224</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>HERRRIGA</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>1507</th>
-      <td>SSALMLWASH</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1508</th>
-      <td>STROUT22-32</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1509</th>
-      <td>BLRAYVIIe</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1510</th>
-      <td>SGRAYVI-VII</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1511</th>
-      <td>PLAICIIIa</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-<p>1512 rows × 2 columns</p>
-</div></div></div>
+<img alt="../_images/0b7e8572667d95255f5f7323ab72d3ebdbcbd35f1ae45e58dc2a265d28ed13db.png" src="../_images/0b7e8572667d95255f5f7323ab72d3ebdbcbd35f1ae45e58dc2a265d28ed13db.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">cod_stocks</span>
+</span></pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -515,13 +362,7 @@ data-aria-dark="Switch to auto color mode">
     <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
   </svg>
   <span>Back to top</span>
-</button><div class="navigation flex print:hidden"><div class="navigation-prev">
-    <a href="06-ibis-2.html">
-      <i class="i-lucide chevron-left"></i>
-      <div class="page-info">
-        <span>Previous</span><div class="title"><code class="docutils literal notranslate"><span class="pre">ibis</span></code> Table Joins</div></div>
-    </a>
-  </div></div></div>
+</button><div class="navigation flex print:hidden"></div></div>
     </div>
   </main>
 </div>
