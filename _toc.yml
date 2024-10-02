@@ -15,6 +15,7 @@ parts:
   - file: reading/05-ibis-1
   - file: reading/06-ibis-2
   - file: reading/06-ibis-3
+  - file: reading/07-ibis-4
   
   
   
