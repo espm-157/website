@@ -73,8 +73,8 @@ sphinx:
             "url": "index"
         },
         ]
-    },
-    extensions = ["jupyter_sphinx"],
+    }
+    extensions = ["jupyter_sphinx"]
     html_context: {
         "source_type": "github",
         "source_user": "espm-157",
