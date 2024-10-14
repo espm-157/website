@@ -28,6 +28,7 @@ parse:
     - colon_fence
     - substitution
     - tasklist
+    - jupyter_sphinx
 
 # Add links to GitHub repo
 # For more info: https://jupyterbook.org/en/stable/basics/repository.html
@@ -74,7 +75,6 @@ sphinx:
         },
         ]
     }
-    extensions: ["jupyter_sphinx"]
     html_context: {
         "source_type": "github",
         "source_user": "espm-157",
@@ -82,6 +82,7 @@ sphinx:
         "source_version": "main",  # Optional
         "source_docs_path": "/"
         }
+
     
 
 
