@@ -68,15 +68,15 @@
 Hold on tight and don't put too much faith in this.
 
 
-Week     | Module                                      | Topics                     | Reading link   
+Week     | Module                                      | Topics                     | Reading links
 ---------|---------------------------------------------|----------------------------|-------------------------
-week 1   | {material-regular}`device_thermostat;1.5em` | GitHub, JupyterHub         | [{material-regular}`book;1.5em;sd-text-info`](#)
-week 2   | {material-regular}`device_thermostat;1.5em` | data: `ibis`, `duckdb`     | [{material-regular}`book;1.5em;sd-text-info`](#)
-week 3   | {material-regular}`device_thermostat;1.5em` | viz: `altair`              | [{material-regular}`book;1.5em;sd-text-info`](#)
-week 4   | {material-regular}`device_thermostat;1.5em` | Collab,  PRs, CI           | [{material-regular}`book;1.5em;sd-text-info`](#)
-week 5   | {material-regular}`directions_boat;1.5em`   | Module intro               | [{material-regular}`book;1.5em;sd-text-info`](#)
-week 6   | {material-regular}`directions_boat;1.5em`   | RDBs, joins                | [{material-regular}`book;1.5em;sd-text-info`](#)
-week 7   | {material-regular}`directions_boat;1.5em`   | discovery                  | [{material-regular}`book;1.5em;sd-text-info`](#)
+week 1   | {material-regular}`device_thermostat;1.5em` | GitHub, JupyterHub         | [{material-regular}`book;1.5em;sd-text-info`](/reading/01-github-jupyter/)
+week 2   | {material-regular}`device_thermostat;1.5em` | viz: `seaborn`             | [{material-regular}`book;1.5em;sd-text-info`](/reading/02-visualization-basics/)
+week 3   | {material-regular}`device_thermostat;1.5em` | data: `pandas` / `ibis`    | [{material-regular}`book;1.5em;sd-text-info`](/reading/03-data-access/)
+week 4   | {material-regular}`device_thermostat;1.5em` | Collab,  PRs, CI           | [{material-regular}`book;1.5em;sd-text-info`](/reading/04-transform/)
+week 5   | {material-regular}`directions_boat;1.5em`   | Module intro               | [{material-regular}`book;1.5em;sd-text-info`](/reading/05-ibis-1/)
+week 6   | {material-regular}`directions_boat;1.5em`   | RDBs, joins                | [{material-regular}`book;1.5em;sd-text-info`](/reading/05-ibis-2/)
+week 7   | {material-regular}`directions_boat;1.5em`   | discovery                  | [{material-regular}`book;1.5em;sd-text-info`](/reading/05-ibis-3/)
 week 8   | {material-regular}`satellite_alt;1.5em`     | spatial data types         | [{material-regular}`book;1.5em;sd-text-info`](#)
 week 9   | {material-regular}`satellite_alt;1.5em`     | spatial data viz           | [{material-regular}`book;1.5em;sd-text-info`](#)
 week 10  | {material-regular}`satellite_alt;1.5em`     | spatial data analysis      | [{material-regular}`book;1.5em;sd-text-info`](#)

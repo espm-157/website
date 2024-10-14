@@ -16,9 +16,9 @@ title: "ESPM-157: Data Science in Global Change Ecology"
 :gutter: 3
 
 :::{grid-item-card} Instructor Team
-{material-regular}`person;2em;sd-text-primary` [Carl Boettiger](https://carlboettiger.info)  
-{material-regular}`person;2em;sd-text-primary` Amanda Wik, Teaching Assistant  
-{material-regular}`person;2em;sd-text-primary` Tyler Bernard, Teaching Assistant
+{material-regular}`person;2em;sd-text-primary` [Carl Boettiger](https://carlboettiger.info)  [OH: 9a Friday by appt](https://berkeley.zoom.us/my/cboettig)  
+{material-regular}`person;2em;sd-text-primary` Amanda Wik, TA.  
+{material-regular}`person;2em;sd-text-primary` Tyler Bernard, TA. [OH: 11:30a Fridays](https://calendly.com/tgbernard19-berkeley/office-hours-2)  
 :::
 
 :::{grid-item-card} Logistics

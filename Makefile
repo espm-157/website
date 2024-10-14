@@ -1,4 +1,4 @@
-BASE="jupyterhub.thelio.carlboettiger.info"
+BASE="jupyterhub.cirrus.carlboettiger.info"
 ## Makefile to build JupyterBook for this repository
 ## - html-hub: build static website so it can be viewed on hosted JupyterHub (via URL proxy).
 
@@ -17,8 +17,13 @@ html:
 
 .PHONY: serve
 serve: 
+	@echo "preview at: https://${BASE}${JUPYTERHUB_SERVICE_PREFIX}proxy/8000/index.html"
 	python -m http.server --directory ${PWD}/_build/html
 
+
+.PHONY: install
+install:
+	pip install -r book-requirements.txt
 
 ## - clean   : remove all build files
 .PHONY: clean
