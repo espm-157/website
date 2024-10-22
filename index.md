@@ -33,5 +33,3 @@ reproducible notebooks, databases, data visualization, geospatial analysis and m
 collaborative setting. See our [syllabus](https://espm-157.carlboettiger.info/overview/syllabus.html) and [schedule overview](https://espm-157.carlboettiger.info/overview/schedule.html)
 for details. _Please see_ [enrollment](https://espm-157.carlboettiger.info/overview/syllabus.html#enrollment) if you questions about getting into this course!
 
-
-
