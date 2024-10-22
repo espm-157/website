@@ -41,6 +41,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: './_build/html'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - uses: ftnext/action-push-ghpages@v1.0.0
+        with:
+          build_dir: '_build/html'
+          github_token: $GTIHUB_TOKEN
+ 
