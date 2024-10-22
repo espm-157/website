@@ -1,4 +1,4 @@
-#  {material-regular}`gavel` Syllabus
+# ⚖ Syllabus
 
 **ESPM-157: Data Science in Global Change Ecology**
 

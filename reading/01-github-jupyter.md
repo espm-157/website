@@ -49,11 +49,11 @@ There's a few one-time setup steps we need to work with Git and GitHub from Jupy
 
 Try to `clone` our "authentication" repo, <https://github.com/espm-157-f24/auth> into your Jupyterhub using the Clone Repository button from the Git menu (left side).  (We will review this together in class).
 
-![](/_static/img/git-clone.png)
+![](https://github.com/espm-157/website/blob/main/_static/img/git-clone.png?raw=true)
 
 Then use the "File" menu on the left side to open the `auth` folder and then opn the Jupyter Notebook, `github-login.ipynb`.  Try running the cell in that notebook.
 
-![](/_static/img/file-menu.png)
+![](https://github.com/espm-157/website/blob/main/_static/img/file-menu.png?raw=true)
 
 
 Tada! You have authenticated with GitHub on your Jupyterhub.  In future, you will only need to re-open this login notebook to authenticate, as it will remain on your JupyterHub.
