@@ -1,15 +1,15 @@
 ---
 layout: default 
-cover: https://climate.nasa.gov/system/internal_resources/details/original/417_1263_banner-science-1600x500.jpg
+banner: https://climate.nasa.gov/system/internal_resources/details/original/417_1263_banner-science-1600x500.jpg
 title: "ESPM-157: Data Science in Global Change Ecology"
 
 ---
 
+::::{grid} 1 1 1 1
+
 ![](https://climate.nasa.gov/system/internal_resources/details/original/417_1263_banner-science-1600x500.jpg)
 
-<center>
-<h1>ESPM-157: Data Science in Global Change Ecology</h1>
-</center>
+::::
 
 
 ::::{grid}  1 1 2 2

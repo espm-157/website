@@ -1,24 +1,15 @@
 BASE="jupyterhub.cirrus.carlboettiger.info"
 ## Makefile to build JupyterBook for this repository
-## - html-hub: build static website so it can be viewed on hosted JupyterHub (via URL proxy).
-
-.PHONY: html-hub
-html-hub: html
-	@echo
-	@echo "To start the Python http server, use:"
-	@echo "python -m http.server --directory ${PWD}/_build/html"
-	@echo "and visit this link with your browser:"
-	@echo "https://${BASE}${JUPYTERHUB_SERVICE_PREFIX}proxy/8000/index.html"
 
 ## - html    : Build static website for local display
 .PHONY: html
 html:
-	jupyter-book build .
+	BASE_URL="/user/${JUPYTERHUB_USER}/proxy/8000" myst build --html
 
 .PHONY: serve
 serve: 
 	@echo "preview at: https://${BASE}${JUPYTERHUB_SERVICE_PREFIX}proxy/8000/index.html"
-	python -m http.server --directory ${PWD}/_build/html
+	npx serve -p 8000 _build/html 2>/dev/null
 
 
 .PHONY: install
