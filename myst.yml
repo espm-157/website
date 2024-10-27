@@ -32,7 +32,6 @@ project:
         - file: reading/07-ibis-4.ipynb
         - file: reading/spatial-1.ipynb
         - file: reading/spatial-2.ipynb
-        - file: reading/spatial-3.ipynb
         
 site:
   template: book-theme
