@@ -5,3 +5,5 @@ conf.py
 package-lock.json
 package.json
 Untitled.ipynb
+**/*.parquet
+**/*.tif
