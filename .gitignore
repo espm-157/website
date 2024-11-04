@@ -7,3 +7,4 @@ package.json
 Untitled.ipynb
 **/*.parquet
 **/*.tif
+**/*.gpkg
