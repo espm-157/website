@@ -33,6 +33,7 @@ project:
         - file: reading/spatial-1.ipynb
         - file: reading/spatial-2.ipynb
         - file: reading/spatial-3.ipynb
+        - file: reading/spatial-4.ipynb
         
 site:
   template: book-theme
