@@ -16,8 +16,8 @@ title: "ESPM-157: Data Science in Global Change Ecology"
 
 :::{grid-item-card} Instructor Team
 👤 [Carl Boettiger](https://carlboettiger.info)  [OH: 9a Friday by appt](https://berkeley.zoom.us/my/cboettig)  
-👤 Amanda Wik, TA.  [OH: Mondays 9:30](https://forms.gle/x4ZAgrYCAo1uduzK6)
-👤 Tyler Bernard, TA. [OH: Fridays 11:30a](https://calendly.com/tgbernard19-berkeley/office-hours-2)  
+👤 Abby Keller, TA. 
+👤 Neville Taraporevala, TA.   
 :::
 
 :::{grid-item-card} Logistics
