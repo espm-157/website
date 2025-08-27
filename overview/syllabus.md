@@ -2,7 +2,7 @@
 
 **ESPM-157: Data Science in Global Change Ecology**
 
-Fall 2024 - the existing ESPM-157 moves to Wheeler 212, more than doubles in size, and switches into Python! Much has changed, much will change, and this course is changing with it.  Welcome aboard.
+ESPM 157 is now in Python. Our course continues to evolve with the fast pace of data science. The use and critique of Large Language Models (LLMs) will feature promiently. Welcome aboard.
 
 
 ## Textbook

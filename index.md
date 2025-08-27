@@ -36,6 +36,6 @@ for details. _Please see_ [enrollment](https://espm-157.carlboettiger.info/overv
 ## Links
 
 - [Course DataHub](https://nature.datahub.berkeley.edu) 
-- [Course Forum (Slack)](https://espm-157.slack.com/)
-- [Course GitHub](https://github.com/espm-157-f24/)
+- [Course Forum (Zulip)](https://espm-157.zulipchat.com/)
+- [Course GitHub](https://github.com/espm-157)
 
