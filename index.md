@@ -16,7 +16,7 @@ title: "ESPM-157: Data Science in Global Change Ecology"
 
 :::{grid-item-card} Instructor Team
 👤 [Carl Boettiger](https://carlboettiger.info)  [OH: 9a Friday by appt](https://berkeley.zoom.us/my/cboettig)  
-👤 Abby Keller, TA. OH: 1-2 pm Thursday (Wellman 315) or by appt, agkeller@berkeley.edu
+👤 Abby Keller, TA. OH: 1-2 pm Thursday (Wellman 315) or by appt, agkeller@berkeley.edu  
 👤 Neville Taraporevala, TA. OH: 3-4 pm Tuesday (Mulford 43) or by appt, nevilletaraporevala@berkeley.edu
 :::
 
