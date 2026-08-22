@@ -26,6 +26,7 @@ project:
         - file: reading/02-visualization-basics.ipynb
         - file: reading/03-data-access.md
         - file: reading/04-transform.ipynb
+        - file: reading/04b-gh-actions.md
         - file: reading/05-ibis-1.ipynb
         - file: reading/06-ibis-2.ipynb
         - file: reading/06-ibis-3.ipynb
@@ -34,6 +35,7 @@ project:
         - file: reading/spatial-2.ipynb
         - file: reading/spatial-3.ipynb
         - file: reading/spatial-4.ipynb
+        - file: reading/spatial-5.ipynb
         
 site:
   template: book-theme
