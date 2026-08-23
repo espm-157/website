@@ -85,11 +85,13 @@ it works — because these are all the *same* API. Point those three fields some
 and everything downstream is unchanged. That portability is a property of open
 infrastructure, and it is worth noticing that closed systems generally do not offer it.
 
-:::{tip} If a model disappears
+:::{tip} This is where we start, not where we end
 NRP adds and retires models as the open-weight frontier moves, and `deepseek-v4-flash` is
-currently listed under evaluation rather than as generally supported. If it vanishes or
-misbehaves, `gpt-oss` and `qwen3` are the stable fallbacks — change the model name in the
-same dialog and carry on. Tell us on Zulip so we can update this page.
+currently listed under evaluation rather than general support. Expect the default to change
+during the semester — that is the normal condition of this field, not a failure of
+planning. If it is retired or misbehaves, `gpt-oss` and `qwen3` are stable alternatives:
+change the model name in the same dialog and carry on. Tell us on Zulip so we can update
+this page.
 :::
 
 ### Set it to plan mode
@@ -98,28 +100,16 @@ Kilo Code has several modes. We use **plan** mode for this module.
 
 - [Using modes](https://kilo.ai/docs/basic-usage/using-modes)
 
-Plan mode has read-only access to your project plus the ability to write plan files. It can
-read your code and propose what to do; it cannot rewrite your notebook while you watch.
-`code` and `debug` modes have full write access — we will get there later in the course,
-deliberately.
+Plan mode has read-only access to your project, plus the ability to write plan files under
+`.kilo/plans/`. It can read your code and your data and propose what to do; it cannot
+rewrite your notebook while you watch. `code` and `debug` modes have full write access.
+We will get there later in the course, deliberately.
 
-### Turn off auto-approve
-
-**This one matters, and it is not the default.**
-
-Out of the box, Kilo Code auto-approves most actions. Go to **Settings** → **Auto Approve**
-and set the tools to **ask** rather than **allow**. Then each action pauses with a
-**Run** / **Deny** prompt.
-
-- [Auto-approving actions](https://kilo.ai/docs/features/auto-approving-actions)
-
-You will be tempted to switch this back after the tenth prompt. Do not, at least not this
-module. An agent that edits files while you watch a progress bar teaches you nothing about
-whether the work is right, and this module is entirely about whether the work is right.
-You cannot audit what you never saw proposed.
-
-Note also the shield button that appears in permission prompts: it turns on runtime
-auto-approve without opening Settings. It is easy to hit by accident.
+That restriction is the whole point, and it is enforced by the mode rather than by your
+vigilance. You do not need to change any other settings: in plan mode there is nothing
+dangerous to approve, because the tools that change things are not available. When we move
+to `code` mode in a later module, approval settings become worth a conversation — and we
+will have it then, rather than teaching you to click through prompts now.
 
 ## 5. GitHub authentication in your editor
 
@@ -144,7 +134,6 @@ Before Session 2 you should be able to:
 - [ ] Generate an NRP token
 - [ ] Configure Kilo Code with the NRP custom provider and `deepseek-v4-flash`
 - [ ] Confirm Kilo Code is in **plan** mode
-- [ ] Confirm auto-approve is set to **ask**, not allow
 - [ ] Sign in to GitHub from the editor
 - [ ] Clone a repository, make a commit, and push it
 
