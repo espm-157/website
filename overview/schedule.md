@@ -50,8 +50,7 @@
 📈 `streamlit`, reactive design  
 
 +++
-<a href="https://github.com/espm-157/llm-python-template"><i class="i-simpleicons github"></i> llm template </a>
-
+_template TBD_
 
 :::
 
@@ -68,23 +67,23 @@
 Fall 2026: we meet **Wed/Fri 8-10am in Wheeler 212**, from August 26 through
 December 4 (formal classes end). Hold on tight and don't put too much faith in this.
 
-Week     | Dates            | Module | Topics                     | Reading links
----------|------------------|--------|----------------------------|-------------------------
-week 1   | Aug 26 / Aug 28  |    🌡   | GitHub, JupyterHub         | [📖](/reading/01-github-jupyter/)
-week 2   | Sep 2 / Sep 4    |    🌡   | viz: `plotnine`            | [📖](/reading/02-visualization-basics/)
-week 3   | Sep 9 / Sep 11   |    🌡   | data: `pandas` / `ibis`    | [📖](/reading/03-data-access/)
-week 4   | Sep 16 / Sep 18  |    🌡   | Collab, PRs, CI            | [📖](/reading/04-transform/) [📖](/reading/04b-gh-actions/)
-week 5   | Sep 23 / Sep 25  |   🐟   | Module intro               | [📖](/reading/05-ibis-1/)
-week 6   | Sep 30 / Oct 2   |   🐟   | RDBs, joins                | [📖](/reading/06-ibis-2/)
-week 7   | Oct 7 / Oct 9    |   🐟   | discovery                  | [📖](/reading/06-ibis-3/) [📖](/reading/07-ibis-4/)
-week 8   | Oct 14 / Oct 16  |   🛰   | spatial data types         | [📖](/reading/spatial-1/)
-week 9   | Oct 21 / Oct 23  |   🛰   | spatial data viz           | [📖](/reading/spatial-2/)
-week 10  | Oct 28 / Oct 30  |   🛰   | spatial data analysis      | [📖](/reading/spatial-3/) [📖](/reading/spatial-4/)
-week 11  | Nov 4 / Nov 6    |   🛰   | putting it together        | [📖](/reading/spatial-5/)
-week 12  | ~~Nov 11~~ / Nov 13 |   🤖   | LLMs                    | [📖](#)
-week 13  | Nov 18 / Nov 20  |   🤖   | LLMs+RAG?                  | [📖](#)
-week 14  | ~~Nov 25~~ / ~~Nov 27~~ | 🦃 | _no class meetings_     |
-week 15  | Dec 2 / Dec 4    | 🤖 🎓  | `streamlit`, Final Projects | [📖](#)
+Week     | Dates            | Module | Topics
+---------|------------------|--------|----------------------------
+week 1   | Aug 26 / Aug 28  |    🌡   | GitHub, JupyterHub
+week 2   | Sep 2 / Sep 4    |    🌡   | viz: `plotnine`
+week 3   | Sep 9 / Sep 11   |    🌡   | data: `pandas` / `ibis`
+week 4   | Sep 16 / Sep 18  |    🌡   | Collab, PRs, CI
+week 5   | Sep 23 / Sep 25  |   🐟   | Module intro
+week 6   | Sep 30 / Oct 2   |   🐟   | RDBs, joins
+week 7   | Oct 7 / Oct 9    |   🐟   | discovery
+week 8   | Oct 14 / Oct 16  |   🛰   | spatial data types
+week 9   | Oct 21 / Oct 23  |   🛰   | spatial data viz
+week 10  | Oct 28 / Oct 30  |   🛰   | spatial data analysis
+week 11  | Nov 4 / Nov 6    |   🛰   | putting it together
+week 12  | ~~Nov 11~~ / Nov 13 |   🤖   | LLMs
+week 13  | Nov 18 / Nov 20  |   🤖   | LLMs+RAG?
+week 14  | ~~Nov 25~~ / ~~Nov 27~~ | 🦃 | _no class meetings_
+week 15  | Dec 2 / Dec 4    | 🤖 🎓  | `streamlit`, Final Projects
 
 :::{note} Academic holidays
 **Wed Nov 11** (Veterans Day) and **Thanksgiving week** (Wed Nov 25 non-instructional
