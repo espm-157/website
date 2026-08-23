@@ -68,8 +68,8 @@ interface, do not reflect these principles. The equivalent there looks like this
 # the older style, which we avoid
 import seaborn as sns
 wide = co2.pivot_wider(names_from="name", values_from="value").to_pandas()
-sns.lineplot(wide, x="decimal_date", y="co2", color="blue")
-sns.lineplot(wide, x="decimal_date", y="smooth", color="red")
+sns.lineplot(wide, x="decimal_date", y="average", color="blue")
+sns.lineplot(wide, x="decimal_date", y="deseasonalized", color="red")
 ```
 
 Here `x` and `y` still refer to columns, but `color` is asserted manually. The

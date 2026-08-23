@@ -104,7 +104,7 @@ A chain you can read line by line is a chain you can check line by line.
 
 ```python
 (co2
- .filter(_.name == "co2")
+ .filter(_.name == "average")
  .head()
  .to_pandas()
 )
