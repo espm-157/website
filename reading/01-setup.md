@@ -30,9 +30,6 @@ Our compute environment. Nothing to install.
   CalNet.
 - [DataHub documentation](https://docs.datahub.berkeley.edu/)
 
-Your session has a **memory limit**, and it is smaller than your laptop's. This is not an
-inconvenience we are apologizing for — it is a real constraint that shapes how you write
-code, and Part 3 of the climate module is built around it.
 
 ## 3. NRP account and API token
 
