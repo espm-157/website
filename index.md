@@ -35,6 +35,6 @@ collaborative setting. See our syllabus and overview (links below or on the side
 ## Links
 
 - [Course DataHub](https://nature.datahub.berkeley.edu) 
-- [Course Forum (Zulip)](https://espm-157.zulipchat.com/)
+- [Course Forum (Zulip)](https://espm-157-f26.zulipchat.com/)
 - [Course GitHub](https://github.com/espm-157)
 
