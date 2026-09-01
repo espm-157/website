@@ -15,9 +15,9 @@ title: "ESPM-157: Data Science in Global Change Ecology"
 ::::{grid}  1 1 2 2
 
 :::{grid-item-card} Instructor Team
-👤 [Carl Boettiger](https://carlboettiger.info)  [OH: TBD](https://berkeley.zoom.us/my/cboettig)  
-👤 [Daniela Rodriguez-Chavez](https://nature.berkeley.edu/people/daniela-rodriguez-chavez), GSI. OH: TBD  
-👤 [Elizabeth Ruiz](https://ourenvironment.berkeley.edu/people/elizabeth-ruiz), GSI. OH: TBD, elizabeth.ruiz@berkeley.edu
+👤 [Carl Boettiger](https://carlboettiger.info)  [OH: Fri 12pm](https://berkeley.zoom.us/my/cboettig) or by appt  
+👤 [Daniela Rodriguez-Chavez](https://nature.berkeley.edu/people/daniela-rodriguez-chavez), GSI. OH: Tue 12-2pm, Wellman 315  
+👤 [Elizabeth Ruiz](https://ourenvironment.berkeley.edu/people/elizabeth-ruiz), GSI. [OH: Thu 10am-12pm](https://berkeley.zoom.us/j/92961453385), elizabeth.ruiz@berkeley.edu
 :::
 
 :::{grid-item-card} Logistics
