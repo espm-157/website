@@ -91,22 +91,14 @@ change the model name in the same dialog and carry on. Tell us on Zulip so we ca
 this page.
 :::
 
-### Set it to plan mode
+### Set it to ask mode
 
 Kilo Code has several modes. We use **plan** mode for this module.
 
 - [Using modes](https://kilo.ai/docs/basic-usage/using-modes)
 
-Plan mode has read-only access to your project, plus the ability to write plan files under
-`.kilo/plans/`. It can read your code and your data and propose what to do; it cannot
-rewrite your notebook while you watch. `code` and `debug` modes have full write access.
+Ask mode has read-only access to your project. `code` and `debug` modes have full write access.
 We will get there later in the course, deliberately.
-
-That restriction is the whole point, and it is enforced by the mode rather than by your
-vigilance. You do not need to change any other settings: in plan mode there is nothing
-dangerous to approve, because the tools that change things are not available. When we move
-to `code` mode in a later module, approval settings become worth a conversation — and we
-will have it then, rather than teaching you to click through prompts now.
 
 ## 5. GitHub authentication in your editor
 
