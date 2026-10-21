@@ -8,3 +8,4 @@ Untitled.ipynb
 **/*.parquet
 **/*.tif
 **/*.gpkg
+reading/rules/

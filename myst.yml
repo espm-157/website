@@ -33,6 +33,7 @@ project:
     - title: Module 3
       children:
         - file: reading/text-intro.md
+        - file: reading/laya-example.ipynb
     - title: Module 4
       children:
         - file: reading/apps-intro.md

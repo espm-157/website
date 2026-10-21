@@ -52,7 +52,8 @@ one fits each step and to say why.
   completely literal.
 - **Decision models** answer typed questions about a text with probabilities instead of
   generated prose. We use [Laya](https://huggingface.co/convaiinnovations/laya), an
-  open-weight decision model that runs on the National Research Platform.
+  open-weight decision model that we host for the course. The
+  [Laya example](laya-example.ipynb) shows each kind of question on one listing rule.
 - **Embeddings** turn each passage into a vector of numbers placed so that passages with
   similar meaning are close together. We store them in DuckDB and search them by meaning.
 - **Retrieval-augmented generation (RAG)** retrieves the passages most relevant to a
