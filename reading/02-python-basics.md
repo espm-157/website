@@ -1,9 +1,10 @@
-# 🐍 Python, the parts you actually need
+# 🐍 Python basics
 
-You will not memorize a library. You will read code that a model wrote and decide whether
-it does what it claims. That requires knowing what the pieces mean.
+In this course you will read code that a model wrote and decide whether it does what it
+claims. You do not need to memorize a library to do that, but you do need to know what
+each piece of the code means.
 
-This is short on purpose. It is the vocabulary, not a tutorial.
+This page is a short vocabulary list. It is not a full tutorial.
 
 ## Imports
 
@@ -12,7 +13,7 @@ import ibis
 from plotnine import ggplot, aes, geom_line
 ```
 
-`import ibis` makes the name `ibis` available. `from ... import ...` pulls specific names
+`import ibis` makes the name `ibis` available. `from ... import ...` brings specific names
 directly into your namespace.
 
 When a model's code fails with `NameError`, an import is usually missing. When two pieces
@@ -24,25 +25,24 @@ of code disagree about what `read_csv` means, two different libraries both defin
 co2 = ibis.read_csv("co2.csv")
 ```
 
-The name `co2` now refers to that object. Assignment is not a copy and not a computation —
-it is a label.
+The name `co2` now refers to that object. Assignment attaches a label to an object; it does
+not copy the object or compute anything.
 
-A common way analyses go wrong: reassigning the same name to different things as a script
-goes on, so that by line 60 nobody knows what `df` contains. Give things names that say
-what they are.
+Analyses often go wrong when a script reassigns the same name to different things, so that
+by line 60 nobody knows what `df` contains. Give each object a name that says what it is.
 
-## The dot
+## The dot operator
 
-The `.` means "look inside this thing."
+The `.` means "look inside this object."
 
 ```python
 co2.filter(...)     # call the filter method belonging to co2
 co2.year            # access the column named year
 ```
 
-Everything to the left of the dot determines what is legal to the right. `ibis` tables
-have `.filter()`; a plain number does not. When you see `AttributeError`, the object was
-not the type the code assumed — which is usually the actual bug, not a typo.
+The object to the left of the dot determines what can appear to the right. `ibis` tables
+have a `.filter()` method and a plain number does not. An `AttributeError` means the object
+was not the type the code assumed, and that wrong assumption is usually the real bug.
 
 ## Method chaining
 
@@ -55,52 +55,50 @@ result = (
 )
 ```
 
-Each method returns a new table, so the next method can act on it. Read a chain top to
-bottom: start with `co2`, keep rows from 1990 on, keep two columns, sort.
+Each method returns a new table, so the next method can act on it. Read the chain from top
+to bottom: start with `co2`, keep rows from 1990 onward, keep two columns, and sort.
 
-The outer parentheses let you break the chain across lines. Put each step on its own line.
-A chain you can read line by line is a chain you can check line by line.
+The outer parentheses let the chain span several lines. We put each step on its own line
+so that we can read and check the steps one at a time.
 
 ## Lazy evaluation
 
 `ibis` does not do the work when you write the chain. It builds a description of the work
-and runs it when you ask for results.
+and runs it only when you ask for results.
 
 ```python
-result          # in interactive mode, shows a preview
-result.to_pandas()   # actually executes, returns the whole thing in memory
+result               # in interactive mode, shows a preview
+result.to_pandas()   # executes the query and returns the whole result in memory
 ```
 
-This is why `ibis` can query a file far larger than your session's memory: it pushes the
-filtering and grouping down to DuckDB, which streams the file and returns only the answer.
-`to_pandas()` is the moment you pull data into memory, so it is the moment to ask how much
+Lazy evaluation lets `ibis` query a file far larger than your session's memory. It passes
+the filtering and grouping to DuckDB, which streams through the file and returns only the
+answer. Calling `to_pandas()` pulls data into memory, so before you call it, check how much
 data you are about to pull.
 
-## The verbs
+## Table verbs
 
-Nearly everything in this course is a combination of six or seven table operations —
-`filter`, `select`, `mutate`, `group_by`, `agg`, `order_by`. That vocabulary is small,
-consistent, and worth learning once; the next page,
-[single table verbs](03-ibis-verbs.md), works through it properly.
+Nearly everything in this course combines six or seven table operations: `filter`,
+`select`, `mutate`, `group_by`, `agg` and `order_by`. The vocabulary is small and
+consistent. The next page, [single table verbs](03-ibis-verbs.md), covers it in detail.
 
-## Easy to remember, easy to get wrong
+## Silent errors
 
-`ibis.read_csv(...).filter(...).select(...)` is not hard to write. That is the point of a
-well-designed package — the syntax is not the obstacle.
+`ibis.read_csv(...).filter(...).select(...)` is not hard to write, because the package is
+designed so that the syntax is easy. The harder part is everything the syntax does not
+tell you:
 
-What is hard is everything the syntax does not tell you:
-
-- `.filter(_.stressor == "CO2 - combustion - air")` runs perfectly and quietly excludes
-  cement, lime, and peat emissions.
-- `.agg(total=_.value.sum())` runs perfectly and quietly adds kilograms to kilotonnes.
-- Reading one file when the dataset is twelve files produces a clean chart of a twelfth of
+- `.filter(_.stressor == "CO2 - combustion - air")` runs without error and quietly excludes
+  cement, lime and peat emissions.
+- `.agg(total=_.value.sum())` runs without error and quietly adds kilograms to kilotonnes.
+- Reading one file from a dataset of twelve files produces a clean chart of one twelfth of
   the record.
 
-None of those raise an error. Correct syntax is the beginning of the work, not the end of
-it.
+None of these raise an error. Code with correct syntax still needs to be checked against
+what the data and the question require.
 
 ## Reference
 
 - [Ibis: getting started](https://ibis-project.org/tutorials/getting_started)
 - [Ibis API reference](https://ibis-project.org/reference/)
-- [Python tutorial, official docs](https://docs.python.org/3/tutorial/)
+- [Official Python tutorial](https://docs.python.org/3/tutorial/)

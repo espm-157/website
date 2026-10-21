@@ -43,7 +43,15 @@ Final Project  | 30%
 HW Exercises   | 60% 
 Participation  | 10% 
 
-Grading rubrics will usually be provided with each module. 
+Grading rubrics will usually be provided with each module.
+
+The final project proposal is due **Wednesday, October 28**. The final project rubric has
+20 core points for the proposal, narrative, presentation, code, GitHub use, and process and
+AI use, plus 10 points from optional elements such as tabular data at scale, vector or
+raster data, interactive maps, text as data, verification, a web page, or a dashboard or
+app. The [final project template](https://github.com/espm-157/python-final-template)
+includes the full rubric.
+
 It is expected that students in this course will have a wide range of prior experience
 and ability, and grading will aim to reflect learning and effort in the course.
 This course is not graded "on a curve" compared to other students.

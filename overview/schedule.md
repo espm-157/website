@@ -4,50 +4,48 @@
 ::::{grid}
 :gutter: 3
 
-:::{grid-item-card} 🌡 Module 1: Global Climate Change
+:::{grid-item-card} 🌡 Module 1. Global climate change
 :columns: 6
 
 🖺 [Mann et al (1998)](https://doi.org/10.1038/33859)  
-🛠 Concepts: Tabular data, git  
- Communication: declarative visualization, jupyter notebooks
+🛠 Concepts: Tabular data, git, coding agents  
+📈 Communication: Declarative visualization, Jupyter notebooks  
 
 +++
 <a href="https://github.com/espm-157/climate-python-template"><i class="i-simpleicons github"></i> climate template </a>
 
 :::
 
-:::{grid-item-card} 🐟 Module 2: Global Fisheries Collapse
+:::{grid-item-card} 🛰 Module 2. Environmental justice
 :columns: 6
-
-🖺 [Worm et al (2006)](https://doi.org/10.1126/science.1132294)  
-🛠 Concepts: Relational databases  
-📈 Communication: Myst, pdf/LaTeX, html outputs  
-
-+++
-<a href="https://github.com/espm-157/fish-python-template"><i class="i-simpleicons github"></i> fish template </a>
-
-:::
-
-:::{grid-item-card} 🛰  Module 3: Environmental Justice
-:columns: 6
-
-
 
 🖺 [Schell et al (2020)](https://doi.org/10.1126/science.aay4497)  
-🛠 Concepts: Geospatial data structures + analysis  
-📈 Communication: Geospatial visualziation  
+🛠 Concepts: Geospatial data structures and analysis  
+📈 Communication: Geospatial visualization  
 
 +++
 <a href="https://github.com/espm-157/spatial-python-template"><i class="i-simpleicons github"></i> spatial template </a>
 
 :::
 
-:::{grid-item-card} 🤖 Module 4: Language Models and Decision support tools?
+:::{grid-item-card} 📜 Module 3. Text as data
+:columns: 6
+
+🖺 [Delach et al (2019)](https://doi.org/10.1038/s41558-019-0620-8)  
+🛠 Concepts: Regular expressions, classifiers, embeddings, retrieval-augmented generation  
+📈 Communication: Claims traced to source documents  
+
++++
+<a href="https://github.com/espm-157/text-template"><i class="i-simpleicons github"></i> text template </a>
+
+:::
+
+:::{grid-item-card} 🤖 Module 4. Applications
 :columns: 6
 
 🖺 TBD  
-🛠 LLMs, RAG,  
-📈 `streamlit`, reactive design  
+🛠 Concepts: Reactive design, dependencies, continuous integration, open source licensing  
+📈 Communication: Interactive web applications  
 
 +++
 _template TBD_
@@ -71,19 +69,22 @@ Week     | Dates            | Module | Topics
 ---------|------------------|--------|----------------------------
 week 1   | Aug 26 / Aug 28  |    🌡   | GitHub, JupyterHub
 week 2   | Sep 2 / Sep 4    |    🌡   | viz: `plotnine`
-week 3   | Sep 9 / Sep 11   |    🌡   | data: `pandas` / `ibis`
+week 3   | Sep 9 / Sep 11   |    🌡   | data: `ibis`, coding agents
 week 4   | Sep 16 / Sep 18  |    🌡   | Collab, PRs, CI
-week 5   | Sep 23 / Sep 25  |   🐟   | Module intro
-week 6   | Sep 30 / Oct 2   |   🐟   | RDBs, joins
-week 7   | Oct 7 / Oct 9    |   🐟   | discovery
-week 8   | Oct 14 / Oct 16  |   🛰   | spatial data types
-week 9   | Oct 21 / Oct 23  |   🛰   | spatial data viz
-week 10  | Oct 28 / Oct 30  |   🛰   | spatial data analysis
-week 11  | Nov 4 / Nov 6    |   🛰   | putting it together
-week 12  | ~~Nov 11~~ / Nov 13 |   🤖   | LLMs
-week 13  | Nov 18 / Nov 20  |   🤖   | LLMs+RAG?
+week 5   | Sep 23 / Sep 25  |   🛰   | spatial data types
+week 6   | Sep 30 / Oct 2   |   🛰   | spatial data viz
+week 7   | Oct 7 / Oct 9    |   🛰   | spatial data analysis
+week 8   | Oct 14 / Oct 16  |   📜   | text as data, regular expressions
+week 9   | Oct 21 / Oct 23  |   📜   | classifiers, search and RAG
+week 10  | Oct 28 / Oct 30  |   📜   | structured extraction; **final project proposal due Wed Oct 28**
+week 11  | Nov 4 / Nov 6    |   🤖   | client-side apps
+week 12  | ~~Nov 11~~ / Nov 13 |   🤖   | CI, dependencies, licenses
+week 13  | Nov 18 / Nov 20  |   🎓   | final projects
 week 14  | ~~Nov 25~~ / ~~Nov 27~~ | 🦃 | _no class meetings_
-week 15  | Dec 2 / Dec 4    | 🤖 🎓  | `streamlit`, Final Projects
+week 15  | Dec 2 / Dec 4    |   🎓   | final projects
+
+The final project template is at
+[espm-157/python-final-template](https://github.com/espm-157/python-final-template).
 
 :::{note} Academic holidays
 **Wed Nov 11** (Veterans Day) and **Thanksgiving week** (Wed Nov 25 non-instructional

@@ -1,49 +1,51 @@
-# 🤖 What a coding agent actually is
+# 🤖 Coding agents
 
-You are going to spend a semester working with a coding agent. It is worth an hour to
-understand what one is, because the marketing and the mechanism are very different things.
+You will spend the semester working with a coding agent, so it is worth an hour to
+understand what one is. How an agent works is quite different from how it is marketed.
 
-Hadley Wickham has been writing the clearest available explanation of this, aimed at data
-scientists rather than at software engineers. His examples are in R. Read them anyway —
-the ideas transfer completely, and the pedagogy is excellent.
+Hadley Wickham has written the clearest available explanation, aimed at data scientists
+instead of software engineers. His examples are in R, but the ideas apply equally to
+Python, and the explanations are excellent teaching material.
 
-## Assigned
+## Assigned readings
 
-Read these two, in order, during the first week:
+Read these two posts, in order, during the first week:
 
-- [What is an agent?](https://tidydesign.substack.com/p/what-is-an-agent) — an agent is a
-  language model in a loop, calling tools and deciding the next step from the last result.
-  Note the distinction between tools that *read* the world and tools that *change* it.
+- [What is an agent?](https://tidydesign.substack.com/p/what-is-an-agent) An agent is a
+  language model running in a loop, calling tools and choosing each next step from the
+  previous result. Note the distinction between tools that *read* the world and tools
+  that *change* it.
 - [A coding agent is six functions in a trenchcoat](https://tidydesign.substack.com/p/a-coding-agent-is-six-functions-in)
-  — the whole apparatus, demystified. Once you can name the six functions, the thing stops
-  being magic and starts being software you can reason about.
+  This post walks through the whole apparatus. Once you can name the six functions, you
+  can reason about the agent as ordinary software.
 
-Read this one before we discuss autonomy, later in the module:
+Read this post before we discuss autonomy later in the module:
 
 - [Auto mode knows it's dangerous (and does it anyway)](https://tidydesign.substack.com/p/auto-mode-knows-its-dangerous-and)
 
-## Why we stay in plan mode
+## Ask mode
 
-We work in **plan mode** for this entire module: the agent proposes, you approve, then it
-runs. We do not turn on autonomous modes until later in the course, and when we do it will
-be a deliberate step rather than a default.
+We work in **ask mode** for this entire module. Ask mode has read-only access to your
+project: the agent can read your code and data and suggest what to write, but you type or
+paste the code and run it yourself. We move to **code mode**, which lets the agent edit
+files and run code, at the start of Module 2.
 
-The reason is not that autonomy is forbidden or frightening. It is that an agent that
-edits files and runs code while you watch a progress bar teaches you nothing about
-whether its work is right. You cannot audit what you did not see proposed.
+Autonomy is neither forbidden nor frightening. We avoid it for now because watching an
+agent edit files and run code behind a progress bar tells you nothing about whether its
+work is right. You can only audit work that you have read before it runs.
 
-## Optional, and worth it
+## Optional readings
 
-- [Your LLM can't math (and that's ok)](https://tidydesign.substack.com/p/your-llm-cant-math-and-thats-ok) —
-  directly relevant to why we verify numbers rather than trusting them.
-- [Help! My coding agent can run code](https://tidydesign.substack.com/p/help-my-coding-agent-can-run-code) —
-  what it means that this thing has a shell.
-- [y code when ai?](https://tidydesign.substack.com/p/y-code-when-ai) — a talk on why
-  learning to code still matters. Read this one before our in-class unplugged session.
+- [Your LLM can't math (and that's ok)](https://tidydesign.substack.com/p/your-llm-cant-math-and-thats-ok)
+  explains why we verify the numbers a model gives us.
+- [Help! My coding agent can run code](https://tidydesign.substack.com/p/help-my-coding-agent-can-run-code)
+  discusses what it means that the agent has access to a shell.
+- [y code when ai?](https://tidydesign.substack.com/p/y-code-when-ai) is a talk on why
+  learning to code still matters. Read it before our in-class unplugged session.
 
-## To discuss in class
+## Discussion questions
 
 - What is the difference between a *conversation* with a model and an *agent*?
 - Which of your agent's tools can change the state of your computer? How would you know?
-- The agent proposes a plan. What in that plan are you actually able to evaluate, and what
-  are you taking on faith? Be honest about the second category.
+- When the agent proposes a plan, which parts of it can you actually evaluate, and which
+  parts are you taking on faith? Be honest about the second category.
