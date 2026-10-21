@@ -1,13 +1,15 @@
 ---
 layout: default 
-banner: https://climate.nasa.gov/system/internal_resources/details/original/417_1263_banner-science-1600x500.jpg
+banner: _static/img/banner.jpg
 title: "ESPM-157: Data Science in Global Change Ecology"
 
 ---
 
 ::::{grid} 1 1 1 1
 
-![](https://climate.nasa.gov/system/internal_resources/details/original/417_1263_banner-science-1600x500.jpg)
+![Scientists on Arctic sea ice and melt ponds in the Chukchi Sea during NASA's ICESCAPE mission](_static/img/banner.jpg)
+
+_Photo: NASA/Kathryn Hansen_
 
 ::::
 
@@ -15,14 +17,20 @@ title: "ESPM-157: Data Science in Global Change Ecology"
 ::::{grid}  1 1 2 2
 
 :::{grid-item-card} Instructor Team
-👤 [Carl Boettiger](https://carlboettiger.info)  [OH: Fri 12pm](https://berkeley.zoom.us/my/cboettig) or by appt  
-👤 [Daniela Rodriguez-Chavez](https://nature.berkeley.edu/people/daniela-rodriguez-chavez), GSI. OH: Tue 11:10am-12:50pm or by appt., Wellman 315, drodriguezchavez@berkeley.edu  
-👤 [Elizabeth Ruiz](https://ourenvironment.berkeley.edu/people/elizabeth-ruiz), GSI. OH: [Thu 10am-12pm](https://berkeley.zoom.us/j/92961453385), or by appt., elizabeth.ruiz@berkeley.edu
+👤 [Carl Boettiger](https://carlboettiger.info), instructor  
+👤 [Daniela Rodriguez-Chavez](https://nature.berkeley.edu/people/daniela-rodriguez-chavez), GSI, drodriguezchavez@berkeley.edu  
+👤 [Elizabeth Ruiz](https://ourenvironment.berkeley.edu/people/elizabeth-ruiz), GSI, elizabeth.ruiz@berkeley.edu
 :::
 
 :::{grid-item-card} Logistics
 🏛 Wheeler 212  
-📅 Wed/Fri 8-10am
+📅 Wed/Fri 8-10am  
+
+**Office hours**  
+Carl: [Fri 12pm](https://berkeley.zoom.us/my/cboettig) on Zoom  
+Daniela: Tue 11:10am-12:50pm, Wellman 315  
+Elizabeth: [Thu 10am-12pm](https://berkeley.zoom.us/j/92961453385) on Zoom  
+Each of us also meets by appointment.
 :::
 
 ::::
