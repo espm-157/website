@@ -43,7 +43,7 @@
 :::{grid-item-card} 🤖 Module 4. Applications
 :columns: 6
 
-🖺 TBD  
+🖺 Your analysis from Modules 1 to 3  
 🛠 Concepts: Reactive design, dependencies, continuous integration, open source licensing  
 📈 Communication: Interactive web applications  
 
