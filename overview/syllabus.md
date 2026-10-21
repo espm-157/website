@@ -26,7 +26,7 @@ This course has no formal prerequisites. Prior experience with programming in an
 ## Office hours
 
 + Carl Boettiger: Fridays at noon on [Zoom](https://berkeley.zoom.us/my/cboettig), or by appointment
-+ Daniela Rodriguez-Chavez: Tuesdays 12-2pm, Wellman 315
++ Daniela Rodriguez-Chavez: Tuesdays 11:10am-12:50pm, Wellman 315, or by appointment
 + Elizabeth Ruiz: Thursdays 10am-12pm, [Zoom](https://berkeley.zoom.us/j/92961453385)
 
 ## Communication

@@ -62,3 +62,11 @@ templates set up for us:
 - [DuckDB-WASM overview](https://duckdb.org/docs/api/wasm/overview)
 - [Observable Plot documentation](https://observablehq.com/plot/)
 - [MapLibre GL JS examples](https://maplibre.org/maplibre-gl-js/docs/examples/)
+
+## Template
+
+<a href="https://github.com/espm-157/app-template"><i class="i-simpleicons github"></i> app template</a>
+
+The template includes a small [starter app](https://espm-157.github.io/app-template/) that reads the
+CO₂ data from Module 1, offers two menus and a slider, and draws a line chart. Each team replaces it
+with its own app.
