@@ -91,12 +91,14 @@ you can select in the same dialog. Please tell us on Zulip so we can update this
 
 ### Ask mode
 
-Kilo Code has several modes. We use **ask** mode for this module.
+Kilo Code has several modes. We use **ask** mode for Module 1 and **code** mode from Module 2
+onward.
 
 - [Using modes](https://kilo.ai/docs/basic-usage/using-modes)
 
-Ask mode has read-only access to your project, while `code` and `debug` modes have full
-write access. We will move to those modes later in the course as a deliberate step.
+Ask mode has read-only access to your project: the agent can read your code and data and
+suggest what to write, but you run the code yourself. Code mode has full write access, so
+the agent can edit files and run code. We switch to code mode at the start of Module 2.
 
 ## 5. GitHub authentication in the editor
 

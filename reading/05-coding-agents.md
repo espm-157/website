@@ -47,5 +47,5 @@ work is right. You can only audit work that you have read before it runs.
 
 - What is the difference between a *conversation* with a model and an *agent*?
 - Which of your agent's tools can change the state of your computer? How would you know?
-- When the agent proposes a plan, which parts of it can you actually evaluate, and which
+- When the agent suggests code, which parts of it can you actually evaluate, and which
   parts are you taking on faith? Be honest about the second category.
