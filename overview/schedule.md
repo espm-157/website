@@ -70,18 +70,18 @@ Week     | Dates            | Module | Topics
 week 1   | Aug 26 / Aug 28  |    🌡   | GitHub, JupyterHub
 week 2   | Sep 2 / Sep 4    |    🌡   | viz: `plotnine`
 week 3   | Sep 9 / Sep 11   |    🌡   | data: `ibis`, coding agents
-week 4   | Sep 16 / Sep 18  |    🌡   | Collab, PRs, CI
-week 5   | Sep 23 / Sep 25  |   🛰   | spatial data types
+week 4   | Sep 16 / Sep 18  |    🌡   | Collab, PRs, CI 
+week 5   | Sep 23 / Sep 25  |   🛰   | spatial data types **module 1 due Sep 23**
 week 6   | Sep 30 / Oct 2   |   🛰   | spatial data viz
-week 7   | Oct 7 / Oct 9    |   🛰   | spatial data analysis
-week 8   | Oct 14 / Oct 16  |   📜   | text as data, regular expressions
+week 7   | Oct 7 / Oct 9    |   🛰   | spatial data analysis 
+week 8   | Oct 14 / Oct 16  |   📜   | text as data, regular expressions **module 2 due Oct 14**
 week 9   | Oct 21 / Oct 23  |   📜   | classifiers, search and RAG
 week 10  | Oct 28 / Oct 30  |   📜   | structured extraction; **final project proposal due Wed Oct 28**
-week 11  | Nov 4 / Nov 6    |   🤖   | client-side apps
+week 11  | Nov 4 / Nov 6    |   🤖   | client-side apps **module 3 due Nov 4**
 week 12  | ~~Nov 11~~ / Nov 13 |   🤖   | CI, dependencies, licenses
-week 13  | Nov 18 / Nov 20  |   🎓   | final projects
+week 13  | Nov 18 / Nov 20  |   🎓   | final projects **module 4 due Dec 2**
 week 14  | ~~Nov 25~~ / ~~Nov 27~~ | 🦃 | _no class meetings_
-week 15  | Dec 2 / Dec 4    |   🎓   | final projects
+week 15  | Dec 2 / Dec 4    |   🎓   | final projects 
 
 The final project template is at
 [espm-157/python-final-template](https://github.com/espm-157/python-final-template).
