@@ -14,13 +14,18 @@ VS Code:
    `esa.ipynb` is at the top level of the Explorer.
 2. In the Explorer, click **New File** and name it `.env`, with the leading dot and no other
    extension. It belongs in the same folder as `esa.ipynb`.
-3. Add these lines with your own values, and save the file:
+3. Copy these lines into the file:
 
 ```bash
 LAYA_URL=https://laya.carlboettiger.info
-LAYA_API_KEY=your-laya-key
-NRP_TOKEN=your-nrp-token
+LAYA_API_KEY=XXXXXXXXXXXXXXXX
+NRP_TOKEN=XXXXXXXXXXXXXXXX
 ```
+
+4. **Replace each `XXXXXXXXXXXXXXXX` with your own key**, and save the file. The X's are
+   placeholders, not keys. If you leave them in, every request fails with an authentication
+   error (`401 Unauthorized`). The next section says where each key comes from. Keep the
+   `LAYA_URL` line as it is.
 
 Write each value as it is, with no quotes and no spaces around the `=`.
 
@@ -30,13 +35,18 @@ add a line `.env` to `.gitignore` before you commit anything.
 
 ## Variables
 
-- `LAYA_URL` is the address of the Laya server that we host for the course.
+- `LAYA_URL` is the address of the Laya server that we host for the course. It is the same for
+  everyone, so you copy it as written.
 - `LAYA_API_KEY` is the course key for Laya, which we give you in class.
-- `NRP_TOKEN` is optional. It is the token you generated during [setup](01-setup.md) for Kilo
-  Code, and you need it only if you want to call a regular language model from your notebook,
-  for example for structured extraction. The [structured extraction example](extraction-example.ipynb)
-  and the **Setup** cell of the module template show how the notebook uses it to connect to
-  `deepseek-v4-flash` and `qwen3-embedding`.
+- `NRP_TOKEN` is optional. You need it only if you want to call a regular language model from
+  your notebook, for example for structured extraction. The
+  [structured extraction example](extraction-example.ipynb) and the **Setup** cell of the module
+  template show how the notebook uses it to connect to `deepseek-v4-flash` and `qwen3-embedding`.
+
+Your NRP token is the same one you entered in Kilo Code during
+[setup](01-setup.md#id-3-nrp-account-and-api-token). If you no longer have it, generate a new one
+at [nrp.ai/llmtoken](https://nrp.ai/llmtoken). When the page asks you to sign in, choose
+**University of California, Berkeley** as your identity provider. Do not sign in with ORCID.
 
 The template's Setup cell reads both `NRP_TOKEN` and `LAYA_API_KEY`. If one of them is missing
 from `.env`, that cell stops with a `KeyError` naming the variable.

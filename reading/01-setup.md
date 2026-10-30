@@ -38,7 +38,8 @@ The [National Research Platform](https://nrp.ai) hosts the open-weight language 
 use. It is run by a consortium of universities and is free for academic use.
 
 - [Register for an account](https://nrp.ai/documentation/userdocs/start/getting-started/)
-- Generate a token at [nrp.ai/llmtoken](https://nrp.ai/llmtoken)
+- Generate a token at [nrp.ai/llmtoken](https://nrp.ai/llmtoken). When asked to sign in,
+  choose **University of California, Berkeley** as your identity provider, not ORCID.
 - [Available models](https://nrp.ai/documentation/userdocs/ai/llm-managed/models/)
 - [Fair use policy](https://nrp.ai/documentation/userdocs/ai/llm-managed/fair-use).
   Please read it, since you share this infrastructure with researchers across the country.
