@@ -59,11 +59,13 @@ one fits each step and to say why.
 - **Retrieval-augmented generation (RAG)** retrieves the passages most relevant to a
   question and asks a language model to answer from those passages only, citing each one.
 - **Structured extraction** asks a language model to fill in a schema that we define, with
-  one record per document.
+  one record per document. The [structured extraction example](extraction-example.ipynb)
+  extracts a record from each of two listing rules and checks it.
 
 The language model is `deepseek-v4-flash` and the embedding model is `qwen3-embedding`, both
 served by the [National Research Platform](https://nrp.ai/documentation/userdocs/ai/llm-managed/).
-This is the same API you configured in Kilo Code during Module 1.
+This is the same API you configured in Kilo Code during Module 1. The [.env file page](env-file.md) shows how to
+store your keys for Laya and NRP so that a notebook can read them.
 
 ## Further reading
 
