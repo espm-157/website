@@ -37,7 +37,7 @@ add a line `.env` to `.gitignore` before you commit anything.
 
 - `LAYA_URL` is the address of the Laya server that we host for the course. It is the same for
   everyone, so you copy it as written.
-- `LAYA_API_KEY` is the course key for Laya, which we give you in class.
+- `LAYA_API_KEY` is the course key for Laya, which we share on the course Zulip.
 - `NRP_TOKEN` is optional. You need it only if you want to call a regular language model from
   your notebook, for example for structured extraction. The
   [structured extraction example](extraction-example.ipynb) and the **Setup** cell of the module
