@@ -38,6 +38,7 @@ project:
         - file: reading/laya-example.ipynb
         - file: reading/extraction-example.ipynb
         - file: reading/pdf-export.md
+        - file: reading/pdf-formats.md
     - title: Module 4
       children:
         - file: reading/apps-intro.md
