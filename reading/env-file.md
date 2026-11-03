@@ -22,8 +22,8 @@ LAYA_API_KEY=XXXXXXXXXXXXXXXX
 NRP_TOKEN=XXXXXXXXXXXXXXXX
 ```
 
-4. **Replace each `XXXXXXXXXXXXXXXX` with your own key**, and save the file. The X's are
-   placeholders, not keys. If you leave them in, every request fails with an authentication
+4. **Replace each `XXXXXXXXXXXXXXXX` with your own LAYA and NRP key/token**, and save the file. The X's are
+   placeholders, not keys. They should not be the same key for both LAYA and NRP. If you leave them in, every request fails with an authentication
    error (`401 Unauthorized`). The next section says where each key comes from. Keep the
    `LAYA_URL` line as it is.
 
