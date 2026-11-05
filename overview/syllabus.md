@@ -151,3 +151,12 @@ benefit from their support, please apply online at https://dsp.berkeley.edu.
 
 
 
+
+
+## Financial aid satisfactory academic progress
+
+The following text is provided in accordance with California Assembly Bill 789 (AB 789).
+
+To maintain eligibility for financial aid, students must meet Satisfactory Academic Progress (SAP) standards. Satisfactory academic progress requires maintaining progress toward degree completion by completing at least 67% of attempted units, maintaining a minimum cumulative grade point average (2.0 for undergraduate students; 3.0 for graduate students), and completing degree requirements within the maximum allowable timeframe (measured in units for undergraduates and academic terms for graduate students).
+
+Failure to meet financial aid SAP standards may result in the suspension of financial aid eligibility unless a SAP appeal is granted. Students with questions regarding their SAP status or the SAP appeals process are encouraged to contact Cal Student Central for assistance.
