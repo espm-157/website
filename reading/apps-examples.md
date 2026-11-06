@@ -62,13 +62,6 @@ These apps build on the climate data from Module 1.
   temperature with one line per year and highlights the current year against all earlier ones.
 - 🌡 NOAA's [Climate at a Glance](https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/global/time-series)
   lets a reader choose a region, a variable, a season and a base period, and draws the time series.
-- 🌡 The New York Times app
-  [How much hotter is your hometown than when you were born?](https://www.nytimes.com/interactive/2018/08/30/climate/how-much-hotter-is-your-hometown.html)
-  asks for a city and a birth year and builds the chart around them. It is a model for the "look
-  up your own place" kind of app.
-- 🌡 [You draw it](https://www.nytimes.com/interactive/2015/05/28/upshot/you-draw-it-how-family-income-affects-childrens-college-chances.html),
-  also from the New York Times, asks the reader to draw the trend before revealing the data. The
-  same idea works for the temperature reconstruction in Mann et al. (1998).
 
 ## Maps
 
@@ -95,8 +88,6 @@ has the widest support for map projections and GIS formats.
 
 These apps build on the environmental justice theme of Module 2.
 
-- 🛰 [Mapping Inequality](https://dsl.richmond.edu/panorama/redlining/map), our data source, pairs
-  each HOLC map with the original area descriptions written by the surveyors.
 - 🛰 [Tree Equity Score](https://www.treeequityscore.org/map) scores every neighborhood in the US on
   tree canopy relative to income, race, age and heat. It asks the same question as Module 2 for
   the present day, and a reader can search for their own address.
