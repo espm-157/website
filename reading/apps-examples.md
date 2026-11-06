@@ -181,6 +181,44 @@ computed ahead of time and saved to a file, and the reader's query is embedded i
   model download is large, often several gigabytes, which is a cost to weigh for any reader on a
   phone.
 
+## Streamlit and Shiny galleries
+
+The [Streamlit gallery](https://streamlit.io/gallery), the
+[Shiny for Python gallery](https://shiny.posit.co/py/gallery/) and the
+[Shiny for R gallery](https://shiny.posit.co/r/gallery/) collect hundreds of data apps, most with
+a link to their source code. These apps run on a server. Free hosted apps are put to sleep when
+nobody uses them, so the first visit can take a minute while the server wakes up, which is the
+cost of server-side apps described in the [Module 4 introduction](apps-intro.md). Many of them
+translate directly into a client-side app. The data file becomes a static CSV or Parquet file read
+by DuckDB-WASM, each widget becomes an HTML input, and each chart becomes an Observable Plot or
+Vega-Lite chart. These apps would translate well.
+
+- 🌡 The [Seattle weather dashboard](https://demo-seattle-weather.streamlit.app/) shows summary
+  numbers for one year at the top, then lets the reader compare temperature, precipitation and
+  wind across chosen years. Its [source](https://github.com/streamlit/demo-seattle-weather) is a
+  single short Python file with Altair charts, which are already Vega-Lite.
+- 🌡 The [respiratory disease app](https://gallery.shinyapps.io/respiratory_disease_pyshiny/)
+  maps fine particulate pollution and deaths from respiratory disease by country, with a slider
+  for the year. It uses World Bank, OECD and Our World in Data files, and its
+  [source](https://github.com/rstudio/shiny-gallery/tree/master/respiratory_disease_pyshiny) is in
+  Shiny for Python.
+- 🛰 The [Utah Lake water quality dashboard](https://gallery.shinyapps.io/lake-profile-dashboard/)
+  maps monitoring sites. When the reader clicks a site, the app draws the profile of dissolved
+  oxygen and temperature with depth for that site. The pattern of clicking a place on a map to
+  fill a panel of charts fits almost any spatial dataset.
+- 🛰 [Prettymapp](https://prettymapp.streamlit.app/) draws a poster-style map of streets, water and
+  parks for any address, with a radius slider and color themes. A MapLibre version would restyle
+  vector tiles instead of downloading OpenStreetMap data on a server.
+- 📜 [Biodiversity in National Parks](https://abenedetti.shinyapps.io/bioNPS/) lists the species
+  recorded in each US national park with their conservation status, as tables, charts and a map,
+  and its [source](https://github.com/abenedetti/bioNPS/) is in R. An app from Module 3 could
+  pair each listed species with the listing rules that discuss climate change.
+
+The [Shiny for Python templates](https://shiny.posit.co/py/templates/) are worth browsing for
+layout alone. The [restaurant tips dashboard](https://gallery.shinyapps.io/template-dashboard-tips1/)
+shows a common arrangement of summary numbers in a row across the top, filters in a sidebar, and
+cards that each hold one chart or table.
+
 ## Layout and components
 
 The starter app uses plain HTML and a short stylesheet. A layout or component library adds menus,
@@ -207,6 +245,10 @@ Observable Framework also need a build step, which turns your source files into 
 GitHub Pages serves, so the deploy workflow in the template would need a new step to run it.
 Libraries such as Pico, Web Awesome and MapLibre can be loaded from a pinned URL with no build
 step at all. Choose the smallest set of tools that does what your readers need.
+
+The [Shiny layouts](https://shiny.posit.co/py/layouts/) page is a useful catalog of the standard
+arrangements, such as a navigation bar, a sidebar, tabs and cards, each with a picture. The same
+arrangements can be built with any of the libraries above.
 
 A few habits make an app work on a phone whatever library you choose:
 
