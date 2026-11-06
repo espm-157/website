@@ -42,6 +42,7 @@ project:
     - title: Module 4
       children:
         - file: reading/apps-intro.md
+        - file: reading/apps-examples.md
     - title: Archive
       children:
         - file: archive/00-preface.md

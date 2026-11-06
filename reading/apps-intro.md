@@ -58,6 +58,9 @@ templates set up for us:
 
 ## Further reading
 
+The [frameworks and examples](apps-examples.md) page tours published apps on the themes of
+Modules 1 to 3 and the libraries they are built with.
+
 - [GitHub Pages documentation](https://docs.github.com/en/pages)
 - [DuckDB-WASM overview](https://duckdb.org/docs/api/wasm/overview)
 - [Observable Plot documentation](https://observablehq.com/plot/)
