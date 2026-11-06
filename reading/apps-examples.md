@@ -1,11 +1,19 @@
 # 🧭 Frameworks and examples
 
-The starter app uses three libraries and no framework: DuckDB-WASM reads the data, Observable
-Plot draws the chart, and plain HTML provides the menus. Most published data apps combine a few
-more pieces: a map library, a layout or component library, and sometimes a framework that builds
-the whole site. This page tours the major choices through apps that people actually use, grouped
-by the themes of Modules 1 to 3. Use it to find an app worth imitating, and then find out how
-that app was built.
+Every app on this page is built from the three layers described in
+[HTML, CSS and JavaScript](apps-web-basics.md). Each library adds to one or more of these layers.
+
+| Layer | What libraries add | Examples |
+|---|---|---|
+| JavaScript | data, charts and maps drawn into an HTML element | DuckDB-WASM, Observable Plot, D3, MapLibre, deck.gl |
+| CSS | colors, fonts and layouts that adapt to the screen | Pico CSS, Bootstrap, Tailwind CSS |
+| HTML | new elements such as tabs, drawers and dialogs, defined with JavaScript | Web Awesome |
+| All three | components written together and compiled into plain files | Svelte, React, Vue, Observable Framework |
+
+The starter app uses plain HTML and CSS and two JavaScript libraries: DuckDB-WASM reads the data
+and Observable Plot draws the chart. This page tours the major libraries for each layer through
+apps that people actually use, grouped by the themes of Modules 1 to 3. Use it to find an app
+worth imitating, and then find out how that app was built.
 
 ## Reading an app
 
@@ -15,7 +23,10 @@ developer tools.
 - The **network tab** lists every file the app loads: its scripts, its data files, and its map
   tiles. Reload the page with the tab open to see which data an app reads, how large they are,
   and whether it queries a server or reads static files.
-- The **sources** or **debugger** tab shows the libraries. A file named `maplibre-gl.js` or
+- The **elements** or **inspector** tab shows the HTML of the page and the CSS rules applied to
+  each element. Most apps have a `<div>` or `<canvas>` element into which a chart or map library
+  draws.
+- The **sources** or **debugger** tab shows the JavaScript libraries. A file named `maplibre-gl.js` or
   `duckdb-wasm` tells you a lot about how the app works.
 - The **device toolbar** (the phone icon in Chrome and Firefox) shows the app at the width of a
   phone. Try it on every app below, including your own.
@@ -27,7 +38,8 @@ Ask your coding agent to explain what it finds, the same way you asked it to exp
 
 ## Charts
 
-Observable Plot is one of several grammar-of-graphics libraries for the browser.
+Chart libraries are JavaScript. Each one takes data and draws a chart into an element on the page,
+usually as SVG, which is itself a kind of HTML that CSS can style. Observable Plot is one of several grammar-of-graphics libraries for the browser.
 [Vega-Lite](https://vega.github.io/vega-lite/examples/) is the library underneath Python's
 [Altair](https://altair-viz.github.io/gallery/index.html), so a chart you write in Altair in a
 notebook can be exported as a Vega-Lite spec and embedded in a web page.
@@ -60,8 +72,10 @@ These apps build on the climate data from Module 1.
 
 ## Maps
 
-In Module 2 we used MapLibre through leafmap. Writing MapLibre in JavaScript directly opens up
-much more of it. The [MapLibre examples](https://maplibre.org/maplibre-gl-js/docs/examples/)
+Map libraries are JavaScript, together with a small CSS file for the zoom buttons and popups.
+The map fills one `<div>` on the page and draws with the computer's graphics card. In Module 2 we
+used MapLibre through leafmap, which writes this JavaScript for us. Writing MapLibre in JavaScript
+directly opens up much more of it. The [MapLibre examples](https://maplibre.org/maplibre-gl-js/docs/examples/)
 include a [globe](https://maplibre.org/maplibre-gl-js/docs/examples/display-a-globe-with-a-vector-map/),
 [3D terrain](https://maplibre.org/maplibre-gl-js/docs/examples/3d-terrain/), and a
 [cloud-optimized GeoTIFF](https://maplibre.org/maplibre-gl-js/docs/examples/add-a-cog-raster-source/)
@@ -221,24 +235,29 @@ cards that each hold one chart or table.
 
 ## Layout and components
 
-The starter app uses plain HTML and a short stylesheet. A layout or component library adds menus,
-tabs, dialogs and a grid that rearranges itself on a phone.
+The starter app uses plain HTML and a short stylesheet of its own. Layout and component libraries
+replace that stylesheet, or add new HTML elements, so that menus, tabs, dialogs and grids look
+consistent and rearrange themselves on a phone. They differ in which layer they work in.
 
-- [Pico CSS](https://picocss.com/) styles plain HTML elements with no classes to learn, and
-  includes dark mode. It is the smallest step up from the starter app.
-- [Bootstrap](https://getbootstrap.com/docs/5.3/examples/) provides a responsive grid, a navigation
-  bar that collapses into a menu on a phone, and many other components. Its examples page has
-  complete layouts for dashboards, sidebars and landing pages.
-- [Tailwind CSS](https://tailwindcss.com/) styles each element with small utility classes. Coding
-  agents write it fluently, but the resulting HTML is harder to read.
+- [Pico CSS](https://picocss.com/) is a stylesheet only. It styles plain HTML elements with no
+  classes to learn, and includes dark mode. It is the smallest step up from the starter app.
+- [Bootstrap](https://getbootstrap.com/docs/5.3/examples/) is mostly CSS, with a little JavaScript
+  for menus that open and close. It provides a responsive grid, a navigation bar that collapses
+  into a menu on a phone, and many other components. Its examples page has complete layouts for
+  dashboards, sidebars and landing pages.
+- [Tailwind CSS](https://tailwindcss.com/) is CSS applied through many small classes written in
+  the HTML, such as `p-4` for padding. Coding agents write it fluently, but the resulting HTML is
+  harder to read.
 - [Web Awesome](https://webawesome.com/), the successor to [Shoelace](https://shoelace.style/),
-  provides components such as tabs, drawers, dialogs and range sliders as web components, which
-  work in plain HTML without a framework.
+  adds new HTML elements, such as `<wa-tab-group>` and `<wa-drawer>`, which are defined in
+  JavaScript and styled with CSS. They work in a plain HTML page without a framework.
 
-Larger apps use a JavaScript framework to keep the interface in step with the app's state.
-[Svelte](https://svelte.dev/) is common in newsrooms, and [LayerCake](https://layercake.graphics/)
-is a chart library for it. React powers the Our World in Data Grapher and the Overture explorer
-above, and Vue powers STAC Browser.
+Larger apps use a JavaScript framework. A framework lets you write each part of the interface as
+a component that holds its own HTML, CSS and JavaScript together, and it updates the page
+whenever the app's state changes. A build step then compiles the components into ordinary HTML,
+CSS and JavaScript files. [Svelte](https://svelte.dev/) is common in newsrooms, and
+[LayerCake](https://layercake.graphics/) is a chart library for it. React powers the Our World in
+Data Grapher and the Overture explorer above, and Vue powers STAC Browser.
 
 Each of these libraries is a dependency that you must pin and test. Svelte, React, Tailwind and
 Observable Framework also need a build step, which turns your source files into the files that
