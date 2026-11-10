@@ -28,7 +28,7 @@ _Photo: NASA/Kathryn Hansen_
 
 **Office hours**  
 Carl: [Fri 12pm](https://berkeley.zoom.us/my/cboettig) on Zoom  
-Daniela: Tue 11:10am-12:50pm, Wellman 315  
+Daniela: Tue 11:10am-12:50pm, zoom today (https://berkeley.zoom.us/j/97136010845)  
 Elizabeth: [Thu 10am-12pm](https://berkeley.zoom.us/j/92961453385) on Zoom  
 Each of us also meets by appointment.
 :::
