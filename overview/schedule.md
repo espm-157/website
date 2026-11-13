@@ -79,7 +79,7 @@ week 9   | Oct 21 / Oct 23  |   3📜   | classifiers, search and RAG
 week 10  | Oct 28 / Oct 30  |   3📜   | structured extraction; // **final project proposal due Wed Oct 28**
 week 11  | Nov 4 / Nov 6    |   4🤖   | client-side apps // **module 3 due Nov 4**
 week 12  | ~~Nov 11~~ / Nov 13 |   4🤖   | CI, dependencies, licenses
-week 13  | Nov 18 / Nov 20  |   🎓   | final projects // **module 4 due Dec 2**
+week 13  | Nov 18 / Nov 20  |   🎓   | final projects // **module 4 due Nov 18**
 week 14  | ~~Nov 25~~ / ~~Nov 27~~ | 🦃 | _no class meetings_
 week 15  | Dec 2 / Dec 4    |   🎓   | final projects 
 
