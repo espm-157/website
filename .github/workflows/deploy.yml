@@ -35,7 +35,7 @@ jobs:
         with:
           node-version: 22.x
       - name: Install MyST Markdown
-        run: npm install -g mystmd
+        run: npm install -g mystmd@1.13.0
       - name: Build HTML Assets
         run: myst build --html
       - name: Upload artifact
